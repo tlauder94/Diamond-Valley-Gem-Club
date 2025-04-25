@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memberships - Diamond Valley Gem Club</title>
+  <link rel="stylesheet" href="membership.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div id="navbar-container"></div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <h1>Memberships</h1>
+  </section>
+
+  <!-- How to Become a Member Section -->
+  <section class="membership-section">
+  <div class="membership-container">
+    <!-- Left Column: Information -->
+    <div class="membership-left">
+      <h2>How to Become a Member</h2>
+      <p>
+        Becoming a member of the Diamond Valley Gem Club is simple and rewarding. Follow these steps to join our vibrant community of gem enthusiasts:
+      </p>
+      <ul>
+        <li>Download the Membership Application / Renewal Form.</li>
+        <li>Fill out the form with your details and preferences.</li>
+        <li>Submit the completed form to the club in person or via email.</li>
+        <li>Pay the membership fee to activate your membership.</li>
+      </ul>
+      <p>
+        Once your membership is active, you’ll gain access to our workshops, events, and a supportive community of like-minded individuals. Whether you’re a beginner or an experienced gem enthusiast, we welcome you to join us!
+      </p>
+    </div>
+
+    <!-- Right Column: Buttons -->
+    <div class="membership-right">
+      <div class="button-container">
+        <a href="#" class="action-button">Download the Membership Application / Renewal Form</a>
+        <a href="#" class="action-button">Complete an Application Form Online</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Page Break -->
+  <div class="page-break"></div>
+
+  <!-- Joining Fees/Subscriptions Section -->
+  <section class="fees-section">
+  <div class="fees-container">
+    <!-- Left Column: Joining Fees -->
+    <div class="fees-left">
+      <h2>Joining Fees/Subscriptions</h2>
+      <ul>
+        <li>Adult: $40</li>
+        <li>Family - Second Adult: $30</li>
+        <li>Family - Third (or more) Adult: $20</li>
+        <li>Family - Child 16 - 18: $20</li>
+        <li>Family - Child Under 16*: $15</li>
+      </ul>
+      <p>Joining Fee (per person): $10.00</p>
+      <p>
+        Membership is annual (calendar year) with renewal payment due 1st January each year.
+      </p>
+      <p>
+        *Note: Junior membership is conditional upon a parent or guardian becoming a member who must accompany the junior member whilst at the club and whilst at club functions.
+      </p>
+    </div>
+
+    <!-- Right Column: Club Visiting Charges -->
+    <div class="fees-right">
+      <h2>Club Visiting Charges</h2>
+      <p>
+        Visitors are welcome to attend the club for a small fee. Please contact the club for more details about visiting charges and available facilities.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- Page Break -->
+  <div class="page-break"></div>
+
+  <!-- Why Join the Club Section -->
+  <section class="why-join-section">
+  <div class="why-join-container">
+    <!-- Left Column: Information -->
+    <div class="why-join-left">
+      <h2>Why Join the Club?</h2>
+      <p>
+        The Diamond Valley Gem Club is the perfect place for anyone passionate about gems, minerals, and jewelry making. By joining the club, you gain access to a vibrant community of like-minded individuals who share your enthusiasm for exploring the beauty of gemstones.
+      </p>
+      <p>
+        Members enjoy access to fully equipped workshops, expert guidance from seasoned gem enthusiasts, and opportunities to participate in exclusive events and exhibitions. Joining the Diamond Valley Gem Club is more than a membership—it's an opportunity to grow your passion and skills in a supportive and inspiring setting.
+      </p>
+    </div>
+
+    <!-- Right Column: Benefit Cards -->
+    <div class="why-join-right">
+      <div class="benefits-container">
+        <!-- Member Benefit 1 -->
+        <div class="benefit">
+          <h3>Benefit Title 1</h3>
+          <p>Short description of the benefit. This can be updated later.</p>
+        </div>
+        <!-- Member Benefit 2 -->
+        <div class="benefit">
+          <h3>Benefit Title 2</h3>
+          <p>Short description of the benefit. This can be updated later.</p>
+        </div>
+        <!-- Member Benefit 3 -->
+        <div class="benefit">
+          <h3>Benefit Title 3</h3>
+          <p>Short description of the benefit. This can be updated later.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+
+  <!-- Scripts to Load Navbar and Footer -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Load Navbar
+      fetch('/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+
+      // Load Footer
+      fetch('/footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    });
+  </script>
+</body>
+</html>
