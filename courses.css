@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.courses-header {
+  background-color:  rgb(30, 117, 186);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.courses-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.course-card {
+  background-color: #e9f6fc; /* Updated background color for the box */
+  border: 1px solid #ddd; /* Add a border for better definition */
+  border-radius: 8px; /* Slightly round the corners */
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: box-shadow 0.3s ease;
+  margin: 10px; /* Add margin around the container */
+  padding: 10px; /* Add padding inside the container */
+  min-height: 400px; /* Set a minimum height for the cards */
+}
+
+.course-card img {
+  width: 70%; /* Set the image width to 70% of the card */
+  height: 180px; /* Set a fixed height for the image */
+  display: block;
+  margin: 20px auto; /* Add equal space above and below, and center the image */
+  object-fit: cover; /* Ensure the image scales properly within the defined size */
+}
+
+.course-card h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 10px auto 10px; /* Add space above and below the header */
+  color: #2ca9d7; /* Updated header color */
+  width: 70%; /* Match the width of the image */
+  text-align: left; /* Align text to the left */
+}
+
+.course-card p {
+  font-size: 1rem;
+  margin: 0 auto; /* Center the paragraph horizontally */
+  margin-top: 10px; /* Add space above the paragraph */
+  color: #666;
+  width: 70%; /* Match the width of the image */
+  text-align: left; /* Align text to the left */
+}
