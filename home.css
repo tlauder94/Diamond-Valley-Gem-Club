@@ -33,10 +33,17 @@
 
 .divider {
     display: flex;
-    height: 0;  
+    height: 1px;  
     width: 80%;
-    border: solid 1px #1B75BC;
-    align-items: center;
+    border: none;
+    background-color: #1B75BC;
+    margin: 20px auto;
+}
+
+.home-course-grid {
+    display: flex;
+    align-items: center;    
+    border: 1px solid red;
 }
 
 .home-history-container {
