@@ -10,6 +10,7 @@ body {
     padding: 40px 20px;
     text-align: center;
     font-size: 1.2rem;
+    color: white;
   }
 
   .about-container {
@@ -60,6 +61,10 @@ body {
   
   .about-booklet-button:hover {
     background-color: #155a8a;
+  }
+
+  #about-member-profile h1{
+    text-align: center;
   }
 
   .about-member-profile-grid {
