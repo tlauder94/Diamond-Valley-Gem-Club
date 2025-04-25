@@ -8,19 +8,17 @@
   <link rel="stylesheet" href="/calendar.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css">
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-</head>
+  </head>
 <body>
-  <!-- Navbar -->
+    
   <header id="navbar-container"></header>
 
-  <!-- Banner Section -->
   <section class="banner">
     <div class="banner-content">
       <h1>Calendar & Events</h1>
     </div>
   </section>
 
-  <!-- About Section -->
   <section class="about-section container">
   <div class="about-wrapper">
     <div class="about-text">
@@ -33,12 +31,10 @@
   </div>
 </section>
 
-  <!-- Calendar Section -->
   <section class="calendar-section container">
     <div id="calendar"></div>
   </section>
 
-  <!-- Upcoming Events Section -->
   <section class="upcoming-events container">
   <h2>Upcoming Events</h2>
   <div id="upcoming-events-container"></div>
@@ -48,14 +44,14 @@
   document.addEventListener('DOMContentLoaded', () => {
     const calendarEl = document.getElementById('calendar');
     const calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth', // Default to month view
+      initialView: 'dayGridMonth', 
       headerToolbar: {
-        left: 'prev,next today', // Navigation buttons
+        left: 'prev,next today',
         center: 'title',
-        right: 'dayGridMonth,timeGridWeek' // Allow only month and week views
+        right: 'dayGridMonth,timeGridWeek' 
       },
-      showNonCurrentDates: true, // Ensure overflow days are shown to complete the week
-      fixedWeekCount: false, // Remove the extra row at the bottom of the calendar
+      showNonCurrentDates: true, 
+      fixedWeekCount: false,
       events: [
         {
           title: 'Faceting Masterclass',
@@ -78,12 +74,47 @@
           description: 'Master the art of cabochon polishing with expert guidance.',
           image: '/images/cabochon.png'
         }
-      ]
+      ],
+      eventContent: function(arg) {
+        
+        const startTime = new Date(arg.event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+
+       
+        return {
+          html: `
+            <div class="fc-event-time" style="font-size: 0.8rem; color: #1B75BC; font-weight: bold;">${startTime}</div>
+            <div class="fc-event-title">${arg.event.title}</div>
+          `
+        };
+      },
+      eventClick: function(info) {
+        
+        info.jsEvent.preventDefault();
+
+        
+        const startTime = new Date(info.event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const endTime = new Date(info.event.end).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const eventTime = `${startTime} - ${endTime}`;
+
+       
+        const modal = document.getElementById('event-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalTime = document.getElementById('modal-time');
+        const modalDescription = document.getElementById('modal-description');
+        const modalImage = document.getElementById('modal-image');
+
+        modalTitle.textContent = info.event.title;
+        modalTime.textContent = eventTime; 
+        modalDescription.textContent = info.event.extendedProps.description;
+        modalImage.src = info.event.extendedProps.image;
+
+        modal.style.display = 'block';
+      }
     });
 
     calendar.render();
 
-    // Dynamically populate the Upcoming Events section
+   
     const events = calendar.getEvents();
     const upcomingEventsContainer = document.getElementById('upcoming-events-container');
 
@@ -91,6 +122,9 @@
       const eventDate = new Date(event.start);
       const month = eventDate.toLocaleString('default', { month: 'long' });
       const day = eventDate.getDate();
+      const startTime = new Date(event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+      const endTime = new Date(event.end).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+      const eventTime = `${startTime} - ${endTime}`;
 
       const eventHTML = `
         <div class="event">
@@ -101,6 +135,7 @@
           <img src="${event.extendedProps.image}" alt="${event.title}" class="event-image">
           <div class="event-details">
             <h3>${event.title}</h3>
+            <p class="event-time" style="font-weight: bold; margin: 5px 0; color: #1B75BC;">${eventTime}</p> <!-- Time added here -->
             <p>${event.extendedProps.description}</p>
             <a href="#" class="add-to-calendar-button">Add to Calendar</a>
           </div>
@@ -113,11 +148,20 @@
   });
 </script>
 
-  <!-- Footer -->
+
+<div id="event-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1000;">
+  <button id="close-modal" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+  <h2 id="modal-title" style="margin-top: 0;"></h2>
+  <p id="modal-time" style="font-weight: bold; margin: 10px 0;"></p> 
+  <img id="modal-image" src="" alt="Event Image" style="width: 100%; max-height: 200px; object-fit: cover; margin-bottom: 20px;">
+  <p id="modal-description"></p>
+</div>
+
+
   <footer id="footer-container"></footer>
 
   <script>
-    // Dynamically load the shared navbar
+
     document.addEventListener('DOMContentLoaded', () => {
       fetch('/navbar.html')
         .then(response => response.text())
@@ -127,7 +171,6 @@
         .catch(error => console.error('Error loading navbar:', error));
     });
 
-    // Dynamically load the shared footer
     document.addEventListener('DOMContentLoaded', () => {
       fetch('/footer.html')
         .then(response => response.text())
@@ -136,6 +179,99 @@
         })
         .catch(error => console.error('Error loading footer:', error));
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const calendarEl = document.getElementById('calendar');
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      headerToolbar: {
+        left: 'prev,next today', 
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek' 
+      },
+      showNonCurrentDates: true, 
+      fixedWeekCount: false, 
+      events: [
+        {
+          title: 'Faceting Masterclass',
+          start: '2025-06-15T10:00:00',
+          end: '2025-06-15T14:00:00',
+          description: 'Learn the precision art of gemstone faceting in this advanced-level class.',
+          image: '/images/faceting.png'
+        },
+        {
+          title: 'Cabochon Machine Workshop',
+          start: '2025-06-22T13:00:00',
+          end: '2025-06-22T17:00:00',
+          description: 'Hands-on training with cabochon machines for beginners and enthusiasts.',
+          image: '/images/cabmachine.jpg'
+        },
+        {
+          title: 'Cabochon Polishing Techniques',
+          start: '2025-06-29T15:00:00',
+          end: '2025-06-29T18:00:00',
+          description: 'Master the art of cabochon polishing with expert guidance.',
+          image: '/images/cabochon.png'
+        }
+      ],
+      eventContent: function(arg) {
+        
+        const startTime = new Date(arg.event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+
+        return {
+          html: `
+            <div class="fc-event-time" style="font-size: 0.8rem; color: #1B75BC; font-weight: bold;">${startTime}</div>
+            <div class="fc-event-title">${arg.event.title}</div>
+          `
+        };
+      },
+      eventClick: function(info) {
+        
+        info.jsEvent.preventDefault();
+
+        
+        const startTime = new Date(info.event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const endTime = new Date(info.event.end).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        const eventTime = `${startTime} - ${endTime}`;
+
+       
+        const modal = document.getElementById('event-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalTime = document.getElementById('modal-time');
+        const modalDescription = document.getElementById('modal-description');
+        const modalImage = document.getElementById('modal-image');
+
+        modalTitle.textContent = info.event.title;
+        modalTime.textContent = eventTime; 
+        modalDescription.textContent = info.event.extendedProps.description;
+        modalImage.src = info.event.extendedProps.image;
+
+        modal.style.display = 'block';
+      }
+    });
+
+    calendar.render();
+
+   
+    const modal = document.getElementById('event-modal');
+    const closeModalButton = document.getElementById('close-modal');
+
+    closeModalButton.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        modal.style.display = 'none';
+      }
+    });
+
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  });
   </script>
 </body>
 </html>
