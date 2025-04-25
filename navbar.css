@@ -31,7 +31,8 @@ nav {
     text-decoration: none;
     color: #403E43;    
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 10px;    
+     transition: background 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a:hover{

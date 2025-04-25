@@ -11,8 +11,56 @@
 
 <body>
 
+  <header id="navbar-container"></header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <img src="images/banner.png" alt="Diamond Valley Gem Club" class="hero-image" />
+      <h1>Welcome to the Diamond Valley Gem Club</h1>
+      <p>Our club fosters the interests of people who are interested in the collecting, cutting, and polishing
+        of gemstones, lapidary work, and all associated arts, crafts and activities.</p>
+    </div>
+  </section>
+
 </body>
 
-<footer>
+<footer id="footer-container"></footer>
+
+<script>
+// Dynamically load the shared navbar
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('navbar.html') // Ensure the file path is correct
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Failed to load navbar. Status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(data => {
+          document.querySelector('header').innerHTML = data;
+        })
+        .catch(error => {
+          console.error('Error loading navbar:', error);
+          document.querySelector('header').innerHTML = '<p style="color: red;">Failed to load navbar. Please try again later.</p>';
+        });
+    });
     
-</footer>
+  // Dynamically load the shared footer
+      document.addEventListener('DOMContentLoaded', () => {
+        fetch('footer.html') // Ensure the file path is correct
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`Failed to load footer. Status: ${response.status}`);
+            }
+            return response.text();
+          })
+          .then(data => {
+            document.querySelector('footer').innerHTML = data;
+          })
+          .catch(error => {
+            console.error('Error loading footer:', error);
+            document.querySelector('footer').innerHTML = '<p style="color: red;">Failed to load navbar. Please try again later.</p>';
+          });
+      });
+  </script>
+
