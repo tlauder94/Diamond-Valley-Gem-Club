@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Banner Section */
+.banner {
+  background-color: #1B75BC;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Course Description Section */
+.course-description {
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.description-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.description-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Prerequisites Section */
+.prerequisites {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+}
+
+.prerequisites-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.prerequisites-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Cost Section */
+.course-cost {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.course-cost .price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1B75BC;
+}
+
+.course-cost .cta-button {
+  background-color: #1B75BC;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.course-cost .cta-button:hover {
+  background-color: #155a8a;
+}
+
+/* Upcoming Dates Section */
+.upcoming-dates {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+}
+
+.upcoming-dates ul {
+  list-style: none;
+  padding: 0;
+}
+
+.upcoming-dates li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Instructor Info Section */
+.instructor-info {
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.instructor-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.instructor-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+blockquote {
+  font-style: italic;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #1B75BC;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+footer .social-links img {
+  width: 30px;
+  margin: 0 10px;
+}

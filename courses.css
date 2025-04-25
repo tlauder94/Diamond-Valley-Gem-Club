@@ -64,3 +64,13 @@ body {
   width: 70%; /* Match the width of the image */
   text-align: left; /* Align text to the left */
 }
+
+.course-card a {
+  text-decoration: none; /* Remove the underline from the links */
+  color: inherit; /* Inherit the text color from the parent element */
+  display: block; /* Make the entire card clickable */
+}
+
+.course-card a:hover {
+  text-decoration: none; /* Ensure no underline appears on hover */
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabochon Cutting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="courses.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="navbar-container"></header>
+
+  <!-- Banner Section -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Cabochon Cutting</h1>
+      <p>Master the art of shaping and polishing gemstones into smooth, domed cabochons.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Course Description Section -->
+    <section class="course-description">
+      <h2>What this Course Involves</h2>
+      <div class="description-content">
+        <p>Learn the art of shaping and polishing rocks and gemstones into smooth, domed cabochons. This hands-on course covers everything from selecting your rough to using lapidary equipment safely and effectively. Perfect for beginners or anyone looking to level up their rock game.</p>
+        <ul>
+          <li>Hands-on practice with lapidary tools</li>
+          <li>Techniques for selecting and preparing rough stones</li>
+          <li>Polishing and finishing techniques</li>
+        </ul>
+        <img src="../images/cabochon-tools.jpg" alt="Cabochon Tools in Use">
+      </div>
+    </section>
+
+    <!-- Prerequisites Section -->
+    <section class="prerequisites">
+      <h2>Prerequisites</h2>
+      <div class="prerequisites-content">
+        <ul>
+          <li>No prior experience required</li>
+          <li>Basic knowledge of tools is helpful but not necessary</li>
+          <li>All materials and tools will be provided</li>
+        </ul>
+        <img src="../images/tools.jpg" alt="Lapidary Tools">
+      </div>
+    </section>
+
+    <!-- Cost Section -->
+    <section class="course-cost">
+      <h2>Course Cost</h2>
+      <p class="price">$150</p>
+      <button class="cta-button">Register Now</button>
+    </section>
+
+    <!-- Upcoming Dates Section -->
+    <section class="upcoming-dates">
+      <h2>Upcoming Course Dates</h2>
+      <ul>
+        <li>June 15, 2025</li>
+        <li>July 20, 2025</li>
+        <li>August 10, 2025</li>
+      </ul>
+    </section>
+
+    <!-- Instructor Info Section -->
+    <section class="instructor-info">
+      <h2>Meet Your Instructor</h2>
+      <div class="instructor-content">
+        <img src="../images/instructor.jpg" alt="Instructor Photo" class="instructor-photo">
+        <div>
+          <p><strong>Jane Doe</strong> has over 20 years of experience in lapidary arts and has taught hundreds of students the art of cabochon cutting. Her teaching style is hands-on, approachable, and focused on building confidence in her students.</p>
+          <blockquote>"I believe anyone can learn the art of cabochon cutting with the right guidance and tools. Let's create something beautiful together!"</blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer-container"></footer>
+
+  <script>
+  // Dynamically load the shared navbar
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('../navbar.html') // Correct path to navbar.html
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Failed to load navbar. Status: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.querySelector('header').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Error loading navbar:', error);
+        document.querySelector('header').innerHTML = '<p style="color: red;">Failed to load navbar. Please try again later.</p>';
+      });
+  });
+
+  // Dynamically load the shared footer
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('../footer.html') // Correct path to footer.html
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Failed to load footer. Status: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.querySelector('footer').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Error loading footer:', error);
+        document.querySelector('footer').innerHTML = '<p style="color: red;">Failed to load footer. Please try again later.</p>';
+      });
+  });
+  </script>
+
+
+</body>
+</html>
