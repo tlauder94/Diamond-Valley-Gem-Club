@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    footer {
+      background-color: #403E43;
+      color: white;
+      padding: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .footer-column {
+      margin: 0;
+    }
+
+    .footer-column:first-child {
+      flex: 0 0 55%;
+    }
+
+    .footer-column:nth-child(2){
+      flex: 0 0 25%;
+    }
+
+    .footer-column:nth-child(3) {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-left: 20px;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 27px;
+    }
+
+    .nav-links li {
+      margin: 0;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-info {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .contact-info h2 {
+      font-size: 18px;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-column {
+        margin: 20px 0;
+      }
+
+      .footer-column:first-child {
+        flex: 1; 
+      }
+
+      .footer-column:nth-child(2),
+      .footer-column:nth-child(3) {
+        padding-left: 0;
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <footer>
+    <div class="footer-column">
+      <img src="images/logonoblc.png" alt="Logo no blc">
+    </div>
+    <div class="footer-column">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#membership">Membership</a></li>
+        <li><a href="#event">Event</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <div class="contact-info">
+        <h2>Contact Us:</h2>
+        <p>Diamond Valley Gem Club Inc.<br>20 Noorong Avenue, Bundoora VIC</p>
+        <p>Diamond Valley Gem Club<br>P.O. Box 1009<br>Bundoora Vic 3083</p>
+      </div>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
