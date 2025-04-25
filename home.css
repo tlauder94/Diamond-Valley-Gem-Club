@@ -40,10 +40,45 @@
     margin: 20px auto;
 }
 
+.home-course-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
 .home-course-grid {
     display: flex;
-    align-items: center;    
-    border: 1px solid red;
+    gap: 5%;
+    justify-content: center;
+}
+
+.home-course-card {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.home-benefit-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.home-benefit-grid {
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+}
+
+.home-benefit-card {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background-color: #e9f6fc;
+    border: 1px solid #1B75BC;
+    border-radius: 10px;
 }
 
 .home-history-container {
@@ -61,4 +96,11 @@
     padding-left: 1%;
 }
 
+.home-opening-container {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-between;
+    margin: 2% 20%;
+}
 
