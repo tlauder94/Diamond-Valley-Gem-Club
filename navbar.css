@@ -24,11 +24,7 @@ nav {
     gap: 1%;
     align-items: center;
     list-style: none;
-<<<<<<< HEAD
-    padding: 0 15% 0 15%
-=======
     padding: 0 15% 0 15%;
->>>>>>> d8dfc62000bd53c38ca999a395c7dc60ee6ab798
 }
 
 .nav-links a{
