@@ -34,25 +34,25 @@ a {
 .about-section {
   padding: 40px 20px;
   display: flex;
-  justify-content: center; /* Center the entire wrapper */
+  justify-content: center; 
 }
 
 .about-wrapper {
   display: flex;
-  flex-wrap: nowrap; /* Ensure the text and image stay side by side */
+  flex-wrap: nowrap; 
   gap: 20px;
-  align-items: stretch; /* Stretch both sides to match height */
-  max-width: 1400px; /* Increased from 900px to 1575px (75% bigger) */
-  width: 100%; /* Ensure responsiveness */
-  margin: 60px 0 100px 0; /* Add spacing above and below the wrapper */
+  align-items: stretch; 
+  max-width: 1400px; 
+  width: 100%; 
+  margin: 60px 0 100px 0; 
 }
 
 .about-text {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center the text vertically */
-  background-color: #e9f6fc; /* Baby blue color from the courses section */
+  justify-content: center; 
+  background-color: #e9f6fc; 
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -68,7 +68,7 @@ a {
 .about-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the image fills the container proportionately */
+  object-fit: cover; 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -77,32 +77,32 @@ a {
 .calendar-section {
   padding: 40px 20px;
   display: flex;
-  justify-content: center; /* Center the calendar horizontally */
+  justify-content: center; 
 }
 
 #calendar {
-    max-width: 1190px; /* Limit the width of the calendar */
-    width: 100%; /* Allow it to scale responsively */
+    max-width: 1190px; 
+    width: 100%; 
     margin: 0 auto;
-    background-color: white; /* White background for the calendar */
-    border-radius: 12px; /* Rounded corners for a clean look */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Stronger shadow for emphasis */
-    padding: 20px; /* Add padding inside the calendar */
+    background-color: white; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); 
+    padding: 20px; 
   }
 
 /* FullCalendar Internal Styles */
 .fc {
-  width: 100%; /* Ensure the calendar spans the full width of the container */
+  width: 100%; 
 }
 
 .fc .fc-scrollgrid {
-  width: 100%; /* Ensure the scrollable grid spans the full width */
+  width: 100%; 
 }
 
 /* Style for Day Cells */
 .fc .fc-daygrid-day {
-  background-color: #e9f6fc; /* Light blue background for day cells */
-  border: 1px solid #d1e7f3; /* Subtle border for day cells */
+  background-color: #e9f6fc;
+  border: 1px solid #d1e7f3; 
 }
 
 .fc .fc-daygrid-day-frame {
@@ -114,35 +114,35 @@ a {
 
 /* Style for Date Numbers */
 .fc .fc-daygrid-day-top {
-  color: #1B75BC; /* Dark blue for date numbers */
+  color: #1B75BC; 
   font-weight: bold;
   font-size: 14px;
 }
 
 /* Style for Weekday Headers (Mon, Tues, etc.) */
 .fc .fc-col-header-cell {
-  background-color: #1B75BC; /* Dark blue background for headers */
-  color: white; /* White text for headers */
+  background-color: #1B75BC; 
+  color: white; 
   font-weight: bold;
   text-align: center;
   padding: 10px;
-  border: 1px solid #d1e7f3; /* Subtle border for headers */
+  border: 1px solid #d1e7f3; 
 }
 
 /* Style for Toolbar (Month, Week, Day Buttons) */
 .fc .fc-toolbar {
-  width: 100%; /* Ensure the toolbar spans the full width */
-  margin-bottom: 20px; /* Add spacing below the toolbar */
+  width: 100%; 
+  margin-bottom: 20px; 
 }
 
 .fc .fc-toolbar-title {
-  color: #1B75BC; /* Dark blue for the toolbar title */
+  color: #1B75BC; 
   font-size: 18px;
   font-weight: bold;
 }
 
 .fc .fc-button {
-  background-color: #1B75BC; /* Dark blue for buttons */
+  background-color: #1B75BC; 
   color: white;
   border: none;
   border-radius: 4px;
@@ -152,33 +152,93 @@ a {
 }
 
 .fc .fc-button:hover {
-  background-color: #155a8a; /* Slightly darker blue on hover */
+  background-color: #155a8a; 
 }
 
 .fc .fc-button:disabled {
-  background-color: #d1e7f3; /* Light blue for disabled buttons */
+  background-color: #d1e7f3; 
   color: #a0a0a0;
   cursor: not-allowed;
 }
 
+/* Style for Calendar Events */
+.fc-event {
+  background-color: #1B75BC; 
+  color: white; 
+  border: none; 
+  border-radius: 4px; 
+  padding: 2px 5px; 
+  font-size: 0.9rem; 
+  font-weight: bold; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  cursor: pointer; 
+}
+
+/* Hover Effect for Events */
+.fc-event:hover {
+  background-color: #155a8a; 
+}
+
+/* Style for Event Time in Calendar Preview */
+.fc-event-time {
+  color: white !important; 
+}
+
+/* Modal Styling */
+#event-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+#event-modal h2 {
+  margin-top: 0;
+}
+
+#event-modal img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+#event-modal button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 /* General Container for Page Content */
 .container {
-  max-width: 1200px; /* Limit the width of the content */
-  margin: 0 auto; /* Center the content horizontally */
-  padding: 0 20px; /* Add padding on the left and right */
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
 }
 
 /* Upcoming Events Section */
 .upcoming-events {
-  padding: 80px 20px; /* Increase padding above and below */
+  padding: 80px 20px; 
 }
 
 .upcoming-events h2 {
   font-size: 2rem;
-  margin-bottom: 40px; /* Add more space below the title */
+  margin-bottom: 40px; 
   color: #1B75BC;
-  text-align: left; /* Align the title to the left */
-  margin-left: 0; /* Ensure it aligns with the left edge of the section */
+  text-align: left; 
+  margin-left: 0; 
 }
 
 .event {
@@ -194,13 +254,13 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #1B75BC; /* Dark blue text */
+  color: #1B75BC; 
   font-weight: bold;
   text-align: center;
   font-size: 1.5rem;
-  width: auto; /* Remove fixed width */
-  height: auto; /* Remove fixed height */
-  margin-right: 20px; /* Add spacing between the date and the image */
+  width: auto; 
+  height: auto; 
+  margin-right: 20px; 
 }
 
 .event-date .event-month {
@@ -226,12 +286,8 @@ a {
 .event-details h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-}
-
-.event-details p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.5;
+  color: #1B75BC; 
+  font-weight: bold; 
 }
 
 /* Divider */
@@ -246,7 +302,7 @@ a {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 15px;
-  background-color: #1B75BC; /* Dark blue background */
+  background-color: #1B75BC;
   color: white;
   text-decoration: none;
   font-size: 1rem;
@@ -257,7 +313,24 @@ a {
 }
 
 .add-to-calendar-button:hover {
-  background-color: #155a8a; /* Slightly darker blue on hover */
+  background-color: #155a8a; 
+}
+
+/* Ensure day cells properly constrain their content */
+.fc .fc-daygrid-day-frame {
+  overflow: hidden !important; 
+  position: relative; 
+}
+
+/* Allow events to wrap their content */
+.fc-daygrid-event {
+  max-width: 100%; 
+  overflow: hidden; 
+  text-overflow: unset; 
+  white-space: normal; 
+  display: inline-block;
+  vertical-align: top; 
+  box-sizing: border-box; 
 }
 
 /* Responsive Design */
