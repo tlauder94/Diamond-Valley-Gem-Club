@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost Wax Casting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="courses.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="navbar-container"></header>
+
+  <!-- Banner Section -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Lost Wax Casting</h1>
+      <p>Master the ancient art of lost wax casting to create intricate and unique metal designs.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="course-layout">
+    <!-- Left Content -->
+    <div class="course-info">
+      <!-- Course Description Section -->
+      <section class="course-description container">
+        <h2>About This Course</h2>
+        <p>Learn the ancient technique of lost wax casting, a process used to create intricate metal designs. This course will guide you through every step, from carving your wax model to casting it in metal and finishing your final piece.</p>
+        <ul>
+          <li>Hands-on practice with wax carving and casting</li>
+          <li>Techniques for creating intricate designs</li>
+          <li>Metal finishing and polishing</li>
+        </ul>
+      </section>
+
+      <!-- Prerequisites Section -->
+      <section class="prerequisites container">
+        <h2>Prerequisites</h2>
+        <ul>
+          <li>No prior experience required</li>
+          <li>Basic knowledge of tools is helpful but not necessary</li>
+          <li>All materials and tools will be provided</li>
+        </ul>
+      </section>
+
+      <!-- Cost Section -->
+      <section class="course-cost container">
+        <h2>Course Cost</h2>
+        <p class="price">$300</p>
+        <button class="cta-button">Register Now</button>
+      </section>
+
+      <!-- Upcoming Dates Section -->
+      <section class="upcoming-dates container">
+        <h2>Upcoming Course Dates</h2>
+        <ul>
+          <li>July 5, 2025</li>
+          <li>August 2, 2025</li>
+          <li>September 6, 2025</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Right Content (Images) -->
+    <div class="course-images">
+      <img src="/images/cabmachine.jpg" alt="Wax Carving Tools in Use">
+      <img src="/images/cabs.jpg" alt="Finished Lost Wax Castings">
+    </div>
+  </main>
+
+  <!-- Instructor Info Section -->
+  <section class="instructor-info container">
+    <h2>Meet Your Instructor</h2>
+    <div class="instructor-content">
+      <img src="../images/cabs.jpg" alt="Instructor Photo" class="instructor-photo">
+      <div>
+        <p><strong>Michael Brown</strong> is a skilled artisan with over 20 years of experience in lost wax casting. He has created custom designs for clients worldwide and is passionate about sharing this timeless technique.</p>
+        <blockquote>"Lost wax casting is a blend of precision and creativity. Let me help you bring your designs to life."</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer-container"></footer>
+
+  <script>
+    // Dynamically load the shared navbar
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector('header').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    });
+
+    // Dynamically load the shared footer
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('../footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    });
+  </script>
+</body>
+</html>
