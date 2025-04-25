@@ -1,0 +1,57 @@
+.body {    
+    font-family: Montserrat, sans-serif;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.hero-text {
+    color: white;   
+    background-color: #1B75BC;
+    width: 40%;
+    text-align: center;
+}
+
+.home-about-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.home-about-text {  
+    color: #403E43;
+    width: 20%;
+    text-align: left;
+    padding-left: 1%;
+}
+
+.divider {
+    display: flex;
+    height: 0;  
+    width: 80%;
+    border: solid 1px #1B75BC;
+    align-items: center;
+}
+
+.home-history-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.home-history-text {
+    color: white;   
+    background-color: #1B75BC;
+    width: 20%;
+    text-align: left;
+    padding-left: 1%;
+}
+
+
