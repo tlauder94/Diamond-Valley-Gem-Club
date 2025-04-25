@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diamond Valley Gem Club</title>
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+</head>
+
+<body>
+
+  <header id="navbar-container"></header>
+
+  <header class="about-header">
+    <h1>About Us</h1>
+  </header>
+
+  <section id="about-us">
+    <div class="about-container">
+        <div class="about-text">
+            <h1>Club History</h1>
+            <p>In October 1967 the Diamond Valley Gem club was officially formed.
+                That year there were ten gem clubs formed in Victoria and we
+                were one of them. The club emerged from humble beginnings with
+                workshops being held at a member’s home using limited equipment.</p>
+            <p>Our first club President was Franz Zyllstra and years later the club
+                became an incorporated body. On the eighth of February 1968 the
+                clubroom was opened at the Sullivan’s home in Montmorency. The
+                first newsletter was issued in May 1968. In late 1968 the club held
+                its first gem show, which in fact was the first national gem show to
+                be held anywhere in Australia.</p>    
+            <p>In later years the club has progressed to having our own clubhouse.
+                On the thirteenth of July 1975 about seventy members went along
+                to an open day at the new clubrooms, which were located at the
+                western end of Stanley Street behind Stortford Avenue in Ivanhoe.</p>    
+            <p>In following years we approached the council again for larger
+                premises. Councillor Critcheley took the case to the council and a
+                new premises was found at 135 Henry Street, Greensborough.</p>   
+            <p>In 2019 the club again approached council for larger premises
+                and in 2020 we were offered the old girl guide hall at 20 Noorong
+                Avenue, Bundoora which is now our present location</p>     
+            <p>After Fifty years we have a healthy membership, good
+                accommodation for our equipment, and we offer a good range
+                of activities for our members to ensure that the club is around for
+                another fifty years.</p>    
+         </div>
+         <div class="about-image-container">
+            <div class="about-image">
+                <img src="/images/banner.png" alt="Diamond Valley Gem Club" class="about-image" />
+            </div>
+            <div class="about-image">
+                <img src="/images/banner.png" alt="Diamond Valley Gem Club" class="about-image" />
+            </div>
+        </div>
+      </div> 
+  </section>
+
+  <section id="about-booklet-container">
+    <div class="about-booklet-container">
+        <div class="about-booklet-text">
+            <h1>50 Year Booklet</h1>
+            <p>Et has minim elitr intellegat. Mea aeterno eleifend antiopam
+                ad, nam no suscipit quaerendum. At nam minimum ponderum.
+                Curabitur lacinia mauris ut ex dictum consequat. Integer
+                pellentesque ligula ut leo pretium, nec euismod lacus.</p>
+        </div>
+        <button class="about-booklet-button">Download Now</button>
+    </div>    
+  </section>
+
+  <section id="about-member-profile">
+    <h1>Member Profiles</h1>
+    <div class="about-member-profile-grid">
+        <div class="about-member-profile-container">
+            <img src="/images/banner.png" alt="President" class="about-profile-image" />
+            <h2>President</h2>
+        </div>
+        <div class="about-member-profile-container">
+            <img src="/images/banner.png" alt="Vice President" class="about-profile-image" />
+            <h2>Vice President</h2>
+        </div>
+        <div class="about-member-profile-container">
+            <img src="/images/banner.png" alt="Secretary" class="about-profile-image" />
+            <h2>Secretary</h2>
+        </div>
+    </div>    
+  </section>
+
+  <section id="about-duty-officer">
+    <div class="about-duty-officer-grid">
+        <div class="duty-officer-container">
+               <img src="/images/banner.png" alt="Secretary" class="about-officer-image" />
+            <h1>Duty Officer Name</h1>
+        </div>
+        <div class="duty-officer-container">
+            <img src="/images/banner.png" alt="Secretary" class="about-officer-image" />
+            <h1>Duty Officer Name</h1>
+        </div>
+        <div class="duty-officer-container">
+            <img src="/images/banner.png" alt="Secretary" class="about-officer-image" />
+            <h1>Duty Officer Name</h1>
+        </div>
+        <div class="duty-officer-container">
+            <img src="/images/banner.png" alt="Secretary" class="about-officer-image" />
+            <h1>Duty Officer Name</h1>
+        </div>
+        <div class="duty-officer-container">
+            <img src="/images/banner.png" alt="Secretary" class="about-officer-image" />
+            <h1>Duty Officer Name</h1>
+        </div>
+        <div class="duty-officer-container">
+            <img src="/images/banner.png" alt="Secretary" class="about-officer-image" />
+            <h1>Duty Officer Name</h1>
+        </div>
+        <div class="duty-officer-container">
+            <img src="/images/banner.png" alt="Secretary" class="about-officer-image" />
+            <h1>Duty Officer Name</h1>
+        </div>
+        <div class="duty-officer-container">
+            <img src="/images/banner.png" alt="Secretary" class="about-officer-image" />
+            <h1>Duty Officer Name</h1>
+        </div>
+        <div class="duty-officer-container">
+            <img src="/images/banner.png" alt="Secretary" class="about-officer-image" />
+            <h1>Duty Officer Name</h1>
+        </div>
+    </div>
+  </section>
+
+  <footer id="footer-container"></footer>
+
+  <script>
+  // Dynamically load the shared navbar
+      document.addEventListener('DOMContentLoaded', () => {
+        fetch('navbar.html') // Ensure the file path is correct
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`Failed to load navbar. Status: ${response.status}`);
+            }
+            return response.text();
+          })
+          .then(data => {
+            document.querySelector('header').innerHTML = data;
+          })
+          .catch(error => {
+            console.error('Error loading navbar:', error);
+            document.querySelector('header').innerHTML = '<p style="color: red;">Failed to load navbar. Please try again later.</p>';
+          });
+      });
+      
+    // Dynamically load the shared footer
+        document.addEventListener('DOMContentLoaded', () => {
+          fetch('footer.html') // Ensure the file path is correct
+            .then(response => {
+              if (!response.ok) {
+                throw new Error(`Failed to load footer. Status: ${response.status}`);
+              }
+              return response.text();
+            })
+            .then(data => {
+              document.querySelector('footer').innerHTML = data;
+            })
+            .catch(error => {
+              console.error('Error loading footer:', error);
+              document.querySelector('footer').innerHTML = '<p style="color: red;">Failed to load navbar. Please try again later.</p>';
+            });
+        });
+    </script>
+  
+  </body>
+  
+  </html>
+  
