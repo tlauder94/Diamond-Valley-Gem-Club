@@ -16,12 +16,16 @@
     text-align: center;
 }
 
+.hero-image {
+    width: 20%;
+}
+
 .home-about-container {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
-    margin-top: 2%;
+    margin: 2% auto;
 }
 
 .home-about-text {  
@@ -34,15 +38,42 @@
 .divider {
     display: flex;
     height: 1px;  
-    width: 80%;
     border: none;
     background-color: #1B75BC;
-    margin: 20px auto;
+    margin: auto 10%;
 }
+
+.home-button {
+    background-color: #1B75BC;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .home-button:hover {
+    background-color: #155a8a;
+  }
+
+  .home-history-button {    
+    background-color: #155a8a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .home-history-button:hover {
+    background-color: #555;
+  }
 
 .home-course-container {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: auto;
     padding: 0 20px;
     text-align: center;
 }
@@ -61,7 +92,7 @@
 
 .home-benefit-container {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 5% auto;
     padding: 0 20px;
     text-align: center;
 }
