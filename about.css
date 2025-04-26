@@ -39,82 +39,115 @@ body {
     justify-content: space-between;
   }
 
-  .about-booklet-container {
-    background-color:  #333;
-    padding: 40px 20px;
-    text-align: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  /* About Booklet Section */
+#about-booklet-container {
+  width: 100%; /* Ensure the container spans the full width of the page */
+  background-color: #333; /* Dark background color */
+  color: white;
+  padding: 40px 20px; /* Add padding for spacing */
+}
 
-  .about-booklet-text {
-    width: 40%;
-  }
+.about-booklet-container {
+  max-width: 1200px; /* Constrain content width */
+  margin: 0 auto; /* Center the content horizontally */
+  display: flex;
+  justify-content: space-between; /* Space between text and button */
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Add spacing between the text and button */
+}
 
-  .about-booklet-button {
-    background-color: white;
-    color: #333;
-    text-decoration: none;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    height: 50px;
-  }
-  
-  .about-booklet-button:hover {
-    background-color: #155a8a;
-  }
+.about-booklet-text {
+  flex: 2; /* Take up more space */
+}
 
-  #about-member-profile h1{
-    text-align: center;
-  }
+.about-booklet-button-container {
+  flex: 1; /* Take up less space */
+  display: flex;
+  justify-content: flex-end; /* Align button to the right of its container */
+  align-items: center; /* Center button vertically */
+}
 
-  .about-member-profile-grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 5%;
-    margin: auto;
-  }
+.about-booklet-button {
+  padding: 15px 20px; /* Add padding for a larger button */
+  background-color: #1B75BC;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-    #about-member-profile h1{
-    font-size: 2.5rem;
-  }
-  .about-member-profile-container {
-    text-align: center;
-  } 
-  
-  .about-profile-image  {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+.about-booklet-button:hover {
+  background-color: #155a8a;
+}
 
-  .about-duty-officer-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5%;
-    justify-content: center;
-    margin: auto 0 auto 25%;
-  }
+  /* Member Profiles Section */
+#about-member-profile h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1B75BC; /* Same blue as the banner */
+}
 
-  .duty-officer-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 45%;
-    margin-bottom: 2%;
-    gap: 3%;
-  }
+.about-member-profile-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5%;
+  margin: auto;
+}
 
-  .about-officer-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+.about-member-profile-container {
+  text-align: center;
+}
+
+/* Profile Image Styling */
+.about-profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; /* Circular images */
+  object-fit: cover;
+  border: 3px solid #1B75BC; /* Blue border around the image */
+  margin-bottom: 10px; /* Space between image and title */
+}
+
+/* Profile Title Styling */
+.about-member-profile-container h2 {
+  font-size: 1.2rem;
+  color: #1B75BC; /* Same blue as the banner */
+  margin-top: 10px;
+}
+
+/* About Duty Officer Grid */
+.about-duty-officer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%; /* Space between items */
+  justify-content: center;
+  margin: auto; /* Center the grid */
+}
+
+/* Duty Officer Container */
+.duty-officer-container {
+  text-align: center;
+  width: 30%; /* Adjust width for 3 items per row */
+  margin-bottom: 20px; /* Add spacing between rows */
+}
+
+/* Officer Image Styling */
+.about-officer-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Circular images */
+  object-fit: cover;
+  border: 3px solid #1B75BC; /* Blue border around the image */
+  margin-bottom: 10px; /* Space between image and title */
+}
+
+/* Officer Title Styling */
+.duty-officer-container h2 {
+  font-size: 1rem;
+  color: #1B75BC; /* Same blue as the banner */
+  margin-top: 10px;
+}
