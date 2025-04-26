@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .faq-header {
+    background-color: #1B75BC;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%; /* Ensure the banner spans the full width of the page */
+    margin: 0; /* Remove any default margins */
+    height: 150px;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-size: 1.5rem;
+  }
+
+  .faq-container {
+    width: 80%;
+    border: 2px solid #333;
+    background-color: #2ca9d7;
+    margin: 20px 0 20px 10%;
+    text-align: center;
+  }
+
+  div[id^="faq-box-header"] {
+    background-color: #2ca9d7;
+    width: 100%;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+  }
+
+  .faq-plus {
+    text-align: right;
+    font-size: 2.5rem;
+  }
+
+  div[id^="faq-text"]  {
+    background-color: #f9f9f9;
+    width: 100%;
+    display: none;
+  }
