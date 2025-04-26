@@ -39,35 +39,49 @@ body {
     justify-content: space-between;
   }
 
-  .about-booklet-container {
-    background-color:  #333;
-    padding: 40px 20px;
-    text-align: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  /* About Booklet Section */
+#about-booklet-container {
+  width: 100%; /* Ensure the container spans the full width of the page */
+  background-color: #333; /* Dark background color */
+  color: white;
+  padding: 40px 20px; /* Add padding for spacing */
+}
 
-  .about-booklet-text {
-    width: 40%;
-  }
+.about-booklet-container {
+  max-width: 1200px; /* Constrain content width */
+  margin: 0 auto; /* Center the content horizontally */
+  display: flex;
+  justify-content: space-between; /* Space between text and button */
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Add spacing between the text and button */
+}
 
-  .about-booklet-button {
-    background-color: white;
-    color: #333;
-    text-decoration: none;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    height: 50px;
-  }
-  
-  .about-booklet-button:hover {
-    background-color: #155a8a;
-  }
+.about-booklet-text {
+  flex: 2; /* Take up more space */
+}
+
+.about-booklet-button-container {
+  flex: 1; /* Take up less space */
+  display: flex;
+  justify-content: flex-end; /* Align button to the right of its container */
+  align-items: center; /* Center button vertically */
+}
+
+.about-booklet-button {
+  padding: 15px 20px; /* Add padding for a larger button */
+  background-color: #1B75BC;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.about-booklet-button:hover {
+  background-color: #155a8a;
+}
 
   #about-member-profile h1{
     text-align: center;
