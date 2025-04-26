@@ -12,6 +12,11 @@ h1, h2 {
   padding: 0;
 }
 
+/* General Title Styling */
+h1, h2, h3 {
+  color: #1B75BC; /* Same blue as the banner */
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -52,6 +57,11 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Distribute space evenly between sections */
+}
+
+/* General Left Margin for Content */
+.course-info {
+  margin-left: 20px; /* Add a decent left margin */
 }
 
 .course-images {
@@ -96,25 +106,40 @@ a {
   margin-bottom: 10px;
 }
 
-/* Cost Section */
-.course-cost .price {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1B75BC;
+/* Course Cost Section */
+.course-cost {
+  display: flex;
+  justify-content: space-between; /* Space between cost details and button */
+  align-items: center; /* Align items vertically */
+  margin-bottom: 20px;
 }
 
-.course-cost .cta-button {
-  background-color: #1B75BC;
+.cost-container {
+  display: flex;
+  justify-content: space-between; /* Space between cost details and button */
+  align-items: center; /* Align items vertically */
+  width: 100%; /* Ensure the container spans the full width */
+}
+
+.cost-details {
+  flex: 1; /* Take up remaining space */
+}
+
+.cta-button {
+  padding: 15px 25px;
+  background-color: #1B75BC; /* Same blue as the banner */
   color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
   border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 20px; /* Add spacing between the cost details and button */
 }
 
-.course-cost .cta-button:hover {
-  background-color: #155a8a;
+.cta-button:hover {
+  background-color: #155a8a; /* Darker blue on hover */
 }
 
 /* Instructor Info Section */
@@ -141,4 +166,27 @@ blockquote {
   font-style: italic;
   color: #555;
   margin: 10px 0;
+}
+
+.price {
+  font-size: 2rem; /* Make the price larger */
+  font-weight: bold; /* Make the price bold */
+  color: #1B75BC; /* Same blue as the banner */
+  margin: 0; /* Remove any extra margin */
+}
+
+/* Page Break Styling */
+main .page-break {
+  display: flex;
+  height: 1px !important; /* Ensure the height is applied */
+  background-color: #1B75BC !important; /* Force the blue color */
+  margin: 20px 0 !important; /* Add spacing above and below */
+  width: 100% !important; /* Ensure the width is applied */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  
+}
+
+.page-break.full-width {
+  width:90% !important; /* Extend the full width of the container */
 }
