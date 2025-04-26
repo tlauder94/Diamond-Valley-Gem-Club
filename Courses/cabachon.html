@@ -153,7 +153,7 @@
           .filter(event => event.type === 'course') // Filter only course events
           .forEach(event => {
             const eventDate = new Date(event.start);
-            const month = eventDate.toLocaleString('default', { month: 'long' });
+            const month = eventDate.toLocaleString('default', { month: 'short' }); // Use short month format
             const day = eventDate.getDate();
             const startTime = new Date(event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
             const endTime = new Date(event.end).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
