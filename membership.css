@@ -12,11 +12,21 @@ section {
   padding: 20px 0;
   width: 100%; /* Ensure the banner spans the full width of the page */
   margin: 0; /* Remove any default margins */
+  height: 150px;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-size: 1.5rem;
 }
 
 .banner h1 {
   margin: 0;
   font-size: 2.5rem;
+}
+
+/* General Header Styling (Excluding Banner) */
+section h2 {
+  color: #1B75BC; /* Dark blue color for headers */
 }
 
 /* Membership Section */
@@ -125,7 +135,7 @@ section {
 
 .benefit h3 {
   margin-top: 0;
-  color: #1B75BC;
+  color: #1B75BC; /* Dark blue color for benefit titles */
 }
 
 .benefit p {
