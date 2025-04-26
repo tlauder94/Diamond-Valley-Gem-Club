@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,150 +7,158 @@
   <link rel="stylesheet" href="/contact.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
 </head>
-
 <body>
 
+  <!-- Header -->
   <header id="navbar-container"></header>
 
+  <!-- Banner Section -->
   <header class="contact-header">
     <h1>Contact Us</h1>
   </header>
 
+  <!-- Club Opening Times Section -->
+  <div class="opening-hours-container">
+    <section class="contact-section">
+      <h2 class="section-heading">Club Opening Times</h2>
+      <div class="opening-hours-cards">
+        <div class="opening-hours-card" data-day="1">
+          <h3>Monday</h3>
+          <p>7:30pm - 9:30pm</p>
+        </div>
+        <div class="opening-hours-card" data-day="2">
+          <h3>Tuesday</h3>
+          <p>10:30am - 3:00pm</p>
+          <p>7:30pm - 9:30pm</p>
+        </div>
+        <div class="opening-hours-card" data-day="3">
+          <h3>Wednesday</h3>
+          <p>Closed</p>
+        </div>
+        <div class="opening-hours-card" data-day="4">
+          <h3>Thursday</h3>
+          <p>7:30pm - 10:00pm</p>
+        </div>
+        <div class="opening-hours-card" data-day="5">
+          <h3>Friday</h3>
+          <p>Closed</p>
+        </div>
+        <div class="opening-hours-card" data-day="6">
+          <h3>Saturday</h3>
+          <p>10:30am - 4:00pm</p>
+        </div>
+        <div class="opening-hours-card" data-day="0">
+          <h3>Sunday</h3>
+          <p>Closed</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Main Content -->
   <div class="contact-content-container">
-  <div class="contact-text-container">
-    <div class="contact-text">
-      <h1>How Can We Help You?</h1>
-      <p1>We'd love to hear from you! 
-        Whether you're interested in becoming a member, attending a workshop, or just have a question about the club, 
-        feel free to reach out.
-        </p1>
-      </div>  
-      <div class="contact-text">  
-      <h2>Address</h2>  
-      <p2>22 Noorong Ave, Bundoora VIC 3083</p2>
-      </div>
-      <div class="contact-text">
-      <h2>Club Opening Times</h2>
-        <table>
-          <tr>
-            <td>Monday</td>
-            <td>7:30pm - 9:30pm</td>
-          </tr>
-          <tr>
-            <td>Tuesday</td>
-            <td>10:30am - 3:00pm</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>7:30pm - 9:30pm</td>
-          </tr>
-          <tr>
-            <td>Wednesday</td>
-            <td>Closed</td>
-          </tr>
-          <tr>
-            <td>Thursday</td>
-            <td>7:30pm - 10:00pm</td>
-          </tr>
-          <tr>
-            <td>Friday</td>
-            <td>Closed</td>
-          </tr>
-          <tr>
-            <td>Saturday</td>
-            <td>10:30am - 4pm</td>
-          </tr>
-          <tr>
-            <td>Sunday</td>
-            <td>Closed</td>
-          </tr>
-        </table>
-        </div>
-        <div class="contact-text">
-        <h2>Contact Number</h2>
-        <p2>0123456789</p2>
-        </div>
-        <div class="contact-text">
-        <h2>Socials</h2>
-        <p2><i class="fab fa-facebook-f"></i> <i class="fab fa-instagram"></i> <i class="fab fa-twitter "></i></p2>
-        </div>
+    <!-- Left Content -->
+    <div class="contact-info-container">
+      <!-- Address Section -->
+      <section class="contact-section">
+        <h2 class="section-heading">Address</h2>
+        <p>22 Noorong Ave, Bundoora VIC 3083</p>
+      </section>
+      <div class="page-break"></div>
+
+      <!-- Contact Number Section -->
+      <section class="contact-section">
+        <h2 class="section-heading">Contact Number</h2>
+        <p>0123456789</p>
+      </section>
+      <div class="page-break"></div>
+
+      <!-- Send Us a Message Section -->
+      <section class="contact-section">
+        <h2 class="section-heading">Send Us a Message</h2>
+        <p>If you need more information or have any questions, feel free to send us a message. Fill out the form below, and we’ll get back to you as soon as possible.</p>
+      </section>
     </div>
+
+    <!-- Right Content -->
     <div class="contact-form-map-container">
-      <div id="googleMap" style="width:100%;height:400px;">
-        <img src="/images/map.png" alt="Google Maps" class="map-embed"/>
+      <!-- Google Maps Embed -->
+      <div id="googleMap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d461.90924396841365!2d145.0632242248574!3d-37.7040536683611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad648bb07873d61%3A0x77a83d7f522ce53a!2s22%20Noorong%20Ave%2C%20Bundoora%20VIC%203083!5e1!3m2!1sen!2sau!4v1745668478641!5m2!1sen!2sau"
+          width="100%"
+          height="500"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
-      <div class="contact-form">
-        <h2>Contact Us</h2>
-        <form action="form-to-email.php" method="post" name="contact-form">
-          <label for="name">Your Name:</label>
-          <input type="text" id="name" name="name" placeholder="e.g. Mick Dundee" required />
-    
-          <label for="email">Your Email:</label>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required />
-    
-          <label for="message">Your Message:</label>
-          <textarea id="message" name="message" rows="4" placeholder="Let us know what you're looking for..." required></textarea>
-    
-          <button type="submit">Send Message</button>
-        </form>
-      </div>  
     </div>
   </div>
 
+  <!-- Contact Form Section -->
+<div class="contact-form-container">
+  <form action="form-to-email.php" method="post" class="contact-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Your Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Your Email <span class="required">*</span></label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+    </div>
+    <div class="form-group">
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="submit-button">Send Message</button>
+    </div>
+  </form>
+</div>
+
+  <!-- Footer -->
   <footer id="footer-container"></footer>
 
-<script>
-  // Dynamically load the shared navbar
-      document.addEventListener('DOMContentLoaded', () => {
-        fetch('navbar.html') // Ensure the file path is correct
-          .then(response => {
-            if (!response.ok) {
-              throw new Error(`Failed to load navbar. Status: ${response.status}`);
-            }
-            return response.text();
-          })
-          .then(data => {
-            document.querySelector('header').innerHTML = data;
-          })
-          .catch(error => {
-            console.error('Error loading navbar:', error);
-            document.querySelector('header').innerHTML = '<p style="color: red;">Failed to load navbar. Please try again later.</p>';
-          });
-      });
-      
+  <script>
+    // Dynamically load the shared navbar
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector('header').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    });
+
     // Dynamically load the shared footer
-        document.addEventListener('DOMContentLoaded', () => {
-          fetch('footer.html') // Ensure the file path is correct
-            .then(response => {
-              if (!response.ok) {
-                throw new Error(`Failed to load footer. Status: ${response.status}`);
-              }
-              return response.text();
-            })
-            .then(data => {
-              document.querySelector('footer').innerHTML = data;
-            })
-            .catch(error => {
-              console.error('Error loading footer:', error);
-              document.querySelector('footer').innerHTML = '<p style="color: red;">Failed to load navbar. Please try again later.</p>';
-            });
-        });
-    </script>
-
- <!-- Google maps script
-<script>
-  function myMap() {
-  var mapProp= {
-    center:new google.maps.LatLng(51.508742,-0.120850),
-    zoom:5,
-  };
-  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-  }
-  </script>    
-
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script> -->
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const today = new Date().getDay(); // Get the current day (0 = Sunday, 1 = Monday, etc.)
+      const cards = document.querySelectorAll('.opening-hours-card');
   
-  </body>
-  
-  </html>
-  
+      cards.forEach(card => {
+        if (parseInt(card.getAttribute('data-day')) === today) {
+          card.classList.add('highlight'); // Add the highlight class to today's card
+        }
+      });
+    });
+  </script>
+</body>
+</html>

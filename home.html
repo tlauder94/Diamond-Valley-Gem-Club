@@ -14,31 +14,37 @@
   <header id="navbar-container"></header>
 
   <section id="hero">
-    <div class="hero-container">
-      <div class="hero-image-container">
-        <img src="/images/Faceting.jpeg" alt="Diamond Valley Gem Club" class="hero-image-left" />  
-        <img src="/images/cabs.jpg" alt="Diamond Valley Gem Club" class="hero-image-right" /> 
-      </div> 
-      <div class="hero-text">
-        <h1>Welcome to the Diamond Valley Gem Club</h1>
-        <p>Our club fosters the interests of people who are interested in the collecting, cutting, and polishing
-        of gemstones, lapidary work, and all associated arts, crafts and activities.</p>
+  <div class="hero-container">
+    <div class="hero-images">
+      <div class="hero-image hero-image-left">
+        <img src="/images/Faceting.jpeg" alt="Faceting" />
+      </div>
+      <div class="hero-image hero-image-right">
+        <img src="/images/cabs.jpg" alt="Cabs" />
       </div>
     </div>
-  </section>
+    <div class="hero-text">
+      <h1>Welcome to the Diamond Valley Gem Club</h1>
+      <p>
+        Our club fosters the interests of people who are interested in the collecting, cutting, and polishing
+        of gemstones, lapidary work, and all associated arts, crafts, and activities.
+      </p>
+    </div>
+  </div>
+</section>
 
   <section id="home-about">
-    <div class="home-about-container">
-      <div class="home-about-text">
-        <h1>About Us</h1>
-        <p>Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit 
-          quaerendum. At nam minimum ponderum. Cras pellentesque venenatis interdum. 
-          Praesent posuere, dui tristique pulvinar condimentum, ipsum velit tincidunt sem, 
-          vitae ornare ante ex ac augue.</p>
-      </div>
-      <img src="/images/banner.png" alt="Diamond Valley Gem Club" class="hero-image" />
+  <div class="home-about-container">
+    <div class="home-about-text">
+      <h1>About Us</h1>
+      <p>Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit 
+        quaerendum. At nam minimum ponderum. Cras pellentesque venenatis interdum. 
+        Praesent posuere, dui tristique pulvinar condimentum, ipsum velit tincidunt sem, 
+        vitae ornare ante ex ac augue.</p>
     </div>
-  </section>
+    <img src="/images/banner.png" alt="Diamond Valley Gem Club" class="about-image" />
+  </div>
+</section>
 
   <div class="divider"></div>
 
@@ -73,24 +79,14 @@
     </div>
   </section>
 
-  <section id="home-benefit">
-    <div class="home-benefit-container">
-      <div class="home-benefit-grid">
-        <div class="home-benefit-card">
-          <h1>Member Benefit 1</h1>
-          <p>Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad.</p>
-        </div>
-        <div class="home-benefit-card">
-          <h1>Member Benefit 2</h1>
-          <p>Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad.</p>
-        </div>
-        <div class="home-benefit-card">
-          <h1>Member Benefit 3</h1>
-          <p>Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad.</p>
-        </div>
-     </div>
-    </div>
-  </section>
+<section id="home-upcoming-events">
+  <div class="page-break"></div>
+  <h2>Upcoming Events</h2>
+  <div id="upcoming-events-container" class="upcoming-events-grid">
+    <!-- Events will be dynamically loaded here -->
+  </div>
+  <div class="page-break"></div>
+</section>
 
   <section id="home-history">
     <div class="home-history-container">
@@ -105,47 +101,43 @@
   </section>
 
   <section id="home-opening">
-    <div class="home-opening-container">
-      <div class="home-opening-text">
-        <h1>Club Opening Times</h1>
-        <table>
-          <tr>
-            <td>Monday</td>
-            <td>7:30pm - 9:30pm</td>
-          </tr>
-          <tr>
-            <td>Tuesday</td>
-            <td>10:30am - 3:00pm</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>7:30pm - 9:30pm</td>
-          </tr>
-          <tr>
-            <td>Wednesday</td>
-            <td>Closed</td>
-          </tr>
-          <tr>
-            <td>Thursday</td>
-            <td>7:30pm - 10:00pm</td>
-          </tr>
-          <tr>
-            <td>Friday</td>
-            <td>Closed</td>
-          </tr>
-          <tr>
-            <td>Saturday</td>
-            <td>10:30am - 4pm</td>
-          </tr>
-          <tr>
-            <td>Sunday</td>
-            <td>Closed</td>
-          </tr>
-        </table>
+  <div class="opening-hours-container">
+    <section class="contact-section">
+      <h2 class="section-heading">Club Opening Times</h2>
+      <div class="opening-hours-cards">
+        <div class="opening-hours-card" data-day="1">
+          <h3>Monday</h3>
+          <p>7:30pm - 9:30pm</p>
+        </div>
+        <div class="opening-hours-card" data-day="2">
+          <h3>Tuesday</h3>
+          <p>10:30am - 3:00pm</p>
+          <p>7:30pm - 9:30pm</p>
+        </div>
+        <div class="opening-hours-card" data-day="3">
+          <h3>Wednesday</h3>
+          <p>Closed</p>
+        </div>
+        <div class="opening-hours-card" data-day="4">
+          <h3>Thursday</h3>
+          <p>7:30pm - 10:00pm</p>
+        </div>
+        <div class="opening-hours-card" data-day="5">
+          <h3>Friday</h3>
+          <p>Closed</p>
+        </div>
+        <div class="opening-hours-card" data-day="6">
+          <h3>Saturday</h3>
+          <p>10:30am - 4:00pm</p>
+        </div>
+        <div class="opening-hours-card" data-day="0">
+          <h3>Sunday</h3>
+          <p>Closed</p>
+        </div>
       </div>
-      <img src="/images/banner.png" alt="Diamond Valley Gem Club" class="home-opening-image" />
-    </div>
-  </section>
+    </section>
+  </div>
+</section>
 
 
 <footer id="footer-container"></footer>
@@ -187,6 +179,107 @@
           });
       });
   </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const today = new Date().getDay(); // Get the current day (0 = Sunday, 1 = Monday, etc.)
+      const cards = document.querySelectorAll('.opening-hours-card');
+  
+      cards.forEach(card => {
+        if (parseInt(card.getAttribute('data-day')) === today) {
+          card.classList.add('highlight'); // Add the highlight class to today's card
+        }
+      });
+    });
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // Hardcoded upcoming events
+  const events = [
+    {
+      title: "Working Bee",
+      date: "Saturday, May 4th",
+      time: "9:00am - 12:00pm",
+      location: "Club Grounds"
+    },
+    {
+      title: "Committee Meeting",
+      date: "Tuesday, May 7th",
+      time: "7:30pm - 9:00pm",
+      location: "Clubhouse"
+    },
+    {
+      title: "Annual General Meeting",
+      date: "Sunday, May 12th",
+      time: "2:00pm - 4:00pm",
+      location: "Main Hall"
+    }
+  ];
+
+  // Array of random images from the /images folder
+  const images = [
+    "/images/cabochon.png",
+    "/images/cabs.jpg",
+    "/images/faceting.png",
+    "/images/silversmith.png",
+  ];
+
+  const container = document.getElementById('upcoming-events-container');
+  container.innerHTML = ''; // Clear any existing content
+
+  // Loop through events and create event cards
+  events.forEach(event => {
+    const randomImage = images[Math.floor(Math.random() * images.length)]; // Pick a random image
+
+    // Create the event card
+    const eventCard = document.createElement('div');
+    eventCard.classList.add('event-card');
+
+    // Add the image container
+    const eventCardImage = document.createElement('div');
+    eventCardImage.classList.add('event-card-image');
+    const img = document.createElement('img');
+    img.src = randomImage;
+    img.alt = event.title;
+    eventCardImage.appendChild(img);
+
+    // Add the content container
+    const eventCardContent = document.createElement('div');
+    eventCardContent.classList.add('event-card-content');
+
+    // Add the event info
+    const eventInfo = document.createElement('div');
+    eventInfo.classList.add('event-info');
+    eventInfo.innerHTML = `
+      <h3>${event.title}</h3>
+      <p><strong>Date:</strong> ${event.date}</p>
+      <p><strong>Time:</strong> ${event.time}</p>
+      <p><strong>Location:</strong> ${event.location}</p>
+    `;
+
+    // Add the "Add to Calendar" button
+    const addToCalendarButton = document.createElement('button');
+    addToCalendarButton.classList.add('add-to-calendar-button');
+    addToCalendarButton.textContent = "Add to Calendar";
+    addToCalendarButton.onclick = () => {
+      const calendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+        event.title
+      )}&dates=${encodeURIComponent(event.date)}&details=${encodeURIComponent(
+        `Time: ${event.time}\nLocation: ${event.location}`
+      )}`;
+      window.open(calendarUrl, '_blank');
+    };
+
+    // Append everything to the event card
+    eventCardContent.appendChild(eventInfo);
+    eventCardContent.appendChild(addToCalendarButton);
+    eventCard.appendChild(eventCardImage);
+    eventCard.appendChild(eventCardContent);
+    container.appendChild(eventCard);
+  });
+});
+</script>
 
 </body>
 
