@@ -13,7 +13,7 @@ h1, h2 {
 }
 
 /* General Title Styling */
-h1, h2, h3 {
+h2, h3 {
   color: #1B75BC; /* Same blue as the banner */
 }
 
@@ -109,24 +109,36 @@ a {
 /* Course Cost Section */
 .course-cost {
   display: flex;
-  justify-content: space-between; /* Space between cost details and button */
+  justify-content: space-between; /* Space out the heading, price, and button */
   align-items: center; /* Align items vertically */
   margin-bottom: 20px;
 }
 
 .cost-container {
   display: flex;
-  justify-content: space-between; /* Space between cost details and button */
+  justify-content: space-between; /* Space out the elements */
   align-items: center; /* Align items vertically */
   width: 100%; /* Ensure the container spans the full width */
 }
 
-.cost-details {
-  flex: 1; /* Take up remaining space */
+.cost-heading {
+  flex: 1; /* Allow the heading to take up space */
+  text-align: left; /* Align the heading to the left */
+  margin-right: 10px; /* Add spacing between the heading and the price */
+}
+
+.price {
+  flex: 1; /* Center the price in the middle */
+  text-align: center; /* Center the price text */
+  font-size: 2rem; /* Adjust the font size for emphasis */
+  font-weight: bold; /* Make the price bold */
+  color: #1B75BC; /* Use the banner blue color */
 }
 
 .cta-button {
-  padding: 15px 25px;
+  flex: 0; /* Prevent the button from stretching */
+  padding: 10px 35px; /* Slightly increase horizontal padding */
+  min-width: 180px; /* Increase the minimum width */
   background-color: #1B75BC; /* Same blue as the banner */
   color: white;
   border: none;
@@ -135,7 +147,7 @@ a {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-left: 20px; /* Add spacing between the cost details and button */
+  text-align: center; /* Ensure the text is centered */
 }
 
 .cta-button:hover {
@@ -189,4 +201,85 @@ main .page-break {
 
 .page-break.full-width {
   width:90% !important; /* Extend the full width of the container */
+}
+
+.event {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #1B75BC;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+  width: auto;
+  height: auto;
+  margin-right: 15px;
+}
+
+.event-date .event-month {
+  font-size: 0.9rem;
+}
+
+.event-date .event-day {
+  font-size: 1.5rem;
+}
+
+.event-image {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #1B75BC;
+  font-weight: bold;
+}
+
+.event-time {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.register-interest-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background-color: #1B75BC;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.register-interest-button:hover {
+  background-color: #155a8a;
+}
+
+.membership-link {
+  color: #1B75BC; /* Banner blue color */
+  text-decoration: underline; /* Underline the link */
+  font-weight: bold; /* Optional: Make it bold for emphasis */
+}
+
+.membership-link:hover {
+  color: #155a8a; /* Darker blue on hover */
+  text-decoration: none; /* Optional: Remove underline on hover */
 }

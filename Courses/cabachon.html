@@ -6,6 +6,9 @@
   <title>Cabochon Cutting</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="courses.css">
+  <link href='https://unpkg.com/fullcalendar@5.10.1/main.css' rel='stylesheet' />
+  <script src='https://unpkg.com/fullcalendar@5.10.1/main.js'></script>
+  
 </head>
 <body>
   <!-- Header -->
@@ -26,11 +29,15 @@
       <!-- Cost Section -->
 <section class="course-cost">
   <div class="cost-container">
-    <div class="cost-details">
-      <h2>Course Cost</h2>
+    <div class="cost-heading-container">
+      <h2 class="cost-heading">Course Cost</h2>
+    </div>
+    <div class="price-container">
       <p class="price">$150</p>
     </div>
-    <button class="cta-button">Register Now</button>
+    <div class="cta-button-container">
+      <button class="cta-button">Register Now</button>
+    </div>
   </div>
 </section>
 <div class="page-break"></div>
@@ -71,11 +78,7 @@
 <!-- Upcoming Dates Section -->
 <section class="upcoming-dates">
   <h2>Upcoming Course Dates</h2>
-  <ul>
-    <li>June 15, 2025</li>
-    <li>July 20, 2025</li>
-    <li>August 10, 2025</li>
-  </ul>
+  <div id="upcoming-courses-container"></div>
 </section>
     </div>
 
@@ -121,6 +124,59 @@
           document.querySelector('footer').innerHTML = data;
         })
         .catch(error => console.error('Error loading footer:', error));
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const events = [
+        {
+          title: 'Cabochon Cutting Workshop',
+          start: '2025-06-15T10:00:00',
+          end: '2025-06-15T16:00:00',
+          description: 'Learn the art of shaping and polishing gemstones into smooth, domed cabochons.',
+          image: '/images/cabs.jpg',
+          type: 'course'
+        },
+        {
+          title: 'Faceting Masterclass',
+          start: '2025-07-10T09:00:00',
+          end: '2025-07-10T15:00:00',
+          description: 'Master the precision art of gemstone faceting.',
+          image: '/images/faceting.png',
+          type: 'course'
+        }
+      ];
+
+      const upcomingCoursesContainer = document.getElementById('upcoming-courses-container');
+
+      if (upcomingCoursesContainer) {
+        events
+          .filter(event => event.type === 'course') // Filter only course events
+          .forEach(event => {
+            const eventDate = new Date(event.start);
+            const month = eventDate.toLocaleString('default', { month: 'long' });
+            const day = eventDate.getDate();
+            const startTime = new Date(event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+            const endTime = new Date(event.end).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+            const eventTime = `${startTime} - ${endTime}`;
+
+            const eventHTML = `
+              <div class="event">
+                <div class="event-date">
+                  <div class="event-month">${month}</div>
+                  <div class="event-day">${day}</div>
+                </div>
+                <img src="${event.image}" alt="${event.title}" class="event-image">
+                <div class="event-details">
+                  <h3>${event.title}</h3>
+                  <p class="event-time">${eventTime}</p>
+                  <a href="#" class="register-interest-button">Register Interest</a>
+                </div>
+              </div>
+            `;
+
+            upcomingCoursesContainer.innerHTML += eventHTML;
+          });
+      }
     });
   </script>
 </body>
