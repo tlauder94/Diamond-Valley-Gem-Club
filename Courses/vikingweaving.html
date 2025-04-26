@@ -6,6 +6,8 @@
   <title>Viking Weaving</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="courses.css">
+  <link href='https://unpkg.com/fullcalendar@5.10.1/main.css' rel='stylesheet' />
+  <script src='https://unpkg.com/fullcalendar@5.10.1/main.js'></script>
 </head>
 <body>
   <!-- Header -->
@@ -23,8 +25,45 @@
   <main class="course-layout">
     <!-- Left Content -->
     <div class="course-info">
-      <!-- Course Description Section -->
-      <section class="course-description container">
+      <!-- Cost Section -->
+      <section class="course-cost">
+        <div class="cost-container">
+          <div class="cost-heading-container">
+            <h2 class="cost-heading">Course Cost</h2>
+          </div>
+          <div class="price-container">
+            <p class="price">$220</p>
+          </div>
+          <div class="cta-button-container">
+            <button class="cta-button">Register Now</button>
+          </div>
+        </div>
+      </section>
+      <div class="page-break"></div>
+
+      <!-- Availability Section -->
+      <section class="course-availability">
+        <h2>Who Is This Available To?</h2>
+        <p>This course is available to all members of the Diamond Valley Gem Club.</p>
+        <p>
+          Not a member? <a href="/membership.html" class="membership-link">Sign up now</a> to access this and other exciting opportunities!
+        </p>
+      </section>
+      <div class="page-break"></div>
+
+      <!-- Prerequisites Section -->
+      <section class="prerequisites">
+        <h2>Prerequisites</h2>
+        <ul>
+          <li>No prior experience required</li>
+          <li>Basic knowledge of tools is helpful but not necessary</li>
+          <li>All materials and tools will be provided</li>
+        </ul>
+      </section>
+      <div class="page-break"></div>
+
+      <!-- About This Course Section -->
+      <section class="course-description">
         <h2>About This Course</h2>
         <p>Discover the ancient technique of Viking wire weaving, a method used to create intricate chains and jewellery. This hands-on course will teach you how to weave wire into beautiful, durable designs.</p>
         <ul>
@@ -33,32 +72,12 @@
           <li>Finishing and polishing your woven designs</li>
         </ul>
       </section>
-
-      <!-- Prerequisites Section -->
-      <section class="prerequisites container">
-        <h2>Prerequisites</h2>
-        <ul>
-          <li>No prior experience required</li>
-          <li>Basic knowledge of tools is helpful but not necessary</li>
-          <li>All materials and tools will be provided</li>
-        </ul>
-      </section>
-
-      <!-- Cost Section -->
-      <section class="course-cost container">
-        <h2>Course Cost</h2>
-        <p class="price">$220</p>
-        <button class="cta-button">Register Now</button>
-      </section>
+      <div class="page-break"></div>
 
       <!-- Upcoming Dates Section -->
-      <section class="upcoming-dates container">
+      <section class="upcoming-dates">
         <h2>Upcoming Course Dates</h2>
-        <ul>
-          <li>August 2, 2025</li>
-          <li>September 6, 2025</li>
-          <li>October 4, 2025</li>
-        </ul>
+        <div id="upcoming-courses-container"></div>
       </section>
     </div>
 
@@ -85,25 +104,80 @@
   <footer id="footer-container"></footer>
 
   <script>
-    // Dynamically load the shared navbar
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('../navbar.html')
-        .then(response => response.text())
-        .then(data => {
-          document.querySelector('header').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading navbar:', error));
-    });
+  // Dynamically load the shared navbar
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('../navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('header').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  });
 
-    // Dynamically load the shared footer
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('../footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.querySelector('footer').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading footer:', error));
-    });
+  // Dynamically load the shared footer
+  document.addEventListener('DOMContentLoaded', () => {
+    fetch('../footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('footer').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  });
+
+  // Dynamically load upcoming course dates
+  document.addEventListener('DOMContentLoaded', () => {
+    const events = [
+      {
+        title: 'Viking Weaving Workshop',
+        start: '2025-08-02T10:00:00',
+        end: '2025-08-02T16:00:00',
+        description: 'Learn the ancient art of Viking wire weaving.',
+        image: '/images/cabs.jpg',
+        type: 'course'
+      },
+      {
+        title: 'Viking Weaving Workshop',
+        start: '2025-09-06T10:00:00',
+        end: '2025-09-06T16:00:00',
+        description: 'Learn the ancient art of Viking wire weaving.',
+        image: '/images/cabs.jpg',
+        type: 'course'
+      }
+    ];
+
+    const upcomingCoursesContainer = document.getElementById('upcoming-courses-container');
+
+    if (upcomingCoursesContainer) {
+      events
+        .filter(event => event.type === 'course') // Filter only course events
+        .slice(0, 2) // Limit to 2 events
+        .forEach(event => {
+          const eventDate = new Date(event.start);
+          const month = eventDate.toLocaleString('default', { month: 'short' }); // Use short month format
+          const day = eventDate.getDate();
+          const startTime = new Date(event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+          const endTime = new Date(event.end).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
+          const eventTime = `${startTime} - ${endTime}`;
+
+          const eventHTML = `
+            <div class="event">
+              <div class="event-date">
+                <div class="event-month">${month}</div>
+                <div class="event-day">${day}</div>
+              </div>
+              <img src="${event.image}" alt="${event.title}" class="event-image">
+              <div class="event-details">
+                <h3>${event.title}</h3>
+                <p class="event-time">${eventTime}</p>
+                <a href="#" class="register-interest-button">Register Interest</a>
+              </div>
+            </div>
+          `;
+
+          upcomingCoursesContainer.innerHTML += eventHTML;
+        });
+    }
+  });
   </script>
 </body>
 </html>

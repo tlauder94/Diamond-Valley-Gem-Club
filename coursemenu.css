@@ -2,7 +2,6 @@ body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   background-color: #f9f9f9;
-  color: #333;
 }
 
 .courses-header {
@@ -29,7 +28,7 @@ body {
 }
 
 .course-card {
-  background-color: #e9f6fc; /* Updated background color for the box */
+  background-color: #e9f6fc; /* Light blue background for the card */
   border: 1px solid #ddd; /* Add a border for better definition */
   border-radius: 8px; /* Slightly round the corners */
   overflow: hidden;
@@ -38,6 +37,9 @@ body {
   margin: 10px; /* Add margin around the container */
   padding: 10px; /* Add padding inside the container */
   min-height: 400px; /* Set a minimum height for the cards */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Space out content */
 }
 
 .course-card img {
@@ -52,7 +54,7 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
   margin: 10px auto 10px; /* Add space above and below the header */
-  color: #2ca9d7; /* Updated header color */
+  color: #1B75BC; /* Same blue as the banner */
   width: 70%; /* Match the width of the image */
   text-align: left; /* Align text to the left */
 }
@@ -61,17 +63,31 @@ body {
   font-size: 1rem;
   margin: 0 auto; /* Center the paragraph horizontally */
   margin-top: 10px; /* Add space above the paragraph */
-  color: #666;
+  color: #333; /* Keep the text color consistent */
   width: 70%; /* Match the width of the image */
   text-align: left; /* Align text to the left */
 }
 
 .course-card a {
   text-decoration: none; /* Remove the underline from the links */
-  color: inherit; /* Inherit the text color from the parent element */
   display: block; /* Make the entire card clickable */
 }
 
-.course-card a:hover {
-  text-decoration: none; /* Ensure no underline appears on hover */
+.course-button {
+  display: block;
+  text-align: center;
+  margin: 15px auto 0; /* Center the button horizontally */
+  padding: 15px 25px; /* Increase padding for a larger button */
+  background-color: #1B75BC; /* Same blue as the banner */
+  color: white !important; /* Ensure button text is white */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem; /* Slightly larger font size */
+  width: fit-content; /* Adjust button width to fit text */
+}
+
+.course-button:hover {
+  background-color: #155a8a; /* Darker blue on hover */
 }
