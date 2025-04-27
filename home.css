@@ -331,3 +331,25 @@
   transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
+.see-all-events-button-container {
+  text-align: center; /* Center the button */
+  margin: 40px 0; /* Add larger spacing above and below the button */
+}
+
+.see-all-events-button {
+  background-color: #1B75BC; /* Banner blue background */
+  color: white; /* White text */
+  font-size: 1.3rem; /* Make the button text larger */
+  padding: 15px 30px; /* Increase padding for a more prominent button */
+  border: none;
+  border-radius: 5px; /* Optional: Slightly rounded corners */
+  text-decoration: none; /* Remove underline from the link */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.see-all-events-button:hover {
+  background-color: #155a8a; /* Darker blue on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+

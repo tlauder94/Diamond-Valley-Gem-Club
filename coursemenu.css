@@ -20,7 +20,7 @@ body {
 
 .courses-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduce the minimum width of the cards */
   gap: 20px;
   max-width: 1200px;
   margin: 40px auto;
@@ -28,23 +28,22 @@ body {
 }
 
 .course-card {
-  background-color: #e9f6fc; /* Light blue background for the card */
-  border: 1px solid #ddd; /* Add a border for better definition */
-  border-radius: 8px; /* Slightly round the corners */
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  transition: box-shadow 0.3s ease;
-  margin: 10px; /* Add margin around the container */
-  padding: 10px; /* Add padding inside the container */
-  min-height: 400px; /* Set a minimum height for the cards */
   display: flex;
-  flex-direction: column; /* Stack content vertically */
-  justify-content: space-between; /* Space out content */
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top of the box */
+  align-items: flex-start; /* Align all child elements, including the button, to the left */
+  padding: 10px 15px; /* Keep consistent padding */
+  background-color: #E3F2FD; /* Baby blue background */
+  border: none; /* Remove the border */
+  border-radius: 0; /* Keep sharp edges */
+  box-shadow: none; /* Remove shadow from the container */
+  height: 420px; /* Maintain the adjusted height */
+  position: relative; /* Enable absolute positioning for child elements if needed */
 }
 
 .course-card img {
-  width: 70%; /* Set the image width to 70% of the card */
-  height: 180px; /* Set a fixed height for the image */
+  width: 90%; /* Set the image width to 70% of the card */
+  height: 150px; /* Set a fixed height for the image */
   display: block;
   margin: 20px auto; /* Add equal space above and below, and center the image */
   object-fit: cover; /* Ensure the image scales properly within the defined size */
@@ -55,7 +54,7 @@ body {
   font-weight: 700;
   margin: 10px auto 10px; /* Add space above and below the header */
   color: #1B75BC; /* Same blue as the banner */
-  width: 70%; /* Match the width of the image */
+  width: 90%; /* Match the width of the image */
   text-align: left; /* Align text to the left */
 }
 
@@ -64,7 +63,7 @@ body {
   margin: 0 auto; /* Center the paragraph horizontally */
   margin-top: 10px; /* Add space above the paragraph */
   color: #333; /* Keep the text color consistent */
-  width: 70%; /* Match the width of the image */
+  width: 90%; /* Match the width of the image */
   text-align: left; /* Align text to the left */
 }
 
@@ -74,20 +73,17 @@ body {
 }
 
 .course-button {
-  display: block;
-  text-align: center;
-  margin: 15px auto 0; /* Center the button horizontally */
-  padding: 15px 25px; /* Increase padding for a larger button */
-  background-color: #1B75BC; /* Same blue as the banner */
-  color: white !important; /* Ensure button text is white */
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  font-size: 1.1rem; /* Slightly larger font size */
-  width: fit-content; /* Adjust button width to fit text */
-}
-
-.course-button:hover {
-  background-color: #155a8a; /* Darker blue on hover */
+  background-color: #333; /* Dark grey background */
+  color: white; /* White text */
+  font-size: 1.1rem; /* Button font size */
+  padding: 8px 12px; /* Adjust padding for a smaller button */
+  border: none;
+  border-radius: 3px; /* Optional: Slightly rounded corners */
+  text-align: left; /* Align the button text to the left */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: auto; /* Push the button to the bottom of the card */
+  margin-bottom: 15px; /* Add consistent spacing from the bottom of the card */
+  margin-left: 15px; /* Match the left padding of the .course-card */
+  align-self: flex-start; /* Ensure the button aligns with the left edge of the card */
 }

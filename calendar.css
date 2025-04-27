@@ -59,10 +59,15 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center; 
-  background-color: #e9f6fc; 
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+  color: #1B75BC; /* Banner blue color */
+  font-size: 2rem; /* Optional: Adjust the font size if needed */
+  font-weight: bold; /* Optional: Make the heading bold */
+  text-align: center; /* Optional: Center-align the heading */
 }
 
 .about-image {
