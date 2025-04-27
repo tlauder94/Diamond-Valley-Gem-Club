@@ -87,3 +87,48 @@ body {
   margin-left: 15px; /* Match the left padding of the .course-card */
   align-self: flex-start; /* Ensure the button aligns with the left edge of the card */
 }
+
+.about-courses-section {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 40px 20px; /* Add padding for spacing */
+}
+
+.about-courses-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px; /* Add spacing between the text and image containers */
+  max-width: 1200px; /* Limit the width of the content */
+  margin: 0 auto; /* Center the container */
+  align-items: center; /* Align items vertically */
+}
+
+.about-courses-text {
+  flex: 1; /* Take up equal space */
+  text-align: left; /* Align text to the left */
+}
+
+.about-courses-text h2 {
+  color: #1B75BC; /* Banner blue for the heading */
+  font-size: 2rem; /* Larger heading size */
+  margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.about-courses-text p {
+  font-size: 1.1rem; /* Slightly larger paragraph text */
+  line-height: 1.6; /* Improve readability */
+  color: #333; /* Dark text color */
+}
+
+.about-courses-image {
+  flex: 1; /* Take up equal space */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.about-courses-image img {
+  max-width: 100%; /* Ensure the image scales properly */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
