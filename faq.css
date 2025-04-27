@@ -4,7 +4,15 @@ body {
     background-color: #f9f9f9;
     color: #333;
   }
-  
+
+  .faq-container {
+    width: 80%;
+    background-color: #2ca9d7;
+    margin: 20px 0 20px 10%;
+    text-align: center;
+    box-shadow: 1px 2px 4px rgba(1, 1, 1, 1); /* Add a subtle shadow */
+  }
+
   .faq-header {
     background-color: #1B75BC;
     color: white;
@@ -19,24 +27,30 @@ body {
     font-size: 1.5rem;
   }
 
-  .faq-container {
-    width: 80%;
-    border: 2px solid #333;
-    background-color: #2ca9d7;
-    margin: 20px 0 20px 10%;
+  div[id^="faq-box-header"] {
+    background-color: #e9f6fc;
+    color: #1B75BC;
     text-align: center;
+    padding: 20px 0;
+    width: 100%; /* Ensure the banner spans the full width of the page */
+    margin: 0; /* Remove any default margins */
+    height: 50px;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-size: 1.2rem;
+    cursor: pointer; 
   }
 
-  div[id^="faq-box-header"] {
-    background-color: #2ca9d7;
+  .faq-head {
     width: 100%;
-    border-bottom: 1px solid #333;
-    cursor: pointer;
+    text-align: center;
   }
 
   .faq-plus {
     text-align: right;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    padding-right: 150px;
   }
 
   div[id^="faq-text"]  {
@@ -44,3 +58,23 @@ body {
     width: 100%;
     display: none;
   }
+
+  .divider {
+    display: flex;
+    height: 1.5px;  
+    border-radius: 3px;
+    background-color: #555;
+    z-index: 100;
+    width: 80%;
+    top: 0;
+    margin: 0 10%;
+}
+
+.divider-edge {
+  display: flex;
+  height: 1.5px;  
+  border-radius: 3px;
+  background-color: #333;
+  z-index: 100;
+  width: 100%;
+}
