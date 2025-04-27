@@ -213,11 +213,8 @@ body {
 }
 
 .club-facilities-cta {
-  display: flex;
-  flex-direction: column; /* Stack text and button vertically */
-  align-items: center; /* Center-align the content */
   margin-top: 20px; /* Add spacing above the section */
-  text-align: center; /* Center-align the text */
+  text-align: left; /* Align text and button to the left */
 }
 
 .club-facilities-cta p {
