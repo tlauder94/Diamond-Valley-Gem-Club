@@ -1,80 +1,96 @@
 body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-
-  .faq-container {
-    width: 80%;
-    background-color: #2ca9d7;
-    margin: 20px 0 20px 10%;
-    text-align: center;
-    box-shadow: 1px 2px 4px rgba(1, 1, 1, 1); /* Add a subtle shadow */
-  }
-
-  .faq-header {
-    background-color: #1B75BC;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%; /* Ensure the banner spans the full width of the page */
-    margin: 0; /* Remove any default margins */
-    height: 150px;
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    font-size: 1.5rem;
-  }
-
-  div[id^="faq-box-header"] {
-    background-color: #e9f6fc;
-    color: #1B75BC;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%; /* Ensure the banner spans the full width of the page */
-    margin: 0; /* Remove any default margins */
-    height: 50px;
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    font-size: 1.2rem;
-    cursor: pointer; 
-  }
-
-  .faq-head {
-    width: 100%;
-    text-align: center;
-  }
-
-  .faq-plus {
-    text-align: right;
-    font-size: 3.5rem;
-    padding-right: 150px;
-  }
-
-  div[id^="faq-text"]  {
-    background-color: #f9f9f9;
-    width: 100%;
-    display: none;
-  }
-
-  .divider {
-    display: flex;
-    height: 1.5px;  
-    border-radius: 3px;
-    background-color: #555;
-    z-index: 100;
-    width: 80%;
-    top: 0;
-    margin: 0 10%;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-.divider-edge {
-  display: flex;
-  height: 1.5px;  
-  border-radius: 3px;
-  background-color: #333;
-  z-index: 100;
+/* FAQ Container */
+.faq-container {
+  width: 50%;
+  margin: 20px auto; 
+  text-align: left;
+  background-color: #f9f9f9; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* FAQ Header */
+.faq-header {
+  background-color: #1B75BC;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
   width: 100%;
+  margin: 0;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem; 
+  font-weight: bold;
 }
+
+/* FAQ Question Box */
+div[id^="faq-box-header"] {
+  background-color: #e9f6fc; 
+  color: #1B75BC;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 5px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+div[id^="faq-box-header"]:hover {
+  background-color: #d4eefb; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.faq-head h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+
+.faq-plus {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1B75BC;
+  transition: transform 0.3s ease;
+}
+
+div[id^="faq-box-header"].open .faq-plus {
+  transform: rotate(45deg);
+}
+
+/* FAQ Answer Text */
+div[id^="faq-text"] {
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  margin: 0 0 10px 0;
+  border-left: 4px solid #1B75BC;
+  display: none;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* div[id^="faq-text"].open {
+  display: block;
+} */
+
+/* Divider */
+/* .divider {
+  height: 1.5px;
+  border-radius: 3px;
+  background-color: #555;
+  width: 80%;
+  margin: 10px auto;
+} */
