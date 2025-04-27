@@ -188,19 +188,15 @@ blockquote {
 }
 
 /* Page Break Styling */
-main .page-break {
+.page-break {
   display: flex;
-  height: 1px !important; /* Ensure the height is applied */
-  background-color: #1B75BC !important; /* Force the blue color */
-  margin: 20px 0 !important; /* Add spacing above and below */
-  width: 100% !important; /* Ensure the width is applied */
-  margin-left: auto !important;
-  margin-right: auto !important;
+  height: 1px ; /* Ensure the height is applied */
+  background-color: #1B75BC ; /* Force the blue color */
+  margin: 20px 0 ; /* Add spacing above and below */
+  width: 100% ; /* Ensure the width is applied */
+  margin-left: auto ;
+  margin-right: auto ;
   
-}
-
-.page-break.full-width {
-  width:90% !important; /* Extend the full width of the container */
 }
 
 .event {
