@@ -63,12 +63,25 @@
   line-height: 1.5;
 }
 
+/* Page Divider */
+.divider {
+  display: flex;
+  height: 1px;
+  border: none;
+  background-color: #1B75BC;
+  margin: 20px auto; /* Center the divider and add consistent spacing */
+  width: 80%; /* Ensure the divider spans the same width as other sections */
+}
+
+/* About Us Container */
 .home-about-container {
   display: flex;
-  align-items: stretch; /* Ensure both the text and image stretch to the same height */
-  justify-content: center; /* Center the entire container */
-  width: 80%; /* Limit the combined width of the text and image to 50% of the page */
-  margin:auto; /* Center the container vertically and horizontally */
+  align-items: stretch;
+  justify-content: center;
+  width: 100%; /* Ensure the container spans the full width */
+  max-width: 1200px; /* Limit the width for consistency */
+  margin: 40px auto; /* Add consistent spacing above and below */
+  padding: 0 20px; /* Add padding for better alignment */
 }
 
 .home-about-container h1 {
@@ -95,14 +108,6 @@
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Ensure the image scales properly */
   display: block;
-}
-
-.divider {
-    display: flex;
-    height: 1px;  
-    border: none;
-    background-color: #1B75BC;
-    margin: auto 10%;
 }
 
 .home-button {
