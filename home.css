@@ -67,19 +67,31 @@
   display: flex;
   align-items: stretch; /* Ensure both the text and image stretch to the same height */
   justify-content: center; /* Center the entire container */
-  width: 50%; /* Limit the combined width of the text and image to 50% of the page */
-  margin: 2% auto; /* Center the container vertically and horizontally */
+  width: 80%; /* Limit the combined width of the text and image to 50% of the page */
+  margin:auto; /* Center the container vertically and horizontally */
+}
+
+.home-about-container h1 {
+  color: #1B75BC; 
+  text-align: left !important; /* Align the heading to the left */
 }
 
 .home-about-text {
   color: #403E43;
-  width: 50%; /* Take up half of the 50% container */
+  width: 65%;
   text-align: left;
   padding: 20px;
 }
 
+.home-about-image-container {
+  width: 35%; /* Take up half of the 50% container */
+  display: flex;
+  justify-content: center; /* Center the image within its container */
+  align-items: center; /* Center the image vertically */
+}
+
 .about-image {
-  width: 50%; /* Take up half of the 50% container */
+  width: 100%; /* Take up half of the 50% container */
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Ensure the image scales properly */
   display: block;
@@ -143,23 +155,23 @@
 .home-course-card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align content to the top of the box */
-  align-items: flex-start; /* Align all child elements, including the button, to the left */
-  padding: 10px 15px; /* Keep consistent padding */
-  background-color: #E3F2FD; /* Baby blue background */
-  border: none; /* Remove the border */
-  border-radius: 0; /* Keep sharp edges */
-  box-shadow: none; /* Remove shadow from the container */
-  height: 420px; /* Maintain the adjusted height */
-  position: relative; /* Enable absolute positioning for child elements if needed */
+  justify-content: flex-start;
+  align-items: flex-start; 
+  padding: 10px 15px; 
+  background-color: #E3F2FD; 
+  border: none; 
+  border-radius: 0; 
+  box-shadow: none; 
+  height: 420px; 
+  position: relative; 
 }
 
 .course-image {
-  width: 90%; /* Set the image width to 70% of the card */
-  height: 150px; /* Set a fixed height for the image */
+  width: 90%; 
+  height: 150px; 
   display: block;
-  margin: 20px auto; /* Add equal space above and below, and center the image */
-  object-fit: cover; /* Ensure the image scales properly within the defined size */
+  margin: 20px auto; 
+  object-fit: cover; 
 }
 
 .home-course-card h1 {
@@ -201,18 +213,21 @@
   align-self: flex-start; /* Ensure the button aligns with the left edge of the card */
 }
 
+.view-all-courses-button-container{
+  text-align: center; /* Center the button */
+  margin: 60px 0 30px 0; /* Add larger spacing above and below the button */
+}
+
 .home-all-courses-button {
-  background-color: #333; /* Dark grey background */
+  background-color: #1B75BC; /* Banner blue background */
   color: white; /* White text */
-  font-size: 1.1rem; /* Button font size */
-  padding: 8px 12px; /* Adjust padding for a smaller button */
+  font-size: 1.3rem; /* Make the button text larger */
+  padding: 15px 30px; /* Increase padding for a more prominent button */
   border: none;
-  border-radius: 3px; /* Optional: Slightly rounded corners */
-  text-align: left; /* Align the button text to the left */
+  border-radius: 5px; /* Optional: Slightly rounded corners */
+  text-decoration: none; /* Remove underline from the link */
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 2%; /* Push the button to the bottom of the card */
-  height: 60px;
 }
 
 .home-all-courses-button:hover {
@@ -242,25 +257,38 @@
 }
 
 .home-history-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
+  display: flex;
+  align-items: stretch;
+  justify-content: center; 
+  width: 80%; 
+  margin:auto; 
+  margin-bottom: 50px;
+  
+    
 }
 
 .home-history-text {
-    color: white;   
-    background-color: #1B75BC;
-    width: 20%;
+    width: 60%;
     text-align: left;
-    padding-left: 1%;
+    padding: 20px;
+}
+
+.home-history-text h1 {
+  color: #1B75BC ;
+}
+
+.home-history-image-container{
+    width: 40%; /* Take up half of the 50% container */
+    display: flex;
+    justify-content: center; /* Center the image within its container */
+    align-items: center; /* Center the image vertically */
 }
 
 .opening-hours-container {
   width: 100%;
   max-width: 1200px;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: white;
   margin: 0 auto 30px;
   text-align: center;
 }
@@ -341,6 +369,7 @@
   text-align: center;
   margin: 30px auto;
   padding: 20px;
+  width: 80%; /* Limit the width of the section */
 }
 
 #home-upcoming-events h2 {
@@ -367,6 +396,9 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Push the button to the bottom */
 }
 
 .event-card:hover {
@@ -376,20 +408,18 @@
 
 .event-card-image img {
   width: 100%;
-  height: 150px;
+  height: 200px;
   object-fit: cover;
 }
 
 .event-card-content {
-  display: flex;
-  justify-content: space-between; /* Space between info and button */
-  align-items: center; /* Align items vertically */
   padding: 15px;
   text-align: left;
+  flex: 1; /* Allow the content to take up remaining space */
 }
 
 .event-info {
-  flex: 1; /* Take up remaining space */
+  margin-bottom: 15px; /* Add spacing between the info and the button */
 }
 
 .add-to-calendar-button {
@@ -402,7 +432,9 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-left: 20px; /* Add spacing between info and button */
+  margin: 30px auto; /* Center the button horizontally */
+  display: block; /* Ensure the button behaves like a block element */
+  text-align: center; /* Center the text inside the button */
 }
 
 .add-to-calendar-button:hover {
@@ -412,7 +444,7 @@
 
 .see-all-events-button-container {
   text-align: center; /* Center the button */
-  margin: 40px 0; /* Add larger spacing above and below the button */
+  margin: 70px 0; /* Add larger spacing above and below the button */
 }
 
 .see-all-events-button {

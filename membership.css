@@ -19,14 +19,12 @@ section {
   font-size: 1.5rem;
 }
 
-.banner h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
 /* General Header Styling (Excluding Banner) */
 section h2 {
-  color: #1B75BC; /* Dark blue color for headers */
+    color: #1B75BC;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 /* Membership Section */

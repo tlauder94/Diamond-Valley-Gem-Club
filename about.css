@@ -19,37 +19,38 @@ body {
     font-size: 1.5rem;
   }
 
-  #about-us{
-    width: 80%; /* Overarching container spans 80% of the page width */
+  #club-history{
     background-color: #f9f9f9; /* Light background for contrast */
     padding: 40px 20px; /* Add padding for spacing */
     margin: 0 auto; /* Center the container horizontally */
+    justify-items: center;;
   }
 
-  .about-container {
+  .club-history-container {    
+    width: 80%; /* Overarching container spans 80% of the page width */
     display: flex; /* Use flexbox for layout */
-    gap: 10%; /* Add a 10% margin between the text and images containers */
     align-items: center; /* Align items vertically */
+    justify-content: space-between;
   }
 
-    .about-container h1 {
+    .club-history-container h1 {
     color: #1B75BC; /* Banner blue for the heading */
     font-size: 2rem; /* Match the size of other section titles */
     text-align: left; /* Center-align the heading */
     margin-bottom: 20px; /* Add spacing below the heading */
   }
 
-  .about-text {
+  .club-history-text {
     text-align: left;
-    width: 40%;
+    width: 60%;
   }
 
-  .about-image-container {
+  .club-history-image-container {
     display: flex;
     flex-direction: column;
   }
 
-  .about-image {
+  .club-history-image {
     margin: 1% 0;
     height: 100%;
   }
@@ -210,14 +211,6 @@ body {
   color: #1B75BC; /* Banner blue for the heading */
   font-size: 2rem; /* Larger heading size */
   margin-bottom: 20px; /* Add spacing below the heading */
-}
-
-.club-facilities-text p,
-.club-facilities-text ul {
-  font-family: 'Montserrat', sans-serif; /* Match the global font */
-  font-size: 1.1rem; /* Match the paragraph text size */
-  line-height: 1.6; /* Match the line height for readability */
-  color: #333; /* Match the dark text color */
 }
 
 .club-facilities-cta {

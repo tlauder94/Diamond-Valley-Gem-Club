@@ -22,19 +22,25 @@ body {
   color: white;
   text-align: center;
   padding: 20px 0;
-  width: 100%;
-  margin: 0;
+  width: 100%; /* Ensure the banner spans the full width of the page */
+  margin: 0; /* Remove any default margins */
   height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem; 
-  font-weight: bold;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-size: 1.5rem;
 }
 
-.faq-blurb{
-  text-align: center;  
-  margin: 2% 20%;
+.faq-blurb-header{
+  color: #1B75BC;
+  font-size: 1.8rem;
+  margin: 2% 10%;
+  text-align: left;
+}
+
+.faq-blurb {
+  text-align: left;  
+  margin: 2% 10%;
   font-size: 1.1rem;
 }
 

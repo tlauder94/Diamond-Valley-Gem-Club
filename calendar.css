@@ -32,11 +32,6 @@ a {
   font-size: 1.5rem;
 }
 
-.banner h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
 /* About Section */
 .about-section {
   padding: 40px 20px;
@@ -55,19 +50,15 @@ a {
 }
 
 .about-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  padding: 20px;
-  border-radius: 8px;
+  text-align: left;  
+  font-size: 1.1rem;
 }
 
 .about-section h2 {
   color: #1B75BC; /* Banner blue color */
   font-size: 2rem; /* Optional: Adjust the font size if needed */
   font-weight: bold; /* Optional: Make the heading bold */
-  text-align: center; /* Optional: Center-align the heading */
+  text-align: left; /* Optional: Center-align the heading */
 }
 
 .about-image {
