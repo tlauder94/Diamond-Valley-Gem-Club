@@ -29,7 +29,7 @@ a {
   display: flex; /* Use flexbox for alignment */
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 /* About Section */
@@ -51,12 +51,11 @@ a {
 
 .about-text {
   text-align: left;  
-  font-size: 1.1rem;
 }
 
 .about-section h2 {
   color: #1B75BC; /* Banner blue color */
-  font-size: 2rem; /* Optional: Adjust the font size if needed */
+  font-size: 1.5rem; /* Optional: Adjust the font size if needed */
   font-weight: bold; /* Optional: Make the heading bold */
   text-align: left; /* Optional: Center-align the heading */
 }
