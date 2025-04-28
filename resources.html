@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diamond Valley Gem Club</title>
+  <link rel="stylesheet" href="/resources.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+</head>
+
+<body>
+
+  <header id="navbar-container"></header>
+
+  <header class="resources-header">
+    <h1>Resources</h1>
+  </header>
+
+  <p class="resources-blurb">Our resources page is here to keep you connected and inspired.
+    Browse our latest club newsletters, explore links to like-minded societies, and check out a collection of useful resources related to our shared interests in gems, minerals, and lapidary.
+    If you find anything that would be a great addition to this page, please do let us know!</p>
+
+  <section id="socities" >
+    <h1>Here you can find some useful resources we think you'll love!</h1>
+    <ul class="resource-nav-links" id="general-links">
+        <li>General Resources</li>
+        <li><a href="https://www.facebook.com/groups/668711063185498/">Austrlia Lapidary Group Facebook Group</a></li>
+        <li><a href="https://www.parks.vic.gov.au/things-to-do/fossicking-prospecting">Parks Victoria Fossicking Page</a></li>
+        <li><a href="https://www.mindat.org/">Mindat.org</a></li>
+        <li><a href="https://www.gem.org.au/">Gemmological Association of Australia</a></li>
+        <li><a href="https://www.gsa.org.au/">Geological Society of Australia</a></li> 
+    </ul>
+    <ul class="resource-nav-links" id="facet-links">
+        <li>Faceting</li>
+        <li><a href="https://facetorsguild.com.au/">Australian Facetors' Guild</a></li>
+        <li><a href="https://aflaca.org.au/members/australian-facetors-guild/">AFLACA</a></li>
+        <li><a href="https://www.facebook.com/groups/Vicfac/">Victorian Facetors' Facebook Group</a></li>
+        <li><a href="https://facetdiagrams.org/">Facetdiagrams.org</a></li>
+    </ul>
+    <ul class="resource-nav-links" id="silversmith-links">
+        <li>Silversmithing</li>
+        <li><a href="https://www.gsga.org.au/">Gold &amp Silversmiths Guild of Australia</a></li>
+        <li><a href="https://www.facebook.com/GSGA.org/">Gold &amp Silversmiths Guild of Australia Facebook Group</a></li>
+    </ul>
+  </section>
+
+  <section id="newsletter-box">
+    <h1>Check out our newsletters below to find out what's happening at the club!</h1>
+    <div class="newsletter-container">
+        <div class="divider-edge"></div>
+        <div id="newsletter-header-2025" onclick="myFunction(this.id)">
+            <div class="faq-head">
+                <h2>2025 Newsletters</h2>
+            </div>  
+            <div class="newsletter-plus">
+                <p>+</p>
+            </div>
+        </div>
+        <div id="newsletter-text-2025">
+            <p>Newsletter Q1 2025</p>
+            <button class="newsletter-button"><a href="Newsletter Q1 2025" target="_blank">Download</a></button>
+        </div>
+        <div id="newsletter-header-2024" onclick="myFunction(this.id)">
+            <div class="faq-head">
+                <h2>2024 Newsletters</h2>
+            </div>  
+            <div class="newsletter-plus">
+                <p>+</p>
+            </div>
+        </div>
+        <div id="newsletter-text-2024">
+            <p>Newsletter Q4 2024</p>
+            <button class="newsletter-button"><a href="Newsletter Q4 2024" target="_blank">Download</a></button>
+            <p>Newsletter Q3 2024</p>
+            <button class="newsletter-button"><a href="Newsletter Q3 2024" target="_blank">Download</a></button>
+            <p>Newsletter Q2 2024</p>
+            <button class="newsletter-button"><a href="Newsletter Q2 2024" target="_blank">Download</a></button>
+            <p>Newsletter Q1 2024</p>
+            <button class="newsletter-button"><a href="Newsletter Q1 2024" target="_blank">Download</a></button>
+        </div>
+    </div>
+  </section>    
+
+
+  <footer id="footer-container"></footer>
+
+<script>
+// Dynamically load the shared navbar
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('navbar.html') // Ensure the file path is correct
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Failed to load navbar. Status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(data => {
+          document.querySelector('header').innerHTML = data;
+        })
+        .catch(error => {
+          console.error('Error loading navbar:', error);
+          document.querySelector('header').innerHTML = '<p style="color: red;">Failed to load navbar. Please try again later.</p>';
+        });
+    });
+    
+  // Dynamically load the shared footer
+      document.addEventListener('DOMContentLoaded', () => {
+        fetch('footer.html') // Ensure the file path is correct
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`Failed to load footer. Status: ${response.status}`);
+            }
+            return response.text();
+          })
+          .then(data => {
+            document.querySelector('footer').innerHTML = data;
+          })
+          .catch(error => {
+            console.error('Error loading footer:', error);
+            document.querySelector('footer').innerHTML = '<p style="color: red;">Failed to load navbar. Please try again later.</p>';
+          });
+      });
+  
+  /*Dropdown Newsletter text box when the header is clicked (for boxes 1-9)*/  
+        function myFunction(y) {       
+        var x = document.getElementById("newsletter-text-202" + y[21]);
+        if (x.style.display === "none") {
+        x.style.display = "flex";
+        } else {
+        x.style.display = "none";
+        }       
+        }
+
+</script>
+
+</body>
+
+</html>

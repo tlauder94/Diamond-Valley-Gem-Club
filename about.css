@@ -19,12 +19,17 @@ body {
     font-size: 1.5rem;
   }
 
+  #about-us{
+    width: 80%; /* Overarching container spans 80% of the page width */
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px 20px; /* Add padding for spacing */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+
   .about-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10%;
-    margin: 30px 0 30px 0;
+    display: flex; /* Use flexbox for layout */
+    gap: 10%; /* Add a 10% margin between the text and images containers */
+    align-items: center; /* Align items vertically */
   }
 
     .about-container h1 {
@@ -35,7 +40,6 @@ body {
   }
 
   .about-text {
-    width: 70%;
     text-align: left;
     width: 40%;
   }
@@ -43,7 +47,11 @@ body {
   .about-image-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+  }
+
+  .about-image {
+    margin: 1% 0;
+    height: 100%;
   }
 
   /* About Booklet Section */

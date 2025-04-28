@@ -17,6 +17,9 @@
         <h1>Frequently Asked Questions</h1>
       </header>
 
+      <p class="faq-blurb">Got a question? Take a look below to find answers to some of the questions we are most often asked.
+        If you can't find what you're looking for, head over to our <a href="/contact.html">Contact page</a> for details on how to get in touch — we'd love to hear from you!</p>
+
     <section id="faq-box">
         <div class="faq-container">
             <div class="divider-edge"></div>
@@ -198,7 +201,7 @@
                   document.querySelector('footer').innerHTML = '<p style="color: red;">Failed to load navbar. Please try again later.</p>';
                 });
             });
-
+        /*Dropdown FAQ text box when the header is clicked (for boxes 1-9)*/  
         function myFunction(y) {       
         var x = document.getElementById("faq-text-" + y[15]);
         if (x.style.display === "none") {
@@ -207,7 +210,7 @@
         x.style.display = "none";
         }
     }
-
+        /*Dropdown FAQ text box when the header is clicked (for boxes 10+)*/
         function myfunctionLarge(y) {       
         var x = document.getElementById("faq-text-" + y[15] + y[16]);
         if (x.style.display === "none") {

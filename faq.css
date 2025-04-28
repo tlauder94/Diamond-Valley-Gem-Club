@@ -32,6 +32,12 @@ body {
   font-weight: bold;
 }
 
+.faq-blurb{
+  text-align: center;  
+  margin: 2% 20%;
+  font-size: 1.1rem;
+}
+
 /* FAQ Question Box */
 div[id^="faq-box-header"] {
   background-color: #e9f6fc; 

@@ -121,6 +121,12 @@
     background-color: #555;
   }
 
+  .home-history-button a {    
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+  }
+
 .home-course-container {
     max-width: 1200px;
     margin: auto;
@@ -135,9 +141,82 @@
 }
 
 .home-course-card {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top of the box */
+  align-items: flex-start; /* Align all child elements, including the button, to the left */
+  padding: 10px 15px; /* Keep consistent padding */
+  background-color: #E3F2FD; /* Baby blue background */
+  border: none; /* Remove the border */
+  border-radius: 0; /* Keep sharp edges */
+  box-shadow: none; /* Remove shadow from the container */
+  height: 420px; /* Maintain the adjusted height */
+  position: relative; /* Enable absolute positioning for child elements if needed */
+}
+
+.course-image {
+  width: 90%; /* Set the image width to 70% of the card */
+  height: 150px; /* Set a fixed height for the image */
+  display: block;
+  margin: 20px auto; /* Add equal space above and below, and center the image */
+  object-fit: cover; /* Ensure the image scales properly within the defined size */
+}
+
+.home-course-card h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 10px auto 10px; /* Add space above and below the header */
+  color: #1B75BC; /* Same blue as the banner */
+  width: 90%; /* Match the width of the image */
+  text-align: left; /* Align text to the left */
+}
+
+.home-course-card p {
+  font-size: 1rem;
+  margin: 0 auto; /* Center the paragraph horizontally */
+  margin-top: 10px; /* Add space above the paragraph */
+  color: #333; /* Keep the text color consistent */
+  width: 90%; /* Match the width of the image */
+  text-align: left; /* Align text to the left */
+}
+
+.home-course-card a {
+  text-decoration: none; /* Remove the underline from the links */
+  display: block; /* Make the entire card clickable */
+}
+
+.home-course-card button {
+  background-color: #333; /* Dark grey background */
+  color: white; /* White text */
+  font-size: 1.1rem; /* Button font size */
+  padding: 8px 12px; /* Adjust padding for a smaller button */
+  border: none;
+  border-radius: 3px; /* Optional: Slightly rounded corners */
+  text-align: left; /* Align the button text to the left */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: auto; /* Push the button to the bottom of the card */
+  margin-bottom: 15px; /* Add consistent spacing from the bottom of the card */
+  margin-left: 15px; /* Match the left padding of the .course-card */
+  align-self: flex-start; /* Ensure the button aligns with the left edge of the card */
+}
+
+.home-all-courses-button {
+  background-color: #333; /* Dark grey background */
+  color: white; /* White text */
+  font-size: 1.1rem; /* Button font size */
+  padding: 8px 12px; /* Adjust padding for a smaller button */
+  border: none;
+  border-radius: 3px; /* Optional: Slightly rounded corners */
+  text-align: left; /* Align the button text to the left */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 2%; /* Push the button to the bottom of the card */
+  height: 60px;
+}
+
+.home-all-courses-button:hover {
+  background-color: #155a8a;
 }
 
 .home-benefit-container {

@@ -1,0 +1,182 @@
+.body {     
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.resources-header {
+    background-color: #1B75BC;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%; /* Ensure the banner spans the full width of the page */
+    margin: 0; /* Remove any default margins */
+    height: 150px;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-size: 1.5rem;
+  }
+
+  .resources-blurb{
+    text-align: center;  
+    margin: 2% 20%;
+    font-size: 1.1rem;
+  }
+
+  #socities {
+    background-color: #e9f6fc; 
+    color: #1B75BC;
+    padding: 15px;
+    margin: 10px;    
+    border-radius: 5px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 30%;
+    text-align: left;
+  }
+
+  .resource-nav-links {
+    display: flex;
+    flex-direction: column;
+    color: #1B75BC;
+    font-size: 1.5rem;
+    justify-content: center;
+    gap: 1%;
+    align-items: left;
+    list-style: none;
+    padding: 0 15% 0 2%;
+    border-bottom: 1px solid #333;
+    border-top: 1px solid #333;
+  }
+
+  .resource-nav-links li{
+    margin: 10px;
+  }
+
+  .resource-nav-links a {
+    font-size: 1rem; 
+    text-decoration: none;
+    color: #403E43;    
+    padding: 10px;
+    border-radius: 10px;        
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .resource-nav-links a:hover{
+    text-decoration: none;
+    background-color: rgb(30, 117, 186);
+    color: white;
+}
+
+  /* Newsletter Box */  
+  #newsletter-box {
+    background-color: #e9f6fc; 
+    color: #1B75BC;
+    padding: 10px;
+    margin: 10px;    
+    border-radius: 5px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 40%;
+    text-align: center;
+  }
+
+  #newsletter-box h1 {
+    color: #1B75BC;
+    font-size: 1.2rem;
+  }
+
+  /* Newsletter Container */
+.newsletter-container {
+    width: 90%;
+    margin: 20px auto; 
+    text-align: left;
+    background-color: #f9f9f9; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  div[id^="newsletter-header"] {
+    background-color: #e9f6fc; 
+    color: #1B75BC;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 5px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  div[id^="newsletter-header"]:hover {
+    background-color: #d4eefb; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .newsletter-header h1 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  
+  .newsletter-plus {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1B75BC;
+    transition: transform 0.3s ease;
+  }
+  
+  div[id^="newsletter-header"].open .newsletter-plus {
+    transform: rotate(45deg);
+  }
+  
+  /* Newsletter Text */
+  div[id^="newsletter-text"] {
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 15px 20px;
+    margin: 0 0 10px 0;
+    border-left: 4px solid #1B75BC;
+    display: none;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    gap: 5%;
+  }
+
+  div[id^="newsletter-text"] p {
+    border-bottom: 1px solid #333;
+  }  
+  
+  .newsletter-button {
+    background-color: #333; /* Dark grey background */
+    font-size: 1.1rem; /* Button font size */
+    padding: 8px 12px; /* Adjust padding for a smaller button */
+    border: none;
+    border-radius: 3px; /* Optional: Slightly rounded corners */
+    text-align: left; /* Align the button text to the left */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: auto; /* Push the button to the bottom of the card */
+    margin-bottom: 15px; /* Add consistent spacing from the bottom of the card */
+    margin-left: 15px; /* Match the left padding of the .course-card */
+    align-self: flex-start; /* Ensure the button aligns with the left edge of the card */
+  }
+
+  .newsletter-button a {
+    text-decoration: none;
+    color: white;
+  }
