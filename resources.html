@@ -143,10 +143,10 @@
   /*Dropdown Newsletter text box when the header is clicked (for boxes 1-9)*/  
         function myFunction(y) {       
         var x = document.getElementById("newsletter-text-202" + y[21]);
-        if (x.style.display === "none") {
-        x.style.display = "flex";
-        } else {
+        if (x.style.display === "flex") {
         x.style.display = "none";
+        } else {
+        x.style.display = "flex";
         }       
         }
 
