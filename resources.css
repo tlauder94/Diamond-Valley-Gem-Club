@@ -251,3 +251,7 @@
     text-decoration: none;
     color: white;
   }
+
+  .library-button:hover {
+    background-color: #1B75BC;
+  }
