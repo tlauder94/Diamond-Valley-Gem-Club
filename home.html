@@ -33,6 +33,13 @@
   </div>
 </section>
 
+<section id="annoucement">
+  <div class="annoucement-banner">
+    <h1 id="annoucement-header"></h1>
+    <p id="annoucement-text"></p>
+  </div>
+</section>
+
 <section id="home-opening">
   <div class="opening-hours-container">
     <section class="contact-section">
@@ -78,9 +85,9 @@
   <div class="home-about-container">
     <div class="home-about-text">
       <h1>About Us</h1>
-      <p>At the Diamond Valley Gem Club, we're all about digging deeper — literally and figuratively. Founded by a passionate group of rockhounds and lapidary enthusiasts, our club offers a welcoming space for anyone fascinated by gems, minerals, fossils, and the art of shaping them into stunning works. Whether you're a beginner who can barely tell quartz from granite or a seasoned facetor who dreams in perfect symmetry, you'll find workshops, equipment, and expert guidance to help you level up your skills. We run regular classes in cutting, cabbing, faceting, silversmithing, and jewellery making, because rocks deserve a good polish and a great setting.
+      <p>At the Diamond Valley Gem Club, we're all about digging deeper — literally and figuratively. Founded by a passionate group of rockhounds and lapidary enthusiasts, our club offers a welcoming space for anyone fascinated by gems, minerals, fossils, and the art of shaping them into stunning works. Whether you're a beginner who can barely tell quartz from granite or a seasoned facetor who dreams in perfect symmetry, you'll find workshops, equipment, and expert guidance to help you level up your skills. We run regular classes in cutting, cabbing, faceting, silversmithing, and jewellery making, because rocks deserve a good polish and a great setting.</p>
 
-       <P> But it’s not all about the grind (pun absolutely intended). We're a social bunch too — offering field trips, competitions, gem shows, and community events where you can swap stories, stones, and a fair bit of friendly banter. Whether you’re here to learn, create, compete, or just marvel at the Earth's sparkliest treasures, Diamond Valley Gem Club offers a vibrant, down-to-earth community ready to welcome you. Grab a chisel, grab a cuppa — let’s rock.</p>
+       <p> But it’s not all about the grind (pun absolutely intended). We're a social bunch too — offering field trips, competitions, gem shows, and community events where you can swap stories, stones, and a fair bit of friendly banter. Whether you’re here to learn, create, compete, or just marvel at the Earth's sparkliest treasures, Diamond Valley Gem Club offers a vibrant, down-to-earth community ready to welcome you. Grab a chisel, grab a cuppa — let’s rock.</p>
     </div>
     <div class="home-about-image-container">
     <img src="/images/banner.png" alt="Diamond Valley Gem Club" class="about-image" />
@@ -294,6 +301,29 @@
     container.appendChild(eventCard);
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+
+fetch('https://script.google.com/macros/s/AKfycbyjn7AgTtRZFd9PhnyNTfVcQaLNX6TGT8TPJnx5HzM/dev')
+.then(res => res.json())
+.then((res) => {
+    const data = res.data;
+    document.getElementById('annoucementheader').innerHTML =  data.title;
+    document.getElementById('annoucement-text').innerHTML = data.message;
+});
+
+// Debounce utility function
+function debounce(func, delay) {
+    let timeout;
+    return function (...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), delay);
+    };
+  }    
+
+
+} ) ;
+
 </script>
 
 </body>
