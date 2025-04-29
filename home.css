@@ -64,21 +64,51 @@
 }
 
 .annoucement-banner {
-  width: 100%;
-  background-color: #333;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  background-color: #E3F2FD; /* Light blue background */
+  color: #1B75BC; /* Blue text for contrast */
   text-align: center;
+  padding: 15px 10px; /* Reduced padding for a shorter height */
+  font-size: 1.1rem; /* Slightly smaller font size */
+  font-weight: bold;
+  border: 3px solid #1B75BC; /* Bold blue border */
+  border-radius: 8px; /* Rounded corners */
+  position: fixed;
+  top: 10px; /* Add a small gap from the top */
+  left: 5%; /* Center the banner horizontally */
+  right: 5%; /* Center the banner horizontally */
+  width: 90%; /* Limit the width to 90% */
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  animation: slideDown 0.5s ease-in-out;
+
+  /* Flexbox for vertical and horizontal centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  height: auto; /* Allow the banner to adjust height dynamically */
+  min-height: 80px; /* Set a minimum height for the banner */
 }
 
 #annoucement-header {
-  color: white;
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Larger font for the title */
+  margin: 0; /* Remove default margins */
+  text-transform: uppercase;
 }
 
 #annoucement-text {
-  color: white;
-  font-size: 1rem;
+  font-size: 1rem; /* Standard font size for the message */
+  margin: 5px 0 0 0; /* Add a small margin above the text */
+}
+
+/* Slide-down animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .home-about-container {
@@ -338,7 +368,7 @@
 .opening-hours-card.highlight {
   background-color: #E3F2FD;
   border: 2px solid #1B75BC;
-  box-shadow: 0 4px 10px rgba(27, 117, 188, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
   transition: all 0.3s ease;
 }
@@ -474,5 +504,28 @@
 .see-all-events-button:hover {
   background-color: #155a8a; /* Darker blue on hover */
   transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Close Button for the Announcement Banner */
+.annoucement-banner .close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: white; /* White background for contrast */
+  color: #1B75BC; /* Blue text to match the theme */
+  border: none;
+  border-radius: 50%; /* Circular button */
+  width: 30px;
+  height: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.annoucement-banner .close-button:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+  transform: scale(1.1); /* Slight zoom effect */
 }
 

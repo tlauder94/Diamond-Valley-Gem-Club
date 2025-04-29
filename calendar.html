@@ -31,7 +31,7 @@
   <section class="calendar-section container">
     <div id="calendar"></div>
   </section>
-
+<script src="/calendar.js"></script>
   <section class="upcoming-events container">
   <h2>Upcoming Events</h2>
   <div id="upcoming-events-container"></div>
@@ -93,7 +93,7 @@
         const endTime = new Date(info.event.end).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
         const eventTime = `${startTime} - ${endTime}`;
 
-       
+
         const modal = document.getElementById('event-modal');
         const modalTitle = document.getElementById('modal-title');
         const modalTime = document.getElementById('modal-time');
@@ -146,12 +146,22 @@
 </script>
 
 
-<div id="event-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1000;">
-  <button id="close-modal" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
-  <h2 id="modal-title" style="margin-top: 0;"></h2>
-  <p id="modal-time" style="font-weight: bold; margin: 10px 0;"></p> 
-  <img id="modal-image" src="" alt="Event Image" style="width: 100%; max-height: 200px; object-fit: cover; margin-bottom: 20px;">
-  <p id="modal-description"></p>
+<div id="event-modal" class="modal">
+  <div class="modal-content">
+    <span id="close-modal" class="close-button">&times;</span>
+    <div class="event">
+      <img id="modal-image" src="" alt="Event Image" class="event-image">
+      <div class="event-details">
+        <h3 id="modal-title"></h3>
+        <p id="modal-date"></p>
+        <p id="modal-time"></p>
+        <p id="modal-description"></p>
+        <p id="modal-location"></p>
+        <p id="modal-available-to"></p>
+        <a id="add-to-calendar-button" href="#" class="add-to-calendar-button">Add to Calendar</a>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -231,7 +241,7 @@
         const endTime = new Date(info.event.end).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
         const eventTime = `${startTime} - ${endTime}`;
 
-       
+
         const modal = document.getElementById('event-modal');
         const modalTitle = document.getElementById('modal-title');
         const modalTime = document.getElementById('modal-time');
