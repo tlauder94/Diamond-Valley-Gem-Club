@@ -181,99 +181,98 @@
     font-size: 1rem;
   }
 
-.home-course-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
-    text-align: center;
+  .home-course-container {
+    max-width: 1200px; /* Limit the width of the container */
+    margin: auto; /* Center the container */
+    padding: 0 20px; /* Add padding for spacing */
+    text-align: center; /* Center-align the content */
 }
 
+/* Courses Grid */
 .home-course-grid {
-    display: flex;
-    gap: 5%;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  gap: 20px; /* Add spacing between cards */
+  justify-content: center; /* Center the grid */
 }
 
+/* Individual Course Card */
 .home-course-card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start; 
-  padding: 10px 15px; 
-  background-color: #E3F2FD; 
-  border: none; 
-  border-radius: 0; 
-  box-shadow: none; 
-  height: 420px; 
-  position: relative; 
+  align-items: center;
+  padding: 15px;
+  background-color: #ffffff; /* White background for the card */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 30%; /* Ensure 3 cards fit side by side */
+  max-width: 350px; /* Limit the maximum width */
+  height: auto; /* Allow dynamic height */
+  text-align: center;
+  overflow: hidden; /* Ensure content stays inside the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover Effect for Course Card */
+.home-course-card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Course Image */
 .course-image {
-  width: 90%; 
-  height: 150px; 
-  display: block;
-  margin: 20px auto; 
-  object-fit: cover; 
+  width: 100%; /* Constrain the image to the card's width */
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensure the image scales properly without distortion */
+  border-radius: 8px 8px 0 0; /* Match the card's top corners */
+  display: block; /* Ensure the image behaves like a block element */
+  margin: 0; /* Remove any default margins */
 }
 
-.home-course-card h1 {
-  font-size: 1.25rem;
+/* Course Title */
+.home-course-card h2 {
+  font-size: 1.5rem;
   font-weight: 700;
-  margin: 10px auto 10px; /* Add space above and below the header */
-  color: #1B75BC; /* Same blue as the banner */
-  width: 90%; /* Match the width of the image */
-  text-align: left; /* Align text to the left */
+  margin: 10px 0; /* Add spacing above and below the title */
+  color: #1B75BC; /* Banner blue color */
+  text-align: center; /* Center-align the title */
+  width: 100%; /* Match the width of the card */
 }
 
+/* Course Description */
 .home-course-card p {
   font-size: 1rem;
-  margin: 0 auto; /* Center the paragraph horizontally */
-  margin-top: 10px; /* Add space above the paragraph */
-  color: #333; /* Keep the text color consistent */
-  width: 90%; /* Match the width of the image */
-  text-align: left; /* Align text to the left */
+  color: #333; /* Dark gray text for readability */
+  margin: 0 0 15px 0; /* Add spacing below the description */
+  text-align: center; /* Center-align the description */
+  line-height: 1.5; /* Improve readability */
+  max-height: 4.5em; /* Limit the height to 3 lines of text */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  white-space: normal; /* Allow wrapping */
 }
 
-.home-course-card a {
-  text-decoration: none; /* Remove the underline from the links */
-  display: block; /* Make the entire card clickable */
-}
-
-.home-course-card button {
-  background-color: #333; /* Dark grey background */
-  color: white; /* White text */
-  font-size: 1.1rem; /* Button font size */
-  padding: 8px 12px; /* Adjust padding for a smaller button */
-  border: none;
-  border-radius: 3px; /* Optional: Slightly rounded corners */
-  text-align: left; /* Align the button text to the left */
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: auto; /* Push the button to the bottom of the card */
-  margin-bottom: 15px; /* Add consistent spacing from the bottom of the card */
-  margin-left: 15px; /* Match the left padding of the .course-card */
-  align-self: flex-start; /* Ensure the button aligns with the left edge of the card */
-}
-
-.view-all-courses-button-container{
-  text-align: center; /* Center the button */
-  margin: 60px 0 30px 0; /* Add larger spacing above and below the button */
-}
-
-.home-all-courses-button {
+/* "More Details" Button */
+.home-course-card a.course-button {
   background-color: #1B75BC; /* Banner blue background */
   color: white; /* White text */
-  font-size: 1.3rem; /* Make the button text larger */
-  padding: 15px 30px; /* Increase padding for a more prominent button */
+  font-size: 1rem; /* Button font size */
+  padding: 10px 20px; /* Add padding for a modern look */
   border: none;
-  border-radius: 5px; /* Optional: Slightly rounded corners */
-  text-decoration: none; /* Remove underline from the link */
+  border-radius: 5px; /* Slightly rounded corners */
   cursor: pointer;
+  text-decoration: none; /* Remove underline from the link */
   transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block; /* Ensure the button behaves like a block element */
+  margin-top: auto; /* Push the button to the bottom of the card */
 }
 
-.home-all-courses-button:hover {
-  background-color: #155a8a;
+/* Hover Effect for Button */
+.home-course-card a.course-button:hover {
+  background-color: #155a8a; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
 }
 
 .home-benefit-container {
@@ -298,32 +297,70 @@
     border-radius: 10px;
 }
 
+/* Club History Container */
 .home-history-container {
   display: flex;
   align-items: stretch;
-  justify-content: center; 
-  width: 80%; 
-  margin:auto; 
-  margin-bottom: 50px;
-  
-    
+  justify-content: center;
+  width: 100%; /* Ensure the container spans the full width */
+  max-width: 1200px; /* Limit the width for consistency */
+  margin: 40px auto; /* Add consistent spacing above and below */
+  padding: 0 20px; /* Add padding for better alignment */
 }
 
+/* Club History Text */
 .home-history-text {
-    width: 60%;
-    text-align: left;
-    padding: 20px;
+  color: #403E43;
+  width: 65%; /* Match the text width of About Us */
+  text-align: left;
+  padding: 20px;
 }
 
 .home-history-text h1 {
-  color: #1B75BC ;
+  color: #1B75BC; /* Banner blue color */
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-.home-history-image-container{
-    width: 40%; /* Take up half of the 50% container */
-    display: flex;
-    justify-content: center; /* Center the image within its container */
-    align-items: center; /* Center the image vertically */
+.home-history-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.home-history-button {
+  background-color: #1B75BC; /* Banner blue background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline from the link */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-history-button:hover {
+  background-color: #155a8a; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Club History Image Container */
+.home-history-image-container {
+  width: 35%; /* Match the image width of About Us */
+  display: flex;
+  justify-content: center; /* Center the image within its container */
+  align-items: center; /* Center the image vertically */
+}
+
+/* Club History Image */
+.history-image {
+  width: 100%; /* Make the image fill the container's width */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover; /* Ensure the image scales properly without distortion */
+  border-radius: 8px; /* Optional: Add rounded corners to match the design */
+  display: block; /* Ensure the image behaves like a block element */
 }
 
 .opening-hours-container {
@@ -444,7 +481,7 @@
 }
 
 .event-card:hover {
-  box-shadow: 0 6px 12px rgba(27, 117, 188, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   transform: scale(1.02);
 }
 
@@ -527,5 +564,31 @@
 .annoucement-banner .close-button:hover {
   background-color: #f0f0f0; /* Light gray on hover */
   transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* View All Courses Button Container */
+.view-all-courses-button-container {
+  text-align: center; /* Center the button */
+  margin: 40px 0; /* Add spacing above and below the button */
+}
+
+/* View All Courses Button */
+.home-all-courses-button {
+  background-color: #1B75BC; /* Banner blue background */
+  color: white; /* White text */
+  font-size: 1.3rem; /* Larger button text */
+  padding: 15px 30px; /* Add padding for a prominent button */
+  border: none;
+  border-radius: 5px; /* Slightly rounded corners */
+  text-decoration: none; /* Remove underline from the link */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block; /* Ensure the button behaves like a block element */
+}
+
+/* Hover Effect for View All Courses Button */
+.home-all-courses-button:hover {
+  background-color: #155a8a; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
 }
 

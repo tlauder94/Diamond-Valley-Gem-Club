@@ -17,10 +17,10 @@
   <div class="hero-container">
     <div class="hero-images">
       <div class="hero-image hero-image-left">
-        <img src="/images/Faceting.jpeg" alt="Faceting" />
+        <img src="/images/home1.jpg" alt="Faceting" />
       </div>
       <div class="hero-image hero-image-right">
-        <img src="/images/cabs.jpg" alt="Cabs" />
+        <img src="/images/home3.jpg" alt="Cabs" />
       </div>
     </div>
     <div class="hero-text">
@@ -91,7 +91,7 @@
        <p> But it’s not all about the grind (pun absolutely intended). We're a social bunch too — offering field trips, competitions, gem shows, and community events where you can swap stories, stones, and a fair bit of friendly banter. Whether you’re here to learn, create, compete, or just marvel at the Earth's sparkliest treasures, Diamond Valley Gem Club offers a vibrant, down-to-earth community ready to welcome you. Grab a chisel, grab a cuppa — let’s rock.</p>
     </div>
     <div class="home-about-image-container">
-    <img src="/images/banner.png" alt="Diamond Valley Gem Club" class="about-image" />
+    <img src="/images/history1.jpg" alt="Diamond Valley Gem Club" class="about-image" />
     </div>
   </div>
 </section>
@@ -104,35 +104,21 @@
     <div class="home-course-container">
       <div class="home-course-text">
         <h1>Courses</h1>
-      </div>  
-      <div class="home-course-grid">
+      </div>
+      <div id="home-course-grid" class="home-course-grid">
         <div class="home-course-card">
-          <img src="/images/cabochon.png" alt="Cabochoning Course" class="course-image" />
-          <h1>Course 1</h1>
-          <p>Et has minim elitr intellegat. 
-            Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum.</p>
-          <button class="home-button">More Details</button>
+          <img src="images/example.jpg" alt="Course Image" class="course-image">
+          <h2>Course Title</h2>
+          <p>Course description goes here. It should be concise and informative.</p>
+          <a href="course-details.html" class="course-button">More Details</a>
         </div>
-        <div class="home-course-card">
-          <img src="/images/faceting.png" alt="Faceting Course" class="course-image" />
-          <h1>Course 2</h1>
-          <p>Et has minim elitr intellegat. 
-            Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum.</p>
-          <button class="home-button">More Details</button>
-        </div>
-        <div class="home-course-card">
-          <img src="/images/silversmith.png" alt="Silversmithing Course" class="course-image" />
-          <h1>Course 3</h1>
-          <p>Et has minim elitr intellegat. 
-            Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum.</p>
-          <button class="home-button">More Details</button>
-        </div>
-     </div>
-     <div class="view-all-courses-button-container">
-     <button class="home-all-courses-button">View All Courses</button>
-     </div>
+        <!-- More dynamically added cards -->
+      </div>
+      <div class="view-all-courses-button-container">
+        <a href="courses.html" class="home-all-courses-button">View All Courses</a>
+      </div>
     </div>
-  </section>
+</section>
 
 
 <section id="home-upcoming-events">
@@ -156,7 +142,7 @@
           <button class="home-history-button"><a href="/about.html#club-history-text">Read more...  </a></button>
         </div>
         <div class="home-history-image-container">
-        <img src="/images/banner.png" alt="Diamond Valley Gem Club History" class="history-image" /> 
+        <img src="/images/aboutus.jpg" alt="Diamond Valley Gem Club History" class="history-image" /> 
         </div>       
     </div>
   </section>
@@ -203,6 +189,8 @@
       });
   </script>
   
+
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const today = new Date().getDay(); // Get the current day (0 = Sunday, 1 = Monday, etc.)
@@ -331,8 +319,195 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const upcomingEventsContainer = document.getElementById('upcoming-events-container');
+
+  // Fetch events from the calendar API
+  const eventsApiUrl = 'https://script.google.com/macros/s/AKfycbzDEbxudf6gPyCQe2KBI-Rf2Ddh49OPjPGEFL08S6nPTF-dVPnD7i8YwJAYx436KumX/exec?sheet=Events';
+
+  fetch(eventsApiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Fetched Events:', data);
+
+      // Clear any existing content
+      upcomingEventsContainer.innerHTML = '';
+
+      // Limit the number of events displayed (e.g., show only the next 3 events)
+      const upcomingEvents = data.slice(0, 3);
+
+      // Loop through the events and create cards
+      upcomingEvents.forEach(event => {
+        // Convert date from DD-MM-YYYY to a readable format
+        const [day, month, year] = event.date.split('-');
+        const formattedDate = `${day} ${new Date(`${year}-${month}-${day}`).toLocaleString('default', { month: 'long' })}, ${year}`;
+
+        // Format start and end times
+        const formattedStartTime = formatTime(event.startTime);
+        const formattedEndTime = formatTime(event.endTime);
+
+        // Assign an image based on event type
+        let image = '';
+        switch (event.type) {
+          case 'Working Bee':
+            image = '/images/library.jpg';
+            break;
+          case 'Field Trip':
+            image = '/images/Faceting.jpeg';
+            break;
+          case 'Committee Meeting':
+            image = '/images/cabs.jpg';
+            break;
+          case 'Social Event':
+            image = '/images/library.jpg';
+            break;
+          case 'AGM':
+            image = '/images/Faceting.jpeg';
+            break;
+          case 'Other Event':
+            image = '/images/cabs.jpg';
+            break;
+          case 'Gem Show':
+            image = '/images/library.jpg';
+            break;
+          case 'Gem Identification':
+            image = '/images/Faceting.jpeg';
+            break;
+          default:
+            image = '/images/default-event.png';
+        }
+
+        // Create the event card
+        const eventCard = document.createElement('div');
+        eventCard.classList.add('event-card');
+
+        // Add the image container
+        const eventCardImage = document.createElement('div');
+        eventCardImage.classList.add('event-card-image');
+        const img = document.createElement('img');
+        img.src = image;
+        img.alt = event.title;
+        eventCardImage.appendChild(img);
+
+        // Add the content container
+        const eventCardContent = document.createElement('div');
+        eventCardContent.classList.add('event-card-content');
+
+        // Add the event info
+        const eventInfo = document.createElement('div');
+        eventInfo.classList.add('event-info');
+        eventInfo.innerHTML = `
+          <h3>${event.title}</h3>
+          <p><strong>Date:</strong> ${formattedDate}</p>
+          <p><strong>Time:</strong> ${formattedStartTime} - ${formattedEndTime}</p>
+          <p><strong>Location:</strong> ${event.location || 'No location specified'}</p>
+          <p><strong>Who Can Attend:</strong> ${event.openTo || 'Open to everyone'}</p>
+        `;
+
+        // Add the "Add to Calendar" button
+        const addToCalendarButton = document.createElement('button');
+        addToCalendarButton.classList.add('add-to-calendar-button');
+        addToCalendarButton.textContent = "Add to Calendar";
+        addToCalendarButton.onclick = () => {
+          const calendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+            event.title
+          )}&dates=${encodeURIComponent(event.date)}&details=${encodeURIComponent(
+            `Time: ${formattedStartTime} - ${formattedEndTime}\nLocation: ${event.location}\nWho Can Attend: ${event.openTo}`
+          )}`;
+          window.open(calendarUrl, '_blank');
+        };
+
+        // Append everything to the event card
+        eventCardContent.appendChild(eventInfo);
+        eventCardContent.appendChild(addToCalendarButton);
+        eventCard.appendChild(eventCardImage);
+        eventCard.appendChild(eventCardContent);
+        upcomingEventsContainer.appendChild(eventCard);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching events:', error);
+      upcomingEventsContainer.innerHTML = '<p>Failed to load upcoming events. Please try again later.</p>';
+    });
+
+  // Function to format time to 12-hour format with AM/PM
+  function formatTime(time) {
+    const timeString = String(time).padStart(4, '0'); // Ensure 4-digit format
+    const hours = parseInt(timeString.slice(0, 2), 10);
+    const minutes = timeString.slice(2, 4);
+    const period = hours >= 12 ? 'PM' : 'AM';
+    const formattedHours = hours % 12 || 12; // Convert to 12-hour format
+    return `${formattedHours}:${minutes}${period}`;
+  }
+});
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const courseGrid = document.getElementById('home-course-grid');
+
+  // Fetch the courses.html file
+  fetch('courses.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load courses. Status: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then(html => {
+      // Parse the HTML content
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+
+      // Select all course cards
+      const courseCards = Array.from(doc.querySelectorAll('.course-card'));
+
+      // Randomly select 3 courses
+      const shuffledCourses = courseCards.sort(() => 0.5 - Math.random());
+      const selectedCourses = shuffledCourses.slice(0, 3);
+
+      // Clear the course grid
+      courseGrid.innerHTML = '';
+
+      // Append the selected courses to the home page
+      selectedCourses.forEach(courseCard => {
+        // Create a new card element
+        const card = document.createElement('div');
+        card.classList.add('home-course-card');
+
+        // Extract the image, title, description, and link from the original course card
+        const imageElement = courseCard.querySelector('img');
+        if (imageElement) {
+          imageElement.classList.add('course-image'); // Ensure the class is applied
+        }
+        const image = imageElement?.outerHTML || '';
+        const title = courseCard.querySelector('h2')?.outerHTML || '';
+        const description = courseCard.querySelector('p')?.outerHTML || '';
+        const link = courseCard.querySelector('a.course-button')?.outerHTML || '';
+
+        // Build the card's inner HTML
+        card.innerHTML = `
+          ${image}
+          ${title}
+          ${description}
+          ${link}
+        `;
+
+        // Append the card to the grid
+        courseGrid.appendChild(card);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching courses:', error);
+      courseGrid.innerHTML = '<p>Failed to load courses. Please try again later.</p>';
+    });
+});
+</script>
 </body>
 
 </html>
