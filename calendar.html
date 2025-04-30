@@ -8,9 +8,8 @@
   <link rel="stylesheet" href="/calendar.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css">
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-  </head>
+</head>
 <body>
-    
   <header id="navbar-container"></header>
 
   <section class="banner">
@@ -20,165 +19,69 @@
   </section>
 
   <section class="about-section container">
-  <div class="about-wrapper">
-    <div class="about-text">
-      <h2>About Our Calendar</h2>
-      <p>Our calendar showcases all the exciting events and courses happening at the Diamond Valley Gem Club. Stay up-to-date with upcoming workshops, community events, and special gatherings. Whether you're a beginner or an experienced enthusiast, there's something for everyone!</p>
+    <div class="about-wrapper">
+      <div class="about-text">
+        <h2>About Our Calendar</h2>
+        <p>Our calendar showcases all the exciting events and courses happening at the Diamond Valley Gem Club. Stay up-to-date with upcoming workshops, community events, and special gatherings. Whether you're a beginner or an experienced enthusiast, there's something for everyone!</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section class="calendar-section container">
     <div id="calendar"></div>
   </section>
-<script src="/calendar.js"></script>
+
   <section class="upcoming-events container">
-  <h2>Upcoming Events</h2>
-  <div id="upcoming-events-container"></div>
-</section>
+    <h2>Upcoming Events</h2>
+    <div id="upcoming-events-container"></div>
+  </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const calendarEl = document.getElementById('calendar');
-    const calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth', 
-      headerToolbar: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,timeGridWeek' 
-      },
-      showNonCurrentDates: true, 
-      fixedWeekCount: false,
-      events: [
-        {
-          title: 'Faceting Masterclass',
-          start: '2025-06-15T10:00:00',
-          end: '2025-06-15T14:00:00',
-          description: 'Learn the precision art of gemstone faceting in this advanced-level class.',
-          image: '/images/faceting.png'
-        },
-        {
-          title: 'Cabochon Machine Workshop',
-          start: '2025-06-22T13:00:00',
-          end: '2025-06-22T17:00:00',
-          description: 'Hands-on training with cabochon machines for beginners and enthusiasts.',
-          image: '/images/cabmachine.jpg'
-        },
-        {
-          title: 'Cabochon Polishing Techniques',
-          start: '2025-06-29T15:00:00',
-          end: '2025-06-29T18:00:00',
-          description: 'Master the art of cabochon polishing with expert guidance.',
-          image: '/images/cabochon.png'
-        }
-      ],
-      eventContent: function(arg) {
+  <!-- Modal Structure -->
+  <div id="event-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-modal" class="close-button">&times;</span>
+      <div class="modal-event">
+
+        <h3 id="modal-title" class="modal-event-title"></h3>
         
-        const startTime = new Date(arg.event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
-
-       
-        return {
-          html: `
-            <div class="fc-event-time" style="font-size: 0.8rem; color: #1B75BC; font-weight: bold;">${startTime}</div>
-            <div class="fc-event-title">${arg.event.title}</div>
-          `
-        };
-      },
-      eventClick: function(info) {
-        
-        info.jsEvent.preventDefault();
-
-        
-        const startTime = new Date(info.event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        const endTime = new Date(info.event.end).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        const eventTime = `${startTime} - ${endTime}`;
-
-
-        const modal = document.getElementById('event-modal');
-        const modalTitle = document.getElementById('modal-title');
-        const modalTime = document.getElementById('modal-time');
-        const modalDescription = document.getElementById('modal-description');
-        const modalImage = document.getElementById('modal-image');
-
-        modalTitle.textContent = info.event.title;
-        modalTime.textContent = eventTime; 
-        modalDescription.textContent = info.event.extendedProps.description;
-        modalImage.src = info.event.extendedProps.image;
-
-        modal.style.display = 'block';
-      }
-    });
-
-    calendar.render();
-
-   
-    const events = calendar.getEvents();
-    const upcomingEventsContainer = document.getElementById('upcoming-events-container');
-
-    events.forEach(event => {
-      const eventDate = new Date(event.start);
-      const month = eventDate.toLocaleString('default', { month: 'long' });
-      const day = eventDate.getDate();
-      const startTime = new Date(event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
-      const endTime = new Date(event.end).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
-      const eventTime = `${startTime} - ${endTime}`;
-
-      const eventHTML = `
-        <div class="event">
-          <div class="event-date">
-            <div class="event-month">${month}</div>
-            <div class="event-day">${day}</div>
-          </div>
-          <img src="${event.extendedProps.image}" alt="${event.title}" class="event-image">
-          <div class="event-details">
-            <h3>${event.title}</h3>
-            <p class="event-time" style="font-weight: bold; margin: 5px 0; color: #1B75BC;">${eventTime}</p> <!-- Time added here -->
-            <p>${event.extendedProps.description}</p>
-            <a href="#" class="add-to-calendar-button">Add to Calendar</a>
-          </div>
+        <!-- Date Section -->
+        <div class="modal-event-date">
+          <p id="modal-month" class="modal-event-month"></p>
+          <p id="modal-day" class="modal-event-day"></p>
         </div>
-        <div class="divider"></div>
-      `;
 
-      upcomingEventsContainer.innerHTML += eventHTML;
-    });
-  });
-</script>
+        <!-- Image and Title Section -->
+        <div class="modal-event-header">
+          <img id="modal-image" src="" alt="Event Image" class="modal-event-image">
+        </div>
 
-
-<div id="event-modal" class="modal">
-  <div class="modal-content">
-    <span id="close-modal" class="close-button">&times;</span>
-    <div class="event">
-      <img id="modal-image" src="" alt="Event Image" class="event-image">
-      <div class="event-details">
-        <h3 id="modal-title"></h3>
-        <p id="modal-date"></p>
-        <p id="modal-time"></p>
-        <p id="modal-description"></p>
-        <p id="modal-location"></p>
-        <p id="modal-available-to"></p>
-        <a id="add-to-calendar-button" href="#" class="add-to-calendar-button">Add to Calendar</a>
+        <!-- Details Section -->
+        <div class="modal-event-details">
+          <p class="modal-event-time">Time: <span id="modal-time"></span></p>
+          <p id="modal-description"></p>
+          <p><span>Location:</span> <span id="modal-location"></span></p>
+          <p><span>Available To:</span> <span id="modal-available-to"></span></p>
+          <a id="add-to-calendar-button" href="#" class="add-to-calendar-button">Add to Calendar</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
 
   <footer id="footer-container"></footer>
 
+  <!-- External Scripts -->
+  <script src="/calendar.js"></script>
   <script>
-
     document.addEventListener('DOMContentLoaded', () => {
+      // Load Navbar
       fetch('/navbar.html')
         .then(response => response.text())
         .then(data => {
           document.querySelector('header').innerHTML = data;
         })
         .catch(error => console.error('Error loading navbar:', error));
-    });
 
-    document.addEventListener('DOMContentLoaded', () => {
+      // Load Footer
       fetch('/footer.html')
         .then(response => response.text())
         .then(data => {
@@ -186,99 +89,6 @@
         })
         .catch(error => console.error('Error loading footer:', error));
     });
-
-    document.addEventListener('DOMContentLoaded', () => {
-    const calendarEl = document.getElementById('calendar');
-    const calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth',
-      headerToolbar: {
-        left: 'prev,next today', 
-        center: 'title',
-        right: 'dayGridMonth,timeGridWeek' 
-      },
-      showNonCurrentDates: true, 
-      fixedWeekCount: false, 
-      events: [
-        {
-          title: 'Faceting Masterclass',
-          start: '2025-06-15T10:00:00',
-          end: '2025-06-15T14:00:00',
-          description: 'Learn the precision art of gemstone faceting in this advanced-level class.',
-          image: '/images/faceting.png'
-        },
-        {
-          title: 'Cabochon Machine Workshop',
-          start: '2025-06-22T13:00:00',
-          end: '2025-06-22T17:00:00',
-          description: 'Hands-on training with cabochon machines for beginners and enthusiasts.',
-          image: '/images/cabmachine.jpg'
-        },
-        {
-          title: 'Cabochon Polishing Techniques',
-          start: '2025-06-29T15:00:00',
-          end: '2025-06-29T18:00:00',
-          description: 'Master the art of cabochon polishing with expert guidance.',
-          image: '/images/cabochon.png'
-        }
-      ],
-      eventContent: function(arg) {
-        
-        const startTime = new Date(arg.event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
-
-        return {
-          html: `
-            <div class="fc-event-time" style="font-size: 0.8rem; color: #1B75BC; font-weight: bold;">${startTime}</div>
-            <div class="fc-event-title">${arg.event.title}</div>
-          `
-        };
-      },
-      eventClick: function(info) {
-        
-        info.jsEvent.preventDefault();
-
-        
-        const startTime = new Date(info.event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        const endTime = new Date(info.event.end).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        const eventTime = `${startTime} - ${endTime}`;
-
-
-        const modal = document.getElementById('event-modal');
-        const modalTitle = document.getElementById('modal-title');
-        const modalTime = document.getElementById('modal-time');
-        const modalDescription = document.getElementById('modal-description');
-        const modalImage = document.getElementById('modal-image');
-
-        modalTitle.textContent = info.event.title;
-        modalTime.textContent = eventTime; 
-        modalDescription.textContent = info.event.extendedProps.description;
-        modalImage.src = info.event.extendedProps.image;
-
-        modal.style.display = 'block';
-      }
-    });
-
-    calendar.render();
-
-   
-    const modal = document.getElementById('event-modal');
-    const closeModalButton = document.getElementById('close-modal');
-
-    closeModalButton.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        modal.style.display = 'none';
-      }
-    });
-
-    window.addEventListener('click', (event) => {
-      if (event.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-  });
   </script>
 </body>
 </html>
