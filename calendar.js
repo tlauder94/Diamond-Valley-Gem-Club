@@ -150,42 +150,6 @@ function initializeCalendar(events) {
   calendar.render();
 }
 
-// Populate Upcoming Events Section
-function populateUpcomingEvents(events) {
-  const upcomingEventsContainer = document.getElementById('upcoming-events-container');
-  const upcomingEvents = events
-    .filter(event => new Date(event.start) >= new Date())
-    .sort((a, b) => new Date(a.start) - new Date(b.start))
-    .slice(0, 5);
-
-  upcomingEventsContainer.innerHTML = '';
-
-  if (upcomingEvents.length === 0) {
-    upcomingEventsContainer.innerHTML = '<p>No upcoming events at the moment.</p>';
-    return;
-  }
-
-  upcomingEvents.forEach(event => {
-    const eventElement = document.createElement('div');
-    eventElement.classList.add('upcoming-event');
-
-    eventElement.innerHTML = `
-      <div class="upcoming-event-date">
-        <span class="upcoming-event-day">${new Date(event.start).getDate()}</span>
-        <span class="upcoming-event-month">${new Date(event.start).toLocaleString('default', { month: 'short' })}</span>
-      </div>
-      <div class="upcoming-event-details">
-        <h3>${event.title}</h3>
-        <p>${event.description || 'No description available.'}</p>
-        <p><strong>Location:</strong> ${event.location || 'No location specified.'}</p>
-        <p><strong>Time:</strong> ${new Date(event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })} - ${new Date(event.end).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true })}</p>
-      </div>
-    `;
-
-    upcomingEventsContainer.appendChild(eventElement);
-  });
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('event-modal');
   const closeModalButton = document.getElementById('close-modal');
@@ -209,3 +173,141 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const upcomingEventsContainer = document.getElementById('upcoming-events-container');
+    const eventTypeFilter = document.getElementById('event-type-filter');
+    let allEvents = []; // Store all events for filtering
+  
+    // Fetch events from FullCalendar or your API
+    const eventsApiUrl = 'https://script.google.com/macros/s/AKfycbzDEbxudf6gPyCQe2KBI-Rf2Ddh49OPjPGEFL08S6nPTF-dVPnD7i8YwJAYx436KumX/exec?sheet=Events';
+  
+    fetch(eventsApiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('Fetched Events:', data);
+        allEvents = data; // Store all events
+        displayEvents(allEvents); // Display all events initially
+      })
+      .catch(error => {
+        console.error('Error fetching events:', error);
+        upcomingEventsContainer.innerHTML = '<p>Failed to load upcoming events. Please try again later.</p>';
+      });
+  
+    // Function to display events
+    function displayEvents(events) {
+      // Clear the container
+      upcomingEventsContainer.innerHTML = '';
+
+      if (events.length === 0) {
+        // Display a fallback message if no events are found
+        upcomingEventsContainer.innerHTML = `
+          <div class="no-events-message">
+            <p>No events to display for this category. Check out our <a href="/calendar.html">calendar</a> for more events or explore other categories!</p>
+          </div>
+        `;
+        return; // Exit the function early
+      }
+
+      // Loop through the events and create cards
+      events.forEach(event => {
+        // Convert date from DD-MM-YYYY to a readable format
+        const [day, month, year] = event.date.split('-');
+        const formattedDate = `${day} ${new Date(`${year}-${month}-${day}`).toLocaleString('default', { month: 'long' })}, ${year}`;
+
+        // Assign an image based on event type
+        let image = '';
+        switch (event.type) {
+          case 'Working Bee':
+            image = '/images/library.jpg';
+            break;
+          case 'Field Trip':
+            image = '/images/Faceting.jpeg';
+            break;
+          case 'Committee Meeting':
+            image = '/images/cabs.jpg';
+            break;
+          case 'Social Event':
+            image = '/images/library.jpg';
+            break;
+          case 'AGM':
+            image = '/images/Faceting.jpeg';
+            break;
+          case 'Other Event':
+            image = '/images/cabs.jpg';
+            break;
+          case 'Gem Show':
+            image = '/images/library.jpg';
+            break;
+          case 'Gem Identification':
+            image = '/images/Faceting.jpeg';
+            break;
+          default:
+            image = '/images/default-event.png';
+        }
+
+        // Create the event card
+        const eventCard = document.createElement('div');
+        eventCard.classList.add('event-card');
+
+        // Add the image container
+        const eventCardImage = document.createElement('div');
+        eventCardImage.classList.add('event-card-image');
+        const img = document.createElement('img');
+        img.src = image;
+        img.alt = event.title;
+        eventCardImage.appendChild(img);
+
+        // Add the content container
+        const eventCardContent = document.createElement('div');
+        eventCardContent.classList.add('event-card-content');
+
+        // Add the event info
+        const eventInfo = document.createElement('div');
+        eventInfo.classList.add('event-info');
+        eventInfo.innerHTML = `
+          <h3>${event.title}</h3>
+          <p><strong>Date:</strong> ${formattedDate}</p>
+          <p><strong>Time:</strong> ${event.startTime} - ${event.endTime}</p>
+          <p><strong>Location:</strong> ${event.location || 'No location specified'}</p>
+          <p><strong>Who Can Attend:</strong> ${event.openTo || 'Open to everyone'}</p>
+        `;
+
+        // Add the "Add to Calendar" button
+        const addToCalendarButton = document.createElement('button');
+        addToCalendarButton.classList.add('add-to-calendar-button');
+        addToCalendarButton.textContent = "Add to Calendar";
+        addToCalendarButton.onclick = () => {
+          const calendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+            event.title
+          )}&dates=${encodeURIComponent(event.date)}&details=${encodeURIComponent(
+            `Time: ${event.startTime} - ${event.endTime}\nLocation: ${event.location}\nWho Can Attend: ${event.openTo}`
+          )}`;
+          window.open(calendarUrl, '_blank');
+        };
+
+        // Append everything to the event card
+        eventCardContent.appendChild(eventInfo);
+        eventCardContent.appendChild(addToCalendarButton);
+        eventCard.appendChild(eventCardImage);
+        eventCard.appendChild(eventCardContent);
+        upcomingEventsContainer.appendChild(eventCard);
+      });
+    }
+  
+    // Event listener for the dropdown filter
+    eventTypeFilter.addEventListener('change', () => {
+      const selectedType = eventTypeFilter.value;
+      if (selectedType === 'all') {
+        displayEvents(allEvents); // Show all events
+      } else {
+        const filteredEvents = allEvents.filter(event => event.type === selectedType);
+        displayEvents(filteredEvents); // Show filtered events
+      }
+    });
+  });

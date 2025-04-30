@@ -32,8 +32,26 @@
   </section>
 
   <section class="upcoming-events container">
-    <h2>Upcoming Events</h2>
-    <div id="upcoming-events-container"></div>
+    <div class="upcoming-events-header">
+      <h2>Upcoming Events</h2>
+      <div class="filter-container">
+        <label for="event-type-filter" class="sr-only">Filter by Event Type:</label>
+        <select id="event-type-filter">
+          <option value="all">All</option>
+          <option value="Working Bee">Working Bee</option>
+          <option value="Field Trip">Field Trip</option>
+          <option value="Committee Meeting">Committee Meeting</option>
+          <option value="Social Event">Social Event</option>
+          <option value="AGM">AGM</option>
+          <option value="Other Event">Other Event</option>
+          <option value="Gem Show">Gem Show</option>
+          <option value="Gem Identification">Gem Identification</option>
+        </select>
+      </div>
+    </div>
+    <div id="upcoming-events-container" class="event-cards-container">
+      <!-- Event cards will be dynamically populated here -->
+    </div>
   </section>
 
   <!-- Modal Structure -->
@@ -43,7 +61,7 @@
       <div class="modal-event">
 
         <h3 id="modal-title" class="modal-event-title"></h3>
-        
+
         <!-- Date Section -->
         <div class="modal-event-date">
           <p id="modal-month" class="modal-event-month"></p>
@@ -57,7 +75,7 @@
 
         <!-- Details Section -->
         <div class="modal-event-details">
-          <p class="modal-event-time">Time: <span id="modal-time"></span></p>
+          <p id="modal-time" class="modal-event-time"></p>    
           <p id="modal-description"></p>
           <p><span>Location:</span> <span id="modal-location"></span></p>
           <p><span>Available To:</span> <span id="modal-available-to"></span></p>
