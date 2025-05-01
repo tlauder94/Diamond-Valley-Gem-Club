@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #1B75BC;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+/* Form Styles */
+form {
+  max-width: 900px;
+  margin: 5px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styling */
+.form-section {
+  margin-bottom: 20px;
+}
+
+.form-section h2 {
+  margin-bottom: 15px;
+  color: #1B75BC;
+}
+
+/* Field Containers */
+.field-container {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #1B75BC;
+  box-shadow: 0 0 5px rgba(27, 117, 188, 0.5);
+}
+
+/* Personal Details Section */
+.personal-details-container {
+  position: relative; /* Required for the remove button to position correctly */
+  display: flex;
+  flex-direction: column; /* Stack rows vertically */
+  gap: 5px; /* Reduced gap between rows */
+  margin-bottom: 20px;
+  border: 1px solid #ddd; /* Add a border around the section */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Add padding inside the section */
+  background-color: #f9f9f9; /* Light background for better visibility */
+}
+
+.personal-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping if space is limited */
+  gap: 15px; /* Space between fields in a row */
+}
+
+.title-container {
+  flex: 0.15; /* 15% width */
+}
+
+.placeholder-container {
+  flex: 0.15; /* Matches the width of the Title field */
+}
+
+.first-name-container, .preferred-name-container {
+  flex: 0.4; /* 40% width */
+}
+
+.last-name-container, .dob-container {
+  flex: 0.45; /* 45% width */
+}
+
+/* Contact Details Section */
+.contact-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjusted gap between fields */
+}
+
+.contact-details-container .field-container {
+  flex: 1 1 calc(50% - 10px); /* Two columns with spacing */
+}
+
+/* Fees Section */
+#fees-section {
+  padding: 15px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#fees-section p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+#fees-section span {
+  font-weight: bold;
+  color: #1B75BC;
+}
+
+/* Buttons */
+button {
+  background-color: #1B75BC;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #155a8a;
+}
+
+.add-person-button {
+  display: block;
+  margin: 20px auto;
+}
+
+/* Remove Button */
+.remove-person-button {
+  position: absolute;
+  top: 5px; /* Move closer to the top */
+  right: 5px; /* Move closer to the right */
+  background: none;
+  color: #d9534f;
+  font-size: 1rem; /* Slightly smaller font size */
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease; /* Faster transition for hover effect */
+}
+
+.remove-person-button:hover {
+  color: #b52d2d; /* Subtle hover color */
+}
+
+/* Membership Agreement */
+.field-container input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .field-container {
+    flex: 1 1 100%; /* Fields stack vertically on smaller screens */
+  }
+
+  button {
+    width: 100%;
+  }
+}

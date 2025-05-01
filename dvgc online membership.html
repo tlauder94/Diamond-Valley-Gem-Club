@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond Valley Gem Club Membership Form</title>
+  <link rel="stylesheet" href="dvgc online membership.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <h1>Diamond Valley Gem Club Membership Form</h1>
+  <form id="membership-form">
+    <!-- Personal Details -->
+    <div class="form-section" id="personal-details-section">
+      <h2>Personal Details</h2>
+
+      <!-- Personal Details Container -->
+      <div class="personal-details-container">
+        <!-- Row 1 -->
+        <div class="personal-row">
+          <div class="field-container title-container">
+            <label for="title">Title</label>
+            <select id="title" name="title[]" required>
+              <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Ms">Ms</option>
+              <option value="Dr">Dr</option>
+              <option value="Prof">Prof</option>
+            </select>
+          </div>
+          <div class="field-container first-name-container">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name[]" required>
+          </div>
+          <div class="field-container last-name-container">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name[]" required>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="personal-row">
+          <div class="field-container placeholder-container"></div> <!-- Placeholder for Title -->
+          <div class="field-container preferred-name-container">
+            <label for="preferred-name">Preferred Name</label>
+            <input type="text" id="preferred-name" name="preferred-name[]">
+          </div>
+          <div class="field-container dob-container">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob[]" required>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Another Person Button -->
+    <button type="button" class="add-person-button" id="add-person-button">Add Another Person</button>
+
+    <!-- Contact Details -->
+    <div class="form-section">
+      <h2>Contact Details</h2>
+      <div class="field-container">
+        <label for="apt-number">Number</label>
+        <input type="text" id="apt-number" name="apt-number" required>
+      </div>
+      <div class="field-container">
+        <label for="street">Street</label>
+        <input type="text" id="street" name="street" required>
+      </div>
+      <div class="field-container">
+        <label for="suburb">Suburb</label>
+        <input type="text" id="suburb" name="suburb" required>
+      </div>
+      <div class="field-container">
+        <label for="postcode">Post Code</label>
+        <input type="text" id="postcode" name="postcode" required>
+      </div>
+      <div class="field-container">
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" required>
+      </div>
+      <div class="field-container">
+        <label for="mobile-phone">Mobile Phone</label>
+        <input type="tel" id="mobile-phone" name="mobile-phone" required>
+      </div>
+      <div class="field-container">
+        <label for="home-phone">Home Phone</label>
+        <input type="tel" id="home-phone" name="home-phone">
+      </div>
+      <div class="field-container">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+    </div>
+
+    <!-- Emergency Contact -->
+    <div class="form-section">
+      <h2>Emergency Contact</h2>
+      <div class="field-container">
+        <label for="emergency-name">Name</label>
+        <input type="text" id="emergency-name" name="emergency-name" required>
+      </div>
+      <div class="field-container">
+        <label for="emergency-relationship">Relationship</label>
+        <input type="text" id="emergency-relationship" name="emergency-relationship" placeholder="e.g., Parent, Spouse, Friend" required>
+      </div>
+      <div class="field-container">
+        <label for="emergency-phone">Phone Number</label>
+        <input type="tel" id="emergency-phone" name="emergency-phone" required>
+      </div>
+    </div>
+
+    <!-- Membership Agreement -->
+    <div class="form-section">
+      <h2>Membership Agreement</h2>
+      <p>
+        By becoming a member of the Diamond Valley Gem Club Inc., I/we agree to:
+      </p>
+      <ul>
+        <li>Support the purposes of the club.</li>
+        <li>Abide by the club's rules and by-laws.</li>
+      </ul>
+      <p>
+        For more details, please review our 
+        <a href="https://example.com/terms-and-conditions" target="_blank">Terms and Conditions</a>.
+      </p>
+      <div class="field-container">
+        <input type="checkbox" id="accept-terms" name="accept-terms" required>
+        <label for="accept-terms">I accept the terms and conditions of membership.</label>
+      </div>
+    </div>
+
+    <!-- Fees Section -->
+    <div class="form-section" id="fees-section">
+      <h2>Fees</h2>
+      <p><strong>Joining Fee:</strong> $<span id="joining-fee">0</span></p>
+      <p><strong>Membership Cost:</strong> $<span id="membership-cost">0</span></p>
+      <p><strong>Total Amount:</strong> $<span id="total-amount">0</span></p>
+    </div>
+
+    <!-- Payment Information -->
+    <div class="form-section">
+      <h2>Payment Information</h2>
+      <p>Payments can be made using the following methods:</p>
+      <div>
+        <h3>1. Electronic Funds Transfer (EFT)</h3>
+        <p>Use the following details to make your payment:</p>
+        <ul>
+          <li><strong>Bank:</strong> Westpac</li>
+          <li><strong>BSB:</strong> 033-087</li>
+          <li><strong>Account Number:</strong> 320154</li>
+          <li><strong>Account Name:</strong> Diamond Valley Gem Club Inc</li>
+          <li><strong>Reference:</strong> Your Name</li>
+        </ul>
+      </div>
+      <div>
+        <h3>2. In Person</h3>
+        <p>Payments can be made at the club during operating hours. Please visit the club to complete your payment.</p>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit Application</button>
+  </form>
+
+  <script>
+    document.getElementById('add-person-button').addEventListener('click', () => {
+      const personalDetailsSection = document.getElementById('personal-details-section');
+      const newContainer = document.createElement('div');
+      newContainer.classList.add('personal-details-container');
+
+      newContainer.innerHTML = `
+        <button type="button" class="remove-person-button" aria-label="Remove Section">&times;</button>
+        <div class="personal-row">
+          <div class="field-container title-container">
+            <label for="title">Title</label>
+            <select id="title" name="title[]" required>
+              <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Ms">Ms</option>
+              <option value="Dr">Dr</option>
+              <option value="Prof">Prof</option>
+            </select>
+          </div>
+          <div class="field-container first-name-container">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name[]" required>
+          </div>
+          <div class="field-container last-name-container">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name[]" required>
+          </div>
+        </div>
+        <div class="personal-row">
+          <div class="field-container placeholder-container"></div> <!-- Placeholder for Title -->
+          <div class="field-container preferred-name-container">
+            <label for="preferred-name">Preferred Name</label>
+            <input type="text" id="preferred-name" name="preferred-name[]">
+          </div>
+          <div class="field-container dob-container">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob[]" required>
+          </div>
+        </div>
+      `;
+
+      personalDetailsSection.appendChild(newContainer);
+    });
+
+    // Add event listener to the initial remove button
+    document.querySelectorAll('.remove-person-button').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.target.closest('.inline-fields').remove();
+      });
+    });
+
+    // Function to calculate fees
+    function calculateFees() {
+      const rows = document.querySelectorAll('#personal-details-section .inline-fields');
+      let joiningFee = 0;
+      let membershipCost = 0;
+      let adultCount = 0;
+
+      rows.forEach(row => {
+        const dobField = row.querySelector('input[name="dob[]"]');
+        const dobValue = dobField.value;
+
+        if (dobValue) {
+          const dob = new Date(dobValue);
+          const today = new Date();
+          const age = today.getFullYear() - dob.getFullYear();
+          const isBirthdayPassed = today < new Date(today.getFullYear(), dob.getMonth(), dob.getDate());
+          const finalAge = isBirthdayPassed ? age - 1 : age;
+
+          // Add joining fee for each member
+          joiningFee += 10;
+
+          // Calculate membership cost based on age
+          if (finalAge < 16) {
+            membershipCost += 15; // Child under 16
+          } else if (finalAge < 18) {
+            membershipCost += 20; // Child 16–17
+          } else {
+            if (adultCount === 0) {
+              membershipCost += 40; // First adult
+            } else {
+              membershipCost += 30; // Additional adults
+            }
+            adultCount++;
+          }
+        }
+      });
+
+      // Update the fee display
+      document.getElementById('joining-fee').textContent = joiningFee;
+      document.getElementById('membership-cost').textContent = membershipCost;
+      document.getElementById('total-amount').textContent = joiningFee + membershipCost;
+    }
+
+    // Recalculate fees whenever a row is added, removed, or DOB is changed
+    document.getElementById('add-person-button').addEventListener('click', () => {
+      calculateFees();
+    });
+
+    document.getElementById('personal-details-section').addEventListener('input', (event) => {
+      if (event.target.name === 'dob[]') {
+        calculateFees();
+      }
+    });
+
+    document.getElementById('personal-details-section').addEventListener('click', (event) => {
+      if (event.target.classList.contains('remove-person-button')) {
+        setTimeout(() => calculateFees(), 0); // Delay to allow DOM update
+      }
+    });
+
+    // Initial calculation
+    calculateFees();
+
+    // Function to validate the form before submission
+    function validateForm(event) {
+      const rows = document.querySelectorAll('#personal-details-section .inline-fields');
+      const termsAccepted = document.getElementById('accept-terms').checked;
+      const mobilePhone = document.getElementById('mobile-phone').value.trim();
+      const addressFields = [
+        document.getElementById('apt-number').value.trim(),
+        document.getElementById('street').value.trim(),
+        document.getElementById('suburb').value.trim(),
+        document.getElementById('state').value.trim(),
+        document.getElementById('postcode').value.trim(),
+      ];
+
+      let hasAdult = false;
+      let hasValidRow = false;
+
+      // Validate each row in Personal Details
+      rows.forEach(row => {
+        const firstName = row.querySelector('input[name="first-name[]"]').value.trim();
+        const lastName = row.querySelector('input[name="last-name[]"]').value.trim();
+        const dobValue = row.querySelector('input[name="dob[]"]').value;
+
+        if (firstName && lastName && dobValue) {
+          hasValidRow = true;
+
+          const dob = new Date(dobValue);
+          const today = new Date();
+          const age = today.getFullYear() - dob.getFullYear();
+          const isBirthdayPassed = today < new Date(today.getFullYear(), dob.getMonth(), dob.getDate());
+          const finalAge = isBirthdayPassed ? age - 1 : age;
+
+          if (finalAge >= 18) {
+            hasAdult = true;
+          }
+        }
+      });
+
+      // Check if all required fields are filled
+      const isAddressComplete = addressFields.every(field => field !== '');
+
+      // Error messages
+      if (!hasValidRow) {
+        alert('You must complete at least one row with First Name, Last Name, and D.O.B.');
+        event.preventDefault();
+        return false;
+      }
+
+      if (!hasAdult) {
+        alert('At least one adult (18+) must be included in the form.');
+        event.preventDefault();
+        return false;
+      }
+
+      if (!isAddressComplete) {
+        alert('All address fields (Number, Street, Suburb, State, Postcode) are mandatory.');
+        event.preventDefault();
+        return false;
+      }
+
+      if (!mobilePhone) {
+        alert('Mobile Phone is mandatory.');
+        event.preventDefault();
+        return false;
+      }
+
+      if (!termsAccepted) {
+        alert('You must accept the terms and conditions to proceed.');
+        event.preventDefault();
+        return false;
+      }
+
+      return true;
+    }
+
+    // Attach validation to the form submission
+    document.getElementById('membership-form').addEventListener('submit', validateForm);
+
+    // Event listener to remove dynamically added sections
+    document.addEventListener('click', (event) => {
+      if (event.target.classList.contains('remove-person-button')) {
+        const container = event.target.closest('.personal-details-container');
+        if (container) {
+          container.remove();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

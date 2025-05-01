@@ -206,27 +206,6 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-  // Hardcoded upcoming events
-  const events = [
-    {
-      title: "Working Bee",
-      date: "Saturday, May 4th",
-      time: "9:00am - 12:00pm",
-      location: "Club Grounds"
-    },
-    {
-      title: "Committee Meeting",
-      date: "Tuesday, May 7th",
-      time: "7:30pm - 9:00pm",
-      location: "Clubhouse"
-    },
-    {
-      title: "Annual General Meeting",
-      date: "Sunday, May 12th",
-      time: "2:00pm - 4:00pm",
-      location: "Main Hall"
-    }
-  ];
 
   // Array of random images from the /images folder
   const images = [
@@ -338,11 +317,30 @@ document.addEventListener('DOMContentLoaded', () => {
       // Clear any existing content
       upcomingEventsContainer.innerHTML = '';
 
-      // Limit the number of events displayed (e.g., show only the next 3 events)
-      const upcomingEvents = data.slice(0, 3);
+      // Get today's date
+      const today = new Date();
+
+      // Filter out past events
+      const upcomingEvents = data.filter(event => {
+        const [day, month, year] = event.date.split('-');
+        const eventDate = new Date(`${year}-${month}-${day}`);
+        return eventDate >= today; // Include only events on or after today
+      });
+
+      // Sort events by date (ascending order)
+      upcomingEvents.sort((a, b) => {
+        const [dayA, monthA, yearA] = a.date.split('-');
+        const [dayB, monthB, yearB] = b.date.split('-');
+        const dateA = new Date(`${yearA}-${monthA}-${dayA}`);
+        const dateB = new Date(`${yearB}-${monthB}-${dayB}`);
+        return dateA - dateB;
+      });
+
+      // Limit to the next 3 events
+      const nextThreeEvents = upcomingEvents.slice(0, 3);
 
       // Loop through the events and create cards
-      upcomingEvents.forEach(event => {
+      nextThreeEvents.forEach(event => {
         // Convert date from DD-MM-YYYY to a readable format
         const [day, month, year] = event.date.split('-');
         const formattedDate = `${day} ${new Date(`${year}-${month}-${day}`).toLocaleString('default', { month: 'long' })}, ${year}`;
@@ -355,32 +353,32 @@ document.addEventListener('DOMContentLoaded', () => {
         let image = '';
         switch (event.type) {
           case 'Working Bee':
-          image = '/images/workingbee.jpg';
-          break;
-        case 'Field Trip':
-          image = '/images/Faceting.jpeg';
-          break;
-        case 'Committee Meeting':
-          image = '/images/committee.jpg';
-          break;
-        case 'Social Event':
-          image = '/images/social.jpg';
-          break;
-        case 'AGM':
-          image = '/images/Faceting.jpeg';
-          break;
-        case 'Other Event':
-          image = '/images/cabs.jpg';
-          break;
-        case 'Gem Show':
-          image = '/images/library.jpg';
-          break;
-        case 'Gem Identification':
-          image = '/images/gemid.jpg';
-          break;
-        default:
-          image = '/images/default-event.png';
-      }
+            image = '/images/workingbee.jpg';
+            break;
+          case 'Field Trip':
+            image = '/images/Faceting.jpeg';
+            break;
+          case 'Committee Meeting':
+            image = '/images/committee.jpg';
+            break;
+          case 'Social Event':
+            image = '/images/social.jpg';
+            break;
+          case 'AGM':
+            image = '/images/Faceting.jpeg';
+            break;
+          case 'Other Event':
+            image = '/images/cabs.jpg';
+            break;
+          case 'Gem Show':
+            image = '/images/library.jpg';
+            break;
+          case 'Gem Identification':
+            image = '/images/gemid.jpg';
+            break;
+          default:
+            image = '/images/default-event.png';
+        }
 
         // Create the event card
         const eventCard = document.createElement('div');
