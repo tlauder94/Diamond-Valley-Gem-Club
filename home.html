@@ -355,32 +355,32 @@ document.addEventListener('DOMContentLoaded', () => {
         let image = '';
         switch (event.type) {
           case 'Working Bee':
-            image = '/images/library.jpg';
-            break;
-          case 'Field Trip':
-            image = '/images/Faceting.jpeg';
-            break;
-          case 'Committee Meeting':
-            image = '/images/cabs.jpg';
-            break;
-          case 'Social Event':
-            image = '/images/library.jpg';
-            break;
-          case 'AGM':
-            image = '/images/Faceting.jpeg';
-            break;
-          case 'Other Event':
-            image = '/images/cabs.jpg';
-            break;
-          case 'Gem Show':
-            image = '/images/library.jpg';
-            break;
-          case 'Gem Identification':
-            image = '/images/Faceting.jpeg';
-            break;
-          default:
-            image = '/images/default-event.png';
-        }
+          image = '/images/workingbee.jpg';
+          break;
+        case 'Field Trip':
+          image = '/images/Faceting.jpeg';
+          break;
+        case 'Committee Meeting':
+          image = '/images/committee.jpg';
+          break;
+        case 'Social Event':
+          image = '/images/social.jpg';
+          break;
+        case 'AGM':
+          image = '/images/Faceting.jpeg';
+          break;
+        case 'Other Event':
+          image = '/images/cabs.jpg';
+          break;
+        case 'Gem Show':
+          image = '/images/library.jpg';
+          break;
+        case 'Gem Identification':
+          image = '/images/gemid.jpg';
+          break;
+        default:
+          image = '/images/default-event.png';
+      }
 
         // Create the event card
         const eventCard = document.createElement('div');

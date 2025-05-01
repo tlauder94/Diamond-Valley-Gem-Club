@@ -219,16 +219,16 @@ document.addEventListener('DOMContentLoaded', () => {
       let image = '';
       switch (event.type) {
         case 'Working Bee':
-          image = '/images/library.jpg';
+          image = '/images/workingbee.jpg';
           break;
         case 'Field Trip':
           image = '/images/Faceting.jpeg';
           break;
         case 'Committee Meeting':
-          image = '/images/cabs.jpg';
+          image = '/images/committee.jpg';
           break;
         case 'Social Event':
-          image = '/images/library.jpg';
+          image = '/images/social.jpg';
           break;
         case 'AGM':
           image = '/images/Faceting.jpeg';
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
           image = '/images/library.jpg';
           break;
         case 'Gem Identification':
-          image = '/images/Faceting.jpeg';
+          image = '/images/gemid.jpg';
           break;
         default:
           image = '/images/default-event.png';
