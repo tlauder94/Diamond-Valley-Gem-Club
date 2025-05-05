@@ -392,6 +392,19 @@ button.submit-button:hover {
   background-color: #155a8a; /* Darker blue on hover */
 }
 
+/* Mandatory Note */
+.mandatory-note {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Required Asterisk */
+.required-asterisk {
+  color: red;
+  font-weight: bold;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .field-container {

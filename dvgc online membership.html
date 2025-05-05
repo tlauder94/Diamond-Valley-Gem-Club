@@ -16,16 +16,18 @@
       <h1>Diamond Valley Gem Club Membership Form</h1>
     </section>
     <form id="membership-form">
+      <!-- Mandatory Fields Note -->
+      <p class="mandatory-note">Fields marked with <span class="required-asterisk">*</span> are mandatory.</p>
+
       <!-- Personal Details -->
       <h2>Personal Details</h2>
       <div class="form-section" id="personal-details-section">
-        <!-- Personal Details Container -->
         <div class="personal-details-container">
           <!-- Row 1 -->
           <div class="personal-row">
             <div class="field-container title-container">
               <label for="title">Title</label>
-              <select id="title" name="title[]" required>
+              <select id="title" name="title[]">
                 <option value="Mr">Mr</option>
                 <option value="Mrs">Mrs</option>
                 <option value="Ms">Ms</option>
@@ -34,11 +36,11 @@
               </select>
             </div>
             <div class="field-container first-name-container">
-              <label for="first-name">First Name</label>
+              <label for="first-name">First Name <span class="required-asterisk">*</span></label>
               <input type="text" id="first-name" name="first-name[]" required>
             </div>
             <div class="field-container last-name-container">
-              <label for="last-name">Last Name</label>
+              <label for="last-name">Last Name <span class="required-asterisk">*</span></label>
               <input type="text" id="last-name" name="last-name[]" required>
             </div>
           </div>
@@ -51,7 +53,7 @@
               <input type="text" id="preferred-name" name="preferred-name[]">
             </div>
             <div class="field-container dob-container">
-              <label for="dob">Date of Birth</label>
+              <label for="dob">Date of Birth <span class="required-asterisk">*</span></label>
               <input type="date" id="dob" name="dob[]" required>
             </div>
           </div>
@@ -68,11 +70,11 @@
         <!-- Row 1 -->
         <div class="contact-row">
           <div class="field-container number-container">
-            <label for="apt-number">Number</label>
+            <label for="apt-number">Number <span class="required-asterisk">*</span></label>
             <input type="text" id="apt-number" name="apt-number" required>
           </div>
           <div class="field-container street-container">
-            <label for="street">Street</label>
+            <label for="street">Street <span class="required-asterisk">*</span></label>
             <input type="text" id="street" name="street" required>
           </div>
         </div>
@@ -80,15 +82,15 @@
         <!-- Row 2 -->
         <div class="contact-row">
           <div class="field-container suburb-container">
-            <label for="suburb">Suburb</label>
+            <label for="suburb">Suburb <span class="required-asterisk">*</span></label>
             <input type="text" id="suburb" name="suburb" required>
           </div>
           <div class="field-container state-container">
-            <label for="state">State</label>
+            <label for="state">State <span class="required-asterisk">*</span></label>
             <input type="text" id="state" name="state" required>
           </div>
           <div class="field-container postcode-container">
-            <label for="postcode">Post Code</label>
+            <label for="postcode">Post Code <span class="required-asterisk">*</span></label>
             <input type="text" id="postcode" name="postcode" required>
           </div>
         </div>
@@ -96,7 +98,7 @@
         <!-- Row 3 -->
         <div class="contact-row">
           <div class="field-container mobile-phone-container">
-            <label for="mobile-phone">Mobile Phone</label>
+            <label for="mobile-phone">Mobile Phone <span class="required-asterisk">*</span></label>
             <input type="tel" id="mobile-phone" name="mobile-phone" required>
           </div>
           <div class="field-container home-phone-container">
@@ -108,7 +110,7 @@
         <!-- Row 4 -->
         <div class="contact-row">
           <div class="field-container email-container">
-            <label for="email">Email Address</label>
+            <label for="email">Email Address <span class="required-asterisk">*</span></label>
             <input type="email" id="email" name="email" required>
           </div>
         </div>
@@ -157,7 +159,7 @@
         </p>
         <div class="field-container">
           <input type="checkbox" id="accept-terms" name="accept-terms" required>
-          <label for="accept-terms">I have read and agree to the terms and conditions of membership.</label>
+          <label for="accept-terms">I have read and agree to the terms and conditions of membership <span class="required-asterisk">*</span></label>
         </div>
       </div>
 
