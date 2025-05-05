@@ -11,9 +11,8 @@
   <h1>Diamond Valley Gem Club Membership Form</h1>
   <form id="membership-form">
     <!-- Personal Details -->
+    <h2>Personal Details</h2>
     <div class="form-section" id="personal-details-section">
-      <h2>Personal Details</h2>
-
       <!-- Personal Details Container -->
       <div class="personal-details-container">
         <!-- Row 1 -->
@@ -57,105 +56,154 @@
     <button type="button" class="add-person-button" id="add-person-button">Add Another Person</button>
 
     <!-- Contact Details -->
-    <div class="form-section">
-      <h2>Contact Details</h2>
-      <div class="field-container">
-        <label for="apt-number">Number</label>
-        <input type="text" id="apt-number" name="apt-number" required>
-      </div>
-      <div class="field-container">
-        <label for="street">Street</label>
-        <input type="text" id="street" name="street" required>
-      </div>
-      <div class="field-container">
-        <label for="suburb">Suburb</label>
-        <input type="text" id="suburb" name="suburb" required>
-      </div>
-      <div class="field-container">
-        <label for="postcode">Post Code</label>
-        <input type="text" id="postcode" name="postcode" required>
-      </div>
-      <div class="field-container">
-        <label for="state">State</label>
-        <input type="text" id="state" name="state" required>
-      </div>
-      <div class="field-container">
-        <label for="mobile-phone">Mobile Phone</label>
-        <input type="tel" id="mobile-phone" name="mobile-phone" required>
-      </div>
-      <div class="field-container">
-        <label for="home-phone">Home Phone</label>
-        <input type="tel" id="home-phone" name="home-phone">
-      </div>
-      <div class="field-container">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+    <hr class="section-break">
+    <h2>Contact Details</h2>
+    <div class="form-section contact-details-container">
+      <div class="contact-details-container">
+        <!-- Row 1 -->
+        <div class="contact-row">
+          <div class="field-container number-container">
+            <label for="apt-number">Number</label>
+            <input type="text" id="apt-number" name="apt-number" required>
+          </div>
+          <div class="field-container street-container">
+            <label for="street">Street</label>
+            <input type="text" id="street" name="street" required>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="contact-row">
+          <div class="field-container suburb-container">
+            <label for="suburb">Suburb</label>
+            <input type="text" id="suburb" name="suburb" required>
+          </div>
+          <div class="field-container state-container">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required>
+          </div>
+          <div class="field-container postcode-container">
+            <label for="postcode">Post Code</label>
+            <input type="text" id="postcode" name="postcode" required>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="contact-row">
+          <div class="field-container mobile-phone-container">
+            <label for="mobile-phone">Mobile Phone</label>
+            <input type="tel" id="mobile-phone" name="mobile-phone" required>
+          </div>
+          <div class="field-container home-phone-container">
+            <label for="home-phone">Home Phone</label>
+            <input type="tel" id="home-phone" name="home-phone">
+          </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="contact-row">
+          <div class="field-container email-container">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Emergency Contact -->
-    <div class="form-section">
-      <h2>Emergency Contact</h2>
-      <div class="field-container">
-        <label for="emergency-name">Name</label>
-        <input type="text" id="emergency-name" name="emergency-name" required>
-      </div>
-      <div class="field-container">
-        <label for="emergency-relationship">Relationship</label>
-        <input type="text" id="emergency-relationship" name="emergency-relationship" placeholder="e.g., Parent, Spouse, Friend" required>
-      </div>
-      <div class="field-container">
-        <label for="emergency-phone">Phone Number</label>
-        <input type="tel" id="emergency-phone" name="emergency-phone" required>
+    <hr class="section-break">
+    <h2>Emergency Contact</h2>
+    <div class="form-section emergency-contact-container">
+      <div class="emergency-contact-container">
+        <div class="contact-row">
+          <div class="field-container emergency-name-container">
+            <label for="emergency-name">Name</label>
+            <input type="text" id="emergency-name" name="emergency-name" required>
+          </div>
+          <div class="field-container emergency-relationship-container">
+            <label for="emergency-relationship">Relationship</label>
+            <input type="text" id="emergency-relationship" name="emergency-relationship" placeholder="e.g., Parent, Spouse, Friend" required>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="field-container emergency-phone-container">
+            <label for="emergency-phone">Phone Number</label>
+            <input type="tel" id="emergency-phone" name="emergency-phone" required>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Membership Agreement -->
-    <div class="form-section">
-      <h2>Membership Agreement</h2>
-      <p>
-        By becoming a member of the Diamond Valley Gem Club Inc., I/we agree to:
-      </p>
-      <ul>
-        <li>Support the purposes of the club.</li>
-        <li>Abide by the club's rules and by-laws.</li>
-      </ul>
-      <p>
-        For more details, please review our 
-        <a href="https://example.com/terms-and-conditions" target="_blank">Terms and Conditions</a>.
-      </p>
-      <div class="field-container">
-        <input type="checkbox" id="accept-terms" name="accept-terms" required>
-        <label for="accept-terms">I accept the terms and conditions of membership.</label>
+    <hr class="section-break">
+    <h2>Membership Agreement</h2>
+    <div class="form-section membership-agreement-container">
+      <div class="membership-agreement-container">
+        <p>
+          By becoming a member of the Diamond Valley Gem Club Inc., I/we agree to:
+        </p>
+        <ul>
+          <li>Support the purposes of the club.</li>
+          <li>Abide by the club's rules and by-laws.</li>
+        </ul>
+        <p>
+          For more details, please review our 
+          <a href="https://example.com/terms-and-conditions" target="_blank">Terms and Conditions</a>.
+        </p>
+        <div class="field-container">
+          <input type="checkbox" id="accept-terms" name="accept-terms" required>
+          <label for="accept-terms">I accept the terms and conditions of membership.</label>
+        </div>
       </div>
     </div>
 
     <!-- Fees Section -->
+    <hr class="section-break">
+    <h2>Fees</h2>
     <div class="form-section" id="fees-section">
-      <h2>Fees</h2>
-      <p><strong>Joining Fee:</strong> $<span id="joining-fee">0</span></p>
-      <p><strong>Membership Cost:</strong> $<span id="membership-cost">0</span></p>
-      <p><strong>Total Amount:</strong> $<span id="total-amount">0</span></p>
+      <div class="fees-row">
+        <!-- Left Column -->
+        <div class="fees-left">
+          <p><strong>Joining Fee:</strong> $<span id="joining-fee">0</span></p>
+          <p><strong>Membership Cost:</strong> $<span id="membership-cost">0</span></p>
+        </div>
+
+        <!-- Right Column -->
+        <div class="fees-right">
+          <p><strong>Total Amount:</strong></p>
+          <p class="total-amount">$<span id="total-amount">0</span></p>
+        </div>
+      </div>
     </div>
 
     <!-- Payment Information -->
-    <div class="form-section">
-      <h2>Payment Information</h2>
-      <p>Payments can be made using the following methods:</p>
-      <div>
-        <h3>1. Electronic Funds Transfer (EFT)</h3>
-        <p>Use the following details to make your payment:</p>
-        <ul>
-          <li><strong>Bank:</strong> Westpac</li>
-          <li><strong>BSB:</strong> 033-087</li>
-          <li><strong>Account Number:</strong> 320154</li>
-          <li><strong>Account Name:</strong> Diamond Valley Gem Club Inc</li>
-          <li><strong>Reference:</strong> Your Name</li>
-        </ul>
+    <hr class="section-break">
+    <h2>Payment Information</h2>
+    <div class="form-section payment-info-container">
+      <!-- Introductory Section -->
+      <div class="payment-intro">
+        <p>The Diamond Valley Gem Club offers multiple options to pay for your membership. Please choose the method that works best for you:</p>
       </div>
-      <div>
-        <h3>2. In Person</h3>
-        <p>Payments can be made at the club during operating hours. Please visit the club to complete your payment.</p>
+
+      <div class="payment-row">
+        <!-- Option 1 -->
+        <div class="payment-option-container">
+          <h3>1. Electronic Funds Transfer (EFT)</h3>
+          <p>Use the following details to make your payment:</p>
+          <ul>
+            <li><strong>Bank:</strong> Westpac</li>
+            <li><strong>BSB:</strong> 033-087</li>
+            <li><strong>Account Number:</strong> 320154</li>
+            <li><strong>Account Name:</strong> Diamond Valley Gem Club Inc</li>
+            <li><strong>Reference:</strong> Your Name</li>
+          </ul>
+        </div>
+
+        <!-- Option 2 -->
+        <div class="payment-option-container">
+          <h3>2. In Person</h3>
+          <p>Payments can be made at the club during operating hours. Please visit the club to complete your payment.</p>
+        </div>
       </div>
     </div>
 
@@ -216,14 +264,14 @@
 
     // Function to calculate fees
     function calculateFees() {
-      const rows = document.querySelectorAll('#personal-details-section .inline-fields');
+      const rows = document.querySelectorAll('#personal-details-section .personal-details-container');
       let joiningFee = 0;
       let membershipCost = 0;
       let adultCount = 0;
 
       rows.forEach(row => {
         const dobField = row.querySelector('input[name="dob[]"]');
-        const dobValue = dobField.value;
+        const dobValue = dobField ? dobField.value : null;
 
         if (dobValue) {
           const dob = new Date(dobValue);
