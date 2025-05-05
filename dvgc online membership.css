@@ -20,6 +20,26 @@ h2 {
   font-size: 1.5rem;
 }
 
+/* Page Header */
+.page-header {
+  background-color: #1B75BC; /* Blue background */
+  text-align: center; /* Center the text */
+  padding: 40px 15px; /* Increase padding for consistent height */
+  margin-bottom: 20px; /* Add space below the header */
+  border-radius: 8px; /* Optional: Rounded corners for a modern look */
+  min-height: 150px; /* Ensure consistent height */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Vertically center the text */
+  justify-content: center; /* Horizontally center the text */
+}
+
+.page-header h1 {
+  margin: 0; /* Remove default margin */
+  font-size: 2.5rem; /* Adjust font size for prominence */
+  font-weight: 700; /* Make the text bold */
+  color: white;
+}
+
 /* Form Styles */
 form {
   max-width: 900px;
@@ -352,6 +372,24 @@ button:hover {
 .field-container input[type="checkbox"] {
   width: auto;
   margin-right: 10px;
+}
+
+/* Submit Button */
+button.submit-button {
+  display: block; /* Ensures the button is treated as a block element */
+  margin: 40px auto; /* Centers the button horizontally */
+  padding: 15px 30px; /* Increases padding for a larger button */
+  font-size: 1.2rem; /* Increases font size */
+  background-color: #1B75BC; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.submit-button:hover {
+  background-color: #155a8a; /* Darker blue on hover */
 }
 
 /* Responsive Design */

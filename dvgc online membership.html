@@ -7,59 +7,64 @@
   <link rel="stylesheet" href="dvgc online membership.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <h1>Diamond Valley Gem Club Membership Form</h1>
-  <form id="membership-form">
-    <!-- Personal Details -->
-    <h2>Personal Details</h2>
-    <div class="form-section" id="personal-details-section">
-      <!-- Personal Details Container -->
-      <div class="personal-details-container">
-        <!-- Row 1 -->
-        <div class="personal-row">
-          <div class="field-container title-container">
-            <label for="title">Title</label>
-            <select id="title" name="title[]" required>
-              <option value="Mr">Mr</option>
-              <option value="Mrs">Mrs</option>
-              <option value="Ms">Ms</option>
-              <option value="Dr">Dr</option>
-              <option value="Prof">Prof</option>
-            </select>
-          </div>
-          <div class="field-container first-name-container">
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first-name[]" required>
-          </div>
-          <div class="field-container last-name-container">
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name[]" required>
-          </div>
-        </div>
+  <!-- Header -->
+  <header id="navbar-container"></header>
 
-        <!-- Row 2 -->
-        <div class="personal-row">
-          <div class="field-container placeholder-container"></div> <!-- Placeholder for Title -->
-          <div class="field-container preferred-name-container">
-            <label for="preferred-name">Preferred Name</label>
-            <input type="text" id="preferred-name" name="preferred-name[]">
+  <!-- Main Content -->
+  <main>
+    <section class="page-header">
+      <h1>Diamond Valley Gem Club Membership Form</h1>
+    </section>
+    <form id="membership-form">
+      <!-- Personal Details -->
+      <h2>Personal Details</h2>
+      <div class="form-section" id="personal-details-section">
+        <!-- Personal Details Container -->
+        <div class="personal-details-container">
+          <!-- Row 1 -->
+          <div class="personal-row">
+            <div class="field-container title-container">
+              <label for="title">Title</label>
+              <select id="title" name="title[]" required>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Ms">Ms</option>
+                <option value="Dr">Dr</option>
+                <option value="Prof">Prof</option>
+              </select>
+            </div>
+            <div class="field-container first-name-container">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name[]" required>
+            </div>
+            <div class="field-container last-name-container">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name[]" required>
+            </div>
           </div>
-          <div class="field-container dob-container">
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" name="dob[]" required>
+
+          <!-- Row 2 -->
+          <div class="personal-row">
+            <div class="field-container placeholder-container"></div> <!-- Placeholder for Title -->
+            <div class="field-container preferred-name-container">
+              <label for="preferred-name">Preferred Name</label>
+              <input type="text" id="preferred-name" name="preferred-name[]">
+            </div>
+            <div class="field-container dob-container">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="dob[]" required>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Add Another Person Button -->
-    <button type="button" class="add-person-button" id="add-person-button">Add Another Person</button>
+      <!-- Add Another Person Button -->
+      <button type="button" class="add-person-button" id="add-person-button">Add Another Person</button>
 
-    <!-- Contact Details -->
-    <hr class="section-break">
-    <h2>Contact Details</h2>
-    <div class="form-section contact-details-container">
-      <div class="contact-details-container">
+      <!-- Contact Details -->
+      <hr class="section-break">
+      <h2>Contact Details</h2>
+      <div class="form-section contact-details-container">
         <!-- Row 1 -->
         <div class="contact-row">
           <div class="field-container number-container">
@@ -108,13 +113,11 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Emergency Contact -->
-    <hr class="section-break">
-    <h2>Emergency Contact</h2>
-    <div class="form-section emergency-contact-container">
-      <div class="emergency-contact-container">
+      <!-- Emergency Contact -->
+      <hr class="section-break">
+      <h2>Emergency Contact</h2>
+      <div class="form-section emergency-contact-container">
         <div class="contact-row">
           <div class="field-container emergency-name-container">
             <label for="emergency-name">Name</label>
@@ -132,86 +135,111 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Membership Agreement -->
-    <hr class="section-break">
-    <h2>Membership Agreement</h2>
-    <div class="form-section membership-agreement-container">
-      <div class="membership-agreement-container">
+      <!-- Membership Agreement -->
+      <hr class="section-break">
+      <h2>Membership Agreement</h2>
+      <div class="form-section membership-agreement-container">
         <p>
-          By becoming a member of the Diamond Valley Gem Club Inc., I/we agree to:
+          By joining the Diamond Valley Gem Club Inc., you are becoming part of a vibrant community of gem enthusiasts who share a passion for learning, creativity, and collaboration. As a member, you agree to:
         </p>
         <ul>
-          <li>Support the purposes of the club.</li>
-          <li>Abide by the club's rules and by-laws.</li>
+          <li>Support the purposes and values of the club, fostering a welcoming and inclusive environment for all members.</li>
+          <li>Abide by the club's rules, by-laws, and safety guidelines to ensure a safe and enjoyable experience for everyone.</li>
+          <li>Participate in club activities and contribute to the growth and success of the club whenever possible.</li>
         </ul>
         <p>
-          For more details, please review our 
-          <a href="https://example.com/terms-and-conditions" target="_blank">Terms and Conditions</a>.
+          We encourage you to familiarize yourself with our 
+          <a href="https://example.com/terms-and-conditions" target="_blank">Terms and Conditions</a>, which outline the full details of your membership responsibilities and benefits.
+        </p>
+        <p>
+          Thank you for choosing to be part of the Diamond Valley Gem Club. We look forward to sharing this exciting journey with you!
         </p>
         <div class="field-container">
           <input type="checkbox" id="accept-terms" name="accept-terms" required>
-          <label for="accept-terms">I accept the terms and conditions of membership.</label>
+          <label for="accept-terms">I have read and agree to the terms and conditions of membership.</label>
         </div>
       </div>
-    </div>
 
-    <!-- Fees Section -->
-    <hr class="section-break">
-    <h2>Fees</h2>
-    <div class="form-section" id="fees-section">
-      <div class="fees-row">
-        <!-- Left Column -->
-        <div class="fees-left">
-          <p><strong>Joining Fee:</strong> $<span id="joining-fee">0</span></p>
-          <p><strong>Membership Cost:</strong> $<span id="membership-cost">0</span></p>
-        </div>
+      <!-- Fees Section -->
+      <hr class="section-break">
+      <h2>Fees</h2>
+      <div class="form-section" id="fees-section">
+        <div class="fees-row">
+          <!-- Left Column -->
+          <div class="fees-left">
+            <p><strong>Joining Fee:</strong> $<span id="joining-fee">0</span></p>
+            <p><strong>Membership Cost:</strong> $<span id="membership-cost">0</span></p>
+          </div>
 
-        <!-- Right Column -->
-        <div class="fees-right">
-          <p><strong>Total Amount:</strong></p>
-          <p class="total-amount">$<span id="total-amount">0</span></p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Payment Information -->
-    <hr class="section-break">
-    <h2>Payment Information</h2>
-    <div class="form-section payment-info-container">
-      <!-- Introductory Section -->
-      <div class="payment-intro">
-        <p>The Diamond Valley Gem Club offers multiple options to pay for your membership. Please choose the method that works best for you:</p>
-      </div>
-
-      <div class="payment-row">
-        <!-- Option 1 -->
-        <div class="payment-option-container">
-          <h3>1. Electronic Funds Transfer (EFT)</h3>
-          <p>Use the following details to make your payment:</p>
-          <ul>
-            <li><strong>Bank:</strong> Westpac</li>
-            <li><strong>BSB:</strong> 033-087</li>
-            <li><strong>Account Number:</strong> 320154</li>
-            <li><strong>Account Name:</strong> Diamond Valley Gem Club Inc</li>
-            <li><strong>Reference:</strong> Your Name</li>
-          </ul>
-        </div>
-
-        <!-- Option 2 -->
-        <div class="payment-option-container">
-          <h3>2. In Person</h3>
-          <p>Payments can be made at the club during operating hours. Please visit the club to complete your payment.</p>
+          <!-- Right Column -->
+          <div class="fees-right">
+            <p><strong>Total Amount:</strong></p>
+            <p class="total-amount">$<span id="total-amount">0</span></p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Submit Button -->
-    <button type="submit">Submit Application</button>
-  </form>
+      <!-- Payment Information -->
+      <hr class="section-break">
+      <h2>Payment Information</h2>
+      <div class="form-section payment-info-container">
+        <!-- Introductory Section -->
+        <div class="payment-intro">
+          <p>The Diamond Valley Gem Club offers multiple options to pay for your membership. Please choose the method that works best for you:</p>
+        </div>
+
+        <div class="payment-row">
+          <!-- Option 1 -->
+          <div class="payment-option-container">
+            <h3>1. Electronic Funds Transfer (EFT)</h3>
+            <p>Use the following details to make your payment:</p>
+            <ul>
+              <li><strong>Bank:</strong> Westpac</li>
+              <li><strong>BSB:</strong> 033-087</li>
+              <li><strong>Account Number:</strong> 320154</li>
+              <li><strong>Account Name:</strong> Diamond Valley Gem Club Inc</li>
+              <li><strong>Reference:</strong> Your Name</li>
+            </ul>
+          </div>
+
+          <!-- Option 2 -->
+          <div class="payment-option-container">
+            <h3>2. In Person</h3>
+            <p>Payments can be made at the club during operating hours. Please visit the club to complete your payment.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-button">Submit Application</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer-container"></footer>
 
   <script>
+    // Dynamically load the shared navbar
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector('#navbar-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    });
+
+    // Dynamically load the shared footer
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('../footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.querySelector('#footer-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    });
+
     document.getElementById('add-person-button').addEventListener('click', () => {
       const personalDetailsSection = document.getElementById('personal-details-section');
       const newContainer = document.createElement('div');
