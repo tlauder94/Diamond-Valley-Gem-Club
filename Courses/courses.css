@@ -279,3 +279,9 @@ blockquote {
   color: #155a8a; /* Darker blue on hover */
   text-decoration: none; /* Optional: Remove underline on hover */
 }
+
+#course-cost {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1B75BC;
+}

@@ -443,6 +443,13 @@
   border-bottom: 1px solid #1B75BC;
 }
 
+.page-break-course {
+  margin: 20px 0;
+  border-bottom: 1px solid #1B75BC;
+  width: 80%; /* Limit the width of the line */
+  margin: 0 auto; /* Center the line */
+}
+
 /* Upcoming Events Section */
 #home-upcoming-events {
   text-align: center;
@@ -590,5 +597,28 @@
 .home-all-courses-button:hover {
   background-color: #155a8a; /* Darker blue on hover */
   transform: scale(1.05); /* Slight zoom effect */
+}
+
+.home-about-button a,
+.home-history-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.home-about-button,
+.home-history-button {
+  background-color: #1B75BC;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-about-button:hover,
+.home-history-button:hover {
+  background-color: #155a8a;
 }
 

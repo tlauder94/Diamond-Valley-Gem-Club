@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const eventsApiUrl = 'https://script.google.com/macros/s/AKfycbzDEbxudf6gPyCQe2KBI-Rf2Ddh49OPjPGEFL08S6nPTF-dVPnD7i8YwJAYx436KumX/exec?sheet=Events';
+  const eventsApiUrl = 'https://script.google.com/macros/s/AKfycby5-Sv7WigXltzCjVL_EtgQjYYyH2_rMpGx8HAsu93Pe8vjwn1LxX6NrvJl3fM61WuQ/exec?sheet=Events';
 
   // Fetch events from the API
   fetch(eventsApiUrl)
@@ -150,13 +150,34 @@ function initializeCalendar(events) {
   calendar.render();
 }
 
+// Get modal elements
+const modal = document.getElementById('event-modal');
+const closeButton = document.querySelector('.close-button'); // Assuming the close button has this class
+
+// Function to close the modal
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+// Close modal when the X button is clicked
+if (closeButton) {
+  closeButton.addEventListener('click', closeModal);
+}
+
+// Close modal when the Escape key is pressed
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && modal.style.display === 'block') {
+    closeModal();
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const upcomingEventsContainer = document.getElementById('upcoming-events-container');
   const eventTypeFilter = document.getElementById('event-type-filter');
   let allEvents = []; // Store all events for filtering
 
   // Fetch events from the API
-  const eventsApiUrl = 'https://script.google.com/macros/s/AKfycbzDEbxudf6gPyCQe2KBI-Rf2Ddh49OPjPGEFL08S6nPTF-dVPnD7i8YwJAYx436KumX/exec?sheet=Events';
+  const eventsApiUrl = 'https://script.google.com/macros/s/AKfycby5-Sv7WigXltzCjVL_EtgQjYYyH2_rMpGx8HAsu93Pe8vjwn1LxX6NrvJl3fM61WuQ/exec?sheet=Events';
 
   fetch(eventsApiUrl)
     .then(response => {

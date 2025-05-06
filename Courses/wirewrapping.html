@@ -32,7 +32,7 @@
             <h2 class="cost-heading">Course Cost</h2>
           </div>
           <div class="price-container">
-            <p class="price">$200</p>
+            <p class="price" id="course-cost">Loading...</p> <!-- Display "Loading..." initially -->
           </div>
           <div class="cta-button-container">
             <button class="cta-button">Register Now</button>
@@ -177,6 +177,39 @@
           upcomingCoursesContainer.innerHTML += eventHTML;
         });
     }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const apiUrl = "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLgAVUnOJDWSIpG9P_OXnRAYn5tIerxJDE3p7qyI1rtIxvlkqXtnKthD2PAPbQQB-NQz5eIVCO5JqOhnxwutuMOeeA4yu93LZtDbw8kQNe5sU4g2InX7JvJuf-a80spCRITI8umXmsbai4oDbqCoIcUgmM_9MWq3asPsXfDkawc4WnLsOCj0uLITK333KgGNGRi78lxEOWjZZdvam2MtmOXQVNbwijjATyErsFJcYhD73ZrQoWs0jHx2uvlhWcqdTo8W9PydWmoj9KVqCCUb7Ufb47e4zGjyiWtv3Eg1GjoLhAsiZEA&lib=MOZjIhuefjGEGvwvHrh3M0TbZ7jG6IkQL";
+
+    const costElement = document.getElementById('course-cost');
+
+    // Show loading message
+    costElement.textContent = "Loading...";
+
+    // Fetch course costs from the API
+    fetch(apiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Find the cost for the "Wire Wrapping" course
+        const wireWrappingCourse = data.find(course => course.name === "Wire Wrapping");
+        if (wireWrappingCourse) {
+          // Update the cost dynamically
+          costElement.textContent = `$${wireWrappingCourse.cost}`;
+        } else {
+          costElement.textContent = "Course not found.";
+          console.error("Wire Wrapping course not found in the data.");
+        }
+      })
+      .catch(error => {
+        costElement.textContent = "Error loading cost.";
+        console.error("Error fetching course costs:", error);
+      });
   });
 </script>
 </body>

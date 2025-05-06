@@ -80,46 +80,47 @@
   </div>
 </section>
 
-<div class="divider"></div>
-
-  <section id="home-about">
+<section id="home-about">
   <div class="home-about-container">
     <div class="home-about-text">
       <h1>About Us</h1>
-      <p>At the Diamond Valley Gem Club, we're all about digging deeper — literally and figuratively. Founded by a passionate group of rockhounds and lapidary enthusiasts, our club offers a welcoming space for anyone fascinated by gems, minerals, fossils, and the art of shaping them into stunning works. Whether you're a beginner who can barely tell quartz from granite or a seasoned facetor who dreams in perfect symmetry, you'll find workshops, equipment, and expert guidance to help you level up your skills. We run regular classes in cutting, cabbing, faceting, silversmithing, and jewellery making, because rocks deserve a good polish and a great setting.</p>
-
-       <p> But it’s not all about the grind (pun absolutely intended). We're a social bunch too — offering field trips, competitions, gem shows, and community events where you can swap stories, stones, and a fair bit of friendly banter. Whether you’re here to learn, create, compete, or just marvel at the Earth's sparkliest treasures, Diamond Valley Gem Club offers a vibrant, down-to-earth community ready to welcome you. Grab a chisel, grab a cuppa — let’s rock.</p>
+      <p>
+        At the Diamond Valley Gem Club, we're all about digging deeper — literally and figuratively. Founded by a passionate group of rockhounds and lapidary enthusiasts, our club offers a welcoming space for anyone fascinated by gems, minerals, fossils, and the art of shaping them into stunning works. Whether you're a beginner who can barely tell quartz from granite or a seasoned facetor who dreams in perfect symmetry, you'll find workshops, equipment, and expert guidance to help you level up your skills. We run regular classes in cutting, cabbing, faceting, silversmithing, and jewellery making, because rocks deserve a good polish and a great setting.
+      </p>
+      <p>
+        But it’s not all about the grind (pun absolutely intended). We're a social bunch too — offering field trips, competitions, gem shows, and community events where you can swap stories, stones, and a fair bit of friendly banter. Whether you’re here to learn, create, compete, or just marvel at the Earth's sparkliest treasures, Diamond Valley Gem Club offers a vibrant, down-to-earth community ready to welcome you. Grab a chisel, grab a cuppa — let’s rock.
+      </p>
+      <button class="home-about-button">
+        <a href="/about.html">Find Out More...</a>
+      </button>
     </div>
     <div class="home-about-image-container">
-    <img src="/images/history1.jpg" alt="Diamond Valley Gem Club" class="about-image" />
+      <img src="/images/history1.jpg" alt="Diamond Valley Gem Club" class="about-image" />
     </div>
   </div>
 </section>
 
-  <div class="divider"></div>
+<div class="page-break-course"></div> <!-- Page break moved here -->
 
-
-  
-  <section id="home-course">
-    <div class="home-course-container">
-      <div class="home-course-text">
-        <h1>Courses</h1>
-      </div>
-      <div id="home-course-grid" class="home-course-grid">
-        <div class="home-course-card">
-          <img src="images/example.jpg" alt="Course Image" class="course-image">
-          <h2>Course Title</h2>
-          <p>Course description goes here. It should be concise and informative.</p>
-          <a href="course-details.html" class="course-button">More Details</a>
-        </div>
-        <!-- More dynamically added cards -->
-      </div>
-      <div class="view-all-courses-button-container">
-        <a href="courses.html" class="home-all-courses-button">View All Courses</a>
-      </div>
+<section id="home-course">
+  <div class="home-course-container">
+    <div class="home-course-text">
+      <h1>Courses</h1>
     </div>
+    <div id="home-course-grid" class="home-course-grid">
+      <div class="home-course-card">
+        <img src="images/example.jpg" alt="Course Image" class="course-image">
+        <h2>Course Title</h2>
+        <p>Course description goes here. It should be concise and informative.</p>
+        <a href="course-details.html" class="course-button">More Details</a>
+      </div>
+      <!-- More dynamically added cards -->
+    </div>
+    <div class="view-all-courses-button-container">
+      <a href="courses.html" class="home-all-courses-button">View All Courses</a>
+    </div>
+  </div>
 </section>
-
 
 <section id="home-upcoming-events">
   <div class="page-break"></div>
@@ -271,7 +272,7 @@
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const announcementUrl = 'https://script.google.com/macros/s/AKfycbzDEbxudf6gPyCQe2KBI-Rf2Ddh49OPjPGEFL08S6nPTF-dVPnD7i8YwJAYx436KumX/exec?sheet=Announcement';
+  const announcementUrl = 'https://script.google.com/macros/s/AKfycby5-Sv7WigXltzCjVL_EtgQjYYyH2_rMpGx8HAsu93Pe8vjwn1LxX6NrvJl3fM61WuQ/exec?sheet=Announcements';
 
   fetch(announcementUrl)
     .then(res => {
@@ -302,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const upcomingEventsContainer = document.getElementById('upcoming-events-container');
 
   // Fetch events from the calendar API
-  const eventsApiUrl = 'https://script.google.com/macros/s/AKfycbzDEbxudf6gPyCQe2KBI-Rf2Ddh49OPjPGEFL08S6nPTF-dVPnD7i8YwJAYx436KumX/exec?sheet=Events';
+  const eventsApiUrl = 'https://script.google.com/macros/s/AKfycby5-Sv7WigXltzCjVL_EtgQjYYyH2_rMpGx8HAsu93Pe8vjwn1LxX6NrvJl3fM61WuQ/exec?sheet=Events';
 
   fetch(eventsApiUrl)
     .then(response => {
