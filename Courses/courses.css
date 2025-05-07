@@ -44,19 +44,17 @@ a {
 
 /* Course Layout */
 .course-layout {
-  display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping to ensure alignment */
-  gap: 20px;
-  padding: 40px 20px;
-  align-items: stretch; /* Stretch both sides to match height */
+  margin: 0 10%; /* Add 10% margin on both sides */
+  display: flex; /* Maintain the flex layout */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 20px; /* Keep the spacing between course info and images */
+  padding: 40px 0; /* Maintain vertical padding */
+  align-items: stretch; /* Ensure both sides align properly */
 }
 
 .course-info {
-  flex: 1;
-  min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Distribute space evenly between sections */
+  flex: 1; /* Allow the course info to take up available space */
+  min-width: 300px; /* Ensure a minimum width for the course info */
 }
 
 /* General Left Margin for Content */
@@ -65,19 +63,19 @@ a {
 }
 
 .course-images {
-  flex: 1;
+  flex: 1; /* Allow the images to take up available space */
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 20px; /* Maintain spacing between images */
   align-items: flex-end; /* Align images to the right */
 }
 
 .course-images img {
-  width: 90%; /* Slightly smaller width for a balanced look */
+  width: 90%; /* Keep the current image size */
   height: auto;
-  border-radius: 12px; /* Rounded corners for a modern look */
-  object-fit: cover; /* Maintain aspect ratio */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  border-radius: 12px; /* Maintain rounded corners */
+  object-fit: cover; /* Ensure images maintain their aspect ratio */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Keep the shadow effect */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
@@ -192,7 +190,7 @@ blockquote {
   display: flex;
   height: 1px ; /* Ensure the height is applied */
   background-color: #1B75BC ; /* Force the blue color */
-  margin: 20px 0 ; /* Add spacing above and below */
+  margin: 40px 0 ; /* Add spacing above and below */
   width: 100% ; /* Ensure the width is applied */
   margin-left: auto ;
   margin-right: auto ;
@@ -249,6 +247,7 @@ blockquote {
   font-size: 0.9rem;
   margin-bottom: 10px;
   color: #555;
+  font-weight: bold; /* Make the time bold */
 }
 
 .register-interest-button {
@@ -276,12 +275,23 @@ blockquote {
 }
 
 .membership-link:hover {
-  color: #155a8a; /* Darker blue on hover */
-  text-decoration: none; /* Optional: Remove underline on hover */
+  color: #155a8a; 
+  text-decoration: none; 
 }
 
 #course-cost {
   font-size: 1.5rem;
   font-weight: bold;
   color: #1B75BC;
+}
+
+.spaces-label {
+  color: #1B75BC; 
+  font-weight: bold; 
+}
+
+.event-spaces {
+  font-size: 1rem;
+  color: #333; 
+  margin-top: 5px;
 }

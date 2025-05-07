@@ -32,7 +32,7 @@
             <h2 class="cost-heading">Course Cost</h2>
           </div>
           <div class="price-container">
-            <p class="price">$220</p>
+            <p class="price" id="course-cost">Loading...</p> <!-- Display "Loading..." initially -->
           </div>
           <div class="cta-button-container">
             <button class="cta-button">Register Now</button>
@@ -126,22 +126,25 @@
 
   // Dynamically load upcoming course dates
   document.addEventListener('DOMContentLoaded', () => {
+    // Events array for Viking Weaving
     const events = [
       {
         title: 'Viking Weaving Workshop',
         start: '2025-08-02T10:00:00',
         end: '2025-08-02T16:00:00',
         description: 'Learn the ancient art of Viking wire weaving.',
-        image: '/images/cabs.jpg',
-        type: 'course'
+        image: '/images/vw2.jpg',
+        type: 'course',
+        spacesAvailable: 10
       },
       {
         title: 'Viking Weaving Workshop',
         start: '2025-09-06T10:00:00',
         end: '2025-09-06T16:00:00',
         description: 'Learn the ancient art of Viking wire weaving.',
-        image: '/images/cabs.jpg',
-        type: 'course'
+        image: '/images/vw1.jpeg',
+        type: 'course',
+        spacesAvailable: 8
       }
     ];
 
@@ -150,7 +153,6 @@
     if (upcomingCoursesContainer) {
       events
         .filter(event => event.type === 'course') // Filter only course events
-        .slice(0, 2) // Limit to 2 events
         .forEach(event => {
           const eventDate = new Date(event.start);
           const month = eventDate.toLocaleString('default', { month: 'short' }); // Use short month format
@@ -169,7 +171,9 @@
               <div class="event-details">
                 <h3>${event.title}</h3>
                 <p class="event-time">${eventTime}</p>
-                <a href="#" class="register-interest-button">Register Interest</a>
+                <p class="event-spaces">
+                  <span class="spaces-label">Spaces:</span> ${event.spacesAvailable}
+                </p>
               </div>
             </div>
           `;
@@ -177,6 +181,40 @@
           upcomingCoursesContainer.innerHTML += eventHTML;
         });
     }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const apiUrl = "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLgAVUnOJDWSIpG9P_OXnRAYn5tIerxJDE3p7qyI1rtIxvlkqXtnKthD2PAPbQQB-NQz5eIVCO5JqOhnxwutuMOeeA4yu93LZtDbw8kQNe5sU4g2InX7JvJuf-a80spCRITI8umXmsbai4oDbqCoIcUgmM_9MWq3asPsXfDkawc4WnLsOCj0uLITK333KgGNGRi78lxEOWjZZdvam2MtmOXQVNbwijjATyErsFJcYhD73ZrQoWs0jHx2uvlhWcqdTo8W9PydWmoj9KVqCCUb7Ufb47e4zGjyiWtv3Eg1GjoLhAsiZEA&lib=MOZjIhuefjGEGvwvHrh3M0TbZ7jG6IkQL";
+
+    const courseName = "Viking Weaving"; // Match the course name from the JSON
+    const costElement = document.getElementById('course-cost');
+
+    // Show loading message
+    costElement.textContent = "Loading...";
+
+    // Fetch course costs from the API
+    fetch(apiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Find the cost for the "Viking Weaving" course
+        const course = data.find(course => course.name === courseName);
+        if (course) {
+          // Update the cost dynamically
+          costElement.textContent = `$${course.cost}`;
+        } else {
+          costElement.textContent = "Course not found.";
+          console.error(`${courseName} course not found in the data.`);
+        }
+      })
+      .catch(error => {
+        costElement.textContent = "Error loading cost.";
+        console.error("Error fetching course costs:", error);
+      });
   });
   </script>
 </body>
