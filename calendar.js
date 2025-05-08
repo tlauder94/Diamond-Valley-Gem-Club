@@ -132,6 +132,37 @@ function initializeCalendar(events) {
         : 'N/A';
       const eventTime = `${startTime} - ${endTime}`;
 
+      // Assign an image based on event type (same logic as the events list)
+      let image = '';
+      switch (info.event.extendedProps.category) {
+        case 'Working Bee':
+          image = '/images/workingbee.jpg';
+          break;
+        case 'Field Trip':
+          image = '/images/Faceting.jpeg';
+          break;
+        case 'Committee Meeting':
+          image = '/images/committee.jpg';
+          break;
+        case 'Social Event':
+          image = '/images/social.jpg';
+          break;
+        case 'AGM':
+          image = '/images/Faceting.jpeg';
+          break;
+        case 'Other Event':
+          image = '/images/cabs.jpg';
+          break;
+        case 'Gem Show':
+          image = '/images/library.jpg';
+          break;
+        case 'Gem Identification':
+          image = '/images/gemid.jpg';
+          break;
+        default:
+          image = '/images/default-event.png';
+      }
+
       // Populate modal with event details
       modalTitle.textContent = info.event.title;
       modalMonth.textContent = month;
@@ -140,7 +171,7 @@ function initializeCalendar(events) {
       modalDescription.textContent = info.event.extendedProps.description || 'No description available.';
       modalLocation.textContent = info.event.extendedProps.location || 'No location specified.';
       modalAvailableTo.textContent = info.event.extendedProps.availableTo || 'Open to everyone.';
-      modalImage.src = info.event.extendedProps.image || '/images/default-event.png';
+      modalImage.src = image; // Use the assigned image
 
       // Show the modal
       modal.style.display = 'block';

@@ -214,26 +214,32 @@ body {
 }
 
 .club-facilities-cta {
-  margin-top: 20px; /* Add spacing above the section */
-  text-align: left; /* Align text and button to the left */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack the text and button vertically */
+  justify-content: center; /* Vertically center the content */
+  align-items: flex-start; /* Align content to the left */
+  margin-top: 40px; /* Add spacing above the section */
+  height: 100%; /* Ensure it takes up the full height of the parent container */
 }
 
 .club-facilities-cta p {
-  font-size: 1.1rem; /* Slightly larger text */
+  font-size: 1.2rem; /* Slightly larger text for better readability */
   color: #1B75BC; /* Dark blue text color */
-  margin-bottom: 15px; /* Add spacing below the text */
+  margin-bottom: 20px; /* Add more spacing below the text */
 }
 
 .cta-button {
   background-color: #1B75BC; /* Banner blue background */
   color: white; /* White text */
-  font-size: 1.1rem; /* Button font size */
-  padding: 10px 20px; /* Add padding for a larger button */
+  font-size: 1.2rem; /* Slightly larger button font size */
+  padding: 15px 30px; /* Add more padding for a larger button */
   border: none;
   border-radius: 5px; /* Slightly rounded corners */
   text-decoration: none; /* Remove underline from the link */
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block; /* Ensure the button is treated as a block element for alignment */
+  margin-top: 20px; /* Add spacing above the button */
 }
 
 .cta-button:hover {
@@ -246,4 +252,9 @@ body {
   height: 1px; /* Thin horizontal line */
   background-color: #1B75BC; /* Banner blue color */
   margin: 40px auto; /* Add spacing above and below, center horizontally */
+}
+
+.club-facilities-list li {
+  margin-bottom: 15px; /* Add spacing between list items */
+  line-height: 1.5; 
 }
