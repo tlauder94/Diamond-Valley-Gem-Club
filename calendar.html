@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendar & Events</title>
+  <title>Calendar &amp; Events</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="calendar.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css">
@@ -14,7 +14,7 @@
 
   <section class="banner">
     <div class="banner-content">
-      <h1>Calendar & Events</h1>
+      <h1>Calendar &amp; Events</h1>
     </div>
   </section>
 
@@ -70,7 +70,7 @@
 
         <!-- Image and Title Section -->
         <div class="modal-event-header">
-          <img id="modal-image" src="" alt="Event Image" class="modal-event-image">
+          <img id="modal-image" src=" " alt="Event Image" class="modal-event-image">
         </div>
 
         <!-- Details Section -->
@@ -92,7 +92,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Load Navbar
-      fetch('/navbar.html')
+      fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
           document.querySelector('header').innerHTML = data;
@@ -100,7 +100,7 @@
         .catch(error => console.error('Error loading navbar:', error));
 
       // Load Footer
-      fetch('/footer.html')
+      fetch('footer.html')
         .then(response => response.text())
         .then(data => {
           document.querySelector('footer').innerHTML = data;
