@@ -27,39 +27,39 @@ document.addEventListener('DOMContentLoaded', () => {
         let className = '';
         switch (event.type) {
           case 'Working Bee':
-            image = '/images/library.jpg';
+            image = 'images/library.jpg';
             className = 'event-working-bee';
             break;
           case 'Field Trip':
-            image = '/images/Faceting.jpeg';
+            image = 'images/Faceting.jpeg';
             className = 'event-field-trip';
             break;
           case 'Committee Meeting':
-            image = '/images/cabs.jpg';
+            image = 'images/cabs.jpg';
             className = 'event-committee-meeting';
             break;
           case 'Social Event':
-            image = '/images/library.jpg';
+            image = 'images/library.jpg';
             className = 'event-social-event';
             break;
           case 'AGM':
-            image = '/images/Faceting.jpeg';
+            image = 'images/Faceting.jpeg';
             className = 'event-agm';
             break;
           case 'Other Event':
-            image = '/images/cabs.jpg';
+            image = 'images/cabs.jpg';
             className = 'event-other-event';
             break;
           case 'Gem Show':
-            image = '/images/library.jpg';
+            image = 'images/library.jpg';
             className = 'event-gem-show';
             break;
           case 'Gem Identification':
-            image = '/images/Faceting.jpeg';
+            image = 'images/Faceting.jpeg';
             className = 'event-gem-identification';
             break;
           default:
-            image = '/images/default-event.png';
+            image = 'images/default-event.png';
             className = 'event-default';
         }
 
@@ -136,31 +136,31 @@ function initializeCalendar(events) {
       let image = '';
       switch (info.event.extendedProps.category) {
         case 'Working Bee':
-          image = '/images/workingbee.jpg';
+          image = 'images/workingbee.jpg';
           break;
         case 'Field Trip':
-          image = '/images/Faceting.jpeg';
+          image = 'images/Faceting.jpeg';
           break;
         case 'Committee Meeting':
-          image = '/images/committee.jpg';
+          image = 'images/committee.jpg';
           break;
         case 'Social Event':
-          image = '/images/social.jpg';
+          image = 'images/social.jpg';
           break;
         case 'AGM':
-          image = '/images/Faceting.jpeg';
+          image = 'images/Faceting.jpeg';
           break;
         case 'Other Event':
-          image = '/images/cabs.jpg';
+          image = 'images/cabs.jpg';
           break;
         case 'Gem Show':
-          image = '/images/library.jpg';
+          image = 'images/library.jpg';
           break;
         case 'Gem Identification':
-          image = '/images/gemid.jpg';
+          image = 'images/gemid.jpg';
           break;
         default:
-          image = '/images/default-event.png';
+          image = 'images/default-event.png';
       }
 
       // Populate modal with event details
@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Display a fallback message if no events are found
       upcomingEventsContainer.innerHTML = `
         <div class="no-events-message">
-          <p>No events to display for this category. Check out our <a href="/calendar.html">calendar</a> for more events or explore other categories!</p>
+          <p>No events to display for this category. Check out our <a href="calendar.html">calendar</a> for more events or explore other categories!</p>
         </div>
       `;
       return; // Exit the function early
@@ -271,31 +271,31 @@ document.addEventListener('DOMContentLoaded', () => {
       let image = '';
       switch (event.type) {
         case 'Working Bee':
-          image = '/images/workingbee.jpg';
+          image = 'images/workingbee.jpg';
           break;
         case 'Field Trip':
-          image = '/images/Faceting.jpeg';
+          image = 'images/Faceting.jpeg';
           break;
         case 'Committee Meeting':
-          image = '/images/committee.jpg';
+          image = 'images/committee.jpg';
           break;
         case 'Social Event':
-          image = '/images/social.jpg';
+          image = 'images/social.jpg';
           break;
         case 'AGM':
-          image = '/images/Faceting.jpeg';
+          image = 'images/Faceting.jpeg';
           break;
         case 'Other Event':
-          image = '/images/cabs.jpg';
+          image = 'images/cabs.jpg';
           break;
         case 'Gem Show':
-          image = '/images/library.jpg';
+          image = 'images/library.jpg';
           break;
         case 'Gem Identification':
-          image = '/images/gemid.jpg';
+          image = 'images/gemid.jpg';
           break;
         default:
-          image = '/images/default-event.png';
+          image = 'images/default-event.png';
       }
 
       // Create the event card
