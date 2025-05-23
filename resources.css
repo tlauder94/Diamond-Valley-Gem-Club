@@ -255,3 +255,84 @@
   .library-button:hover {
     background-color: #1B75BC;
   }
+
+  /* Responsive styles for Resources page */
+@media (max-width: 900px) {
+  .resource-info-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  #socities,
+  .resources-right-container {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .library-overlay {
+    max-width: 90%;
+    padding: 20px 10px;
+  }
+  .libary-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .libary-content img {
+    height: 180px;
+    width: 100%;
+    max-width: 220px;
+  }
+  #library-box {
+    height: auto;
+    min-height: 250px;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .resources-header {
+    font-size: 1.1rem;
+    height: 90px;
+    padding: 10px 0;
+  }
+  .resources-blurb-header,
+  .resources-blurb {
+    margin: 2% 2%;
+    font-size: 1rem;
+  }
+  .resource-nav-links {
+    font-size: 1.1rem;
+    padding: 0 2%;
+  }
+  .resource-nav-links li {
+    margin: 6px 0;
+  }
+  .resources-right-container,
+  #socities {
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px 2px;
+  }
+  .library-overlay {
+    max-width: 100%;
+    padding: 10px 2px;
+  }
+  .libary-content img {
+    height: 110px;
+    max-width: 100%;
+  }
+  #library-box {
+    height: auto;
+    min-height: 150px;
+    padding: 5px 0;
+  }
+  .newsletter-container {
+    width: 98%;
+    padding: 5px;
+  }
+  div[id^="newsletter-header"],
+  div[id^="newsletter-text"] {
+    padding: 8px 4px;
+    font-size: 0.95rem;
+  }
+}
