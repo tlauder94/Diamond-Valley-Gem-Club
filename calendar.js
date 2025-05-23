@@ -27,37 +27,29 @@ document.addEventListener('DOMContentLoaded', () => {
         let className = '';
         switch (event.type) {
           case 'Working Bee':
-            image = "images/library.jpg";
-            className = 'event-working-bee';
-            break;
-          case 'Field Trip':
-            image = "images/Faceting.jpeg";
-            className = 'event-field-trip';
-            break;
-          case 'Committee Meeting':
-            image = "images/cabs.jpg";
-            className = 'event-committee-meeting';
-            break;
-          case 'Social Event':
-            image = "images/library.jpg";
-            className = 'event-social-event';
-            break;
-          case 'AGM':
-            image = "images/Faceting.jpeg";
-            className = 'event-agm';
-            break;
-          case 'Other Event':
-            image = "images/cabs.jpg";
-            className = 'event-other-event';
-            break;
-          case 'Gem Show':
-            image = "images/library.jpg";
-            className = 'event-gem-show';
-            break;
-          case 'Gem Identification':
-            image = "images/Faceting.jpeg";
-            className = 'event-gem-identification';
-            break;
+          image = "images/workingbee.jpg";
+          break;
+        case 'Field Trip':
+          image = "images/fieldtrip.jpeg";
+          break;
+        case 'Committee Meeting':
+          image = "images/committee.jpg";
+          break;
+        case 'Social Event':
+          image = "images/social.jpg";
+          break;
+        case 'AGM':
+          image = "images/committee.jpeg";
+          break;
+        case 'Other Event':
+          image = "images/otherevent.jpg";
+          break;
+        case 'Gem Show':
+          image = "images/gemshow.jpg";
+          break;
+        case 'Gem Identification':
+          image = "images/gemid.jpg";
+          break;
           default:
             image = "images/default-event.png";
             className = 'event-default';
@@ -139,7 +131,7 @@ function initializeCalendar(events) {
           image = "images/workingbee.jpg";
           break;
         case 'Field Trip':
-          image = "images/Faceting.jpeg";
+          image = "images/fieldtrip.jpeg";
           break;
         case 'Committee Meeting':
           image = "images/committee.jpg";
@@ -148,13 +140,13 @@ function initializeCalendar(events) {
           image = "images/social.jpg";
           break;
         case 'AGM':
-          image = "images/Faceting.jpeg";
+          image = "images/committee.jpeg";
           break;
         case 'Other Event':
-          image = "images/cabs.jpg";
+          image = "images/otherevent.jpg";
           break;
         case 'Gem Show':
-          image = "images/library.jpg";
+          image = "images/gemshow.jpg";
           break;
         case 'Gem Identification':
           image = "images/gemid.jpg";
@@ -274,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
           image = "images/workingbee.jpg";
           break;
         case 'Field Trip':
-          image = "images/Faceting.jpeg";
+          image = "images/fieldtrip.jpeg";
           break;
         case 'Committee Meeting':
           image = "images/committee.jpg";
@@ -283,13 +275,13 @@ document.addEventListener('DOMContentLoaded', () => {
           image = "images/social.jpg";
           break;
         case 'AGM':
-          image = "images/Faceting.jpeg";
+          image = "images/committee.jpeg";
           break;
         case 'Other Event':
-          image = "images/cabs.jpg";
+          image = "images/otherevent.jpg";
           break;
         case 'Gem Show':
-          image = "images/library.jpg";
+          image = "images/gemshow.jpg";
           break;
         case 'Gem Identification':
           image = "images/gemid.jpg";
