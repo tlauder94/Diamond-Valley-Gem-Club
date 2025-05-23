@@ -28,31 +28,39 @@ document.addEventListener('DOMContentLoaded', () => {
         switch (event.type) {
           case 'Working Bee':
           image = "images/workingbee.jpg";
+          className = 'event-working-bee';
           break;
         case 'Field Trip':
           image = "images/fieldtrip.jpeg";
+          className = 'event-field-trip';
           break;
         case 'Committee Meeting':
           image = "images/committee.jpg";
+          className = 'event-committee-meeting';
           break;
         case 'Social Event':
           image = "images/social.jpg";
+          className = 'event-social-event';
           break;
         case 'AGM':
           image = "images/committee.jpeg";
+          className = 'event-agm';
           break;
         case 'Other Event':
           image = "images/otherevent.jpg";
+          className = 'event-other-event';
           break;
         case 'Gem Show':
           image = "images/gemshow.jpg";
+          className = 'event-gem-show';
           break;
         case 'Gem Identification':
           image = "images/gemid.jpg";
+          className = 'event-gem-identification';
           break;
           default:
-            image = "images/default-event.png";
-            className = 'event-default';
+          image = "images/default-event.png";
+          className = 'event-default';
         }
 
         return {
@@ -70,10 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Initialize the calendar with processed events
       initializeCalendar(processedEvents);
-
-      // Populate the upcoming events section
-      populateUpcomingEvents(processedEvents);
-    })
+``    })
     .catch(error => {
       console.error('Error fetching events:', error);
     });
