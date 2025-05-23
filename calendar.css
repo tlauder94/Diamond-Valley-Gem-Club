@@ -710,3 +710,43 @@ a {
   background-color: #155a8a;
   transform: scale(1.05); /* Slight zoom effect on hover */
 }
+
+/* Responsive styles for Calendar page */
+@media (max-width: 900px) {
+  .calendar-section.container,
+  .upcoming-events.container {
+    padding: 10px;
+  }
+  .upcoming-events-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  .event-card {
+    min-width: 0;
+    width: 100%;
+  }
+  .modal-content {
+    width: 95vw;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .upcoming-events-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .event-card {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .modal-content {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  .modal-event-image {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+  }
+}
