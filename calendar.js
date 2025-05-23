@@ -70,9 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Initialize the calendar with processed events
       initializeCalendar(processedEvents);
-
-      // Populate the upcoming events section
-      populateUpcomingEvents(processedEvents);
     })
     .catch(error => {
       console.error('Error fetching events:', error);
