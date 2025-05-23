@@ -622,3 +622,62 @@
   background-color: #155a8a;
 }
 
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  .hero-container,
+  .home-about-container,
+  .home-history-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .hero-images,
+  .hero-text,
+  .home-about-image-container,
+  .home-about-text,
+  .home-history-image-container,
+  .home-history-text {
+    width: 100%;
+    padding: 10px;
+  }
+  .home-course-grid,
+  .upcoming-events-grid,
+  .home-benefit-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .home-course-card,
+  .event-card,
+  .home-benefit-card {
+    width: 100%;
+    max-width: 100%;
+  }
+  .event-card-image img,
+  .course-image {
+    height: 150px;
+  }
+  .annoucement-banner {
+    min-height: 60px;
+    font-size: 1rem;
+    padding: 10px 5px;
+  }
+  .opening-hours-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .hero-text h1,
+  #home-opening h2,
+  #home-course h1,
+  #home-about h1,
+  #home-upcoming-events h2,
+  .home-history-text h1 {
+    font-size: 1.2rem;
+  }
+  .event-card-image img,
+  .course-image {
+    height: 100px;
+  }
+}
+
