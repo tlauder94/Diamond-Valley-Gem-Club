@@ -258,3 +258,40 @@ body {
   margin-bottom: 15px; /* Add spacing between list items */
   line-height: 1.5; 
 }
+
+/* Responsive styles for About page */
+@media (max-width: 900px) {
+  .club-facilities-content,
+  .club-history-container,
+  .about-booklet-container,
+  .about-member-profile-grid,
+  .about-duty-officer-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .club-facilities-images,
+  .club-facilities-text,
+  .club-history-image-container,
+  .about-booklet-text,
+  .about-booklet-button-container {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .image-grid img,
+  .about-profile-image,
+  .about-officer-image {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  h1, h2 {
+    font-size: 1.2rem;
+  }
+  .cta-button, .about-booklet-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
