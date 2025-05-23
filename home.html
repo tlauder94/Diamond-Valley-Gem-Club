@@ -222,6 +222,8 @@
   // Loop through events and create event cards
   events.forEach(event => {
     const randomImage = images[Math.floor(Math.random() * images.length)]; // Pick a random image
+    console.log(events);
+    console.log(event);
 
     // Create the event card
     const eventCard = document.createElement('div');
