@@ -46,7 +46,7 @@
         <h2>Who Is This Available To?</h2>
         <p>This course is available to all members of the Diamond Valley Gem Club.</p>
         <p>
-          Not a member? <a href="membership.html" class="membership-link">Sign up now</a> to access this and other exciting opportunities!
+          Not a member? <a href="/Diamond-Valley-Gem-Club/membership.html" class="membership-link">Sign up now</a> to access this and other exciting opportunities!
         </p>
       </section>
       <div class="page-break"></div>
@@ -83,8 +83,8 @@
 
     <!-- Right Content (Images) -->
     <div class="course-images">
-      <img src="images/jewellery2.jpeg" alt="Jewellery Tools in Use">
-      <img src="images/jewellery3.jpeg" alt="Finished Jewellery Pieces">
+      <img src="/Diamond-Valley-Gem-Club/images/jewellery2.jpeg" alt="Jewellery Tools in Use">
+      <img src="/Diamond-Valley-Gem-Club/images/jewellery3.jpeg" alt="Finished Jewellery Pieces">
     </div>
   </main>
 
@@ -92,7 +92,7 @@
   <section class="instructor-info container">
     <h2>Meet Your Instructor</h2>
     <div class="instructor-content">
-      <img src="../images/cabs.jpg" alt="Instructor Photo" class="instructor-photo">
+      <img src="/Diamond-Valley-Gem-Club/images/cabs.jpg" alt="Instructor Photo" class="instructor-photo">
       <div>
         <p><strong>Emily Taylor</strong> is a professional jeweller with over 15 years of experience in crafting bespoke jewellery. She is passionate about teaching others how to bring their creative visions to life.</p>
         <blockquote>"Jewellery making is a journey of creativity and craftsmanship. Let me help you create something truly special."</blockquote>
@@ -106,7 +106,7 @@
   <script>
     // Dynamically load the shared navbar
     document.addEventListener('DOMContentLoaded', () => {
-      fetch('../navbar.html')
+      fetch('/Diamond-Valley-Gem-Club/navbar.html')
         .then(response => response.text())
         .then(data => {
           document.querySelector('header').innerHTML = data;
@@ -116,7 +116,7 @@
 
     // Dynamically load the shared footer
     document.addEventListener('DOMContentLoaded', () => {
-      fetch('../footer.html')
+      fetch('/Diamond-Valley-Gem-Club/footer.html')
         .then(response => response.text())
         .then(data => {
           document.querySelector('footer').innerHTML = data;
@@ -132,7 +132,7 @@
           start: '2025-06-29T10:00:00',
           end: '2025-06-29T16:00:00',
           description: 'Unleash your creativity and craft stunning jewellery pieces.',
-          image: 'images/jewellery2.jpeg',
+          image: '/Diamond-Valley-Gem-Club/images/jewellery2.jpeg',
           type: 'course',
           spacesAvailable: 8
         },
@@ -141,7 +141,7 @@
           start: '2025-07-30T10:00:00',
           end: '2025-07-30T16:00:00',
           description: 'Unleash your creativity and craft stunning jewellery pieces.',
-          image: 'images/jewellery3.jpeg',
+          image: '/Diamond-Valley-Gem-Club/images/jewellery3.jpeg',
           type: 'course',
           spacesAvailable: 5
         },
@@ -150,7 +150,7 @@
           start: '2025-08-24T10:00:00',
           end: '2025-08-24T16:00:00',
           description: 'Unleash your creativity and craft stunning jewellery pieces.',
-          image: 'images/jewellery2.jpeg',
+          image: '/Diamond-Valley-Gem-Club/images/jewellery2.jpeg',
           type: 'course',
           spacesAvailable: 10
         }

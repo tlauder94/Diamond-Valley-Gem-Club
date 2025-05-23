@@ -46,7 +46,7 @@
         <h2>Who Is This Available To?</h2>
         <p>This course is available to all members of the Diamond Valley Gem Club.</p>
         <p>
-          Not a member? <a href="membership.html" class="membership-link">Sign up now</a> to access this and other exciting opportunities!
+          Not a member? <a href="/Diamond-Valley-Gem-Club/membership.html" class="membership-link">Sign up now</a> to access this and other exciting opportunities!
         </p>
       </section>
       <div class="page-break"></div>
@@ -83,8 +83,8 @@
 
     <!-- Right Content (Images) -->
     <div class="course-images">
-      <img src="images/wirewrapping.jpeg" alt="Wire Wrapping Tools in Use">
-      <img src="images/wirewrapping1.jpeg" alt="Finished Wire Wrapped Jewellery">
+      <img src="/Diamond-Valley-Gem-Club/images/wirewrapping.jpeg" alt="Wire Wrapping Tools in Use">
+      <img src="/Diamond-Valley-Gem-Club/images/wirewrapping1.jpeg" alt="Finished Wire Wrapped Jewellery">
     </div>
   </main>
 
@@ -92,7 +92,7 @@
   <section class="instructor-info container">
     <h2>Meet Your Instructor</h2>
     <div class="instructor-content">
-      <img src="../images/cabs.jpg" alt="Instructor Photo" class="instructor-photo">
+      <img src="/Diamond-Valley-Gem-Club/images/cabs.jpg" alt="Instructor Photo" class="instructor-photo">
       <div>
         <p><strong>Jessica Brown</strong> is a professional jewellery artist with over 12 years of experience in wire wrapping. She has taught hundreds of students how to create intricate and beautiful designs using wire.</p>
         <blockquote>"Wire wrapping is a creative and rewarding skill. Let me help you bring your designs to life."</blockquote>
@@ -106,7 +106,7 @@
   <script>
   // Dynamically load the shared navbar
   document.addEventListener('DOMContentLoaded', () => {
-    fetch('../navbar.html')
+    fetch('/Diamond-Valley-Gem-Club/navbar.html')
       .then(response => response.text())
       .then(data => {
         document.querySelector('header').innerHTML = data;
@@ -116,7 +116,7 @@
 
   // Dynamically load the shared footer
   document.addEventListener('DOMContentLoaded', () => {
-    fetch('../footer.html')
+    fetch('/Diamond-Valley-Gem-Club/footer.html')
       .then(response => response.text())
       .then(data => {
         document.querySelector('footer').innerHTML = data;
@@ -132,7 +132,7 @@
         start: '2025-08-16T10:00:00',
         end: '2025-08-16T16:00:00',
         description: 'Learn the art of wire wrapping to create stunning jewellery.',
-        image: 'images/wirewrapping1.jpeg',
+        image: '/Diamond-Valley-Gem-Club/images/wirewrapping1.jpeg',
         type: 'course',
         spacesAvailable: 10
       },
@@ -141,7 +141,7 @@
         start: '2025-09-20T10:00:00',
         end: '2025-09-20T16:00:00',
         description: 'Learn the art of wire wrapping to create stunning jewellery.',
-        image: 'images/wirewrapping2.jpeg',
+        image: '/Diamond-Valley-Gem-Club/images/wirewrapping2.jpeg',
         type: 'course',
         spacesAvailable: 8
       }
