@@ -194,7 +194,7 @@
 
   /* Library Box */  
   #library-box {
-    background-image: url("/images/library.jpg"); /* Image backround */
+    background-image: url("images/library.jpg"); /* Image backround */
     background-size: cover;
     background-color: #e9f6fc; 
     color: #1B75BC;
