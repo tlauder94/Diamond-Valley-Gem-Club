@@ -194,3 +194,44 @@ body {
   transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
+/* Responsive styles for Contact page */
+@media (max-width: 900px) {
+  .contact-content-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .contact-info-container,
+  .contact-form-map-container {
+    width: 100%;
+    padding: 0;
+  }
+  .contact-form-container {
+    padding: 10px;
+  }
+  #googleMap iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .opening-hours-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .contact-form .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contact-form-container {
+    padding: 5px;
+  }
+  #googleMap iframe {
+    height: 200px;
+  }
+}
