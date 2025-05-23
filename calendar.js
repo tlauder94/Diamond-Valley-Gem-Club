@@ -136,7 +136,7 @@ function initializeCalendar(events) {
           image = "images/workingbee.jpg";
           break;
         case 'Field Trip':
-          image = "images/fieldtrip.jpeg";
+          image = "images/fieldtrip.jpg";
           break;
         case 'Committee Meeting':
           image = "images/committee.jpg";
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
           image = "images/workingbee.jpg";
           break;
         case 'Field Trip':
-          image = "images/fieldtrip.jpeg";
+          image = "images/fieldtrip.jpg";
           break;
         case 'Committee Meeting':
           image = "images/committee.jpg";
