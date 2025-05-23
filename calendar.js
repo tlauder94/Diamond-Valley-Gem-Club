@@ -171,7 +171,6 @@ function initializeCalendar(events) {
       modalDescription.textContent = info.event.extendedProps.description || 'No description available.';
       modalLocation.textContent = info.event.extendedProps.location || 'No location specified.';
       modalAvailableTo.textContent = info.event.extendedProps.availableTo || 'Open to everyone.';
-      modalImage.src = info.event.extendedProps.image || '/images/default-event.png';
       modalImage.src = image; // Use the assigned image
 
       // Show the modal
@@ -228,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
       upcomingEventsContainer.innerHTML = '<p>Failed to load upcoming events. Please try again later.</p>';
     });
 
-
+    
   // Function to format time to 12-hour format with AM/PM
   function formatTime(time) {
     // Ensure the time is a 4-digit string (e.g., "0700")
@@ -358,3 +357,4 @@ document.addEventListener('DOMContentLoaded', () => {
       displayEvents(filteredEvents.slice(0, 6)); // Show the next 6 filtered events
     }
   });
+});
