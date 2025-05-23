@@ -46,7 +46,7 @@
         <h2>Who Is This Available To?</h2>
         <p>This course is available to all members of the Diamond Valley Gem Club.</p>
         <p>
-          Not a member? <a href="membership.html" class="membership-link">Sign up now</a> to access this and other exciting opportunities!
+          Not a member? <a href="../membership.html" class="membership-link">Sign up now</a> to access this and other exciting opportunities!
         </p>
       </section>
       <div class="page-break"></div>
@@ -83,8 +83,8 @@
 
     <!-- Right Content (Images) -->
     <div class="course-images">
-      <img src="images/rs2.webp" alt="Rock Slabbing Tools in Use">
-      <img src="images/rs3.jpg" alt="Finished Rock Slabs">
+      <img src="../images/rs2.webp" alt="Rock Slabbing Tools in Use">
+      <img src="../images/rs3.jpg" alt="Finished Rock Slabs">
     </div>
   </main>
 
@@ -92,7 +92,7 @@
   <section class="instructor-info container">
     <h2>Meet Your Instructor</h2>
     <div class="instructor-content">
-      <img src="images/cabs.jpg" alt="Instructor Photo" class="instructor-photo">
+      <img src="../images/cabs.jpg" alt="Instructor Photo" class="instructor-photo">
       <div>
         <p><strong>David Lee</strong> is a seasoned lapidary artist with over 20 years of experience in rock slabbing and preparation. He has worked with a wide variety of stones and is passionate about teaching others the fundamentals of this essential skill.</p>
         <blockquote>"Rock slabbing is the foundation of many lapidary projects. Let me help you get started on the right path."</blockquote>
@@ -106,7 +106,7 @@
   <script>
     // Dynamically load the shared navbar
     document.addEventListener('DOMContentLoaded', () => {
-      fetch('/navbar.html')
+      fetch('../navbar.html')
         .then(response => response.text())
         .then(data => {
           document.querySelector('header').innerHTML = data;
@@ -116,7 +116,7 @@
 
     // Dynamically load the shared footer
     document.addEventListener('DOMContentLoaded', () => {
-      fetch('/footer.html')
+      fetch('../footer.html')
         .then(response => response.text())
         .then(data => {
           document.querySelector('footer').innerHTML = data;
@@ -133,7 +133,7 @@
           start: '2025-07-19T10:00:00',
           end: '2025-07-19T16:00:00',
           description: 'Learn how to cut and prepare slabs of rock for lapidary projects.',
-          image: 'images/rs2.webp',
+          image: '../images/rs2.webp',
           type: 'course',
           spacesAvailable: 12
         },
@@ -142,7 +142,7 @@
           start: '2025-08-16T10:00:00',
           end: '2025-08-16T16:00:00',
           description: 'Learn how to cut and prepare slabs of rock for lapidary projects.',
-          image: 'images/rs3.jpg',
+          image: '../images/rs3.jpg',
           type: 'course',
           spacesAvailable: 10
         }
