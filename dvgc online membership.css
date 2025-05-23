@@ -420,3 +420,56 @@ button.submit-button:hover {
     gap: 20px; /* Maintain consistent spacing */
   }
 }
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  form {
+    padding: 10px;
+  }
+  .fees-row,
+  .payment-row {
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 15px;
+  }
+  .fees-left,
+  .fees-right,
+  .payment-option-container {
+    width: 100%;
+    text-align: left;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  h1, h2 {
+    font-size: 1.1rem;
+  }
+  .personal-row,
+  .contact-row,
+  .emergency-contact-row,
+  .payment-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  input,
+  select,
+  button {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .page-header {
+    padding: 20px 5px;
+    min-height: 80px;
+    font-size: 1.2rem;
+  }
+  .section-break {
+    width: 95%;
+  }
+  .add-person-button,
+  button.submit-button {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 12px 0;
+  }
+}
