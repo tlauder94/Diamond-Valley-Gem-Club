@@ -40,3 +40,36 @@ nav {
     background-color: rgb(30, 117, 186);
     color: white;
 }
+
+/* Responsive Navbar */
+@media (max-width: 900px) {
+  .nav-links {
+    gap: 0.5rem;
+    padding: 0 5%;
+    font-size: 1rem;
+  }
+  .main-logo img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    font-size: 1rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0 2%;
+  }
+  .nav-links li {
+    margin: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  .main-logo img {
+    width: 100%;
+    max-width: 220px;
+  }
+}
