@@ -4,6 +4,20 @@ section {
   padding: 20px; /* Add vertical padding */
 }
 
+/* Standard paragraph formatting to match index page */
+p {
+  font-size: 1.2rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+}
+
+/* List items to match paragraph formatting */
+li {
+  font-size: 1.2rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 10px !important;
+}
+
 /* Banner Section */
 .banner {
   background-color: #1B75BC;

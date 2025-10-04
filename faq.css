@@ -5,6 +5,20 @@ body {
   color: #333;
 }
 
+/* Standard paragraph formatting to match index page */
+p {
+  font-size: 1.2rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+}
+
+/* List items to match paragraph formatting */
+li {
+  font-size: 1.2rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 10px !important;
+}
+
 /* FAQ Container */
 .faq-container {
   width: 50%;

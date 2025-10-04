@@ -335,12 +335,14 @@ blockquote {
 .container li {
   font-size: 1.2rem !important;
   line-height: 1.6 !important;
+  margin-bottom: 20px !important;
 }
 
 /* Instructor info specific styling */
 .instructor-info blockquote {
   font-size: 1.2rem !important;
   line-height: 1.6 !important;
+  margin-bottom: 20px !important;
   font-style: italic;
   color: #555;
   margin: 10px 0;

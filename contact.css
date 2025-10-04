@@ -6,6 +6,20 @@ body {
   color: #333;
 }
 
+/* Standard paragraph formatting to match index page */
+p {
+  font-size: 1.2rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+}
+
+/* List items to match paragraph formatting */
+li {
+  font-size: 1.2rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 10px !important;
+}
+
 .contact-header {
   background-color: #1B75BC;
   color: white;
@@ -89,14 +103,15 @@ body {
 
 .opening-hours-card h3 {
   color: #1B75BC;
-  font-size: 1rem; /* Reduced font size for the heading */
-  margin-bottom: 5px;
+  font-size: 1rem !important; /* Reduced font size for the heading */
+  margin-bottom: 5px !important;
 }
 
 .opening-hours-card p {
-  font-size: 0.9rem; /* Reduced font size for the text */
-  margin: 5px 0;
+  font-size: 0.9rem !important; /* Reduced font size for the text */
+  margin: 5px 0 !important;
   color: #333;
+  line-height: 1.2 !important;
 }
 
 .opening-hours-card.highlight {
