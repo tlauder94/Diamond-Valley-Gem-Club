@@ -5,6 +5,8 @@ body {
   padding: 0;
   background-color: #f9f9f9;
   color: #333;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 h1, h2 {
@@ -311,4 +313,35 @@ blockquote {
   padding: 20px;
   font-style: italic;
   font-family: 'Montserrat', sans-serif;
+}
+
+/* Course description text styling to match home page */
+.course-info section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Ensure all text elements match home page size */
+.course-info p, 
+.prerequisites li, 
+.instructor-info p, 
+.instructor-content p, 
+.course-description p,
+.course-description li,
+.prerequisites ul li,
+.course-availability p,
+.container p,
+.container li {
+  font-size: 1.2rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Instructor info specific styling */
+.instructor-info blockquote {
+  font-size: 1.2rem !important;
+  line-height: 1.6 !important;
+  font-style: italic;
+  color: #555;
+  margin: 10px 0;
 }
