@@ -14,8 +14,7 @@ class DVGCApiCache {
     // API Endpoints Configuration
     this.endpoints = {
       events: 'https://script.google.com/macros/s/AKfycby5-Sv7WigXltzCjVL_EtgQjYYyH2_rMpGx8HAsu93Pe8vjwn1LxX6NrvJl3fM61WuQ/exec?sheet=Events',
-      announcements: 'https://script.google.com/macros/s/AKfycby5-Sv7WigXltzCjVL_EtgQjYYyH2_rMpGx8HAsu93Pe8vjwn1LxX6NrvJl3fM61WuQ/exec?sheet=Announcement',
-      courses: 'https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLgAVUnOJDWSIpG9P_OXnRAYn5tIerxJDE3p7qyI1rtIxvlkqXtnKthD2PAPbQQB-NQz5eIVCO5JqOhnxwutuMOeeA4yu93LZtDbw8kQNe5sU4g2InX7JvJuf-a80spCRITI8umXmsbai4oDbqCoIcUgmM_9MWq3asPsXfDkawc4WnLsOCj0uLITK333KgGNGRi78lxEOWjZZdvam2MtmOXQVNbwijjATyErsFJcYhD73ZrQoWs0jHx2uvlhWcqdTo8W9PydWmoj9KVqCCUb7Ufb47e4zGjyiWtv3Eg1GjoLhAsiZEA&lib=MOZjIhuefjGEGvwvHrh3M0TbZ7jG6IkQL'
+      announcements: 'https://script.google.com/macros/s/AKfycby5-Sv7WigXltzCjVL_EtgQjYYyH2_rMpGx8HAsu93Pe8vjwn1LxX6NrvJl3fM61WuQ/exec?sheet=Announcement'
     };
 
     // Initialize cache from localStorage if available
@@ -162,22 +161,6 @@ class DVGCApiCache {
   }
 
   /**
-   * Get course cost by name
-   */
-  async getCourseCost(courseName) {
-    const courses = await this.getData('courses');
-    const course = courses.find(c => c.name === courseName);
-    return course ? course.cost : null;
-  }
-
-  /**
-   * Get all courses
-   */
-  async getCourses() {
-    return this.getData('courses');
-  }
-
-  /**
    * Get upcoming events (next N events)
    */
   async getUpcomingEvents(limit = 3) {
@@ -204,8 +187,7 @@ class DVGCApiCache {
     
     const promises = [
       this.getData('events'),
-      this.getData('announcements'),
-      this.getData('courses')
+      this.getData('announcements')
     ];
     
     try {
