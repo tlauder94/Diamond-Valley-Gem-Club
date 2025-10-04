@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diamond Valley Gem Club</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+  <!-- Load DVGC API Cache Manager -->
+  <script src="dvgc-api-cache.js"></script>
+  <!-- Load home page specific JavaScript -->
+  <script src="index.js"></script>
+</head>
+
+<body>
+
+  <header id="navbar-container"></header>
+
+  <section id="hero">
+  <div class="hero-container">
+    <div class="hero-images">
+      <div class="hero-image hero-image-left">
+        <img src="images/home1.jpg" alt="Faceting" />
+      </div>
+      <div class="hero-image hero-image-right">
+        <img src="images/home3.jpg" alt="Cabs" />
+      </div>
+    </div>
+    <div class="hero-text">
+      <h1>Welcome to the Diamond Valley Gem Club</h1>
+      <p>
+        Our club fosters the interests of people who are interested in the collecting, cutting, and polishing
+        of gemstones, lapidary work, and all associated arts, crafts, and activities.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="annoucement">
+  <div class="annoucement-banner">
+    <button class="close-button" id="close-announcement">&times;</button>
+    <h1 id="annoucement-header"></h1>
+    <p id="annoucement-text"></p>
+  </div>
+</section>
+
+<section id="home-opening">
+  <div class="opening-hours-container">
+    <section class="contact-section">
+      <h2 class="section-heading">Club Opening Times</h2>
+      <div class="opening-hours-cards">
+        <div class="opening-hours-card" data-day="1">
+          <h3>Monday</h3>
+          <p>7:30pm - 9:30pm</p>
+        </div>
+        <div class="opening-hours-card" data-day="2">
+          <h3>Tuesday</h3>
+          <p>10:30am - 3:00pm</p>
+          <p>7:30pm - 9:30pm</p>
+        </div>
+        <div class="opening-hours-card" data-day="3">
+          <h3>Wednesday</h3>
+          <p>10:30am - 3:00pm</p>
+        </div>
+        <div class="opening-hours-card" data-day="4">
+          <h3>Thursday</h3>
+          <p>7:30pm - 10:00pm</p>
+        </div>
+        <div class="opening-hours-card" data-day="5">
+          <h3>Friday</h3>
+          <p>Closed</p>
+        </div>
+        <div class="opening-hours-card" data-day="6">
+          <h3>Saturday</h3>
+          <p>10:30am - 4:00pm</p>
+        </div>
+        <div class="opening-hours-card" data-day="0">
+          <h3>Sunday</h3>
+          <p>Closed</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+
+<section id="home-about">
+  <div class="home-about-container">
+    <div class="home-about-text">
+      <h1>About Us</h1>
+      <p>
+        At the Diamond Valley Gem Club, we're all about digging deeper — literally and figuratively. Founded by a passionate group of rockhounds and lapidary enthusiasts, our club offers a welcoming space for anyone fascinated by gems, minerals, fossils, and the art of shaping them into stunning works. Whether you're a beginner who can barely tell quartz from granite or a seasoned facetor who dreams in perfect symmetry, you'll find workshops, equipment, and expert guidance to help you level up your skills. We run regular classes in cutting, cabbing, faceting, silversmithing, and jewellery making, because rocks deserve a good polish and a great setting.
+      </p>
+      <p>
+        But it’s not all about the grind (pun absolutely intended). We're a social bunch too — offering field trips, competitions, gem shows, and community events where you can swap stories, stones, and a fair bit of friendly banter. Whether you’re here to learn, create, compete, or just marvel at the Earth's sparkliest treasures, Diamond Valley Gem Club offers a vibrant, down-to-earth community ready to welcome you. Grab a chisel, grab a cuppa — let’s rock.
+      </p>
+      <button class="home-about-button">
+        <a href="about.html">Find Out More...</a>
+      </button>
+    </div>
+    <div class="home-about-image-container">
+      <img src="images/history1.jpg" alt="Diamond Valley Gem Club" class="about-image" />
+    </div>
+  </div>
+</section>
+
+<div class="page-break-course"></div> <!-- Page break moved here -->
+
+<section id="home-course">
+  <div class="home-course-container">
+    <div class="home-course-text">
+      <h1>Courses</h1>
+    </div>
+    <div id="home-course-grid" class="home-course-grid">
+      <div class="home-course-card">
+        <img src="images/placeholder.jpg" alt="Course Image" class="course-image">
+        <h2>Course Title</h2>
+        <p>Course description goes here. It should be concise and informative.</p>
+        <a href="course-details.html" class="course-button">More Details</a>
+      </div>
+      <!-- More dynamically added cards -->
+    </div>
+    <div class="view-all-courses-button-container">
+      <a href="courses.html" class="home-all-courses-button">View All Courses</a>
+    </div>
+  </div>
+</section>
+
+<section id="home-upcoming-events">
+  <div class="page-break"></div>
+  <h2>Upcoming Events</h2>
+  <div id="upcoming-events-container" class="upcoming-events-grid">
+    <!-- Events will be dynamically loaded here -->
+  </div>
+  <div class="see-all-events-button-container">
+    <a href="calendar.html" class="see-all-events-button">See All Events</a>
+  </div>
+  <div class="page-break"></div>
+</section>
+
+  <section id="home-history">
+    <div class="home-history-container">
+        <div class="home-history-text">
+          <h1>Club History</h1>
+          <p>In October 1967 the Diamond Valley Gem club was officially formed. That year there were ten gem clubs formed in Victoria and we were one of them. 
+            The club emerged from humble beginnings with workshops being held at a member’s home using limited equipment.</p>
+          <button class="home-history-button"><a href="about.html#club-history-text">Read more...  </a></button>
+        </div>
+        <div class="home-history-image-container">
+        <img src="images/aboutus.jpg" alt="Diamond Valley Gem Club History" class="history-image" /> 
+        </div>       
+    </div>
+  </section>
+
+
+
+<footer id="footer-container"></footer>
+
+</body>
+</html>

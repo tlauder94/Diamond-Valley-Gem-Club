@@ -2,6 +2,17 @@
     font-family: Montserrat, sans-serif;
 }
 
+/* Error message styling for failed component loads */
+.error-message {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+  text-align: center;
+}
+
 /* Hero Section */
 .hero-container {
   display: flex;
@@ -80,14 +91,17 @@
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   animation: slideDown 0.5s ease-in-out;
+  display: none; /* Hidden by default */
 
   /* Flexbox for vertical and horizontal centering */
-  display: flex;
   flex-direction: column;
   justify-content: center; /* Center content vertically */
   align-items: center; /* Center content horizontally */
   height: auto; /* Allow the banner to adjust height dynamically */
-  min-height: 80px; /* Set a minimum height for the banner */
+}
+
+.annoucement-banner.show {
+  display: flex; /* Show banner when it has content */
 }
 
 #annoucement-header {
@@ -115,8 +129,7 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
-  width: 100%; /* Ensure the container spans the full width */
-  max-width: 1200px; /* Limit the width for consistency */
+  width: 80%; /* Match about us page width */
   margin: 40px auto; /* Add consistent spacing above and below */
   padding: 0 20px; /* Add padding for better alignment */
 }
@@ -131,6 +144,12 @@
   width: 65%;
   text-align: left;
   padding: 20px;
+}
+
+.home-about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .home-about-image-container {
@@ -182,7 +201,7 @@
   }
 
   .home-course-container {
-    max-width: 1200px; /* Limit the width of the container */
+    width: 80%; /* Match about us page width */
     margin: auto; /* Center the container */
     padding: 0 20px; /* Add padding for spacing */
     text-align: center; /* Center-align the content */
@@ -191,9 +210,10 @@
 /* Courses Grid */
 .home-course-grid {
   display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
-  gap: 20px; /* Add spacing between cards */
-  justify-content: center; /* Center the grid */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px; /* Normal gap for 3 courses */
+  justify-content: center; /* Center the courses */
+  width: 100%; /* Use full width of container */
 }
 
 /* Individual Course Card */
@@ -207,8 +227,8 @@
   border: 1px solid #ddd; /* Subtle border */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  width: 30%; /* Ensure 3 cards fit side by side */
-  max-width: 350px; /* Limit the maximum width */
+  width: 30%; /* Restored to 30% for 3 cards */
+  max-width: 350px; /* Restored original max width */
   height: auto; /* Allow dynamic height */
   text-align: center;
   overflow: hidden; /* Ensure content stays inside the card */
@@ -302,8 +322,7 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
-  width: 100%; /* Ensure the container spans the full width */
-  max-width: 1200px; /* Limit the width for consistency */
+  width: 80%; /* Match about us page width */
   margin: 40px auto; /* Add consistent spacing above and below */
   padding: 0 20px; /* Add padding for better alignment */
 }
@@ -364,8 +383,7 @@
 }
 
 .opening-hours-container {
-  width: 100%;
-  max-width: 1200px;
+  width: 80%; /* Match about us page width */
   padding: 20px;
   background-color: white;
   margin: 0 auto 30px;
@@ -610,8 +628,8 @@
   background-color: #1B75BC;
   color: white;
   border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
+  padding: 12px 24px;
+  font-size: 1.1rem;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;

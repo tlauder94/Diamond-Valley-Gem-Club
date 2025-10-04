@@ -22,36 +22,39 @@
   .resources-blurb-header{
     color: #1B75BC;
     font-size: 1.8rem;
-    margin: 2% 10%;
+    margin: 2% auto;
     text-align: left;
+    width: 80%;
   }
 
   .resources-blurb{
     text-align: left;  
-    margin: 2% 10%;
+    margin: 2% auto;
     font-size: 1.1rem;
-    width:80%
+    width: 80%;
   }
 
   .resource-info-container {
-    width: 100%;
+    width: 80%;
+    margin: 40px auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 30px;
   }
 
   #socities {
     background-color: #e9f6fc; 
     color: #1B75BC;
-    padding: 15px;
-    margin: 10px;    
+    padding: 20px;
+    margin: 0;    
     border-radius: 5px; 
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: left;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    width: 30%;
+    width: 48%;
     text-align: left;
   }
 
@@ -90,15 +93,16 @@
 }
 
 .resources-right-container {
-    width: 40%;
+    width: 48%;
+    margin: 0;
   }
 
   /* Newsletter Box */  
   #newsletter-box {
     background-color: #e9f6fc; 
     color: #1B75BC;
-    padding: 10px;
-    margin: 10px;    
+    padding: 20px;
+    margin: 0;    
     border-radius: 5px; 
     display: flex;
     flex-direction: column;
@@ -115,7 +119,7 @@
 
   /* Newsletter Container */
 .newsletter-container {
-    width: 90%;
+    width: 80%;
     margin: 20px auto; 
     text-align: left;
     background-color: #f9f9f9; 
@@ -255,3 +259,11 @@
   .library-button:hover {
     background-color: #1B75BC;
   }
+
+/* Error message styling */
+.error-message {
+  color: red;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+}

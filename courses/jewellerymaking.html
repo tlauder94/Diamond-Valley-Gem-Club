@@ -6,8 +6,15 @@
   <title>Jewellery Making</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="courses.css">
+  <link rel="stylesheet" href="../navbar.css">
+  <link rel="stylesheet" href="../footer.css">
   <link href="https://unpkg.com/fullcalendar@5.10.1/main.css" rel="stylesheet" />
   <script src="https://unpkg.com/fullcalendar@5.10.1/main.js"></script>
+  <!-- Load DVGC API Cache Manager -->
+  <script src="../dvgc-api-cache.js"></script>
+  <!-- Load shared course functionality -->
+  <script src="course-common.js"></script>
+  <script src="jewellerymaking-init.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -46,7 +53,7 @@
         <h2>Who Is This Available To?</h2>
         <p>This course is available to all members of the Diamond Valley Gem Club.</p>
         <p>
-          Not a member? <a href="/Diamond-Valley-Gem-Club/membership.html" class="membership-link">Sign up now</a> to access this and other exciting opportunities!
+          Not a member? <a href="../membership.html" class="membership-link">Sign up now</a> to access this and other exciting opportunities!
         </p>
       </section>
       <div class="page-break"></div>
@@ -83,8 +90,8 @@
 
     <!-- Right Content (Images) -->
     <div class="course-images">
-      <img src="/Diamond-Valley-Gem-Club/images/jewellery2.jpeg" alt="Jewellery Tools in Use">
-      <img src="/Diamond-Valley-Gem-Club/images/jewellery3.jpeg" alt="Finished Jewellery Pieces">
+      <img src="../images/jewellery2.jpeg" alt="Jewellery Tools in Use">
+      <img src="../images/jewellery3.jpeg" alt="Finished Jewellery Pieces">
     </div>
   </main>
 
@@ -92,7 +99,7 @@
   <section class="instructor-info container">
     <h2>Meet Your Instructor</h2>
     <div class="instructor-content">
-      <img src="/Diamond-Valley-Gem-Club/images/cabs.jpg" alt="Instructor Photo" class="instructor-photo">
+      <img src="../images/cabs.jpg" alt="Instructor Photo" class="instructor-photo">
       <div>
         <p><strong>Emily Taylor</strong> is a professional jeweller with over 15 years of experience in crafting bespoke jewellery. She is passionate about teaching others how to bring their creative visions to life.</p>
         <blockquote>"Jewellery making is a journey of creativity and craftsmanship. Let me help you create something truly special."</blockquote>
@@ -103,127 +110,8 @@
   <!-- Footer -->
   <footer id="footer-container"></footer>
 
-  <script>
-    // Dynamically load the shared navbar
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/Diamond-Valley-Gem-Club/navbar.html')
-        .then(response => response.text())
-        .then(data => {
-          document.querySelector('header').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading navbar:', error));
-    });
+  </body>`n</html>
 
-    // Dynamically load the shared footer
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('/Diamond-Valley-Gem-Club/footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.querySelector('footer').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading footer:', error));
-    });
 
-    document.addEventListener('DOMContentLoaded', () => {
-      // Events array for Jewellery Making
-      const events = [
-        {
-          title: 'Jewellery Making Workshop',
-          start: '2025-06-29T10:00:00',
-          end: '2025-06-29T16:00:00',
-          description: 'Unleash your creativity and craft stunning jewellery pieces.',
-          image: '/Diamond-Valley-Gem-Club/images/jewellery2.jpeg',
-          type: 'course',
-          spacesAvailable: 8
-        },
-        {
-          title: 'Jewellery Making Workshop',
-          start: '2025-07-30T10:00:00',
-          end: '2025-07-30T16:00:00',
-          description: 'Unleash your creativity and craft stunning jewellery pieces.',
-          image: '/Diamond-Valley-Gem-Club/images/jewellery3.jpeg',
-          type: 'course',
-          spacesAvailable: 5
-        },
-        {
-          title: 'Jewellery Making Workshop',
-          start: '2025-08-24T10:00:00',
-          end: '2025-08-24T16:00:00',
-          description: 'Unleash your creativity and craft stunning jewellery pieces.',
-          image: '/Diamond-Valley-Gem-Club/images/jewellery2.jpeg',
-          type: 'course',
-          spacesAvailable: 10
-        }
-      ];
 
-      const upcomingCoursesContainer = document.getElementById('upcoming-courses-container');
 
-      if (upcomingCoursesContainer) {
-        events
-          .filter(event => event.type === 'course') // Filter only course events
-          .forEach(event => {
-            const eventDate = new Date(event.start);
-            const month = eventDate.toLocaleString('default', { month: 'short' }); // Use short month format
-            const day = eventDate.getDate();
-            const startTime = new Date(event.start).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
-            const endTime = new Date(event.end).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
-            const eventTime = `${startTime} - ${endTime}`;
-
-            const eventHTML = `
-              <div class="event">
-                <div class="event-date">
-                  <div class="event-month">${month}</div>
-                  <div class="event-day">${day}</div>
-                </div>
-                <img src="${event.image}" alt="${event.title}" class="event-image">
-                <div class="event-details">
-                  <h3>${event.title}</h3>
-                  <p class="event-time">${eventTime}</p>
-                  <p class="event-spaces">
-                    <span class="spaces-label">Spaces:</span> ${event.spacesAvailable}
-                  </p>
-                </div>
-              </div>
-            `;
-
-            upcomingCoursesContainer.innerHTML += eventHTML;
-          });
-      }
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      const apiUrl = "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLgAVUnOJDWSIpG9P_OXnRAYn5tIerxJDE3p7qyI1rtIxvlkqXtnKthD2PAPbQQB-NQz5eIVCO5JqOhnxwutuMOeeA4yu93LZtDbw8kQNe5sU4g2InX7JvJuf-a80spCRITI8umXmsbai4oDbqCoIcUgmM_9MWq3asPsXfDkawc4WnLsOCj0uLITK333KgGNGRi78lxEOWjZZdvam2MtmOXQVNbwijjATyErsFJcYhD73ZrQoWs0jHx2uvlhWcqdTo8W9PydWmoj9KVqCCUb7Ufb47e4zGjyiWtv3Eg1GjoLhAsiZEA&lib=MOZjIhuefjGEGvwvHrh3M0TbZ7jG6IkQL";
-
-      const courseName = "Jewellery Making"; // Match the course name from the JSON
-      const costElement = document.getElementById('course-cost');
-
-      // Show loading message
-      costElement.textContent = "Loading...";
-
-      // Fetch course costs from the API
-      fetch(apiUrl)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then(data => {
-          // Find the cost for the "Jewellery Making" course
-          const course = data.find(course => course.name === courseName);
-          if (course) {
-            // Update the cost dynamically
-            costElement.textContent = `$${course.cost}`;
-          } else {
-            costElement.textContent = "Course not found.";
-            console.error(`${courseName} course not found in the data.`);
-          }
-        })
-        .catch(error => {
-          costElement.textContent = "Error loading cost.";
-          console.error("Error fetching course costs:", error);
-        });
-    });
-  </script>
-</body>
-</html>

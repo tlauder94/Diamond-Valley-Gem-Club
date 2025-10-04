@@ -6,6 +6,7 @@
   <title>Courses</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="coursemenu.css">
+  <script src="courses.js"></script>
 </head>
 <body>
 
@@ -35,118 +36,80 @@
 
   <main class="courses-container">
 <div class="course-card">
-  <a href="courses/cabachon.html">
+  <a href="cabachon.html">
     <img src="images/cabs.jpg" alt="Course Image">
     <h2>Cabochon Cutting</h2>
     <p>Shape and polish stone slabs into smooth, domed cabochons using essential lapidary techniques.</p>
   </a>
-  <a href="courses/cabachon.html" class="course-button">More Details</a>
+  <a href="cabachon.html" class="course-button">More Details</a>
 </div>
 <div class="course-card">
-  <a href="courses/faceting.html">
+  <a href="faceting.html">
     <img src="images/facet1.jpeg" alt="Course Image">
     <h2>Faceting</h2>
     <p>Turn rough stones into precision-cut gems, mastering machine setup, cutting angles, and polishing.</p>
   </a>
-  <a href="courses/faceting.html" class="course-button">More Details</a>
+  <a href="faceting.html" class="course-button">More Details</a>
 </div>
 <div class="course-card">
-  <a href="courses/jewellerymaking.html">
+  <a href="jewellerymaking.html">
     <img src="images/jewellery1.jpeg" alt="Course Image">
     <h2>Jewellery Making</h2>
     <p>Create stunning pieces of jewellery using various materials and techniques.</p>
   </a>
-  <a href="courses/jewellerymaking.html" class="course-button">More Details</a>
+  <a href="jewellerymaking.html" class="course-button">More Details</a>
 </div>
 <div class="course-card">
-  <a href="courses/silversmithing.html">
+  <a href="silversmithing.html">
     <img src="images/ss1.jpg" alt="Course Image">
     <h2>Silver Smithing</h2>
     <p>Learn to craft beautiful silver jewellery and objects.</p>
   </a>
-  <a href="courses/silversmithing.html" class="course-button">More Details</a>
+  <a href="silversmithing.html" class="course-button">More Details</a>
 </div>
 <div class="course-card">
-  <a href="courses/lostwax.html">
+  <a href="lostwax.html">
     <img src="images/lostwax.jpg" alt="Course Image">
     <h2>Lost Wax Casting</h2>
     <p>Explore the ancient technique of casting metal objects using wax molds.</p>
   </a>
-  <a href="courses/lostwax.html" class="course-button">More Details</a>
+  <a href="lostwax.html" class="course-button">More Details</a>
 </div>
 <div class="course-card">
-  <a href="courses/wirewrapping.html">
+  <a href="wirewrapping.html">
     <img src="images/wirewrapping2.jpeg" alt="Course Image">
     <h2>Wire Wrapping</h2>
     <p>Design intricate jewellery by wrapping wire around stones and beads.</p>
   </a>
-  <a href="courses/wirewrapping.html" class="course-button">More Details</a>
+  <a href="wirewrapping.html" class="course-button">More Details</a>
 </div>
 <div class="course-card">
-  <a href="courses/rockcarving.html">
+  <a href="rockcarving.html">
     <img src="images/rc1.jpg" alt="Course Image">
     <h2>Rock Carving</h2>
     <p>Learn to carve and shape rocks into beautiful sculptures and designs.</p>
   </a>
-  <a href="courses/rockcarving.html" class="course-button">More Details</a>
+  <a href="rockcarving.html" class="course-button">More Details</a>
 </div>
 <div class="course-card">
-  <a href="courses/rockslabbing.html">
+  <a href="rockslabbing.html">
     <img src="images/rs2.webp" alt="Course Image">
     <h2>Rock Slabbing</h2>
     <p>Discover the process of cutting rocks into slabs for further use.</p>
   </a>
-  <a href="courses/rockslabbing.html" class="course-button">More Details</a>
+  <a href="rockslabbing.html" class="course-button">More Details</a>
 </div>
 <div class="course-card">
-  <a href="courses/vikingweaving.html">
+  <a href="vikingweaving.html">
     <img src="images/vw.jpg" alt="Course Image">
     <h2>Viking Weaving</h2>
     <p>Learn the ancient art of weaving intricate patterns with wire.</p>
   </a>
-  <a href="courses/vikingweaving.html" class="course-button">More Details</a>
+  <a href="vikingweaving.html" class="course-button">More Details</a>
 </div>
 </main>
 
   <footer id="footer-container"></footer>
 
-  <script>
-    // Dynamically load the shared navbar
-        document.addEventListener('DOMContentLoaded', () => {
-          fetch('navbar.html') // Ensure the file path is correct
-            .then(response => {
-              if (!response.ok) {
-                throw new Error(`Failed to load navbar. Status: ${response.status}`);
-              }
-              return response.text();
-            })
-            .then(data => {
-              document.querySelector('header').innerHTML = data;
-            })
-            .catch(error => {
-              console.error('Error loading navbar:', error);
-              document.querySelector('header').innerHTML = '<p style="color: red;">Failed to load navbar. Please try again later.</p>';
-            });
-        });
-        
-      // Dynamically load the shared footer
-          document.addEventListener('DOMContentLoaded', () => {
-            fetch('footer.html') // Ensure the file path is correct
-              .then(response => {
-                if (!response.ok) {
-                  throw new Error(`Failed to load footer. Status: ${response.status}`);
-                }
-                return response.text();
-              })
-              .then(data => {
-                document.querySelector('footer').innerHTML = data;
-              })
-              .catch(error => {
-                console.error('Error loading footer:', error);
-                document.querySelector('footer').innerHTML = '<p style="color: red;">Failed to load navbar. Please try again later.</p>';
-              });
-          });
-      </script>
-    
 </body>
 </html>

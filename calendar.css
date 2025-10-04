@@ -37,6 +37,8 @@ a {
   padding: 40px 20px;
   display: flex;
   justify-content: center; 
+  width: 80%;
+  margin: 0 auto;
 }
 
 .about-wrapper {
@@ -44,9 +46,8 @@ a {
   flex-wrap: nowrap; 
   gap: 20px;
   align-items: stretch; 
-  max-width: 1400px; 
   width: 100%; 
-  margin: 60px 0 100px 0; 
+  margin: 60px auto 100px auto; 
 }
 
 .about-text {
@@ -79,11 +80,12 @@ a {
 .calendar-section {
   padding: 40px 20px;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 #calendar {
-    max-width: 1190px; 
     width: 100%; 
     margin: 0 auto;
     background-color: white; 
@@ -385,7 +387,7 @@ a {
 
 /* General Container for Page Content */
 .container {
-  max-width: 1200px; 
+  width: 80%; 
   margin: 0 auto; 
   padding: 0 20px; 
 }
@@ -589,7 +591,7 @@ a {
   text-align: center;
   margin: 30px auto;
   padding: 20px;
-  width: 80%; /* Limit the width of the section */
+  width: 80% !important; /* Match other sections width - force override */
 }
 
 .upcoming-events-grid {
@@ -709,4 +711,12 @@ a {
 .add-to-calendar-button:hover {
   background-color: #155a8a;
   transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
 }

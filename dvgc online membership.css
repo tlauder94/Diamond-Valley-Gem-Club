@@ -420,3 +420,11 @@ button.submit-button:hover {
     gap: 20px; /* Maintain consistent spacing */
   }
 }
+
+/* Error message styling */
+.error-message {
+  color: red;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Arial', sans-serif;
+}

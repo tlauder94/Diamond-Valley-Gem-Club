@@ -194,3 +194,16 @@ body {
   transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
+/* Maps iframe styling */
+.map-iframe {
+  border: 0;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+

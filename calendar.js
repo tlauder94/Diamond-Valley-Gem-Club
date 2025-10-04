@@ -1,87 +1,121 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const eventsApiUrl = 'https://script.google.com/macros/s/AKfycby5-Sv7WigXltzCjVL_EtgQjYYyH2_rMpGx8HAsu93Pe8vjwn1LxX6NrvJl3fM61WuQ/exec?sheet=Events';
+// Calendar page JavaScript functionality
 
-  // Fetch events from the API
-  fetch(eventsApiUrl)
+// Dynamically load the shared navbar
+function loadNavbar() {
+  fetch('navbar.html')
     .then(response => {
       if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
+        throw new Error(`Failed to load navbar. Status: ${response.status}`);
       }
-      return response.json();
+      return response.text();
     })
     .then(data => {
-      console.log('Fetched Events:', data);
+      document.querySelector('header').innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error loading navbar:', error);
+      const errorElement = document.createElement('p');
+      errorElement.className = 'error-message';
+      errorElement.textContent = 'Failed to load navbar. Please try again later.';
+      document.querySelector('header').appendChild(errorElement);
+    });
+}
 
-      // Process the events for FullCalendar
-      const processedEvents = data.map(event => {
-        // Convert date from DD-MM-YYYY to YYYY-MM-DD
-        const [day, month, year] = event.date.split('-');
-        const formattedDate = `${year}-${month}-${day}`;
+// Dynamically load the shared footer
+function loadFooter() {
+  fetch('footer.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load footer. Status: ${response.status}`);
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.querySelector('footer').innerHTML = data;
+    })
+    .catch(error => {
+      console.error('Error loading footer:', error);
+      const errorElement = document.createElement('p');
+      errorElement.className = 'error-message';
+      errorElement.textContent = 'Failed to load footer. Please try again later.';
+      document.querySelector('footer').appendChild(errorElement);
+    });
+}
 
-        // Convert start and end times to ISO format
-        const startTime = `${formattedDate}T${String(event.startTime).padStart(4, '0').replace(/(\d{2})(\d{2})/, '$1:$2')}`;
-        const endTime = `${formattedDate}T${String(event.endTime).padStart(4, '0').replace(/(\d{2})(\d{2})/, '$1:$2')}`;
+document.addEventListener('DOMContentLoaded', async () => {
+  // Load shared components
+  loadNavbar();
+  loadFooter();
+  
+  try {
+    console.log('📅 Loading calendar events from cache...');
+    
+    // Get events from cache
+    const events = await window.DVGCCache.getEvents();
+    
+    console.log('📊 Calendar events loaded:', events.length);
 
-        // Assign an image and className based on event type
-        let image = '';
-        let className = '';
-        switch (event.type) {
-          case 'Working Bee':
-          image = "images/workingbee.jpg";
+    // Process the events for FullCalendar
+    const processedEvents = events.map(event => {
+      // Convert date from DD-MM-YYYY to YYYY-MM-DD
+      const [day, month, year] = event.date.split('-');
+      const formattedDate = `${year}-${month}-${day}`;
+
+      // Convert start and end times to ISO format
+      const startTime = `${formattedDate}T${String(event.startTime).padStart(4, '0').replace(/(\d{2})(\d{2})/, '$1:$2')}`;
+      const endTime = `${formattedDate}T${String(event.endTime).padStart(4, '0').replace(/(\d{2})(\d{2})/, '$1:$2')}`;
+
+      // Assign className based on event type
+      let className = '';
+      switch (event.type) {
+        case 'Working Bee':
           className = 'event-working-bee';
           break;
         case 'Field Trip':
-          image = "images/fieldtrip.jpeg";
           className = 'event-field-trip';
           break;
         case 'Committee Meeting':
-          image = "images/committee.jpg";
           className = 'event-committee-meeting';
           break;
         case 'Social Event':
-          image = "images/social.jpg";
           className = 'event-social-event';
           break;
         case 'AGM':
-          image = "images/committee.jpeg";
           className = 'event-agm';
           break;
         case 'Other Event':
-          image = "images/otherevent.jpg";
           className = 'event-other-event';
           break;
         case 'Gem Show':
-          image = "images/gemshow.jpg";
           className = 'event-gem-show';
           break;
         case 'Gem Identification':
-          image = "images/gemid.jpg";
           className = 'event-gem-identification';
           break;
-          default:
-          image = "images/default-event.png";
+        default:
           className = 'event-default';
-        }
+      }
 
-        return {
-          title: event.title,
-          start: startTime,
-          end: endTime,
-          description: event.description,
-          location: event.location,
-          category: event.type,
-          availableTo: event.openTo,
-          image: image,
-          className: className,
-        };
-      });
-
-      // Initialize the calendar with processed events
-      initializeCalendar(processedEvents);
-``    })
-    .catch(error => {
-      console.error('Error fetching events:', error);
+      return {
+        title: event.title,
+        start: startTime,
+        end: endTime,
+        description: event.description,
+        location: event.location,
+        category: event.type,
+        availableTo: event.openTo,
+        image: event.image, // Using image from cache
+        className: className,
+      };
     });
+
+    // Initialize the calendar with processed events
+    initializeCalendar(processedEvents);
+  } catch (error) {
+    console.error('❌ Error loading calendar events:', error);
+    // Initialize empty calendar if data fails to load
+    initializeCalendar([]);
+  }
 });
 
 // Initialize FullCalendar

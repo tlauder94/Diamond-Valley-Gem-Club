@@ -30,7 +30,7 @@ section h2 {
 /* Membership Section */
 .membership-section {
   margin: 0 auto; /* Center the section horizontally */
-  max-width: 1200px; /* Add consistent side margins */
+  width: 80%; /* Match about us page width */
   padding: 20px; /* Add vertical padding */
 }
 
@@ -86,13 +86,13 @@ section h2 {
   height: 2px;
   background-color: #1B75BC;
   margin: 20px auto; /* Center the page break horizontally */
-  max-width: 1200px; /* Add consistent side margins */
+  width: 80%; /* Match about us page width */
 }
 
 /* Why Join Section */
 .why-join-section {
   margin: 0 auto; /* Center the section horizontally */
-  max-width: 1200px; /* Add consistent side margins */
+  width: 80%; /* Match about us page width */
   padding: 20px; /* Add vertical padding */
 }
 
@@ -150,7 +150,7 @@ section h2 {
 /* Joining Fees/Subscriptions Section */
 .fees-section {
   margin: 0 auto; /* Center the section horizontally */
-  max-width: 1200px; /* Add consistent side margins */
+  width: 80%; /* Match about us page width */
   padding: 20px; /* Add vertical padding */
 }
 
@@ -167,4 +167,12 @@ section h2 {
 
 .fees-right {
   flex: 1; /* Take up less space */
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
