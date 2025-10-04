@@ -125,7 +125,7 @@
   }
 }
 
-.home-about-container {
+.index-about-container {
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -134,25 +134,25 @@
   padding: 0 20px; /* Add padding for better alignment */
 }
 
-.home-about-container h1 {
+.index-about-container h1 {
   color: #1B75BC; 
   text-align: left !important; /* Align the heading to the left */
 }
 
-.home-about-text {
+.index-about-text {
   color: #403E43;
   width: 65%;
   text-align: left;
   padding: 20px;
 }
 
-.home-about-text p {
+.index-about-text p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.home-about-image-container {
+.index-about-image-container {
   width: 35%; /* Take up half of the 50% container */
   display: flex;
   justify-content: center; /* Center the image within its container */
@@ -166,7 +166,7 @@
   display: block;
 }
 
-.home-button {
+.index-button {
     background-color: #1B75BC;
     color: white;
     border: none;
@@ -176,11 +176,11 @@
     cursor: pointer;
   }
   
-  .home-button:hover {
+  .index-button:hover {
     background-color: #155a8a;
   }
 
-  .home-history-button {    
+  .index-show-button {    
     background-color: #155a8a;
     color: white;
     border: none;
@@ -190,17 +190,17 @@
     cursor: pointer;
   }
 
-  .home-history-button:hover {
+  .index-show-button:hover {
     background-color: #555;
   }
 
-  .home-history-button a {    
+  .index-show-button a {    
     text-decoration: none;
     color: white;
     font-size: 1rem;
   }
 
-  .home-course-container {
+  .index-course-container {
     width: 80%; /* Match about us page width */
     margin: auto; /* Center the container */
     padding: 0 20px; /* Add padding for spacing */
@@ -208,7 +208,7 @@
 }
 
 /* Courses Grid */
-.home-course-grid {
+.index-course-grid {
   display: flex;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
   gap: 20px; /* Normal gap for 3 courses */
@@ -217,7 +217,7 @@
 }
 
 /* Individual Course Card */
-.home-course-card {
+.index-course-card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -236,7 +236,7 @@
 }
 
 /* Hover Effect for Course Card */
-.home-course-card:hover {
+.index-course-card:hover {
   transform: scale(1.05); /* Slight zoom effect */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
@@ -252,7 +252,7 @@
 }
 
 /* Course Title */
-.home-course-card h2 {
+.index-course-card h2 {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 10px 0; /* Add spacing above and below the title */
@@ -262,7 +262,7 @@
 }
 
 /* Course Description */
-.home-course-card p {
+.index-course-card p {
   font-size: 1rem;
   color: #333; /* Dark gray text for readability */
   margin: 0 0 15px 0; /* Add spacing below the description */
@@ -275,7 +275,7 @@
 }
 
 /* "More Details" Button */
-.home-course-card a.course-button {
+.index-course-card a.course-button {
   background-color: #1B75BC; /* Banner blue background */
   color: white; /* White text */
   font-size: 1rem; /* Button font size */
@@ -290,25 +290,25 @@
 }
 
 /* Hover Effect for Button */
-.home-course-card a.course-button:hover {
+.index-course-card a.course-button:hover {
   background-color: #155a8a; /* Darker blue on hover */
   transform: scale(1.05); /* Slight zoom effect */
 }
 
-.home-benefit-container {
+.index-benefit-container {
     max-width: 1200px;
     margin: 5% auto;
     padding: 0 20px;
     text-align: center;
 }
 
-.home-benefit-grid {
+.index-benefit-grid {
     display: flex;
     gap: 5%;
     justify-content: center;
 }
 
-.home-benefit-card {
+.index-benefit-card {
     display: flex;
     flex-direction: column;
     width: 20%;
@@ -318,7 +318,7 @@
 }
 
 /* Club History Container */
-.home-history-container {
+.index-show-container {
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -328,27 +328,27 @@
 }
 
 /* Club History Text */
-.home-history-text {
+.index-show-text {
   color: #403E43;
   width: 65%; /* Match the text width of About Us */
   text-align: left;
   padding: 20px;
 }
 
-.home-history-text h1 {
+.index-show-text h1 {
   color: #1B75BC; /* Banner blue color */
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.home-history-text p {
+.index-show-text p {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 20px;
 }
 
-.home-history-button {
+.index-show-button {
   background-color: #1B75BC; /* Banner blue background */
   color: white;
   border: none;
@@ -360,26 +360,36 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.home-history-button:hover {
+.index-show-button:hover {
   background-color: #155a8a; /* Darker blue on hover */
   transform: scale(1.05); /* Slight zoom effect */
 }
 
-/* Club History Image Container */
-.home-history-image-container {
+/* Gem Show Images Container */
+.index-show-images-container {
   width: 35%; /* Match the image width of About Us */
   display: flex;
   justify-content: center; /* Center the image within its container */
   align-items: center; /* Center the image vertically */
 }
 
-/* Club History Image */
-.history-image {
-  width: 100%; /* Make the image fill the container's width */
-  height: auto; /* Maintain the aspect ratio */
-  object-fit: cover; /* Ensure the image scales properly without distortion */
-  border-radius: 8px; /* Optional: Add rounded corners to match the design */
-  display: block; /* Ensure the image behaves like a block element */
+/* Show Image Styling */
+.show-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.show-image:hover {
+  transform: scale(1.02);
+}
+
+/* Ensure proper spacing from footer */
+#index-show {
+  margin-bottom: 40px;
 }
 
 .opening-hours-container {
@@ -429,7 +439,7 @@
 }
 
 /* Club Opening Hour Heading */
-#home-opening h2 {
+#index-opening h2 {
   color: #1B75BC; /* Banner blue color */
   font-size: 2rem;
   font-weight: 700;
@@ -438,7 +448,7 @@
 }
 
 /* Courses Heading */
-#home-course h1 {
+#index-course h1 {
   color: #1B75BC; /* Banner blue color */
   font-size: 2rem;
   font-weight: 700;
@@ -447,7 +457,7 @@
 }
 
 /* About Us Heading */
-#home-about h1 {
+#index-about h1 {
   color: #1B75BC; /* Banner blue color */
   font-size: 2rem;
   font-weight: 700;
@@ -469,14 +479,14 @@
 }
 
 /* Upcoming Events Section */
-#home-upcoming-events {
+#index-upcoming-events {
   text-align: center;
   margin: 30px auto;
   padding: 20px;
   width: 80%; /* Limit the width of the section */
 }
 
-#home-upcoming-events h2 {
+#index-upcoming-events h2 {
   color: #1B75BC; /* Banner blue color */
   font-size: 2rem;
   font-weight: 700;
@@ -598,7 +608,7 @@
 }
 
 /* View All Courses Button */
-.home-all-courses-button {
+.index-all-courses-button {
   background-color: #1B75BC; /* Banner blue background */
   color: white; /* White text */
   font-size: 1.3rem; /* Larger button text */
@@ -612,19 +622,19 @@
 }
 
 /* Hover Effect for View All Courses Button */
-.home-all-courses-button:hover {
+.index-all-courses-button:hover {
   background-color: #155a8a; /* Darker blue on hover */
   transform: scale(1.05); /* Slight zoom effect */
 }
 
-.home-about-button a,
-.home-history-button a {
+.index-about-button a,
+.index-show-button a {
   text-decoration: none;
   color: white;
 }
 
-.home-about-button,
-.home-history-button {
+.index-about-button,
+.index-show-button {
   background-color: #1B75BC;
   color: white;
   border: none;
@@ -635,37 +645,37 @@
   transition: background-color 0.3s ease;
 }
 
-.home-about-button:hover,
-.home-history-button:hover {
+.index-about-button:hover,
+.index-show-button:hover {
   background-color: #155a8a;
 }
 
 /* Responsive styles for mobile devices */
 @media (max-width: 768px) {
   .hero-container,
-  .home-about-container,
-  .home-history-container {
+  .index-about-container,
+  .index-show-container {
     flex-direction: column;
     height: auto;
   }
   .hero-images,
   .hero-text,
-  .home-about-image-container,
-  .home-about-text,
-  .home-history-image-container,
-  .home-history-text {
+  .index-about-image-container,
+  .index-about-text,
+  .index-show-images-container,
+  .index-show-text {
     width: 100%;
     padding: 10px;
   }
-  .home-course-grid,
+  .index-course-grid,
   .upcoming-events-grid,
-  .home-benefit-grid {
+  .index-benefit-grid {
     flex-direction: column;
     gap: 15px;
   }
-  .home-course-card,
+  .index-course-card,
   .event-card,
-  .home-benefit-card {
+  .index-benefit-card {
     width: 100%;
     max-width: 100%;
   }
@@ -686,11 +696,11 @@
 /* Extra small devices */
 @media (max-width: 480px) {
   .hero-text h1,
-  #home-opening h2,
-  #home-course h1,
-  #home-about h1,
-  #home-upcoming-events h2,
-  .home-history-text h1 {
+  #index-opening h2,
+  #index-course h1,
+  #index-about h1,
+  #index-upcoming-events h2,
+  .index-show-text h1 {
     font-size: 1.2rem;
   }
   .event-card-image img,

@@ -1,4 +1,4 @@
-// Home page JavaScript functionality
+// Index page JavaScript functionality
 
 // Close announcement banner function
 function closeAnnouncementBanner() {
@@ -48,9 +48,9 @@ function loadFooter() {
     });
 }
 
-// Preload all API data when home page loads
+// Preload all API data when Index page loads
 function preloadAPIData() {
-  console.log('🏠 Home page loaded - preloading all DVGC data...');
+  console.log('🏠 Index page loaded - preloading all DVGC data...');
   window.DVGCCache.preloadAllData()
     .then((result) => {
       console.log('✅ Data preloading complete:', result);
@@ -196,9 +196,9 @@ async function loadAnnouncements() {
   }
 }
 
-// Load random courses for home page display
+// Load random courses for Index page display
 function loadRandomCourses() {
-  const courseGrid = document.getElementById('home-course-grid');
+  const courseGrid = document.getElementById('index-course-grid');
   console.log('🎓 Starting course loading...');
 
   // Fetch the courses.html file
@@ -226,11 +226,11 @@ function loadRandomCourses() {
       // Clear the course grid
       courseGrid.innerHTML = '';
 
-      // Append the selected courses to the home page
+      // Append the selected courses to the Index page
       selectedCourses.forEach(courseCard => {
         // Create a new card element
         const card = document.createElement('div');
-        card.classList.add('home-course-card');
+        card.classList.add('index-course-card');
 
         // Extract the image, title, description, and link from the original course card
         const imageElement = courseCard.querySelector('img');
@@ -263,7 +263,7 @@ function loadRandomCourses() {
     });
 }
 
-// Initialize all home page functionality
+// Initialize all Index page functionality
 document.addEventListener('DOMContentLoaded', () => {
   // Load shared components
   loadNavbar();
