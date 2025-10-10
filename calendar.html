@@ -20,62 +20,83 @@
     </div>
   </section>
 
-  <!-- Major Annual Events Section -->
-  <section class="major-events-showcase">
-    <div class="major-events-grid">
-      <div class="major-event-card annual-gem-show">
-        <div class="major-event-content">
-          <h3>Annual Gem Show</h3>
-          <p class="major-event-description">Our flagship event showcasing the finest gems and minerals</p>
-          <p class="major-event-timing">Every March</p>
-          <div class="major-event-tags">
-            <span class="event-tag">Exhibitions</span>
-            <span class="event-tag">Demonstrations</span>
-            <span class="event-tag">Guest Dealers</span>
+  <!-- About Calendar Section -->
+  <section class="about-calendar-section">
+    <div class="about-calendar-container">
+      <!-- Left Container: Text -->
+      <div class="about-calendar-text">
+        <h2>Stay Connected with DVGC</h2>
+        <p>
+          Keep up to date with all Diamond Valley Gem Club activities and important events throughout the year. 
+          Our calendar features working bees, field trips, committee meetings, social gatherings, and special exhibitions that bring our community together.
+        </p>
+        <p>
+          From our signature Annual Gem Show and popular Twilight Markets to regular working bees and exciting field trips, 
+          there's always something happening at DVGC. Filter upcoming events by type, view our full calendar, and never miss 
+          an opportunity to participate in club activities and connect with fellow gem enthusiasts.
+        </p>
+      </div>
+      <!-- Right Container: Major Events -->
+      <div class="about-calendar-events">
+        <div class="major-event-card annual-gem-show">
+          <div class="major-event-content">
+            <h3>Annual Gem Show</h3>
+            <p class="major-event-description">Our flagship event showcasing the finest gems and minerals</p>
+            <p class="major-event-timing">Every March</p>
+            <div class="major-event-tags">
+              <span class="event-tag">Exhibitions</span>
+              <span class="event-tag">Demonstrations</span>
+              <span class="event-tag">Guest Dealers</span>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="major-event-card twilight-market">
-        <div class="major-event-content">
-          <h3>Twilight Market</h3>
-          <p class="major-event-description">Evening markets featuring member collections and crafts</p>
-          <p class="major-event-timing">Multiple times yearly</p>
-          <div class="major-event-tags">
-            <span class="event-tag">Member Sales</span>
-            <span class="event-tag">Crafts</span>
-            <span class="event-tag">Community</span>
+        
+        <div class="major-event-card twilight-market">
+          <div class="major-event-content">
+            <h3>Twilight Market</h3>
+            <p class="major-event-description">Evening markets featuring member collections and crafts</p>
+            <p class="major-event-timing">Multiple times yearly</p>
+            <div class="major-event-tags">
+              <span class="event-tag">Member Sales</span>
+              <span class="event-tag">Crafts</span>
+              <span class="event-tag">Community</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="upcoming-events container">
-    <div class="upcoming-events-header">
-      <h2>Upcoming Events</h2>
-      <div class="filter-container">
-        <label for="event-type-filter" class="sr-only">Filter by Event Type:</label>
-        <select id="event-type-filter">
-          <option value="all">All</option>
-          <option value="Working Bee">Working Bee</option>
-          <option value="Field Trip">Field Trip</option>
-          <option value="Committee Meeting">Committee Meeting</option>
-          <option value="Social Event">Social Event</option>
-          <option value="AGM">AGM</option>
-          <option value="Other Event">Other Event</option>
-          <option value="Gem Show">Gem Show</option>
-          <option value="Gem Identification">Gem Identification</option>
-        </select>
+  <section class="upcoming-events-section">
+    <div class="upcoming-events-container">
+      <div class="upcoming-events-header">
+        <h2>Upcoming Events</h2>
+        <div class="filter-container">
+          <label for="event-type-filter" class="filter-label">Filter by type:</label>
+          <select id="event-type-filter">
+            <option value="all">All Events</option>
+            <option value="Working Bee">Working Bee</option>
+            <option value="Field Trip">Field Trip</option>
+            <option value="Committee Meeting">Committee Meeting</option>
+            <option value="Social Event">Social Event</option>
+            <option value="AGM">AGM</option>
+            <option value="Other Event">Other Event</option>
+            <option value="Gem Show">Gem Show</option>
+            <option value="Gem Identification">Gem Identification</option>
+          </select>
+        </div>
       </div>
-    </div>
-    <div id="upcoming-events-container" class="upcoming-events-grid">
-      <!-- Event cards will be dynamically populated here -->
+      <div id="upcoming-events-container" class="upcoming-events-grid">
+        <!-- Event cards will be dynamically populated here -->
+      </div>
     </div>
   </section>
 
-  <section class="calendar-section container">
-    <div id="calendar"></div>
+  <section class="calendar-section">
+    <div class="calendar-container">
+      <h2>Full Calendar View</h2>
+      <div id="calendar"></div>
+    </div>
   </section>
 
   <!-- Modal Structure -->
