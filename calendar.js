@@ -1,5 +1,109 @@
 // Calendar page JavaScript functionality
 
+// Major event information data
+const majorEventInfo = {
+  "gem-show": {
+    title: "Annual Gem Show",
+    image: "images/gemshow.jpg",
+    description: `
+      <p>The Diamond Valley Gem Club's Annual Gem Show is our flagship event, held every March. This spectacular exhibition showcases the finest gems, minerals, and lapidary work from our members and guest exhibitors.</p>
+      
+      <div class="event-highlights">
+        <h4>Event Highlights</h4>
+        <ul>
+          <li>Stunning displays of rare and beautiful minerals</li>
+          <li>Member collections and handcrafted jewelry</li>
+          <li>Guest dealers from across Australia</li>
+          <li>Live demonstrations of cutting and polishing</li>
+          <li>Educational exhibits for all ages</li>
+          <li>Competitions and awards ceremony</li>
+        </ul>
+      </div>
+      
+      <h3>What Makes Our Show Special</h3>
+      <p>Our gem show is one of Victoria's premier mineral and gem exhibitions. We feature:</p>
+      <ul>
+        <li><strong>Quality Displays:</strong> Carefully curated exhibits featuring both common and rare specimens</li>
+        <li><strong>Educational Focus:</strong> Interactive displays and knowledgeable volunteers to answer questions</li>
+        <li><strong>Shopping Opportunities:</strong> Unique specimens, tools, and equipment from trusted dealers</li>
+        <li><strong>Community Spirit:</strong> A friendly, welcoming atmosphere for collectors of all levels</li>
+      </ul>
+      
+      <h3>Event Details</h3>
+      <p><strong>When:</strong> Annually in March (specific dates announced in newsletters)<br>
+      <strong>Where:</strong> Our clubhouse at 20 Noorong Avenue, Bundoora<br>
+      <strong>Duration:</strong> Typically a weekend event<br>
+      <strong>Entry:</strong> Small admission fee helps support club activities</p>
+      
+      <p><strong>Perfect for families!</strong> Children love the colorful displays and interactive demonstrations.</p>
+    `,
+    additionalInfo: `
+      <h3>How to Participate</h3>
+      <p>Members can participate by:</p>
+      <ul>
+        <li>Volunteering to help with setup, manning displays, or cleanup</li>
+        <li>Entering specimens in our competition categories</li>
+        <li>Displaying their personal collections</li>
+        <li>Demonstrating techniques and sharing knowledge</li>
+      </ul>
+    `
+  },
+  "twilight-market": {
+    title: "Twilight Market",
+    image: "images/social.jpg",
+    description: `
+      <p>Our popular Twilight Markets are intimate evening events where club members can sell their handcrafted items, mineral collections, and lapidary work in a relaxed, social atmosphere.</p>
+      
+      <div class="event-highlights">
+        <h4>What You'll Find</h4>
+        <ul>
+          <li>Handcrafted jewelry and silver work</li>
+          <li>Polished stones and cabochons</li>
+          <li>Member mineral collections</li>
+          <li>Lapidary tools and equipment</li>
+          <li>Unique craft items and artwork</li>
+          <li>Light refreshments and social time</li>
+        </ul>
+      </div>
+      
+      <h3>Market Atmosphere</h3>
+      <p>Twilight Markets offer a more intimate and social experience compared to larger shows:</p>
+      <ul>
+        <li><strong>Community Focus:</strong> Supporting our members' creative endeavors</li>
+        <li><strong>Relaxed Setting:</strong> Browse and chat in a friendly environment</li>
+        <li><strong>Fair Prices:</strong> Members offer competitive prices on quality items</li>
+        <li><strong>Social Connection:</strong> Meet fellow members and share experiences</li>
+      </ul>
+      
+      <h3>Event Details</h3>
+      <p><strong>When:</strong> Multiple times throughout the year (typically evening events)<br>
+      <strong>Where:</strong> Our clubhouse at 20 Noorong Avenue, Bundoora<br>
+      <strong>Duration:</strong> Usually 2-3 hours in the evening<br>
+      <strong>Entry:</strong> Free for club members, small fee for guests</p>
+      
+      <p><strong>Great for beginners!</strong> Perfect opportunity to start building your collection with guidance from experienced members.</p>
+    `,
+    additionalInfo: `
+      <h3>Becoming a Seller</h3>
+      <p>Club members can book a table to sell their items:</p>
+      <ul>
+        <li>Small table fee helps cover venue costs</li>
+        <li>Bring your own display materials</li>
+        <li>All handmade and mineral items welcome</li>
+        <li>Great way to fund new projects and purchases</li>
+      </ul>
+      
+      <h3>Shopping Tips</h3>
+      <ul>
+        <li>Bring cash for easier transactions</li>
+        <li>Ask questions - members love sharing knowledge</li>
+        <li>Look for unique items you won't find elsewhere</li>
+        <li>Consider commissioning custom pieces</li>
+      </ul>
+    `
+  }
+};
+
 // Dynamically load the shared navbar
 function loadNavbar() {
   fetch('navbar.html')
@@ -210,6 +314,9 @@ function initializeCalendar(events) {
   });
 
   calendar.render();
+  
+  // Store calendar instance globally for toggle functionality
+  window.currentCalendar = calendar;
 }
 
 // Get modal elements
@@ -388,4 +495,115 @@ document.addEventListener('DOMContentLoaded', () => {
       displayEvents(filteredEvents.slice(0, 6)); // Show the next 6 filtered events
     }
   });
+
+  // Setup major event modals
+  setupMajorEventModals();
+  
+  // Setup calendar toggle functionality
+  setupCalendarToggle();
 });
+
+// Major event modal setup function
+function setupMajorEventModals() {
+  // Get modal elements
+  const majorEventModal = document.getElementById('major-event-modal');
+  const closeMajorModal = document.getElementById('close-major-modal');
+  
+  // Close button functionality
+  closeMajorModal.addEventListener('click', () => {
+    majorEventModal.style.display = 'none';
+  });
+
+  // Close modal when clicking outside
+  window.addEventListener('click', (event) => {
+    if (event.target === majorEventModal) {
+      majorEventModal.style.display = 'none';
+    }
+  });
+
+  // Major event cards functionality
+  const majorEventCards = document.querySelectorAll('.major-event-card[data-event]');
+  majorEventCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const eventType = card.getAttribute('data-event');
+      showMajorEventInfo(eventType);
+    });
+  });
+}
+
+// Show major event information modal
+function showMajorEventInfo(eventType) {
+  const modal = document.getElementById('major-event-modal');
+  const titleElement = document.getElementById('major-event-title');
+  const imageElement = document.getElementById('major-event-detail-image');
+  const descriptionElement = document.getElementById('major-event-description');
+  const additionalInfoElement = document.getElementById('major-event-additional-info');
+  
+  const eventInfo = majorEventInfo[eventType];
+  if (!eventInfo) return;
+  
+  titleElement.textContent = eventInfo.title;
+  imageElement.src = eventInfo.image;
+  imageElement.alt = eventInfo.title;
+  descriptionElement.innerHTML = eventInfo.description;
+  additionalInfoElement.innerHTML = eventInfo.additionalInfo || '';
+  
+  modal.style.display = 'block';
+}
+
+// Calendar toggle functionality
+function setupCalendarToggle() {
+  const toggleButton = document.getElementById('calendar-toggle-btn');
+  const calendarSection = document.getElementById('calendar-section');
+  const toggleDescription = document.querySelector('.calendar-toggle-description');
+  const body = document.body;
+  
+  function showCalendar() {
+    calendarSection.classList.remove('hidden');
+    body.classList.add('calendar-expanded');
+    
+    // Update button text and arrow
+    toggleButton.querySelector('.toggle-text').textContent = 'Hide Full Calendar';
+    toggleButton.querySelector('.toggle-arrow').textContent = '▲';
+    toggleButton.setAttribute('aria-expanded', 'true');
+    
+    // Hide the subtitle description
+    if (toggleDescription) {
+      toggleDescription.style.display = 'none';
+    }
+    
+    // Trigger FullCalendar resize after showing
+    setTimeout(() => {
+      if (window.currentCalendar) {
+        window.currentCalendar.updateSize();
+      }
+    }, 100);
+  }
+  
+  function hideCalendar() {
+    calendarSection.classList.add('hidden');
+    body.classList.remove('calendar-expanded');
+    
+    // Update button text and arrow
+    toggleButton.querySelector('.toggle-text').textContent = 'Show Full Calendar';
+    toggleButton.querySelector('.toggle-arrow').textContent = '▼';
+    toggleButton.setAttribute('aria-expanded', 'false');
+    
+    // Show the subtitle description again
+    if (toggleDescription) {
+      toggleDescription.style.display = 'block';
+    }
+  }
+  
+  if (toggleButton && calendarSection) {
+    toggleButton.addEventListener('click', function() {
+      const isHidden = calendarSection.classList.contains('hidden');
+      
+      if (isHidden) {
+        showCalendar();
+      } else {
+        hideCalendar();
+      }
+    });
+  }
+}

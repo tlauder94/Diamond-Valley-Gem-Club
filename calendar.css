@@ -181,7 +181,7 @@ a {
 
 /* Upcoming Events Section */
 .upcoming-events-section {
-  padding: 30px 20px;
+  padding: 30px 20px 40px 20px;
   background: white;
 }
 
@@ -239,10 +239,90 @@ a {
   cursor: pointer;
 }
 
+/* Page Break - matching home page exactly */
+.calendar-page-break {
+  margin: 20px auto;
+  border-bottom: 1px solid #1B75BC;
+  width: 80%;
+}
+
+/* Calendar Toggle Section */
+.calendar-toggle-section {
+  text-align: center;
+  padding: 30px 20px 40px 20px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+/* When calendar is expanded, position toggle section at top of calendar visually */
+.calendar-expanded .calendar-toggle-section {
+  position: relative;
+  z-index: 10;
+  margin-bottom: -20px;
+  padding: 20px 20px 30px 20px;
+}
+
+.calendar-expanded .calendar-section {
+  margin-top: -40px;
+  padding-top: 60px;
+}
+
+.calendar-toggle-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #1B75BC, #155a94);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(27, 117, 188, 0.3);
+  min-width: 280px;
+}
+
+.calendar-toggle-button:hover {
+  background: linear-gradient(135deg, #155a94, #1B75BC);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(27, 117, 188, 0.4);
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+}
+
+.toggle-text {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.toggle-arrow {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.calendar-toggle-button[aria-expanded="true"] .toggle-arrow {
+  transform: rotate(180deg);
+}
+
+.calendar-toggle-description {
+  color: #666;
+  font-size: 1rem !important;
+  margin-top: 15px !important;
+  font-style: italic;
+}
+
 /* Calendar Section */
 .calendar-section {
   padding: 40px 20px;
   background: white;
+}
+
+.calendar-section.hidden {
+  display: none;
 }
 
 .calendar-container {
@@ -281,6 +361,7 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 25px;
   margin-top: 20px;
+  margin-bottom: 80px;
   width: 100%;
 }
 
@@ -935,6 +1016,103 @@ html {
   outline-offset: 2px;
 }
 
+/* Major Event Detail Modal Styles */
+.major-event-detail-content {
+  padding: 30px;
+  max-width: none;
+}
+
+#major-event-modal .modal-content {
+  width: 90%;
+  max-width: 900px;
+  margin: 3% auto;
+}
+
+.major-event-detail-content h2 {
+  color: #1B75BC;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 3px solid #1B75BC;
+  padding-bottom: 15px;
+}
+
+#major-event-image-container {
+  margin: 30px 0;
+  text-align: center;
+}
+
+#major-event-detail-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 350px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.major-event-detail-content p {
+  font-size: 1.1rem !important;
+  line-height: 1.7 !important;
+  margin-bottom: 20px !important;
+  color: #333;
+  text-align: left;
+}
+
+.major-event-detail-content h3 {
+  color: #1B75BC;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 30px 0 20px 0;
+  text-align: left;
+  border-left: 4px solid #1B75BC;
+  padding-left: 15px;
+}
+
+.major-event-detail-content ul {
+  margin: 15px 0 25px 0;
+  padding-left: 25px;
+}
+
+.major-event-detail-content li {
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 8px !important;
+  color: #333;
+}
+
+.event-highlights {
+  background: linear-gradient(135deg, #f8fdff 0%, #e9f6fc 100%);
+  border-left: 4px solid #1B75BC;
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 4px 12px rgba(27, 117, 188, 0.1);
+}
+
+.event-highlights h4 {
+  color: #1B75BC;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.event-highlights ul {
+  margin: 0;
+  padding-left: 20px;
+  columns: 2;
+  column-gap: 30px;
+}
+
+.event-highlights li {
+  font-size: 1.05rem !important;
+  line-height: 1.5 !important;
+  margin-bottom: 8px !important;
+  color: #333;
+  break-inside: avoid;
+}
+
 /* Additional Responsive Design for About Section */
 @media (max-width: 768px) {
   .about-calendar-container {
@@ -980,6 +1158,27 @@ html {
     font-size: 1.8rem;
     text-align: center;
   }
+
+  #major-event-modal .modal-content {
+    width: 95%;
+    margin: 2% auto;
+  }
+
+  .major-event-detail-content {
+    padding: 20px;
+  }
+
+  .major-event-detail-content h2 {
+    font-size: 2rem;
+  }
+
+  .major-event-detail-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .event-highlights ul {
+    columns: 1;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1003,5 +1202,40 @@ html {
   .major-event-timing {
     font-size: 0.9rem !important;
     margin-bottom: 12px !important;
+  }
+
+  .major-event-detail-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .major-event-detail-content {
+    padding: 15px;
+  }
+
+  .major-event-detail-content h3 {
+    font-size: 1.2rem;
+    margin: 25px 0 15px 0;
+  }
+
+  .event-highlights {
+    padding: 20px;
+    margin: 25px 0;
+  }
+
+  .modal-content {
+    margin: 1% auto;
+    width: 98%;
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+
+  .calendar-toggle-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    min-width: 250px;
+  }
+
+  .calendar-toggle-section {
+    padding: 30px 15px;
   }
 }
