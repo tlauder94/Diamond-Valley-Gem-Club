@@ -6,6 +6,8 @@
   <title>Diamond Valley Gem Club</title>
   <link rel="stylesheet" href="contact.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+  <!-- Load Opening Hours Manager -->
+  <script src="opening-hours.js"></script>
   <script src="contact.js"></script>
 </head>
 <body>
@@ -23,35 +25,8 @@
     <section class="contact-section">
       <h2 class="section-heading">Club Opening Times</h2>
       <div class="opening-hours-cards">
-        <div class="opening-hours-card" data-day="1">
-          <h3>Monday</h3>
-          <p>7:30pm - 9:30pm</p>
-        </div>
-        <div class="opening-hours-card" data-day="2">
-          <h3>Tuesday</h3>
-          <p>10:30am - 3:00pm</p>
-          <p>7:30pm - 9:30pm</p>
-        </div>
-        <div class="opening-hours-card" data-day="3">
-          <h3>Wednesday</h3>
-          <p>10:30am - 3:00pm</p>
-        </div>
-        <div class="opening-hours-card" data-day="4">
-          <h3>Thursday</h3>
-          <p>7:30pm - 10:00pm</p>
-        </div>
-        <div class="opening-hours-card" data-day="5">
-          <h3>Friday</h3>
-          <p>Closed</p>
-        </div>
-        <div class="opening-hours-card" data-day="6">
-          <h3>Saturday</h3>
-          <p>10:30am - 4:00pm</p>
-        </div>
-        <div class="opening-hours-card" data-day="0">
-          <h3>Sunday</h3>
-          <p>Closed</p>
-        </div>
+        <!-- Opening hours will be loaded dynamically from opening-hours.json -->
+        <div class="loading-message">Loading opening hours...</div>
       </div>
     </section>
   </div>

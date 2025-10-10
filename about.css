@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #f9f9f9;
+    background-color: white;
     color: #333;
 }
 
@@ -34,7 +34,7 @@ li {
   }
 
   #club-history{
-    background-color: #f9f9f9; /* Light background for contrast */
+    background-color: white; /* Light background for contrast */
     padding: 40px 20px; /* Add padding for spacing */
     margin: 0 auto; /* Center the container horizontally */
     justify-items: center;;
@@ -184,7 +184,7 @@ li {
 
 #club-facilities-container {
   width: 80%; /* Overarching container spans 80% of the page width */
-  background-color: #f9f9f9; /* Light background for contrast */
+  background-color: white; /* Light background for contrast */
   padding: 40px 20px; /* Add padding for spacing */
   margin: 0 auto; /* Center the container horizontally */
 }

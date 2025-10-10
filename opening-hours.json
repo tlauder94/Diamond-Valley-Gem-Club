@@ -1,0 +1,48 @@
+{
+  "openingHours": [
+    {
+      "day": "Monday",
+      "dayNumber": 1,
+      "times": ["7:30pm - 9:30pm"],
+      "status": "open"
+    },
+    {
+      "day": "Tuesday", 
+      "dayNumber": 2,
+      "times": ["10:00am - 2:30pm", "7:30pm - 9:30pm"],
+      "status": "open"
+    },
+    {
+      "day": "Wednesday",
+      "dayNumber": 3, 
+      "times": ["10:00am - 2:30pm"],
+      "status": "open"
+    },
+    {
+      "day": "Thursday",
+      "dayNumber": 4,
+      "times": ["7:30pm - 10:00pm"],
+      "status": "open"
+    },
+    {
+      "day": "Friday",
+      "dayNumber": 5,
+      "times": [],
+      "status": "closed"
+    },
+    {
+      "day": "Saturday",
+      "dayNumber": 6,
+      "times": ["10:30am - 4:00pm"],
+      "status": "open"
+    },
+    {
+      "day": "Sunday",
+      "dayNumber": 0,
+      "times": [],
+      "status": "closed"
+    }
+  ],
+  "lastUpdated": "2025-10-09",
+  "timezone": "Australia/Melbourne"
+}

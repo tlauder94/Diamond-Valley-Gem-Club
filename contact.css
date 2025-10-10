@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: #f9f9f9;
+  background-color: white;
   color: #333;
 }
 
@@ -37,7 +37,8 @@ li {
 .contact-content-container {
   display: flex;
   flex-direction: row;
-  margin: 30px 40px;
+  width: 80%; /* Match other pages width */
+  margin: 30px auto; /* Center with auto margins like other pages */
   gap: 20px; /* Adds a gap between the left and right sections */
   justify-content: center;
   align-items: center;
@@ -76,20 +77,19 @@ li {
 }
 
 .opening-hours-container {
-  width: 100%; /* Spans the full width of the section */
-  max-width: 1200px; /* Matches the width of the header container */
+  width: 80%; /* Match about us page width */
   padding: 20px;
-  background-color: #f9f9f9; /* Light background for separation */
-  margin: 0 auto 30px; /* Centers the container and adds spacing below */
-  text-align: center; /* Centers the title */
+  background-color: white;
+  margin: 0 auto 30px;
+  text-align: center;
 }
 
 .opening-hours-cards {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* Ensures all cards fit on one line */
-  gap: 10px; /* Space between cards */
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
   margin-top: 20px;
-  justify-content: center; /* Centers the cards horizontally in the grid */
+  justify-content: center;
 }
 
 .opening-hours-card {
@@ -122,9 +122,16 @@ li {
   transition: all 0.3s ease; /* Smooth transition for the effect */
 }
 
+.loading-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 20px;
+}
+
 .contact-form-container {
-  width: 100%;
-  max-width: 960px; /* Reduced from 1200px to 960px (20% smaller) */
+  width: 60%; /* Appropriate width for forms */
   margin: 30px auto;
   padding: 30px 40px; /* Added equal padding on both left and right */
   background-color: #ffffff; /* Clean white background */

@@ -5,20 +5,6 @@ body {
   color: #333;
 }
 
-/* Standard paragraph formatting to match index page */
-p {
-  font-size: 1.2rem !important;
-  line-height: 1.6 !important;
-  margin-bottom: 20px !important;
-}
-
-/* List items to match paragraph formatting */
-li {
-  font-size: 1.2rem !important;
-  line-height: 1.6 !important;
-  margin-bottom: 10px !important;
-}
-
 /* FAQ Container */
 .faq-container {
   width: 50%;
@@ -108,54 +94,6 @@ div[id^="faq-text"] {
   color: #555;
 }
 
-/* Responsive styles for FAQ page */
-@media (max-width: 900px) {
-  .faq-container {
-    width: 80%;
-    padding: 15px;
-  }
-  .faq-header {
-    font-size: 1.2rem;
-    height: 110px;
-    padding: 15px 0;
-  }
-  .faq-blurb-header,
-  .faq-blurb {
-    margin: 2% 4%;
-  }
-}
-
-@media (max-width: 600px) {
-  .faq-container {
-    width: 98%;
-    padding: 8px;
-  }
-  .faq-header {
-    font-size: 1rem;
-    height: 80px;
-    padding: 10px 0;
-  }
-  .faq-blurb-header {
-    font-size: 1.1rem;
-    margin: 2% 2%;
-  }
-  .faq-blurb {
-    font-size: 1rem;
-    margin: 2% 2%;
-  }
-  div[id^="faq-box-header"] {
-    padding: 10px 8px;
-    font-size: 1rem;
-  }
-  div[id^="faq-text"] {
-    padding: 10px 8px;
-    font-size: 0.95rem;
-  }
-  .faq-plus {
-    font-size: 1.5rem;
-  }
-}
-
 /* div[id^="faq-text"].open {
   display: block;
 } */
@@ -168,11 +106,3 @@ div[id^="faq-text"] {
   width: 80%;
   margin: 10px auto;
 } */
-
-/* Error message styling */
-.error-message {
-  color: red;
-  text-align: center;
-  padding: 10px;
-  font-family: 'Montserrat', sans-serif;
-}

@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
   <!-- Load DVGC API Cache Manager -->
   <script src="dvgc-api-cache.js"></script>
+  <!-- Load Opening Hours Manager -->
+  <script src="opening-hours.js"></script>
   <!-- Load home page specific JavaScript -->
   <script src="index.js"></script>
 </head>
@@ -50,35 +52,8 @@
     <section class="contact-section">
       <h2 class="section-heading">Club Opening Times</h2>
       <div class="opening-hours-cards">
-        <div class="opening-hours-card" data-day="1">
-          <h3>Monday</h3>
-          <p>7:30pm - 9:30pm</p>
-        </div>
-        <div class="opening-hours-card" data-day="2">
-          <h3>Tuesday</h3>
-          <p>10:30am - 3:00pm</p>
-          <p>7:30pm - 9:30pm</p>
-        </div>
-        <div class="opening-hours-card" data-day="3">
-          <h3>Wednesday</h3>
-          <p>10:30am - 3:00pm</p>
-        </div>
-        <div class="opening-hours-card" data-day="4">
-          <h3>Thursday</h3>
-          <p>7:30pm - 10:00pm</p>
-        </div>
-        <div class="opening-hours-card" data-day="5">
-          <h3>Friday</h3>
-          <p>Closed</p>
-        </div>
-        <div class="opening-hours-card" data-day="6">
-          <h3>Saturday</h3>
-          <p>10:30am - 4:00pm</p>
-        </div>
-        <div class="opening-hours-card" data-day="0">
-          <h3>Sunday</h3>
-          <p>Closed</p>
-        </div>
+        <!-- Opening hours will be loaded dynamically from opening-hours.json -->
+        <div class="loading-message">Loading opening hours...</div>
       </div>
     </section>
   </div>
@@ -104,7 +79,7 @@
   </div>
 </section>
 
-<div class="page-break-course"></div> <!-- Page break moved here -->
+<div class="page-break"></div> <!-- Page break moved here -->
 
 <section id="index-course">
   <div class="index-course-container">
@@ -123,17 +98,6 @@
     <div class="view-all-courses-button-container">
       <a href="courses.html" class="index-all-courses-button">View All Courses</a>
     </div>
-  </div>
-</section>
-
-<section id="index-upcoming-events">
-  <div class="page-break"></div>
-  <h2>Upcoming Events</h2>
-  <div id="upcoming-events-container" class="upcoming-events-grid">
-    <!-- Events will be dynamically loaded here -->
-  </div>
-  <div class="see-all-events-button-container">
-    <a href="calendar.html" class="see-all-events-button">See All Events</a>
   </div>
   <div class="page-break"></div>
 </section>
@@ -155,6 +119,29 @@
         </div>       
     </div>
   </section>
+
+<div class="page-break"></div>
+
+<section id="index-upcoming-events">
+  <h2>Upcoming Events</h2>
+  <div id="upcoming-events-container" class="upcoming-events-grid">
+    <!-- Events will be dynamically loaded here -->
+  </div>
+  <div class="see-all-events-button-container">
+    <a href="calendar.html" class="see-all-events-button">See All Events</a>
+  </div>
+</section>
+
+<section id="index-membership-cta">
+  <div class="membership-cta-container">
+    <div class="membership-cta-text">
+      <h2>Not a Member Yet?</h2>
+      <p>Join our passionate community of gem and mineral enthusiasts! Enjoy exclusive access to workshops, events, and our extensive library of resources.</p>
+      <a href="membership.html" class="membership-cta-button">Become a Member Today</a>
+    </div>
+  </div>
+  <div class="page-break"></div>
+</section>
 
 
 

@@ -2,7 +2,7 @@
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
+  background-color: white;
   color: #333;
 }
 
@@ -109,7 +109,7 @@ input:focus, select:focus {
   border: 1px solid #ddd; /* Add a border around the section */
   border-radius: 8px; /* Rounded corners */
   padding: 15px; /* Add padding inside the section */
-  background-color: #f9f9f9; /* Light background for better visibility */
+  background-color: white; /* Light background for better visibility */
 }
 
 .personal-row {
@@ -144,7 +144,7 @@ input:focus, select:focus {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 15px;
-  background-color: #f9f9f9;
+  background-color: white;
 }
 
 .contact-row {
@@ -211,7 +211,7 @@ input:focus {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 15px;
-  background-color: #f9f9f9;
+  background-color: white;
 }
 
 .emergency-name-container, .emergency-relationship-container {
@@ -274,7 +274,7 @@ input:focus {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 15px;
-  background-color: #f9f9f9;
+  background-color: white;
 }
 
 .membership-agreement-container p {
@@ -301,7 +301,7 @@ input:focus {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 15px;
-  background-color: #f9f9f9;
+  background-color: white;
 }
 
 .payment-row {

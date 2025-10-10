@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
-  background-color: #f9f9f9;
+  background-color: white;
 }
 
 /* Standard paragraph formatting to match index page */
@@ -34,8 +34,8 @@ li {
 
 .courses-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduce the minimum width of the cards */
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+  gap: 30px; /* Increased gap for better spacing */
   width: 80%;
   margin: 40px auto;
   padding: 0 20px;
@@ -46,39 +46,47 @@ li {
   flex-direction: column;
   justify-content: flex-start; /* Align content to the top of the box */
   align-items: flex-start; /* Align all child elements, including the button, to the left */
-  padding: 10px 15px; /* Keep consistent padding */
+  padding: 20px; /* Increased padding for larger cards */
   background-color: #E3F2FD; /* Baby blue background */
   border: none; /* Remove the border */
-  border-radius: 0; /* Keep sharp edges */
-  box-shadow: none; /* Remove shadow from the container */
-  height: 420px; /* Maintain the adjusted height */
+  border-radius: 8px; /* Slightly rounded corners for modern look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  height: 500px; /* Increased height for larger cards */
   position: relative; /* Enable absolute positioning for child elements if needed */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .course-card img {
-  width: 90%; /* Set the image width to 70% of the card */
-  height: 150px; /* Set a fixed height for the image */
+  width: 100%; /* Full width of the card */
+  height: 280px; /* Significantly increased height for better proportions */
   display: block;
-  margin: 20px auto; /* Add equal space above and below, and center the image */
+  margin: 0 0 20px 0; /* Space below image */
   object-fit: cover; /* Ensure the image scales properly within the defined size */
+  border-radius: 8px; /* More rounded corners for modern look */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .course-card h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem; /* Larger heading for bigger cards */
   font-weight: 700;
-  margin: 10px auto 10px; /* Add space above and below the header */
+  margin: 0 0 15px 0; /* Space below heading */
   color: #1B75BC; /* Same blue as the banner */
-  width: 90%; /* Match the width of the image */
+  width: 100%; /* Full width */
   text-align: left; /* Align text to the left */
 }
 
 .course-card p {
-  font-size: 1rem;
-  margin: 0 auto; /* Center the paragraph horizontally */
-  margin-top: 10px; /* Add space above the paragraph */
+  font-size: 1.1rem !important; /* Larger text for bigger cards */
+  margin: 0 0 20px 0; /* Space below paragraph */
   color: #333; /* Keep the text color consistent */
-  width: 90%; /* Match the width of the image */
+  width: 100%; /* Full width */
   text-align: left; /* Align text to the left */
+  flex-grow: 1; /* Allow paragraph to expand and push button to bottom */
 }
 
 .course-card a {
@@ -89,21 +97,28 @@ li {
 .course-button {
   background-color: #1B75BC; /* Banner blue background to match site theme */
   color: white; /* White text */
-  font-size: 1.1rem; /* Button font size */
-  padding: 8px 12px; /* Adjust padding for a smaller button */
+  font-size: 1rem; /* Smaller button font size */
+  padding: 8px 16px; /* Smaller padding for compact buttons */
   border: none;
-  border-radius: 3px; /* Optional: Slightly rounded corners */
-  text-align: left; /* Align the button text to the left */
+  border-radius: 5px; /* Rounded corners to match card style */
+  text-align: center; /* Center the button text */
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin-top: auto; /* Push the button to the bottom of the card */
-  margin-bottom: 15px; /* Add consistent spacing from the bottom of the card */
-  margin-left: 15px; /* Match the left padding of the .course-card */
-  align-self: flex-start; /* Ensure the button aligns with the left edge of the card */
+  margin-bottom: 0; /* Remove bottom margin */
+  align-self: flex-start; /* Make button only as wide as needed */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make it inline-block for compact size */
+  min-width: 120px; /* Minimum width for consistency */
+}
+
+.course-button:hover {
+  background-color: #0d5aa7; /* Darker blue on hover */
+  transform: translateY(-2px);
 }
 
 .about-courses-section {
-  background-color: #f9f9f9; /* Light background for contrast */
+  background-color: white; /* Light background for contrast */
   padding: 40px 20px; /* Add padding for spacing */
 }
 
@@ -153,4 +168,30 @@ li {
   text-align: center;
   padding: 10px;
   font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .courses-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-container {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 20px;
+    width: 90%;
+  }
+  
+  .course-card {
+    height: auto; /* Let height adjust on mobile */
+    min-height: 400px;
+  }
+  
+  .about-courses-container {
+    flex-direction: column; /* Stack text and image vertically on mobile */
+    width: 90%;
+  }
 }
