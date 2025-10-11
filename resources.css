@@ -140,6 +140,13 @@ li {
     margin: 0;
   }
 
+  h3 {
+    color: #1B75BC;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
   /* Newsletter Container */
 .newsletter-container, .minutes-container {
     width: 80%;
