@@ -81,7 +81,7 @@ li {
     gap: 1%;
     align-items: left;
     list-style: none;
-    padding: 0 15% 0 2%;
+    padding: 0 5% 0 2%;
     border-bottom: 1px solid #333;
     border-top: 1px solid #333;
   }
@@ -126,9 +126,18 @@ li {
     text-align: center;
   }
 
-  #newsletter-box h1, #minutes-box h1 {
+  h1 {
     color: #1B75BC;
-    font-size: 1.2rem;
+    font-size: 2rem;
+    font-weight: 750;
+    margin: 0;
+  }
+
+  h2 {
+    color: #1B75BC;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
   }
 
   /* Newsletter Container */
@@ -172,12 +181,6 @@ li {
   div[id^="newsletter-header"]:hover, div[id^="minutes"]:hover {
     background-color: #d4eefb; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .newsletter-header h1, .minutes-header h1 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin: 0;
   }
   
   .newsletter-plus {
