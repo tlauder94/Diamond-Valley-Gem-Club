@@ -229,7 +229,7 @@
 
 /* Individual Course Card */
 .index-course-card {
-  background-color: #ffffff;
+  background-color: #e9f6fc; /* Light blue background to match other pages */
   border: 1px solid #ddd;
   border-radius: 8px;
   width: 30%; /* Ensures 3 cards fit side by side */
@@ -518,7 +518,7 @@
 }
 
 .event-card {
-  background-color: #ffffff;
+  background-color: #e9f6fc; /* Light blue background to match other pages */
   border: 1px solid #ddd;
   border-radius: 8px;
   width: 30%; /* Ensures 3 cards fit side by side */
