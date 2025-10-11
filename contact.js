@@ -54,6 +54,40 @@ function highlightTodaysHours() {
   });
 }
 
+// Initialize contact form toggle functionality
+function initContactFormToggle() {
+  const toggleButton = document.getElementById('contact-form-btn');
+  const formContainer = document.getElementById('contact-form-container');
+  
+  if (toggleButton && formContainer) {
+    toggleButton.addEventListener('click', function() {
+      const isHidden = formContainer.classList.contains('hidden');
+      
+      if (isHidden) {
+        // Show the form
+        formContainer.classList.remove('hidden');
+        toggleButton.classList.add('expanded');
+        toggleButton.querySelector('.button-text').textContent = 'Click to close';
+        toggleButton.querySelector('.button-arrow').textContent = '▲';
+        
+        // Smooth scroll to form
+        setTimeout(() => {
+          formContainer.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'nearest' 
+          });
+        }, 100);
+      } else {
+        // Hide the form
+        formContainer.classList.add('hidden');
+        toggleButton.classList.remove('expanded');
+        toggleButton.querySelector('.button-text').textContent = 'Email Us';
+        toggleButton.querySelector('.button-arrow').textContent = '▼';
+      }
+    });
+  }
+}
+
 // Initialize all contact page functionality
 document.addEventListener('DOMContentLoaded', () => {
   // Load shared components
@@ -62,4 +96,5 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Initialize page-specific functionality
   highlightTodaysHours();
+  initContactFormToggle();
 });
