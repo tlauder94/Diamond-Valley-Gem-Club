@@ -69,7 +69,7 @@
 }
 
 .hero-text p {
-  font-size: 1rem;
+  font-size: 1.2rem; /* Increased to match other paragraphs */
   color: white; /* White paragraph text */
   line-height: 1.5;
 }
@@ -213,9 +213,19 @@
     font-size: 2rem; /* Match other section titles */
     font-weight: 700;
     color: #1B75BC; /* Banner blue color to match other titles */
-    margin-top: 0px; /* Remove any top margin to match events */
-    margin-bottom: 0px; /* Reset margin */
-    padding-bottom: 50px; /* Exact match to events section */
+    margin: 0px; /* Reset all margins */
+    padding-bottom: 10px; /* Minimal padding between title and description */
+    display: block; /* Ensure consistent display */
+}
+
+/* Course section description */
+#index-course .section-description {
+    font-size: 1.2rem; /* Match other paragraphs */
+    color: #333;
+    text-align: center;
+    margin: 0 auto 40px auto; /* Increased bottom margin for space before cards */
+    max-width: 1000px; /* Increased from 800px to make wider */
+    line-height: 1.5;
 }
 
 /* Courses Grid */
@@ -466,15 +476,6 @@
   margin-bottom: 20px;
 }
 
-/* Courses Heading */
-#index-course h1 {
-  color: #1B75BC; /* Banner blue color */
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 /* About Us Heading */
 #index-about h1 {
   color: #1B75BC; /* Banner blue color */
@@ -488,7 +489,7 @@
 .page-break {
   margin: 20px auto;
   border-bottom: 1px solid #1B75BC;
-  width: 80%; /* Limit the width of the line */
+  width: 80%; /* Simple 80% to match section widths exactly */
 }
 
 /* Upcoming Events Section */
@@ -503,9 +504,19 @@
   color: #1B75BC; /* Banner blue color */
   font-size: 2rem;
   font-weight: 700;
-  margin-top: 0px; /* Remove any top margin */
-  margin-bottom: 0px; /* Reset margin */
-  padding-bottom: 50px; /* Use padding to match courses section */
+  margin: 0px; /* Reset all margins to exactly match courses */
+  padding-bottom: 10px; /* Match courses section exactly */
+  display: block; /* Ensure consistent display */
+}
+
+/* Events section description */
+#index-upcoming-events .section-description {
+    font-size: 1.2rem; /* Match other paragraphs */
+    color: #333;
+    text-align: center;
+    margin: 0 auto 40px auto; /* Match courses section bottom margin */
+    max-width: 1000px; /* Increased from 800px to make wider */
+    line-height: 1.5;
 }
 
 /* Upcoming Events Grid */
