@@ -88,6 +88,32 @@ function initContactFormToggle() {
   }
 }
 
+// Function to expand contact form if URL hash indicates it should be expanded
+function checkForFormExpansion() {
+  if (window.location.hash === '#contact-form' || 
+      window.location.hash === '#form' || 
+      window.location.hash === '#book-tour-landing') {
+    const toggleButton = document.getElementById('contact-form-btn');
+    const formContainer = document.getElementById('contact-form-container');
+    
+    if (toggleButton && formContainer) {
+      // Expand the form
+      formContainer.classList.remove('hidden');
+      toggleButton.classList.add('expanded');
+      toggleButton.querySelector('.button-text').textContent = 'Click to close';
+      toggleButton.querySelector('.button-arrow').textContent = '▲';
+      
+      // Scroll to the form after a short delay to ensure it's expanded
+      setTimeout(() => {
+        formContainer.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center' 
+        });
+      }, 300);
+    }
+  }
+}
+
 // Initialize all contact page functionality
 document.addEventListener('DOMContentLoaded', () => {
   // Load shared components
@@ -97,4 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize page-specific functionality
   highlightTodaysHours();
   initContactFormToggle();
+  
+  // Check if form should be expanded based on URL hash
+  checkForFormExpansion();
 });
