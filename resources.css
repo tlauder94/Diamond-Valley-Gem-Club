@@ -126,24 +126,18 @@ li {
     text-align: center;
   }
 
-  h1 {
+  .resource-info-container h1, .resources-right-container h1 {
     color: #1B75BC;
     font-size: 2rem;
     font-weight: 750;
     margin: 0;
+    text-align: center;
   }
 
-  h2 {
+  .resource-info-container h2, .resources-right-container h2 {
     color: #1B75BC;
     font-size: 1.5rem;
     font-weight: 500;
-    margin: 0;
-  }
-
-  h3 {
-    color: #1B75BC;
-    font-size: 1.75rem;
-    font-weight: 600;
     margin: 0;
   }
 
