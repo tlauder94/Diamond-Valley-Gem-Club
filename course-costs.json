@@ -9,32 +9,16 @@
       "cost": 40
     },
     {
-      "name": "Jewellery Making",
-      "cost": 40
-    },
-    {
       "name": "Silversmithing",
       "cost": 150
-    },
-    {
-      "name": "Lost Wax Casting",
-      "cost": 40
     },
     {
       "name": "Wire Wrapping",
       "cost": 100
     },
     {
-      "name": "Rock Carving",
-      "cost": 40
-    },
-    {
       "name": "Rock Slabbing",
       "cost": 40
     },
-    {
-      "name": "Viking Weaving",
-      "cost": 100
-    }
   ]
 }
