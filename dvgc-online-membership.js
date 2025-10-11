@@ -49,12 +49,39 @@ function calculateFees() {
   let membershipCost = 0;
   let adultCount = 0;
 
+  // First check if ALL DOB fields are filled
+  let allDobsFilled = true;
+  let totalMembers = 0;
+  
   rows.forEach(row => {
     const dobField = row.querySelector('input[name="dob[]"]');
-    const dobValue = dobField ? dobField.value : null;
+    const firstNameField = row.querySelector('input[name="first-name[]"]');
+    
+    // Only count rows that have a first name (indicating they're being used)
+    if (firstNameField && firstNameField.value.trim() !== '') {
+      totalMembers++;
+      if (!dobField || !dobField.value) {
+        allDobsFilled = false;
+      }
+    }
+  });
 
-    if (dobValue) {
-      const dob = new Date(dobValue);
+  // If not all DOBs are filled, don't show any calculation
+  if (!allDobsFilled || totalMembers === 0) {
+    document.getElementById('joining-fee').textContent = '—';
+    document.getElementById('membership-cost').textContent = '—';
+    document.getElementById('total-amount').textContent = '—';
+    return;
+  }
+
+  // Now calculate fees since all DOBs are filled
+  rows.forEach(row => {
+    const dobField = row.querySelector('input[name="dob[]"]');
+    const firstNameField = row.querySelector('input[name="first-name[]"]');
+    
+    // Only process rows with names and DOBs
+    if (firstNameField && firstNameField.value.trim() !== '' && dobField && dobField.value) {
+      const dob = new Date(dobField.value);
       const today = new Date();
       const age = today.getFullYear() - dob.getFullYear();
       const isBirthdayPassed = today < new Date(today.getFullYear(), dob.getMonth(), dob.getDate());
