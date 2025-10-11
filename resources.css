@@ -112,7 +112,7 @@ li {
   }
 
   /* Newsletter Box */  
-  #newsletter-box {
+  #newsletter-box, #minutes-box {
     background-color: #e9f6fc; 
     color: #1B75BC;
     padding: 20px;
@@ -126,13 +126,13 @@ li {
     text-align: center;
   }
 
-  #newsletter-box h1 {
+  #newsletter-box h1, #minutes-box h1 {
     color: #1B75BC;
     font-size: 1.2rem;
   }
 
   /* Newsletter Container */
-.newsletter-container {
+.newsletter-container, .minutes-container {
     width: 80%;
     margin: 20px auto; 
     text-align: left;
@@ -142,7 +142,21 @@ li {
     padding: 10px;
   }
 
-  div[id^="newsletter-header"] {
+  .minutes-button {
+    background-color: #1B75BC;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .minutes-button:hover {
+    background-color: #155a8a;
+  }
+
+  div[id^="newsletter-header"], div[id^="minutes"] {
     background-color: #e9f6fc; 
     color: #1B75BC;
     padding: 15px 20px;
@@ -155,12 +169,12 @@ li {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
 
-  div[id^="newsletter-header"]:hover {
+  div[id^="newsletter-header"]:hover, div[id^="minutes-header"]:hover {
     background-color: #d4eefb; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  .newsletter-header h1 {
+  .newsletter-header h1, .minutes-header h1 {
     font-size: 1.2rem;
     font-weight: 500;
     margin: 0;
@@ -178,7 +192,7 @@ li {
   }
   
   /* Newsletter Text */
-  div[id^="newsletter-text"] {
+  div[id^="newsletter-text"], div[id^="minutes-text"] {
     flex-direction: column;
     background-color: white;
     padding: 15px 20px;
@@ -191,7 +205,7 @@ li {
     gap: 5%;
   }
 
-  div[id^="newsletter-text"] p {
+  div[id^="newsletter-text"] p, div[id^="minutes-text"] p {
     border-bottom: 1px solid #333;
   }  
   
