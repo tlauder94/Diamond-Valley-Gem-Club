@@ -358,11 +358,15 @@ a {
 /* Upcoming Events Grid */
 .upcoming-events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 25px;
   margin-top: 20px;
   margin-bottom: 80px;
   width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
 /* Responsive Design for Major Events */

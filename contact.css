@@ -103,12 +103,12 @@ li {
 
 .opening-hours-card h3 {
   color: #1B75BC;
-  font-size: 1rem !important; /* Reduced font size for the heading */
+  font-size: 1.1rem !important; /* Increased from 1rem to match home page */
   margin-bottom: 5px !important;
 }
 
 .opening-hours-card p {
-  font-size: 0.9rem !important; /* Reduced font size for the text */
+  font-size: 1rem !important; /* Increased from 0.9rem to match home page */
   margin: 5px 0 !important;
   color: #333;
   line-height: 1.2 !important;

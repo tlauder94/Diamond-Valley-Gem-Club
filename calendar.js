@@ -357,7 +357,28 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(data => {
       console.log('Fetched Events:', data);
-      allEvents = data; // Store all events
+      
+      // Filter out past events - only show events from today onwards
+      const today = new Date();
+      today.setHours(0, 0, 0, 0); // Set to start of today
+      
+      const futureEvents = data.filter(event => {
+        // Parse DD-MM-YYYY format correctly
+        const dateParts = event.date.split('-');
+        if (dateParts.length === 3) {
+          const day = parseInt(dateParts[0], 10);
+          const month = parseInt(dateParts[1], 10) - 1; // Months are 0-indexed in JS
+          const year = parseInt(dateParts[2], 10);
+          const eventDate = new Date(year, month, day);
+          eventDate.setHours(0, 0, 0, 0);
+          
+          return eventDate >= today;
+        } else {
+          return false; // Invalid date format
+        }
+      });
+      
+      allEvents = futureEvents; // Store only future events
       displayEvents(allEvents.slice(0, 6)); // Display the next 6 events initially
     })
     .catch(error => {
