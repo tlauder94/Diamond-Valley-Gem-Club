@@ -142,7 +142,7 @@ li {
     padding: 10px;
   }
 
-  .minutes-button {
+  .newsletter-button, .minutes-button {
     background-color: #1B75BC;
     color: white;
     border: none;
@@ -169,7 +169,7 @@ li {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
 
-  div[id^="newsletter-header"]:hover, div[id^="minutes-header"]:hover {
+  div[id^="newsletter-header"]:hover, div[id^="minutes"]:hover {
     background-color: #d4eefb; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
