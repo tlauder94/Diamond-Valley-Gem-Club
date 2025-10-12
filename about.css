@@ -280,3 +280,9 @@ li {
   padding: 10px;
   font-family: 'Montserrat', sans-serif;
 }
+
+/* Remove unnecessary spacing before footer */
+#about-member-profile {
+  margin-bottom: 0 !important;
+  padding-bottom: 20px; /* Just a small padding for breathing room */
+}

@@ -130,7 +130,7 @@ a {
 .price {
   flex: 1; /* Center the price in the middle */
   text-align: center; /* Center the price text */
-  font-size: 2.5rem; /* Increased font size for better visibility */
+  font-size: 2.2rem; /* Reduced font size for better balance */
   font-weight: bold; /* Make the price bold */
   color: #1B75BC; /* Use the banner blue color */
 }
@@ -181,7 +181,7 @@ blockquote {
 }
 
 .price {
-  font-size: 3rem !important; /* Increased font size with !important to override any conflicts */
+  font-size: 2.2rem !important; /* Reduced font size for better balance */
   font-weight: bold; /* Make the price bold */
   color: #1B75BC; /* Same blue as the banner */
   margin: 0; /* Remove any extra margin */
@@ -189,7 +189,7 @@ blockquote {
 
 /* Specific selector for course cost */
 #course-cost {
-  font-size: 3rem !important; /* Ensure the course cost is large and visible */
+  font-size: 2.2rem !important; /* Ensure the course cost is appropriately sized */
   font-weight: bold !important;
   color: #1B75BC !important;
 }
