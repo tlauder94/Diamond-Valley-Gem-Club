@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Annual Gem Show - Diamond Valley Gem Club</title>
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="gem-show.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+  <script src="gem-show.js"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="navbar-container"></header>
+
+  <!-- Main Content Container -->
+  <div class="gem-show-container">
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="hero-overlay">
+        <h1>Annual Gem & Mineral Show 2026</h1>
+        <p class="hero-lead">Join us for two spectacular days celebrating the beauty and wonder of Earth's natural treasures</p>
+      </div>
+    </section>
+
+    <!-- Event Essentials -->
+    <section class="event-essentials">
+      <div class="essential-card dates-card">
+        <h3>Event Dates</h3>
+        <div class="date-block">
+          <span class="day-label">Saturday</span>
+          <span class="date-detail">9th May 2026</span>
+          <span class="time-detail">9:00am - 5:00pm</span>
+        </div>
+        <div class="date-block">
+          <span class="day-label">Sunday</span>
+          <span class="date-detail">10th May 2026</span>
+          <span class="time-detail">9:00am - 4:00pm</span>
+        </div>
+        <div class="card-actions">
+          <a href="#" class="card-btn" onclick="addToGoogleCalendar(); return false;">Add to Calendar</a>
+          <a href="#" class="card-btn" onclick="downloadICS(); return false;">Download iCal</a>
+        </div>
+      </div>
+
+      <div class="essential-card location-card">
+        <h3>Venue</h3>
+        <p class="venue-name">Eltham Community & Reception Centre</p>
+        <p class="venue-address">801 Main Road<br>Eltham, Victoria 3095</p>
+        <p class="venue-note">Ample free parking available on-site</p>
+        <div class="card-actions">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Eltham+Community+and+Reception+Centre,801+Main+Road,Eltham+VIC+3095" target="_blank" class="card-btn">Get Directions</a>
+        </div>
+      </div>
+
+      <div class="essential-card admission-card">
+        <h3>Admission</h3>
+        <p class="price-main">$5.00 per person</p>
+        <p class="price-special">Children under 12 FREE when accompanied by an adult</p>
+        <p class="admission-note">Cash and card facilities available</p>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+      <h2>Australia's Premier Gem & Mineral Exhibition</h2>
+      <p>The Diamond Valley Gem Club proudly presents our annual showcase of geological wonders, bringing together collectors, dealers, and enthusiasts from across Australia. This highly anticipated event offers visitors the opportunity to explore stunning mineral specimens, purchase unique gems, observe expert demonstrations, and participate in exciting competitions and raffles.</p>
+      <p>Whether you're a seasoned collector, budding enthusiast, or simply curious about the natural world, our show provides an educational and inspiring experience for all ages. Join us for a weekend celebrating the extraordinary beauty and diversity of minerals, gems, and lapidary arts.</p>
+    </section>
+
+    <!-- Main Features -->
+    <section class="features-showcase">
+      <div class="feature-block primary">
+        <div class="feature-image">
+          <img src="images/gemshow.jpg" alt="Mineral Display" onerror="this.style.display='none'">
+        </div>
+        <div class="feature-text">
+          <h3>Exceptional Mineral & Gem Displays</h3>
+          <p>Our exhibition hall will feature breathtaking displays from distinguished collectors and dealers representing regions across Australia and internationally. View rare mineral specimens, spectacular crystal formations, ancient fossils, and exquisite examples of lapidary craftsmanship.</p>
+          <p>From Australian opals and sapphires to international varieties, witness the geological diversity that makes our planet extraordinary. Educational displays provide insights into mineral formation, identification, and the fascinating stories behind notable specimens.</p>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h4>Dealer Marketplace</h4>
+          <p>Browse an extensive selection from trusted dealers offering rough minerals, cut gemstones, finished jewelry, lapidary equipment, and specialist tools. Whether you're seeking specimens for your collection or materials for your next project, our marketplace connects you with quality suppliers and competitive prices.</p>
+        </div>
+        <div class="feature-card">
+          <h4>Live Demonstrations</h4>
+          <p>Throughout both days, experienced club members and visiting artisans will demonstrate essential lapidary techniques including cabochon cutting, gemstone faceting, jewelry fabrication, and specimen preparation. These sessions provide valuable learning opportunities for newcomers and seasoned enthusiasts alike.</p>
+        </div>
+      </div>
+
+      <div class="feature-block secondary">
+        <div class="feature-text">
+          <h3>Competitions & Prize Raffles</h3>
+          <p>Test your knowledge and try your luck with our popular competition categories and prize raffles. Competitions include specimen identification challenges, display competitions for club members, and photography contests celebrating the beauty of minerals and gems.</p>
+          <p>Our raffle draws feature spectacular prizes generously donated by dealers and club supporters, including quality mineral specimens, lapidary equipment, gemstones, and jewelry. All proceeds support the ongoing activities and educational programs of the Diamond Valley Gem Club.</p>
+        </div>
+        <div class="feature-image">
+          <img src="images/gemshow.jpg" alt="Competition Display" onerror="this.style.display='none'">
+        </div>
+      </div>
+
+      <div class="feature-card full-width">
+        <h4>Family-Friendly Environment</h4>
+        <p>We've designed our show to be accessible and engaging for visitors of all ages. Children under 12 receive complimentary admission when accompanied by an adult, making this an ideal family outing. Interactive displays, hands-on activities, and educational materials help young visitors develop an appreciation for Earth sciences and the natural world. Our welcoming atmosphere encourages questions, learning, and discovery for everyone from first-time visitors to experienced collectors.</p>
+      </div>
+    </section>
+
+    <!-- Visitor Information -->
+    <section class="visitor-info-section">
+      <h2>Visitor Information</h2>
+      <div class="info-grid">
+        <div class="info-block">
+          <h4>Getting There</h4>
+          <p>The Eltham Community & Reception Centre is conveniently located on Main Road in Eltham, easily accessible from Melbourne's northern suburbs and beyond. The venue offers ample free parking for all visitors. Public transport options are available with bus services stopping nearby on Main Road.</p>
+        </div>
+        <div class="info-block">
+          <h4>Facilities</h4>
+          <p>The venue features wheelchair accessibility, accessible parking spaces, and restroom facilities. Light refreshments will be available for purchase throughout the event. We recommend bringing reusable shopping bags for any purchases you make from our dealers.</p>
+        </div>
+        <div class="info-block">
+          <h4>What to Bring</h4>
+          <p>While card facilities are available, we recommend bringing cash as some smaller dealers may operate on a cash-only basis. If you're a collector, consider bringing reference materials or a magnifying loupe for closer specimen examination. Photography is generally permitted except where specifically restricted by dealers.</p>
+        </div>
+        <div class="info-block">
+          <h4>Purchasing Guidelines</h4>
+          <p>All dealers at our show are carefully selected to ensure they provide authentic, properly represented merchandise. Take your time browsing, ask questions, and don't hesitate to request information about specimens or gemstones. Reputable dealers are happy to discuss their products and provide certificates of authenticity where applicable.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+      <h2>Questions or Further Information</h2>
+      <p class="contact-intro">For additional details about the show, special requirements, or general enquiries, please don't hesitate to contact us. Our team is happy to assist with any questions you may have.</p>
+      <div class="contact-methods">
+        <div class="contact-method">
+          <h4>Email</h4>
+          <p><a href="mailto:info@dvgc.org.au">info@dvgc.org.au</a></p>
+        </div>
+        <div class="contact-method">
+          <h4>Phone</h4>
+          <p>Contact details available via our main contact page</p>
+        </div>
+        <div class="contact-method">
+          <h4>Website</h4>
+          <p>Visit our website for the latest updates and announcements</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trader Information Dropdown -->
+    <section class="trader-dropdown-section">
+      <div class="dropdown-header" onclick="toggleTraderInfo()">
+        <h3>Dealer & Trader Information</h3>
+        <span class="dropdown-arrow">+</span>
+      </div>
+      
+      <div class="dropdown-content" id="traderDropdown">
+        <div class="trader-simple-layout">
+          <div class="trader-info-simple">
+            <p><strong>Interested in trading at our show?</strong> We welcome dealers and traders offering gems, minerals, fossils, jewelry, lapidary equipment, and related items.</p>
+            <p>Table spaces are limited and allocated on a first-come, first-served basis. Complete the form to receive full details including fees, setup times, and requirements.</p>
+            
+            <div class="benefits-list">
+              <h4>Benefits of Trading</h4>
+              <ul>
+                <li>Access to hundreds of enthusiastic collectors and buyers</li>
+                <li>Networking with fellow dealers and industry contacts</li>
+                <li>Established reputation with strong community following</li>
+                <li>Professional venue with excellent facilities</li>
+                <li>Promotional support through our marketing channels</li>
+                <li>Opportunity to showcase your products to new audiences</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="trader-form-container">
+            <div class="form-card">
+              <h4>Trader Registration</h4>
+              <p class="form-description">Complete this form and we'll send you full information and booking details</p>
+              
+              <form class="trader-form" id="traderForm">
+                <div class="form-group">
+                  <label for="trader-name">Full Name *</label>
+                  <input type="text" id="trader-name" name="trader-name" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="trader-business">Business Name</label>
+                  <input type="text" id="trader-business" name="trader-business">
+                </div>
+
+                <div class="form-group">
+                  <label for="trader-email">Email Address *</label>
+                  <input type="email" id="trader-email" name="trader-email" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="trader-phone">Phone Number *</label>
+                  <input type="tel" id="trader-phone" name="trader-phone" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="trader-products">What will you be selling? *</label>
+                  <textarea id="trader-products" name="trader-products" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="trader-tables">Number of Tables Required</label>
+                  <select id="trader-tables" name="trader-tables">
+                    <option value="1">1 Table</option>
+                    <option value="2">2 Tables</option>
+                    <option value="3">3 Tables</option>
+                    <option value="4">4+ Tables</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="trader-message">Additional Information</label>
+                  <textarea id="trader-message" name="trader-message" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Registration</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer-container"></footer>
+
+</body>
+</html>

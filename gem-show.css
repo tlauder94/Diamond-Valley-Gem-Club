@@ -1,0 +1,833 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Standard paragraph formatting */
+p {
+  font-size: 1.2rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+}
+
+/* List items */
+li {
+  font-size: 1.2rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 10px !important;
+}
+
+/* Page Break Divider */
+.page-break {
+  margin: 20px auto;
+  border-bottom: 1px solid #1B75BC;
+  width: 80%;
+}
+
+/* Header Banner */
+.gem-show-header {
+  background-color: #1B75BC;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  margin: 0;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+/* Main Container */
+.gem-show-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(to bottom, rgba(27, 117, 188, 0.95), rgba(21, 90, 138, 0.95)), 
+              url('images/gemshow.jpg') center/cover;
+  background-color: #1B75BC;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  border-radius: 3px;
+}
+
+.hero-overlay {
+  text-align: center;
+  color: white;
+  padding: 60px 40px;
+  max-width: 900px;
+}
+
+.hero-overlay h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
+}
+
+.hero-lead {
+  font-size: 1.3rem !important;
+  line-height: 1.8 !important;
+  margin: 0 !important;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* Event Essentials */
+.event-essentials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 50px 0;
+}
+
+.essential-card {
+  background: white;
+  padding: 35px 30px;
+  border-left: 5px solid #1B75BC;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.essential-card:hover {
+  box-shadow: 0 4px 25px rgba(27, 117, 188, 0.15);
+  transform: translateY(-3px);
+}
+
+.essential-card h3 {
+  color: #1B75BC;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.date-block {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.date-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.day-label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.date-detail {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1B75BC;
+  margin-bottom: 5px;
+}
+
+.time-detail {
+  display: block;
+  color: #666;
+  font-size: 1rem;
+}
+
+.venue-name {
+  font-weight: 700;
+  color: #333;
+  font-size: 1.15rem !important;
+  margin-bottom: 12px !important;
+}
+
+.venue-address {
+  color: #666;
+  line-height: 1.7 !important;
+  margin-bottom: 15px !important;
+}
+
+.venue-note {
+  color: #888;
+  font-size: 0.95rem !important;
+  font-style: italic;
+  margin: 0 !important;
+}
+
+.price-main {
+  font-size: 2rem !important;
+  font-weight: 700;
+  color: #1B75BC;
+  margin-bottom: 15px !important;
+}
+
+.price-special {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 15px !important;
+  font-size: 1.05rem !important;
+}
+
+.admission-note {
+  color: #888;
+  font-size: 0.95rem !important;
+  margin: 0 !important;
+}
+
+/* Card Actions - Buttons inside cards */
+.card-actions {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-btn {
+  display: block;
+  text-align: center;
+  background: #1B75BC;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.card-btn:hover {
+  background: #155a8a;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(27, 117, 188, 0.3);
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.section-header h2 {
+  color: #1B75BC;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  font-size: 1.1rem !important;
+  color: #666;
+  margin: 0 !important;
+}
+
+/* Event Details Section */
+.event-details-section {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.detail-card {
+  background: white;
+  border-radius: 15px;
+  padding: 35px 30px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #1B75BC, #155a8a);
+}
+
+.detail-card:hover {
+  transform: translateY(-5px);
+  border-color: #1B75BC;
+  box-shadow: 0 8px 30px rgba(27, 117, 188, 0.15);
+}
+
+.detail-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.detail-card h3 {
+  color: #1B75BC;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.detail-card p {
+  color: #333;
+  font-size: 1.1rem !important;
+  margin-bottom: 10px !important;
+}
+
+.detail-note {
+  color: #666 !important;
+  font-size: 1rem !important;
+  font-style: italic;
+}
+
+/* Introduction Section */
+.intro-section {
+  margin: 60px 0;
+  padding: 0 40px;
+}
+
+.intro-section h2 {
+  color: #1B75BC;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.intro-section p {
+  color: #444;
+  line-height: 1.9 !important;
+  margin-bottom: 20px !important;
+  text-align: justify;
+}
+
+/* Features Showcase */
+.features-showcase {
+  margin: 60px 0;
+}
+
+.feature-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.feature-block.primary {
+  background: white;
+  padding: 40px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+
+.feature-block.secondary {
+  background: #f8f9fa;
+  padding: 40px;
+}
+
+.feature-image {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #e9f6fc 0%, #d4eefb 100%);
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-text h3 {
+  color: #1B75BC;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.feature-text p {
+  color: #444;
+  line-height: 1.9 !important;
+  margin-bottom: 18px !important;
+  text-align: justify;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.feature-card {
+  background: white;
+  padding: 35px 30px;
+  border-left: 4px solid #1B75BC;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 25px rgba(27, 117, 188, 0.12);
+  transform: translateX(5px);
+}
+
+.feature-card h4 {
+  color: #1B75BC;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #444;
+  line-height: 1.8 !important;
+  margin: 0 !important;
+  text-align: justify;
+}
+
+.feature-card.full-width {
+  background: linear-gradient(135deg, #1B75BC 0%, #155a8a 100%);
+  color: white;
+  border-left: none;
+  grid-column: 1 / -1;
+}
+
+.feature-card.full-width h4 {
+  color: white;
+}
+
+.feature-card.full-width p {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Trader Dropdown Section */
+.trader-dropdown-section {
+  margin: 60px 0;
+  border: 2px solid #1B75BC;
+  border-radius: 2px;
+}
+
+.dropdown-header {
+  background: #1B75BC;
+  padding: 25px 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.dropdown-header:hover {
+  background: #155a8a;
+}
+
+.dropdown-header h3 {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dropdown-arrow {
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+  line-height: 1;
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background: white;
+}
+
+.trader-intro {
+  padding: 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.trader-intro p {
+  color: #444;
+  line-height: 1.9 !important;
+  margin: 0 !important;
+  text-align: justify;
+}
+
+/* Trader Section - Simplified */
+.trader-simple-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 40px;
+  align-items: start;
+}
+
+.trader-info-simple {
+  padding: 30px;
+  background: #f8f9fa;
+  border-left: 4px solid #1B75BC;
+}
+
+.trader-info-simple p {
+  color: #444;
+  line-height: 1.8 !important;
+  margin-bottom: 20px !important;
+}
+
+.trader-info-simple p:last-child {
+  margin-bottom: 0 !important;
+}
+
+.trader-info-simple strong {
+  color: #1B75BC;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.benefits-list {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 2px solid #ddd;
+}
+
+.benefits-list h4 {
+  color: #1B75BC;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.benefits-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.benefits-list li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 12px !important;
+  color: #444;
+  font-size: 1.05rem !important;
+  line-height: 1.6 !important;
+}
+
+.benefits-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #1B75BC;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Trader Form */
+.trader-form-container {
+  position: relative;
+}
+
+.form-card {
+  background: white;
+  border-radius: 15px;
+  padding: 35px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #1B75BC;
+}
+
+.form-card h4 {
+  color: #1B75BC;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-description {
+  text-align: center;
+  color: #666;
+  font-size: 1rem !important;
+  margin-bottom: 25px !important;
+}
+
+.trader-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1B75BC;
+  box-shadow: 0 0 0 3px rgba(27, 117, 188, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-btn {
+  background-color: #1B75BC;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(27, 117, 188, 0.3);
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #155a8a;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(27, 117, 188, 0.4);
+}
+
+/* Visitor Information Section */
+.visitor-info-section {
+  background: #f8f9fa;
+  padding: 50px 40px;
+  margin: 60px 0;
+}
+
+.visitor-info-section h2 {
+  color: #1B75BC;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.info-block {
+  background: white;
+  padding: 30px;
+  border-left: 4px solid #1B75BC;
+}
+
+.info-block h4 {
+  color: #1B75BC;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.info-block p {
+  color: #444;
+  line-height: 1.8 !important;
+  margin: 0 !important;
+  text-align: justify;
+}
+
+/* Contact Information Section */
+.contact-info-section {
+  margin: 60px 0;
+  padding: 0 40px;
+}
+
+.contact-info-section h2 {
+  color: #1B75BC;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-intro {
+  text-align: center;
+  color: #444;
+  margin-bottom: 40px !important;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.contact-method {
+  background: white;
+  padding: 30px;
+  border-top: 4px solid #1B75BC;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.contact-method h4 {
+  color: #1B75BC;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.contact-method p {
+  color: #444;
+  margin: 0 !important;
+}
+
+.contact-method a {
+  color: #1B75BC;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-method a:hover {
+  color: #155a8a;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .gem-show-container {
+    width: 90%;
+  }
+
+  .event-essentials {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-block,
+  .feature-block.primary,
+  .feature-block.secondary {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .feature-grid,
+  .info-grid,
+  .contact-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .trader-simple-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro-section,
+  .visitor-info-section,
+  .contact-info-section {
+    padding: 40px 20px;
+  }
+
+  .feature-block.primary,
+  .feature-block.secondary {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gem-show-container {
+    width: 95%;
+  }
+
+  .gem-show-header h1 {
+    font-size: 2rem;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .hero-lead {
+    font-size: 1.1rem !important;
+  }
+
+  .dropdown-header {
+    padding: 20px 25px;
+  }
+
+  .dropdown-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .trader-intro,
+  .trader-info,
+  .trader-form-container {
+    padding: 25px;
+  }
+
+  .feature-image {
+    height: 300px;
+  }
+
+  .intro-section h2,
+  .visitor-info-section h2,
+  .contact-info-section h2 {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twilight Market - Diamond Valley Gem Club</title>
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="twilight-market.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
+  <script src="twilight-market.js"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="navbar-container"></header>
+
+  <!-- Banner Section -->
+  <header class="market-header">
+    <h1>Twilight Market</h1>
+  </header>
+
+  <!-- Main Content Container -->
+  <div class="market-container">
+
+    <!-- Introduction Section -->
+    <section class="market-intro">
+      <h2>An Evening of Gems, Crafts & Community</h2>
+      <p>Join us for a magical evening at the Diamond Valley Gem Club's Twilight Market. As the sun sets, our venue comes alive with the sparkle of gems, the glow of craftsmanship, and the warmth of community. Browse unique treasures, meet local artisans, and enjoy a relaxed atmosphere under the twilight sky.</p>
+    </section>
+
+    <!-- Event Details Section -->
+    <section class="event-details-section">
+      <div class="section-header">
+        <h2>Event Details</h2>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail-card">
+          <div class="detail-icon">🌙</div>
+          <h3>When</h3>
+          <p>Date and time details coming soon</p>
+          <p class="detail-note">Evening event - perfect for after-work browsing</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">📍</div>
+          <h3>Where</h3>
+          <p>Diamond Valley Gem Club</p>
+          <p class="detail-note">25 Panther Place, Eltham North VIC 3095</p>
+        </div>
+
+        <div class="detail-card">
+          <div class="detail-icon">🎟️</div>
+          <h3>Entry</h3>
+          <p>Free entry for all</p>
+          <p class="detail-note">Bring family and friends for a unique evening out</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page Break -->
+    <div class="page-break"></div>
+
+    <!-- Market Features Section -->
+    <section class="features-section">
+      <div class="section-header">
+        <h2>Market Highlights</h2>
+        <p>What makes our twilight market special</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">💎</div>
+          <h3>Gems & Minerals</h3>
+          <p>Discover stunning gems, minerals, crystals, and fossils from local and interstate dealers.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3>Handmade Jewelry</h3>
+          <p>Unique, handcrafted jewelry pieces from talented local artisans and club members.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🛠️</div>
+          <h3>Lapidary Supplies</h3>
+          <p>Tools, equipment, and materials for your lapidary projects and hobbies.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🌟</div>
+          <h3>Relaxed Atmosphere</h3>
+          <p>Enjoy shopping in the cooler evening hours with a friendly, welcoming vibe.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">☕</div>
+          <h3>Refreshments</h3>
+          <p>Light refreshments available to enjoy while you browse and socialize.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🅿️</div>
+          <h3>Free Parking</h3>
+          <p>Ample parking available on-site for all visitors and stallholders.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page Break -->
+    <div class="page-break"></div>
+
+    <!-- Stallholder Section -->
+    <section class="stallholder-section">
+      <div class="section-header">
+        <h2>Become a Stallholder</h2>
+        <p>Share your passion and products with our community</p>
+      </div>
+
+      <div class="stallholder-content">
+        <div class="stallholder-info">
+          <h3>Why Join Our Market?</h3>
+          <ul class="stallholder-benefits">
+            <li>Reach an engaged audience of gem and craft enthusiasts</li>
+            <li>Relaxed evening market atmosphere</li>
+            <li>Affordable stall fees</li>
+            <li>Supportive community environment</li>
+            <li>Regular event with loyal attendees</li>
+            <li>Free parking and easy setup</li>
+          </ul>
+
+          <div class="stallholder-requirements">
+            <h3>What Can You Sell?</h3>
+            <p>We welcome stallholders offering gems, minerals, crystals, fossils, handmade jewelry, lapidary work, craft supplies, artisan goods, and related items. All items must be relevant to our community's interests in gems, minerals, and crafts.</p>
+            <p><strong>Note:</strong> Stall spaces are limited and allocated on a first-come, first-served basis. Early registration is recommended.</p>
+          </div>
+        </div>
+
+        <div class="stallholder-form-container">
+          <div class="form-card">
+            <h3>Register Your Interest</h3>
+            <p class="form-description">Complete this form to express your interest in having a stall</p>
+            
+            <form class="stallholder-form" id="stallholderForm">
+              <div class="form-group">
+                <label for="stall-name">Full Name *</label>
+                <input type="text" id="stall-name" name="stall-name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="stall-business">Business/Stall Name</label>
+                <input type="text" id="stall-business" name="stall-business">
+              </div>
+
+              <div class="form-group">
+                <label for="stall-email">Email Address *</label>
+                <input type="email" id="stall-email" name="stall-email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="stall-phone">Phone Number *</label>
+                <input type="tel" id="stall-phone" name="stall-phone" required>
+              </div>
+
+              <div class="form-group">
+                <label for="stall-products">What will you be selling? *</label>
+                <textarea id="stall-products" name="stall-products" rows="4" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="stall-size">Stall Size Preference</label>
+                <select id="stall-size" name="stall-size">
+                  <option value="single">Single Stall (1 table)</option>
+                  <option value="double">Double Stall (2 tables)</option>
+                  <option value="large">Large Stall (3+ tables)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="stall-message">Additional Requirements or Questions</label>
+                <textarea id="stall-message" name="stall-message" rows="3"></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">Submit Registration</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page Break -->
+    <div class="page-break"></div>
+
+    <!-- Visitor Info Section -->
+    <section class="visitor-section">
+      <div class="section-header">
+        <h2>Visitor Information</h2>
+        <p>Everything you need to know for your visit</p>
+      </div>
+
+      <div class="visitor-grid">
+        <div class="visitor-card">
+          <h3>Getting There</h3>
+          <p>We're located at 25 Panther Place, Eltham North VIC 3095. Free parking is available on-site. The venue is easily accessible from the main road with clear signage.</p>
+        </div>
+
+        <div class="visitor-card">
+          <h3>What to Bring</h3>
+          <p>Bring cash for purchases (some stallholders may not have card facilities), reusable bags for your treasures, and comfortable shoes for browsing.</p>
+        </div>
+
+        <div class="visitor-card">
+          <h3>Accessibility</h3>
+          <p>Our venue is wheelchair accessible with accessible parking available. Please contact us if you have specific accessibility requirements.</p>
+        </div>
+
+        <div class="visitor-card">
+          <h3>COVID Safety</h3>
+          <p>We follow current health guidelines to ensure a safe environment for all visitors and stallholders.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page Break -->
+    <div class="page-break"></div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="section-header">
+        <h2>Get in Touch</h2>
+        <p>Questions about the twilight market?</p>
+      </div>
+
+      <div class="contact-info-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📧</div>
+          <h3>Email Us</h3>
+          <a href="mailto:info@dvgc.org.au">info@dvgc.org.au</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <h3>Call Us</h3>
+          <p>Contact details available on our main contact page</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">🌐</div>
+          <h3>Stay Updated</h3>
+          <p>Follow us on social media for the latest market updates</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer-container"></footer>
+
+</body>
+</html>

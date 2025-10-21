@@ -1,0 +1,490 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Standard paragraph formatting */
+p {
+  font-size: 1.2rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+}
+
+/* List items */
+li {
+  font-size: 1.2rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 10px !important;
+}
+
+/* Page Break Divider */
+.page-break {
+  margin: 20px auto;
+  border-bottom: 1px solid #1B75BC;
+  width: 80%;
+}
+
+/* Header Banner */
+.market-header {
+  background-color: #1B75BC;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  margin: 0;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+/* Main Container */
+.market-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Introduction Section */
+.market-intro {
+  text-align: center;
+  width: 80%;
+  margin: 60px auto 40px;
+  padding: 0 20px;
+}
+
+.market-intro h2 {
+  color: #1B75BC;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.section-header h2 {
+  color: #1B75BC;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  font-size: 1.1rem !important;
+  color: #666;
+  margin: 0 !important;
+}
+
+/* Event Details Section */
+.event-details-section {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.detail-card {
+  background: white;
+  border-radius: 15px;
+  padding: 35px 30px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #1B75BC, #155a8a);
+}
+
+.detail-card:hover {
+  transform: translateY(-5px);
+  border-color: #1B75BC;
+  box-shadow: 0 8px 30px rgba(27, 117, 188, 0.15);
+}
+
+.detail-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.detail-card h3 {
+  color: #1B75BC;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.detail-card p {
+  color: #333;
+  font-size: 1.1rem !important;
+  margin-bottom: 10px !important;
+}
+
+.detail-note {
+  color: #666 !important;
+  font-size: 1rem !important;
+  font-style: italic;
+}
+
+/* Market Features Section */
+.features-section {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, #e9f6fc 0%, #d4eefb 100%);
+  border-radius: 12px;
+  padding: 30px 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: #1B75BC;
+  box-shadow: 0 12px 24px rgba(27, 117, 188, 0.2);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  color: #1B75BC;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #555;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Stallholder Section */
+.stallholder-section {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.stallholder-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.stallholder-info h3 {
+  color: #1B75BC;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.stallholder-benefits {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.stallholder-benefits li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 15px !important;
+  color: #333;
+}
+
+.stallholder-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #1B75BC;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.stallholder-requirements {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 4px solid #1B75BC;
+}
+
+.stallholder-requirements h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.stallholder-requirements p {
+  margin-bottom: 15px !important;
+}
+
+.stallholder-requirements strong {
+  color: #1B75BC;
+}
+
+/* Stallholder Form */
+.stallholder-form-container {
+  position: sticky;
+  top: 20px;
+}
+
+.form-card {
+  background: white;
+  border-radius: 15px;
+  padding: 35px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #1B75BC;
+}
+
+.form-card h3 {
+  color: #1B75BC;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-description {
+  text-align: center;
+  color: #666;
+  font-size: 1rem !important;
+  margin-bottom: 25px !important;
+}
+
+.stallholder-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1B75BC;
+  box-shadow: 0 0 0 3px rgba(27, 117, 188, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-btn {
+  background-color: #1B75BC;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(27, 117, 188, 0.3);
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #155a8a;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(27, 117, 188, 0.4);
+}
+
+/* Visitor Section */
+.visitor-section {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.visitor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.visitor-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid #1B75BC;
+}
+
+.visitor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(27, 117, 188, 0.15);
+}
+
+.visitor-card h3 {
+  color: #1B75BC;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.visitor-card p {
+  color: #555;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Contact Section */
+.contact-section {
+  width: 80%;
+  margin: 40px auto 60px;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.contact-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(27, 117, 188, 0.15);
+}
+
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.contact-card h3 {
+  color: #1B75BC;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact-card a {
+  color: #1B75BC;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+  color: #155a8a;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .stallholder-content {
+    grid-template-columns: 1fr;
+  }
+
+  .stallholder-form-container {
+    position: static;
+  }
+
+  .details-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .market-intro h2 {
+    font-size: 2rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .market-container,
+  .event-details-section,
+  .features-section,
+  .stallholder-section,
+  .visitor-section,
+  .contact-section,
+  .market-intro {
+    width: 95%;
+  }
+
+  .market-header h1 {
+    font-size: 2rem;
+  }
+
+  .visitor-grid {
+    grid-template-columns: 1fr;
+  }
+}
