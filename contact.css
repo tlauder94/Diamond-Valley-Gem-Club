@@ -4,6 +4,11 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: white;
   color: #333;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 /* Standard paragraph formatting to match index page */
@@ -41,7 +46,7 @@ li {
   margin: 30px auto; /* Center with auto margins like other pages */
   gap: 20px; /* Adds a gap between the left and right sections */
   justify-content: center;
-  align-items: center;
+  align-items: stretch; /* Make both sides stretch to same height */
 }
 
 .contact-info-container {
@@ -49,6 +54,10 @@ li {
   padding: 20px;
   box-sizing: border-box;
   text-align: left; /* Aligns the contents to the left */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Evenly space the sections */
+  height: 500px; /* Match the map height */
 }
 
 .contact-form-map-container {
@@ -66,14 +75,24 @@ li {
 }
 
 .page-break {
-  margin: 20px 0;
-  border-bottom: 1px solid #1B75BC;
+  width: 80%; /* Page break spans 80% of the container width */
+  height: 1px; /* Thin horizontal line */
+  background-color: #1B75BC; /* Blue divider color */
+  margin: 0; /* Left-align with the text */
 }
 
 .section-heading {
   color: #1B75BC;
   font-size: 1.8rem;
   margin-bottom: 10px;
+}
+
+/* Contact sections evenly spaced */
+.contact-info-container .contact-section {
+  flex: 1; /* Each section takes equal space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically within each section */
 }
 
 .opening-hours-container {
@@ -145,8 +164,9 @@ li {
   display: flex;
   flex-direction: column;
   gap: 15px; /* Reduced from 20px to decrease spacing between form elements */
-  padding: 0 25px; /* Increased padding to center content better */
+  padding: 0; /* Remove padding as wrapper already has padding */
   box-sizing: border-box; /* Ensure padding is included in width calculations */
+  width: 100%; /* Ensure form takes full width of container */
 }
 
 .form-row {
@@ -225,7 +245,7 @@ li {
 
 .submit-button:hover {
   background-color: #155a8a;
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  transform: scale(1.05);
 }
 
 /* Maps iframe styling */
@@ -241,50 +261,63 @@ li {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Expandable Contact Form Styles */
-.contact-form-section {
-  margin: 40px auto;
-  max-width: 920px; /* Increased from 800px to make form 15% wider */
-  text-align: center;
+/* Always-Visible Contact Form Layout */
+.contact-form-section-wrapper {
+  margin: 60px auto 40px;
+  width: 90%;
+  max-width: 1400px;
 }
 
-.contact-form-toggle {
-  margin-bottom: 20px;
-}
-
-.contact-form-button {
-  background: linear-gradient(135deg, #1B75BC 0%, #2A8FD3 100%);
-  color: white;
-  border: none;
-  padding: 15px 40px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Montserrat', sans-serif;
-  box-shadow: 0 4px 15px rgba(27, 117, 188, 0.2);
+.contact-form-layout {
   display: flex;
-  align-items: center;
+  gap: 0;
+  align-items: stretch;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Left: Blue Contact Message Box */
+.contact-message-box {
+  flex: 0 0 40%;
+  background-color: #1B75BC;
+  color: white;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 10px;
-  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-.contact-form-button:hover {
-  background: linear-gradient(135deg, #155a8a 0%, #1B75BC 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(27, 117, 188, 0.3);
+.contact-message-box h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+  color: white;
 }
 
-.button-arrow {
-  transition: transform 0.3s ease;
-  font-size: 0.9rem;
+.contact-message-box p {
+  font-size: 1.2rem !important;
+  line-height: 1.8 !important;
+  margin: 0 !important;
+  color: white;
 }
 
-/* Hidden form styling */
-.hidden {
-  display: none;
+/* Right: Contact Form Container */
+.contact-form-container-wrapper {
+  flex: 0 0 60%;
+  background-color: #f8f9fa;
+  padding: 50px 40px;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Form Labels styled for light background */
+.contact-form-container-wrapper .form-group label {
+  color: #1B75BC;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .contact-form-container {
@@ -322,15 +355,52 @@ li {
   gap: 20px;
 }
 
+/* Responsive Design */
+@media (max-width: 992px) {
+  .contact-form-layout {
+    flex-direction: column;
+  }
+  
+  .contact-message-box {
+    flex: 1;
+    padding: 40px 30px;
+  }
+  
+  .contact-message-box h1 {
+    font-size: 2.5rem;
+  }
+  
+  .contact-form-container-wrapper {
+    flex: 1;
+    padding: 40px 30px;
+  }
+}
+
 @media (max-width: 768px) {
-  .contact-form-container .form-row {
+  .contact-form-section-wrapper {
+    width: 95%;
+    margin: 40px auto 30px;
+  }
+  
+  .contact-message-box {
+    padding: 30px 20px;
+  }
+  
+  .contact-message-box h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-form-container-wrapper {
+    padding: 30px 20px;
+  }
+  
+  .contact-form .form-row {
     flex-direction: column;
     gap: 15px;
   }
   
-  .contact-form-button {
-    padding: 12px 30px;
-    font-size: 1rem;
+  .form-actions {
+    text-align: center;
   }
 }
 

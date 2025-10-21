@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diamond Valley Gem Club</title>
+  <link rel="stylesheet" href="navbar.css" />
   <link rel="stylesheet" href="resources.css" />
   <link rel="stylesheet" href="footer.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap">
@@ -13,68 +14,288 @@
 
 <body>
 
+  <!-- Header -->
   <header id="navbar-container"></header>
 
+  <!-- Banner Section -->
   <header class="resources-header">
     <h1>Resources</h1>
   </header>
 
-  <h1 class="resources-blurb-header">Looking For Something?</h1>
-  <p class="resources-blurb">Our resources page is here to keep you connected and inspired.
-    Browse our latest club newsletters, explore links to like-minded societies, and check out a collection of useful resources related to our shared interests in gems, minerals, and lapidary.
-    If you find anything that would be a great addition to this page, please do let us know!</p>
+  <!-- Main Resources Container -->
+  <div class="resources-main-container">
 
-<div class="resource-info-container">
-  <section id="socities" >
-    <h1>Here you can find some useful resources we think you'll love!</h1>
-    <ul class="resource-nav-links" id="general-links">
-        <li><h2>General Resources</h2></li>
-        <li><a href="https://www.facebook.com/groups/668711063185498/">Australia Lapidary Group Facebook Group</a></li>
-        <li><a href="https://www.parks.vic.gov.au/things-to-do/fossicking-prospecting">Parks Victoria Fossicking Page</a></li>
-        <li><a href="https://www.mindat.org/">Mindat.org</a></li>
-        <li><a href="https://www.gem.org.au/">Gemmological Association of Australia</a></li>
-        <li><a href="https://www.gsa.org.au/">Geological Society of Australia</a></li> 
-        <li><a href="https://beyond4cs.com/free-gemology-courses-and-resources/">Free Gemology Courses</a></li>
-        <li><a href="https://www.gemsociety.org/">International Gem Society</a></li>
-    </ul>
-    <ul class="resource-nav-links" id="facet-links">
-        <li><h2>Faceting</h2></li>
-        <li><a href="https://facetorsguild.com.au/">Australian Facetors' Guild</a></li>
-        <li><a href="https://aflaca.org.au/members/australian-facetors-guild/">AFLACA</a></li>
-        <li><a href="https://www.facebook.com/groups/Vicfac/">Victorian Facetors' Facebook Group</a></li>
-        <li><a href="https://facetdiagrams.org/">Facetdiagrams.org</a></li>
-        <li><a href="https://www.gemcad.com/">GemCad (Software)</a></li>
-        <li><a href="https://gemcutstudio.com/">Gem Cut Studio (Software)</a></li>
-    </ul>
-    <ul class="resource-nav-links" id="silversmith-links">
-        <li><h2>Silversmithing</h2></li>
-        <li><a href="https://www.gsga.org.au/">Gold &amp Silversmiths Guild of Australia</a></li>
-        <li><a href="https://www.facebook.com/GSGA.org/">Gold &amp Silversmiths Guild of Australia Facebook Group</a></li>
-    </ul>
-  </section>
-
-  <div class="resources-right-container">
-    <section id="newsletter-box">
-        <h1>Check out what's been happening at our club with our newsletters and committee meeting minutes</h1>
-        <div class="newsletter-container">
-            <div class="divider-edge"></div>
-            <div id="newsletter-header-2025">
-                <h2>Newsletters 2025</h2>
-                <button class="newsletter-button"><a href="https://drive.google.com/drive/folders/1kQD1D0YDVIzSZrwlba4e1zeuowl8IKQ8?usp=drive_link">Click Here</a></button>
-            </div>
-            <div id="newsletter-header-2024">
-                <h2>Newsletters 2024</h2>
-                <button class="newsletter-button"><a href="https://drive.google.com/drive/folders/1Ieq6j2RGq5qh3n6dKQp3W6Ynd-IaLg5a?usp=drive_link">Click Here</a></button>
-            </div>
-            <div id="minutes">
-                <h2>Minutes</h2>
-                <button class="minutes-button"><a href="https://drive.google.com/drive/u/2/folders/1Lvw9ckshFQzGvxyAjfejNfrVn90jnofy">Click Here</a></button>
-            </div>
+    <!-- Newsletters & Minutes Section -->
+    <section class="resources-section newsletters-section">
+      <div class="section-header">
+        <h2>Club Newsletters & Minutes</h2>
+        <p>Stay updated with our club activities and official records</p>
+      </div>
+      
+      <div class="card-grid">
+        <div class="resource-card newsletter-card">
+          <div class="card-icon">📰</div>
+          <h3>Newsletters 2025</h3>
+          <p>Read about recent events, upcoming activities, and club news</p>
+          <a href="https://drive.google.com/drive/folders/1kQD1D0YDVIzSZrwlba4e1zeuowl8IKQ8?usp=drive_link" class="resource-link" target="_blank">View Newsletters</a>
         </div>
-    </section>
-    </div> 
-</div>
 
+        <div class="resource-card newsletter-card">
+          <div class="card-icon">📰</div>
+          <h3>Newsletters 2024</h3>
+          <p>Explore our archived newsletters from the previous year</p>
+          <a href="https://drive.google.com/drive/folders/1Ieq6j2RGq5qh3n6dKQp3W6Ynd-IaLg5a?usp=drive_link" class="resource-link" target="_blank">View Newsletters</a>
+        </div>
+
+        <div class="resource-card minutes-card">
+          <div class="card-icon">📋</div>
+          <h3>Committee Minutes</h3>
+          <p>Access official records from committee meetings</p>
+          <a href="https://drive.google.com/drive/u/2/folders/1Lvw9ckshFQzGvxyAjfejNfrVn90jnofy" class="resource-link" target="_blank">View Minutes</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page Break -->
+    <div class="page-break"></div>
+
+    <!-- Useful Resources Section -->
+    <section class="resources-section links-section">
+      <div class="section-header">
+        <h2>Useful Resources</h2>
+        <p>Explore external resources to expand your knowledge and connect with the community</p>
+      </div>
+
+      <div class="resources-grid">
+        <!-- General Resources -->
+        <div class="resource-category general-resources">
+          <div class="category-header-banner">
+            <h3 class="category-title">General Resources</h3>
+          </div>
+          <div class="category-content">
+            <p class="category-description">Essential tools and communities for gem and mineral enthusiasts</p>
+            <ul class="resource-links">
+              <li><a href="https://www.facebook.com/groups/668711063185498/" target="_blank">Australia Lapidary Group Facebook</a></li>
+              <li><a href="https://www.parks.vic.gov.au/things-to-do/fossicking-prospecting" target="_blank">Parks Victoria Fossicking</a></li>
+              <li><a href="https://www.mindat.org/" target="_blank">Mindat.org</a></li>
+              <li><a href="https://www.gem.org.au/" target="_blank">Gemmological Association of Australia</a></li>
+              <li><a href="https://www.gsa.org.au/" target="_blank">Geological Society of Australia</a></li>
+              <li><a href="https://beyond4cs.com/free-gemology-courses-and-resources/" target="_blank">Free Gemology Courses</a></li>
+              <li><a href="https://www.gemsociety.org/" target="_blank">International Gem Society</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Faceting Resources -->
+        <div class="resource-category faceting-resources">
+          <div class="category-header-banner">
+            <h3 class="category-title">Faceting Resources</h3>
+          </div>
+          <div class="category-content">
+            <p class="category-description">Specialized resources for faceting techniques and software</p>
+            <ul class="resource-links">
+              <li><a href="https://facetorsguild.com.au/" target="_blank">Australian Facetors' Guild</a></li>
+              <li><a href="https://aflaca.org.au/members/australian-facetors-guild/" target="_blank">AFLACA</a></li>
+              <li><a href="https://www.facebook.com/groups/Vicfac/" target="_blank">Victorian Facetors' Facebook</a></li>
+              <li><a href="https://facetdiagrams.org/" target="_blank">Facet Diagrams</a></li>
+              <li><a href="https://www.gemcad.com/" target="_blank">GemCad Software</a></li>
+              <li><a href="https://gemcutstudio.com/" target="_blank">Gem Cut Studio Software</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Silversmithing Resources -->
+        <div class="resource-category silversmithing-resources">
+          <div class="category-header-banner">
+            <h3 class="category-title">Silversmithing Resources</h3>
+          </div>
+          <div class="category-content">
+            <p class="category-description">Connect with guilds and communities for metalwork artistry</p>
+            <ul class="resource-links">
+              <li><a href="https://www.gsga.org.au/" target="_blank">Gold & Silversmiths Guild of Australia</a></li>
+              <li><a href="https://www.facebook.com/GSGA.org/" target="_blank">GSGA Facebook Group</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page Break -->
+    <div class="page-break"></div>
+
+    <!-- Victorian Clubs Section -->
+    <section class="resources-section clubs-section">
+      <div class="section-header">
+        <h2>Victorian Gem & Lapidary Clubs</h2>
+        <p>Connect with fellow enthusiasts across Victoria</p>
+      </div>
+
+      <div class="clubs-grid">
+        <div class="club-card">
+          <div class="club-header">
+            <div class="club-icon">🏛️</div>
+            <div class="club-info">
+              <h3>Bairnsdale Lapidary Club</h3>
+              <span class="club-location">Bairnsdale, Victoria</span>
+            </div>
+          </div>
+          <p class="club-description">Serving the East Gippsland community with lapidary activities and courses.</p>
+          <a href="https://www.facebook.com/groups/bairnsdalelap/" target="_blank" class="club-link">Visit Website</a>
+        </div>
+
+        <div class="club-card">
+          <div class="club-header">
+            <div class="club-icon">🏛️</div>
+            <div class="club-info">
+              <h3>Ballarat Lapidary Club</h3>
+              <span class="club-location">Ballarat, Victoria</span>
+            </div>
+          </div>
+          <p class="club-description">Serving the Ballarat community with lapidary workshops, field trips, and social activities since 1967.</p>
+          <a href="http://ballaratlapidaryclub.com/" target="_blank" class="club-link">Visit Website</a>
+        </div>
+
+        <div class="club-card">
+          <div class="club-header">
+            <div class="club-icon">🏛️</div>
+            <div class="club-info">
+              <h3>Bendigo Lapidary Club</h3>
+              <span class="club-location">Bendigo, Victoria</span>
+            </div>
+          </div>
+          <p class="club-description">Promoting lapidary arts in the goldfields region with workshops and exhibitions.</p>
+          <a href="https://www.bendigolapidary.org/" target="_blank" class="club-link">Visit Website</a>
+        </div>
+
+        <div class="club-card">
+          <div class="club-header">
+            <div class="club-icon">🏛️</div>
+            <div class="club-info">
+              <h3>Dandenong Lapidary Club</h3>
+              <span class="club-location">Dandenong, Victoria</span>
+            </div>
+          </div>
+          <p class="club-description">Community club offering lapidary courses and equipment access in the south-east region.</p>
+          <a href="https://www.facebook.com/DandenongLapidaryClub/" target="_blank" class="club-link">Visit Website</a>
+        </div>
+
+        <div class="club-card">
+          <div class="club-header">
+            <div class="club-icon">🏛️</div>
+            <div class="club-info">
+              <h3>Essendon Lapidary Club</h3>
+              <span class="club-location">Essendon, Victoria</span>
+            </div>
+          </div>
+          <p class="club-description">Dedicated to promoting lapidary arts and gem cutting in Melbourne's north-west.</p>
+          <a href="https://www.essendonlapidary.org.au/" target="_blank" class="club-link">Visit Website</a>
+        </div>
+
+        <div class="club-card">
+          <div class="club-header">
+            <div class="club-icon">🏛️</div>
+            <div class="club-info">
+              <h3>Frankston Lapidary Club</h3>
+              <span class="club-location">Frankston, Victoria</span>
+            </div>
+          </div>
+          <p class="club-description">Fostering interest in gems, minerals, and lapidary work in the Mornington Peninsula area.</p>
+          <a href="https://www.frankstonlapidary.org.au/" target="_blank" class="club-link">Visit Website</a>
+        </div>
+
+        <div class="club-card">
+          <div class="club-header">
+            <div class="club-icon">🏛️</div>
+            <div class="club-info">
+              <h3>Geelong Lapidary Club</h3>
+              <span class="club-location">Geelong, Victoria</span>
+            </div>
+          </div>
+          <p class="club-description">A friendly club dedicated to the art of lapidary and gemstone crafts in the Geelong region since 1968.</p>
+          <a href="https://www.geelonglapidary.org.au/" target="_blank" class="club-link">Visit Website</a>
+        </div>
+
+        <div class="club-card">
+          <div class="club-header">
+            <div class="club-icon">🏛️</div>
+            <div class="club-info">
+              <h3>Mordialloc Lapidary Club</h3>
+              <span class="club-location">Mordialloc, Victoria</span>
+            </div>
+          </div>
+          <p class="club-description">Bayside club offering courses in cabochon cutting, faceting, and silversmithing.</p>
+          <a href="https://www.facebook.com/mordialloclap/" target="_blank" class="club-link">Visit Website</a>
+        </div>
+
+        <div class="club-card">
+          <div class="club-header">
+            <div class="club-icon">🏛️</div>
+            <div class="club-info">
+              <h3>Morwell Lapidary Club</h3>
+              <span class="club-location">Morwell, Victoria</span>
+            </div>
+          </div>
+          <p class="club-description">Serving the Gippsland region with lapidary workshops and promoting interest in rocks and minerals.</p>
+          <a href="https://www.facebook.com/groups/morwelllapidary/" target="_blank" class="club-link">Visit Website</a>
+        </div>
+
+        <div class="club-card">
+          <div class="club-header">
+            <div class="club-icon">🏛️</div>
+            <div class="club-info">
+              <h3>Nunawading and District Lapidary Club</h3>
+              <span class="club-location">Nunawading, Victoria</span>
+            </div>
+          </div>
+          <p class="club-description">A welcoming community for lapidary enthusiasts in Melbourne's eastern suburbs.</p>
+          <a href="https://ndlconline.asn.au/index.html" target="_blank" class="club-link">Visit Website</a>
+        </div>
+
+        <div class="club-card">
+          <div class="club-header">
+            <div class="club-icon">🏛️</div>
+            <div class="club-info">
+              <h3>Victorian Lapidary & Mineral Club</h3>
+              <span class="club-location">Nunawading, Victoria</span>
+            </div>
+          </div>
+          <p class="club-description">One of Victoria's oldest clubs, promoting the study of minerals, gems, and lapidary arts since 1957.</p>
+          <a href="https://www.vicslapclub.org.au/" target="_blank" class="club-link">Visit Website</a>
+        </div>
+
+        <div class="club-card">
+          <div class="club-header">
+            <div class="club-icon">🏛️</div>
+            <div class="club-info">
+              <h3>Warragul Lapidary Club</h3>
+              <span class="club-location">Warragul, Victoria</span>
+            </div>
+          </div>
+          <p class="club-description">West Gippsland club offering lapidary facilities and courses for all skill levels.</p>
+          <a href="https://www.facebook.com/groups/warragullapidary/" target="_blank" class="club-link">Visit Website</a>
+        </div>
+
+        <div class="club-card">
+          <div class="club-header">
+            <div class="club-icon">🏛️</div>
+            <div class="club-info">
+              <h3>Waverley Lapidary Club</h3>
+              <span class="club-location">Glen Waverley, Victoria</span>
+            </div>
+          </div>
+          <p class="club-description">Active club in Melbourne's eastern suburbs with comprehensive lapidary facilities and courses.</p>
+          <a href="https://www.waverleylapidary.org.au/" target="_blank" class="club-link">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- VGCA Link -->
+      <div class="vgca-link-container">
+        <p>For more information about Victorian lapidary clubs and the state association, visit:</p>
+        <a href="https://www.vgca.org.au/" target="_blank" class="vgca-link">Victorian Gem Clubs Association (VGCA)</a>
+      </div>
+    </section>
+
+  </div>
 
   <footer id="footer-container"></footer>
 

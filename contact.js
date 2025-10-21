@@ -54,58 +54,17 @@ function highlightTodaysHours() {
   });
 }
 
-// Initialize contact form toggle functionality
-function initContactFormToggle() {
-  const toggleButton = document.getElementById('contact-form-btn');
-  const formContainer = document.getElementById('contact-form-container');
-  
-  if (toggleButton && formContainer) {
-    toggleButton.addEventListener('click', function() {
-      const isHidden = formContainer.classList.contains('hidden');
-      
-      if (isHidden) {
-        // Show the form
-        formContainer.classList.remove('hidden');
-        toggleButton.classList.add('expanded');
-        toggleButton.querySelector('.button-text').textContent = 'Click to close';
-        toggleButton.querySelector('.button-arrow').textContent = '▲';
-        
-        // Smooth scroll to form
-        setTimeout(() => {
-          formContainer.scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'nearest' 
-          });
-        }, 100);
-      } else {
-        // Hide the form
-        formContainer.classList.add('hidden');
-        toggleButton.classList.remove('expanded');
-        toggleButton.querySelector('.button-text').textContent = 'Email Us';
-        toggleButton.querySelector('.button-arrow').textContent = '▼';
-      }
-    });
-  }
-}
-
-// Function to expand contact form if URL hash indicates it should be expanded
-function checkForFormExpansion() {
+// Function to scroll to contact form if URL hash indicates it
+function checkForFormScroll() {
   if (window.location.hash === '#contact-form' || 
       window.location.hash === '#form' || 
       window.location.hash === '#book-tour-landing') {
-    const toggleButton = document.getElementById('contact-form-btn');
-    const formContainer = document.getElementById('contact-form-container');
+    const formSection = document.querySelector('.contact-form-section-wrapper');
     
-    if (toggleButton && formContainer) {
-      // Expand the form
-      formContainer.classList.remove('hidden');
-      toggleButton.classList.add('expanded');
-      toggleButton.querySelector('.button-text').textContent = 'Click to close';
-      toggleButton.querySelector('.button-arrow').textContent = '▲';
-      
-      // Scroll to the form after a short delay to ensure it's expanded
+    if (formSection) {
+      // Scroll to the form after a short delay to ensure page is loaded
       setTimeout(() => {
-        formContainer.scrollIntoView({ 
+        formSection.scrollIntoView({ 
           behavior: 'smooth', 
           block: 'center' 
         });
@@ -122,8 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Initialize page-specific functionality
   highlightTodaysHours();
-  initContactFormToggle();
   
-  // Check if form should be expanded based on URL hash
-  checkForFormExpansion();
+  // Check if should scroll to form based on URL hash
+  checkForFormScroll();
 });

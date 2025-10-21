@@ -1,4 +1,12 @@
 /* General Section Styling for Consistent Margins */
+body {
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
 section {
   margin: 0 auto; /* Center the section horizontally */
   padding: 20px; /* Add vertical padding */

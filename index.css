@@ -2,6 +2,14 @@
     font-family: Montserrat, sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
 /* Error message styling for failed component loads */
 .error-message {
   color: #dc3545;

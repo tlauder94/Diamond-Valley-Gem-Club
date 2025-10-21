@@ -55,12 +55,6 @@
         <p>0123456789</p>
       </section>
       <div class="page-break"></div>
-
-      <!-- Send Us a Message Section -->
-      <section class="contact-section">
-        <h2 class="section-heading">Send Us a Message</h2>
-        <p>If you need more information or have any questions, feel free to send us a message. Fill out the form below, and we’ll get back to you as soon as possible.</p>
-      </section>
     </div>
 
     <!-- Right Content -->
@@ -80,43 +74,43 @@
     </div>
   </div>
 
-  <!-- Contact Form Section -->
-<div class="contact-form-section">
-  <!-- Expandable Button -->
-  <div class="contact-form-toggle">
-    <button id="contact-form-btn" class="contact-form-button">
-      <span class="button-text">Email Us</span>
-      <span class="button-arrow">▼</span>
-    </button>
+  <!-- Contact Form Section (Always Visible) -->
+  <div class="contact-form-section-wrapper">
+    <div class="contact-form-layout">
+      <!-- Left: Contact Message Box -->
+      <div class="contact-message-box">
+        <h1>Send Us a Message</h1>
+        <p>If you need more information or have any questions, feel free to send us a message. Fill out the form below, and we'll get back to you as soon as possible.</p>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="contact-form-container-wrapper">
+        <form action="form-to-email.php" method="post" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="submit-button">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-  
-  <!-- Hidden Contact Form -->
-  <div id="contact-form-container" class="contact-form-container hidden">
-    <form action="form-to-email.php" method="post" class="contact-form">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Your Name <span class="required">*</span></label>
-          <input type="text" id="name" name="name" placeholder="Enter your full name" required />
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="email">Your Email <span class="required">*</span></label>
-        <input type="email" id="email" name="email" placeholder="Enter your email address" required />
-      </div>
-      <div class="form-group">
-        <label for="message">Your Message <span class="required">*</span></label>
-        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-      </div>
-      <div class="form-actions">
-        <button type="submit" class="submit-button">Send Message</button>
-      </div>
-    </form>
-  </div>
-</div>
 
   <!-- Footer -->
   <footer id="footer-container"></footer>
